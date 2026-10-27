@@ -74,3 +74,7 @@ Work proceeds by LOOP.md. Gates must pass. Human gates stop the loop. Meta cycle
 ## D008 — Dates rot
 
 Real calendar dates (move-in day, orientation span) live in `content/calendar.json` with `asOf`. Gameplay time is abstract orientation days, not that calendar. Do not bake a semester date into dialogue.
+
+## D019 — Architecture and craft, without a second discovery
+
+Accepted 2026-10-27 from the operator request to fold in the architecture studio and the RPG master directive. Only the non-conflicting parts apply, and they live in [GOAL.md](GOAL.md) under "Architecture and craft." Accepted product decisions stay in this file. Do not run a two-round discovery, do not add combat or an economy, and do not hold the loop for a commercial ship plan. A boundary change is a new decision, not a new questionnaire.

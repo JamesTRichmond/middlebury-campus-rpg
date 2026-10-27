@@ -123,6 +123,77 @@ Each of those screens is a Figma frame before it is code.
 
 Facts you state as true need status `verified`, a source URL, and an `asOf` date. Seed and placeholder copy must look unconfirmed. NPCs are archetypes until a likeness or people gate names them. Do not treat "the college uses Figma" as a fact inside the game.
 
+## Architecture and craft
+
+These rules come from the architecture studio and the RPG master directive. Only the parts that fit this game are in force. They do not replace `GOAL.md`, `LOOP.md`, or `DECISIONS.md`. If one of those is stricter, it wins.
+
+Not in force, because they conflict with this project or do not apply:
+
+- A discovery questionnaire, two answer rounds, or any wait for new product decisions before building. The decisions already in `DECISIONS.md` are accepted. Do not ask the operator to re-pick them.
+- A specialist roster, store submission, age ratings, voice-over, or a live-service team.
+- Combat, builds, loot, crafting, an economy, farming, or a 3D engine.
+- Spending money, new accounts, or shipping this as a Middlebury product.
+- Holding a demo for three art passes. Revisit what the player touches every session on meta cycles, and immediately when feedback says it got worse.
+
+### Pillars
+
+A feature serves one of these, or it waits:
+
+1. The first minutes feel like arriving.
+2. The player can be themselves, including how they move and how they read the screen.
+3. Campus and town are specific and walkable.
+4. Class is the virtual lesson, not a speech about class.
+5. The game stays cozy, unofficial, and honest about what it knows.
+
+### Claims
+
+Tag a material claim. Do not report done what you did not run.
+
+| Tag | Means |
+| --- | --- |
+| verified | You checked a source. Content facts use status `verified`, a URL, and `asOf`. |
+| observed | You ran it in this checkout: a test, the typecheck, or the play path. |
+| reported | A document, a tool, or a person said it. Not the same as observed. |
+| accepted | A decision in `DECISIONS.md`. |
+| proposal | Not accepted. Do not build it on the current item. |
+| assumption | Stated, and safe to proceed. Revisit if play contradicts it. |
+| unknown | You could not check. Say unknown. |
+
+Seed and placeholder copy stays visibly unconfirmed.
+
+### Who owns state
+
+| State | Authority |
+| --- | --- |
+| Places, people, quests, lessons | `content/`, checked by the schema |
+| What the teacher may say | `LessonSource` for that lesson id only |
+| Character, room, notes, unlocks, season | A versioned save in `localStorage` |
+| What the screen looks like | The Figma frame, then the build that matches it |
+| A real person's likeness | `gates/likeness.approved`, or the person is an archetype |
+
+The browser is the whole runtime. There is no server and no account. A door that exists only in the UI is a bug.
+
+### When it fails
+
+- A missing content id is shown as missing. Do not invent a place or a line.
+- A question is not answered with text that is not on that lesson.
+- A save that fails validation is not applied. Keep the previous good save. Tell the player the load failed. Do not drop notes silently.
+- The season toggle does not change quests, notes, or unlocks.
+- Failing or skipping the minigame does not close the story. An open task stays open.
+- Offline is normal. A bundled lesson does not need a network.
+- If Figma is unreachable, stop on the human gate. Do not draw the screen only in code.
+
+### Craft
+
+- The path has to be understandable before you decorate it. The frame still comes first.
+- Movement, dialogue, and the lesson panel are what the player touches constantly. A repeated fault there becomes a regression test, not a new area.
+- Keyboard focus never dead-ends on the letter, the creator, or the lesson panel. Captions are on. Color is never the only cue.
+- Walking should feel immediate. Do not hitch the walk to load a portrait.
+- Generated or imported art records its source and that it is original. No unclear license. No college marks. No secrets in the repo.
+- A player-visible promise in this goal maps to a content id, a frame, and a test before that demo is called done.
+
+These rules are the architecture. When a cycle changes a boundary, add a decision. Do not open a second architecture document that can disagree with `GOAL.md`.
+
 ## Work continuously
 
 After each of phases 1–8 (backlog M1 through M8), the same cycle must leave:
