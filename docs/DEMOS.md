@@ -16,7 +16,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 
 | Demo | After | Player should be able to |
 | --- | --- | --- |
-| `D1-letter-train` | M1 | Read the unofficial letter, set a home place, ride the train into the station |
+| [D1-letter-train](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M1 | Read the unofficial letter, set a home place, ride the train into the station |
 | `D2-character` | M2 | Name themselves, set pronouns and appearance, turn on wheelchair and other access options |
 | `D3-escort` | M3 | Walk from the station through Triangle Park to the dorm, including with a wheelchair |
 | `D4-dorm` | M4 | Unpack and place doodads, then see the orientation notice |
@@ -27,8 +27,16 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 
 ## Recorded builds
 
-None yet. M0 records the file URL in [FIGMA.md](FIGMA.md), not here. The first agent to finish M1 writes the open path and the Figma frame URL in this table. Do not invent either.
+D1 is a local static build. Its inspected source version is recorded below; new builds embed the SHA of their checked-out HEAD. No public deployment or URL is claimed. The Figma link is the original tool-returned file URL; use its Cover arrival link and Present / Flow 1.
 
 | Demo | Version | Figma | How to play | Date |
 | --- | --- | --- | --- | --- |
-| — | — | — | — | — |
+| D1-letter-train | `fd13bcf3bd32b0af91f33d8492dfa89f441c1e9a` | [Prototype](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) — Cover → arrival → Present / Flow 1 | local: `npm ci && npm run validate && npm run preview`; open the printed URL on port 4173 | 2026-10-27 |
+
+D1 opens the unofficial letter in a fresh browser. Enter a city or region, Continue through the window-view ride, then reach the platform. Continue on the platform opens the existing feedback form with the demo and build version. Reload resumes the saved train/platform; invalid saves remain unchanged. The train is user-paced; no invented route, timing or location lookup is used.
+
+Feedback path for the inspected build:
+
+`feedback/index.html?demo=D1-letter-train&version=fd13bcf3bd32b0af91f33d8492dfa89f441c1e9a`
+
+Desktop 1280×720 and phone 390×844 were played through in Chromium and compared with the Figma screenshots. The native origin input replaces the prototype’s filled sample state. D1 ends at feedback; the M0 prototype still shows the later character design after the platform. See the D1 board on Figma Handoff and [cycle 0007](../cycles/0007-letter-train.md).

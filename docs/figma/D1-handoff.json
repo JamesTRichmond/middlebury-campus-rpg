@@ -425,5 +425,27 @@
       "Platform Continue opens the version-bound existing feedback form for the D1 boundary; the M0 prototype preserves its later character design edge.",
       "Long captions and notices wrap/scroll; phone platform clips the 480px native scene at 1x rather than blurring fractional pixels."
     ]
+  },
+  "testedBuildVersion": "fd13bcf3bd32b0af91f33d8492dfa89f441c1e9a",
+  "validation": {
+    "tests": 21,
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "browserChecks": 6,
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "feedbackStorageFailure": "reproduced and fixed",
+    "codeCommits": [
+      "b83ba40",
+      "fd13bcf"
+    ]
   }
 }

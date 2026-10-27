@@ -32,11 +32,13 @@ Create the Figma file with the connected integration. Do this before any game sc
 ## M1-letter-train
 
 ```yaml
-status: doing
+status: done
 blockedBy: [M0-figma-file]
 humanGate: no
 owner: "codex-root"
 ```
+
+Completed 2026-10-27 — `cycle 0007: M1-letter-train`; tested D1 build `fd13bcf3bd32b0af91f33d8492dfa89f441c1e9a`.
 
 The opening, before free walk.
 

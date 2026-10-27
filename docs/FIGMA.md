@@ -38,9 +38,9 @@ What the frames must contain — grid, palette, components, per-demo layouts, an
 
 A player-facing item is not done without that. A logic-only fix can say "no frame change."
 
-## Current acceptance — cycle 0006
+## M0 acceptance — cycle 0006
 
-M0 is complete. Earlier incomplete/pending statements in cycle reports are historical. The human gate is resolved; the operator's explicit M1 hold remains.
+M0 is complete. Earlier incomplete/pending statements in cycle reports are historical. The human gate is resolved; the operator subsequently cleared the M1 hold for cycle 0007.
 
 The recorded URL remains the original integration result, unchanged:
 
@@ -81,4 +81,16 @@ The exact receipts, IDs, palette values, contrast calculations, and per-render r
 
 All art consists of original editable Figma nodes, with no photographs or college marks. Maps are sample layouts/game framing. Class teacher text and the shown response are verbatim from `sample-seminar-questions`; campus dialogue uses the sample `orientation-leader / welcome` line. Escort dialogue is explicitly sample design copy.
 
-This is design acceptance, not a shipped game or live input/save test. The origin input is a filled prototype state. Native text entry, persistence, and the playable D1 build remain M1 work. Navigation was checked through exact reaction/hyperlink readback; no browser click-through or public URL is claimed. M1 was not started.
+This section records M0 design acceptance. At that point the origin input was a filled prototype state, and native text entry, persistence and the playable D1 build remained M1 work. Navigation was checked through exact reaction/hyperlink readback. The shipped D1 evidence follows below.
+
+## D1 implementation — cycle 0007
+
+M1 now implements the accepted letter/origin, train and platform geometry, palette and bundled font. Content is `arrival-letter` in `content/arrival.json`, with existing `middlebury-station` / `station-greeter` references.
+
+New frames were drawn before implementation for phone train (`31:2609`), phone platform (`31:2633`), origin error (`31:2709`), rejected save (`31:2720`) and save unavailable (`31:2732`). D1’s platform Continue opens the existing local feedback form; the M0 five-edge design chain and Cover NODE link remain intact. The template origin affects the ride caption only.
+
+Handoff board `32:2` records the shipped scope and differences. Tested source build: `fd13bcf3bd32b0af91f33d8492dfa89f441c1e9a`. `npm run validate` passed with 21 tests, TypeScript and Vite build; 6 production-browser checks passed. Desktop and phone renders were compared with the corresponding Figma screenshots. There were no supplied static image/SVG assets: the native rectangle geometry is translated into local React/CSS primitives. The matching font is bundled with its SIL OFL license.
+
+The prototype is linked from the D1 row in [DEMOS.md](DEMOS.md) using the original recorded file URL, with Cover → arrival link → Present / Flow 1 instructions. No prototype/public URL was constructed. Exact frame/readback evidence is [D1-handoff.json](figma/D1-handoff.json).
+
+The earlier M0-only statement that no game screens exist is historical. D1 is now a playable local build. Later gameplay phases remain pending.
