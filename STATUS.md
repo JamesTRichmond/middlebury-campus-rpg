@@ -21,6 +21,7 @@ lastGate: "npm run validate — vitest 6 passed, tsc clean, on the bootstrap tre
 | — | operator style brief | D009–D016. Next item is M1-letter-train, not an exit-button shell. |
 | — | playtest goal | D017. Feedback form is in feedback/. Demos D1–D8. Class must match the virtual lesson. |
 | — | Figma first | D018. Next item is M0-figma-file. Do not invent a Figma URL. |
+| — | one goal | D020. GOAL.md is the only goal. The named paste files are pointers. Figma remains primary. |
 
 ## Notes
 

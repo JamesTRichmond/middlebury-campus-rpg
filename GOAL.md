@@ -1,12 +1,10 @@
 # Goal
 
-Build an unofficial, playable RPG that orients a new student to Middlebury College, and design it in Figma first. The player's character is themselves. The feel is a cozy life game: a train into town, a pixel-art map, portraits when people talk, and a dorm you can fuss over.
+You are the continuous builder of an unofficial Middlebury College life RPG in `JamesTRichmond/middlebury-campus-rpg`. The player's character is themselves. College life is the game: arrive, live there, learn the campus and the town, and go to class as that character.
 
-This project is a portfolio piece for a full-stack developer interview at Middlebury College. Figma is a major tool on that developer team, and it is already connected. Figma is the primary tool. Frames, components, prototypes, and accessibility modes live there. The code implements those frames. Using that connected integration is authorized. Do not invent a file URL, do not buy a plan, and do not design a screen only in code.
+This is a portfolio piece for a full-stack developer interview at Middlebury College. Figma is a major tool on that developer team, and the connected Figma integration is already authorized. Figma is the primary tool. Use it whenever a player can see a change, and prefer it for every visual decision. Frames, components, prototypes, and accessibility modes live there. The code implements those frames. Do not invent a file URL, do not buy a plan, do not switch accounts, and do not design a screen only in code.
 
-The game is not a college product. Do not imply endorsement. [docs/FIGMA.md](docs/FIGMA.md) is the file setup.
-
-This file is the goal. [LOOP.md](LOOP.md) is how you pursue it without stopping between cycles. [AGENTS.md](AGENTS.md) is the boundary. If a chat instruction and this file disagree, this file wins until the operator edits it.
+The game is not a college product. Do not imply endorsement. [docs/FIGMA.md](docs/FIGMA.md) is the file setup. This file is the only goal. [LOOP.md](LOOP.md) is how you pursue it without stopping between cycles. [AGENTS.md](AGENTS.md) is the boundary. If a chat instruction and this file disagree, this file wins until the operator edits it. `Middlebury-Campus-RPG-GOAL.md` and `prompts/PASTE-GOAL.md` are pointers. Do not treat them as a second goal.
 
 You are not finished when one feature works. You are finished only when [LOOP.md](LOOP.md) hits a stop condition.
 
@@ -29,6 +27,22 @@ A new student can:
 The first-session script is [docs/EXPERIENCE.md](docs/EXPERIENCE.md).
 
 Tone: welcoming, specific, and unhurried. Not a parody and not a combat game. Missing a task keeps it open.
+
+## Figma
+
+Use the connected Figma integration. Do not ask first. Do not invent a file URL. Do not buy a plan or switch accounts.
+
+Use Figma whenever possible, and always when the player can see the change:
+
+- A new screen, a changed layout, a new component, a new state, a new accessibility mode, a new season look, a new portrait, or a new sprite is a Figma change first.
+- A control used twice becomes a component.
+- Accessibility modes are Figma modes of the same components, not a second design.
+- A logic-only fix with no visible difference may say "no frame change." Anything else updates the frame in the same cycle, records the URL the tool returned, and makes the build match.
+- If the integration fails, write `gates/PENDING-figma.md`, set `stop: human-gate`, and stop. Do not design the screen only in code and backfill Figma later.
+
+One file: `Middlebury Campus RPG (unofficial)`. Pages: Cover, Foundations, Components, Flows, Handoff. Details are in [docs/FIGMA.md](docs/FIGMA.md). Keep the cozy 16-bit to 64-bit look. Figma is not permission to restyle this as a generic web app. No college logos, crests, athletic marks, or real people's photos in the file.
+
+The first backlog item is `M0-figma-file`. Do not start the letter until that file exists.
 
 ## Figma design
 
@@ -67,7 +81,7 @@ A portrait is a separate component from the map sprite. The portrait is the deta
 
 ### Frames
 
-Each demo is a real layout, not a labeled empty frame.
+Each demo is a real layout, not a labeled empty frame. Draw the frame before the matching code.
 
 1. **Letter.** Unofficial acceptance, origin field, continue. Focus order annotated.
 2. **Train.** Window or first-person view, a caption that the ride ends at Middlebury station, then the platform.
@@ -94,6 +108,21 @@ Annotate focus order on the letter and the character creator. Captions are a com
 
 The Cover page links a prototype that plays letter, origin, train, and platform with no dead end. Later demos add their frames to that chain. The Handoff page names, for each shipped frame, the content id it reads and any difference from the build.
 
+## Opening
+
+Each of these screens is a Figma frame before it is code.
+
+1. An acceptance letter that is clearly unofficial. The player sets where they are traveling from. That choice only changes the trip.
+2. A short train ride into Vermont, first person or a window view, ending at Middlebury station (Amtrak MBY, 30 Middle Seymour Street).
+3. A greeter on the platform asks what to call you. This is not the real president and not a named college officer unless `gates/likeness.approved` says so. Control becomes third person.
+4. Character creation: name, pronouns as free text, a wide range of skin tones, hair including textured and protective styles, facial hair, cultural or religious head coverings, and body variety. Accessibility applies from this moment and can be changed later: wheelchair as a real sprite and a real path, captions, visual sound cues, colorblind palettes, high contrast, larger UI, screen-reader names. The escorted walk must be completable in a wheelchair. Do not diagnose anyone.
+5. The greeter walks you through town, across Triangle Park, onto campus, and to your dorm. Triangle Park is a real downtown plaza by the rail tunnel. Using it as the campus door is the game's framing, not an official boundary. The station is about a mile from campus. Do not claim otherwise.
+6. Unpack a few brought items and place doodads. Then an orientation notice sends you downstairs.
+7. Campus objectives: dining, library, and the other central places already in `content/`. Portrait dialogue. Tasks do not expire.
+8. Class: you enter the classroom as your character. The teacher delivers the virtual lesson for that class — the same lesson object from `LessonSource`, not a different speech. You take notes and ask questions. Answers come only from that lesson. Notes persist after you leave. A bundled sample is the first virtual lesson and must be labeled sample. A live LMS or college login waits on `gates/live-lms.approved`.
+9. After campus objectives, Triangle Park opens the town: movie theater and restaurants as sample places until sourced. Do not invent business names.
+10. Later, a season toggle and a trip to the Middlebury Snow Bowl (east on Route 125, not next to the dorm) with one optional minigame. Failure does not block the story.
+
 ## Out of scope until a human gate
 
 - Official affiliation, college logos, or scraped photography.
@@ -113,6 +142,10 @@ The Cover page links a prototype that plays letter, origin, train, and platform 
 - Each demo gate in [docs/DEMOS.md](docs/DEMOS.md) has a Figma prototype and a build a person can play. The build opens [feedback/index.html](feedback/index.html) with its demo id and version. A player-visible change with no frame is not done.
 - Phone and laptop both work once UI exists.
 - Meta cycles make the next cycles faster and stricter. They do not add attractions.
+
+## Facts and people
+
+Facts you state as true need status `verified`, a source URL, and an `asOf` date. Seed and placeholder copy must look unconfirmed. NPCs are archetypes until a likeness or people gate names them. Do not treat "the college uses Figma" as a fact inside the game.
 
 ## Architecture and craft
 
@@ -193,9 +226,13 @@ These rules are the architecture. When a cycle changes a boundary, add a decisio
 4. [STATUS.md](STATUS.md)
 5. [BACKLOG.md](BACKLOG.md)
 6. [DECISIONS.md](DECISIONS.md)
-7. The newest file in [cycles/](cycles/)
-8. The doc linked by the backlog item you are about to touch. For the opening, [docs/EXPERIENCE.md](docs/EXPERIENCE.md). For a demo or playtest, [docs/DEMOS.md](docs/DEMOS.md) and [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md). For anything the player sees, [docs/FIGMA.md](docs/FIGMA.md).
-9. Unprocessed files in [feedback/inbox/](feedback/inbox/), if any.
+7. [docs/FIGMA.md](docs/FIGMA.md)
+8. [docs/EXPERIENCE.md](docs/EXPERIENCE.md)
+9. [docs/DEMOS.md](docs/DEMOS.md)
+10. [docs/LESSON_BRIDGE.md](docs/LESSON_BRIDGE.md)
+11. [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md)
+12. The newest file in [cycles/](cycles/)
+13. Unprocessed files in [feedback/inbox/](feedback/inbox/), if any.
 
 Then execute [LOOP.md](LOOP.md). Do not ask whether to continue. A pasted playtest report becomes the next cycle: file regressions first, then resume the backlog. Do not sit idle waiting for players. Do not skip shipping the demo.
 
@@ -220,6 +257,30 @@ Work in this order. Details and gates live in [BACKLOG.md](BACKLOG.md). Do not r
 
 Phase 9 never ends the loop by itself. After it, file the next concrete improvement from play, or stop on `backlog-empty`.
 
+## Work continuously
+
+After each of phases 1–8 (backlog M1 through M8), the same cycle must leave:
+
+- A Figma prototype whose URL came from the integration
+- A build a person can play
+- A link to `feedback/index.html?demo=<demo id>&version=<git sha>`
+
+Demo ids are in [docs/DEMOS.md](docs/DEMOS.md), `D1-letter-train` through `D8-snow`. Record the real open path. Never invent a public URL. Play the new path once, compare it to the frame, and write what you did. Then start the next cycle. Do not wait idle for players.
+
+## Playtest form
+
+The playtest form is already built. Use it. Do not replace it.
+
+- One question per card
+- Radios, limited checkboxes, move-up/down ranking, and a matrix
+- Back, Next, Skip, unanswered jump, and a review screen
+- Every question has "Add context or write your own answer"
+- `localStorage` in try/catch
+- On Confirm & Submit, copy Markdown that includes this report and any earlier submission from that browser, plus what changed
+- Then offer Copy again, Download .md, and Back to Review
+
+When a report is pasted, save it under `feedback/inbox/` and treat "worse" or "the class does not match the lesson" as a blocker ahead of new scope.
+
 ## Improvement obligation
 
 Keep going. One backlog item, then the next, in the same session, until a stop condition in LOOP.md.
@@ -234,6 +295,16 @@ Every meta cycle, and every cycle that ingests playtest feedback, fix the proces
 
 Do not expand into a new campus, a second school, multiplayer, or combat during a meta cycle. Do not add a farming economy to chase the cozy reference.
 
+## Meta and gates
+
+Every fifth product cycle is a meta cycle: tighten tests and fix repeated failures or content drift. Do not add attractions during a meta cycle.
+
+`npm run validate` must pass before a cycle is done. A gate you did not run is a failure. Three failures on the same item and you stop. Human gates stop you. Do not create the approval files yourself.
+
 ## What you are improving toward
 
 College life at Middlebury, as an RPG: arrive, live in the dorm, learn the campus and the town, and go to class as yourself. The class is not a cutscene that approximates school. It is the virtual lesson, delivered by the teacher, with notes and questions. The interview artifact is the Figma file plus a build that matches it. Demos are how players check that this stayed true from one version to the next.
+
+## Start
+
+Run `npm run validate`. If it passes, begin `M0-figma-file`. Then `M1-letter-train` and its demo `D1-letter-train`.

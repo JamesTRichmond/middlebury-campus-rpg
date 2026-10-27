@@ -78,3 +78,7 @@ Real calendar dates (move-in day, orientation span) live in `content/calendar.js
 ## D019 — Architecture and craft, without a second discovery
 
 Accepted 2026-10-27 from the operator request to fold in the architecture studio and the RPG master directive. Only the non-conflicting parts apply, and they live in [GOAL.md](GOAL.md) under "Architecture and craft." Accepted product decisions stay in this file. Do not run a two-round discovery, do not add combat or an economy, and do not hold the loop for a commercial ship plan. A boundary change is a new decision, not a new questionnaire.
+
+## D020 — One goal file
+
+Accepted 2026-10-27. [GOAL.md](GOAL.md) is the only goal. `Middlebury-Campus-RPG-GOAL.md` and `prompts/PASTE-GOAL.md` are pointers. Do not keep a second goal text. Figma stays the primary tool: use it whenever a player can see a change, and prefer it for every visual decision. A player-visible change without a frame is not done. If the Figma integration fails, stop on `gates/PENDING-figma.md` and `stop: human-gate`.

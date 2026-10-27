@@ -1,3 +1,3 @@
 # Moved
 
-The goal file is [Middlebury-Campus-RPG-GOAL.md](../Middlebury-Campus-RPG-GOAL.md) at the repo root.
+The goal is [GOAL.md](../GOAL.md). Paste that file. This file is a pointer.
