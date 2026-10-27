@@ -30,6 +30,70 @@ The first-session script is [docs/EXPERIENCE.md](docs/EXPERIENCE.md).
 
 Tone: welcoming, specific, and unhurried. Not a parody and not a combat game. Missing a task keeps it open.
 
+## Figma design
+
+The file is not done when the pages exist. This section is what those frames have to show. [docs/FIGMA.md](docs/FIGMA.md) is how the file is organized. If a layout here and a frame disagree, change the frame.
+
+### Grid
+
+- Design the overworld on an integer pixel grid. A logical view of 480×270, shown at whole-number scale so pixels stay square. Do not use a blurry non-integer zoom as the source.
+- Design the letter, creator, dialogue, notebook, and lesson panel as UI frames too: one desktop frame (1280×720) and one phone frame. Same components, not a second design.
+- Seasons are modes of the same map: fall, winter, spring, summer. Do not draw four unrelated maps.
+
+### Color and type
+
+- The palette is original. It is not Middlebury's brand book and not a copy of another game's UI.
+- Record the hex values on the Foundations page once, and use those variables in every frame. Code uses the same values. Do not pick a new accent in a component.
+- UI sits on a warm paper field. Map greens, stone, and snow are tile colors. Text on paper and text on the map both meet contrast in the default mode and in high contrast.
+- One pixel-readable face for the world and dialogue. Do not set body text in a font so thin it breaks at phone size.
+
+### Components
+
+Draw these as components, with the states named:
+
+| Component | States |
+| --- | --- |
+| Button | default, hover, focus, disabled |
+| Text field | empty, filled, focus, error |
+| Letter | unofficial label, body, origin field, continue |
+| Dialogue | nameplate, portrait slot, body, choices |
+| Notice | the orientation "meet downstairs" line |
+| Map HUD | place name, season, open-task hint |
+| Notebook | page, saved lines, close |
+| Lesson panel | lesson title, teacher text, notes, ask box |
+| Character preview | standing sprite and wheelchair sprite, same footprint |
+
+A portrait is a separate component from the map sprite. The portrait is the detailed bust. The sprite is the small figure on the map. Do not reuse one image for both.
+
+### Frames
+
+Each demo is a real layout, not a labeled empty frame.
+
+1. **Letter.** Unofficial acceptance, origin field, continue. Focus order annotated.
+2. **Train.** Window or first-person view, a caption that the ride ends at Middlebury station, then the platform.
+3. **Character.** Name, pronouns as free text, appearance, accessibility options, and a preview that can switch to the wheelchair sprite.
+4. **Escort map.** Station, Triangle Park, campus, dorm. Player and greeter on the grid. Walking and wheelchair versions of the player. Dialogue open over the map in a second state of the same frame.
+5. **Dorm.** A few doodad slots and the orientation notice. The notice does not start the tour by itself.
+6. **Campus.** Dining and library as places you walk to. Portrait dialogue open.
+7. **Class.** The player's character is in the room. The teacher portrait and the lesson text are the virtual lesson, with a notes column and an ask box. Annotate the lesson id the panel reads.
+8. **Town.** Triangle Park as the door to town. Theater and food as sample, labeled sample.
+9. **Seasons and Snow Bowl.** The season control on the same map, plus the optional trip and one minigame frame. Skipping or failing the minigame is a visible path, not a locked door.
+
+### Accessibility modes
+
+On the letter, the dialogue, and the map, show these as Figma modes of the same components:
+
+- default
+- high contrast
+- larger UI
+- a colorblind palette
+
+Annotate focus order on the letter and the character creator. Captions are a component on the dialogue, on by default. The wheelchair sprite has idle and a step, facing four directions, on the same cell size as the walking sprite.
+
+### Prototype
+
+The Cover page links a prototype that plays letter, origin, train, and platform with no dead end. Later demos add their frames to that chain. The Handoff page names, for each shipped frame, the content id it reads and any difference from the build.
+
 ## Out of scope until a human gate
 
 - Official affiliation, college logos, or scraped photography.

@@ -21,8 +21,7 @@ Create the Figma file with the connected integration. Do this before any game sc
 
 - File name: `Middlebury Campus RPG (unofficial)`.
 - Pages from [docs/FIGMA.md](docs/FIGMA.md): Cover, Foundations, Components, Flows, Handoff.
-- Foundations include the pixel grid, type, color, and accessibility modes (default, high contrast, larger UI, colorblind palettes).
-- Starter components: letter, dialogue box, portrait frame, button.
+- Foundations and the starter frames follow the **Figma design** section of [GOAL.md](GOAL.md): pixel grid, recorded palette, letter, dialogue, portrait, button, and the accessibility modes. Empty pages do not pass.
 - Cover states that the prototype is unofficial and not a college product.
 - Write the file URL the integration returns into `docs/FIGMA.md` and STATUS. The cycle report quotes the tool result. No invented URL.
 - If the integration fails, `gates/PENDING-figma.md` and `stop: human-gate`. Do not start M1 instead.

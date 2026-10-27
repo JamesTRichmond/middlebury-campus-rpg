@@ -25,6 +25,8 @@ Create one file named `Middlebury Campus RPG (unofficial)`. Record the URL the i
 
 Keep the cozy 16-bit to 64-bit look. Figma is not permission to restyle this as a generic web app.
 
+What the frames must contain — grid, palette, components, per-demo layouts, and accessibility modes — is the **Figma design** section of [GOAL.md](../GOAL.md). Empty pages do not satisfy it.
+
 ## When a cycle changes what the player sees
 
 1. Update the component or frame, including the accessibility mode that the story touches.

@@ -42,6 +42,57 @@ If the player can see a change, update the frame before the item is done, record
 
 The first backlog item is `M0-figma-file`. Do not start the letter until that file exists.
 
+## Figma design
+
+The file is not done when the pages exist. Draw these layouts. If a frame and this section disagree, change the frame.
+
+### Grid
+
+- Overworld on an integer pixel grid. Logical view 480×270, shown at whole-number scale so pixels stay square.
+- Letter, creator, dialogue, notebook, and lesson panel: one desktop frame (1280×720) and one phone frame. Same components.
+- Seasons are modes of the same map: fall, winter, spring, summer. Not four unrelated maps.
+
+### Color and type
+
+- Original palette. Not Middlebury's brand book and not another game's UI.
+- Record the hex values once on Foundations and use those variables everywhere, including code.
+- Warm paper for UI. Map greens, stone, and snow are tile colors. Text meets contrast in default and high contrast.
+- One pixel-readable face for the world and dialogue.
+
+### Components and states
+
+- Button: default, hover, focus, disabled
+- Text field: empty, filled, focus, error
+- Letter: unofficial label, body, origin field, continue
+- Dialogue: nameplate, portrait slot, body, choices
+- Notice: the orientation line
+- Map HUD: place name, season, open-task hint
+- Notebook: page, saved lines, close
+- Lesson panel: title, teacher text, notes, ask box
+- Character preview: standing sprite and wheelchair sprite, same footprint
+
+The portrait is the detailed bust. The map sprite is the small figure. Do not reuse one image for both.
+
+### Frames
+
+1. **Letter.** Unofficial acceptance, origin, continue. Focus order annotated.
+2. **Train.** Window or first-person view, caption that the ride ends at Middlebury station, then the platform.
+3. **Character.** Name, free-text pronouns, appearance, accessibility, preview that switches to the wheelchair sprite.
+4. **Escort map.** Station, Triangle Park, campus, dorm. Player and greeter on the grid. Walking and wheelchair versions. A second state with dialogue open over the map.
+5. **Dorm.** Doodad slots and the orientation notice. The notice does not start the tour by itself.
+6. **Campus.** Dining and library as places you walk to. Portrait dialogue open.
+7. **Class.** The character is in the room. Teacher portrait and lesson text are the virtual lesson, with notes and an ask box. Annotate the lesson id.
+8. **Town.** Triangle Park as the door. Theater and food labeled sample.
+9. **Seasons and Snow Bowl.** Season control on the same map, the trip, and one minigame. Skipping or failing it is a visible path.
+
+### Accessibility modes
+
+On the letter, the dialogue, and the map, show default, high contrast, larger UI, and a colorblind palette as modes of the same components. Annotate focus order on the letter and the creator. Captions are on by default. The wheelchair sprite has idle and a step, four directions, same cell size as the walking sprite.
+
+### Prototype
+
+Cover links a prototype that plays letter, origin, train, and platform with no dead end. Later demos extend that chain. Handoff names the content id each shipped frame reads, and any difference from the build.
+
 ## Feel
 
 Cozy pixel art in a 16-bit to 64-bit range, in the spirit of Stardew Valley and Harvest Moon, not a copy of either. Map sprites stay small. Dialogue opens a more detailed portrait. Seasons are a toggle on the same map.
