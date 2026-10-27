@@ -2,7 +2,7 @@
 
 Unofficial orientation RPG for new students at Middlebury College. This repository is the working environment for a coding agent. It is **not** affiliated with, endorsed by, or speaking for Middlebury College. Do not use college logos or depict real people.
 
-The playable game is not built yet. The next agent starts at backlog item `M0-figma-file`, then `M1-letter-train`. Figma is the primary design tool. The goal to paste is [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md). If that prompt and `GOAL.md` disagree, `GOAL.md` wins until the operator edits it.
+The playable game is not built yet. The next agent starts at backlog item `M0-figma-file`, then `M1-letter-train`. Figma is the primary design tool. The goal file is [Middlebury-Campus-RPG-GOAL.md](Middlebury-Campus-RPG-GOAL.md). If that file and `GOAL.md` disagree, `GOAL.md` wins until the operator edits it.
 
 ## Loop, short version
 
