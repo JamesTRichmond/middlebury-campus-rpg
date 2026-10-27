@@ -36,6 +36,15 @@ npm run validate
 
 `npm run validate` is `vitest` plus `tsc`. There is no client yet; the green suite means the seed content is internally consistent.
 
+## Codex Cloud
+
+Paste these into the environment's setup fields before publishing:
+
+- Install script: [scripts/codex-install.sh](scripts/codex-install.sh)
+- Start skill: [.codex/start-skill.md](.codex/start-skill.md)
+
+There is no game server. Do not invent a public URL.
+
 ## Map
 
 | File | Why it exists |
