@@ -1,3 +1,11 @@
+# Resolved Figma gate — cycle 0006
+
+The operator explicitly cleared the human gate and authorized this repair in chat. The supported Cover NODE hyperlink and preserved five-edge chain read back successfully. All 43 Flows frames were rendered and visually reviewed; final bounds and auto-layout overlap checks have no issues. M0 passed design acceptance and npm run validate (12 tests, TypeScript clean). This record is a resolution log, not a newly created human approval file.
+
+M1 remains unstarted under the operator's explicit hold. Current evidence is docs/figma/M0-acceptance.json and cycles/0006-figma-acceptance.md.
+
+## Historical pending record
+
 # Pending Figma verification
 
 - Item: M0-figma-file

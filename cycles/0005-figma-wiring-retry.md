@@ -17,3 +17,7 @@ Quote and full tool results: docs/figma/M0-wiring-retry-evidence.json. No screen
 ## Gate
 
 Observed: npm run validate exited 0 (12 tests passed, TypeScript clean). git diff --check exited 0.
+
+## Resolution
+
+Cycle 0006 resolved this gate with a supported internal NODE hyperlink on Cover and full design acceptance. See cycles/0006-figma-acceptance.md. The original failure above remains historical evidence.

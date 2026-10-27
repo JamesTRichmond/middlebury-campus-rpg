@@ -14,6 +14,8 @@ Create one file named `Middlebury Campus RPG (unofficial)`. Record the URL the i
 | Cover | page `0:1`, board `3:510` |
 | Foundations | page `2:2`, board `3:517` |
 | Components | page `2:3`; Letter `3:50`, Dialogue `3:35`, Portrait `3:25` |
+| Flows | page `2:4`; 43 rendered layouts and mode/state specimens |
+| Handoff | page `2:5`, board `3:528` |
 
 ## Pages
 
@@ -36,34 +38,47 @@ What the frames must contain — grid, palette, components, per-demo layouts, an
 
 A player-facing item is not done without that. A logic-only fix can say "no frame change."
 
-## M0 integration evidence
+## Current acceptance — cycle 0006
 
-Observed 2026-10-27: Primary authentication and file access succeeded. The existing file was reused. The original creation tool returned:
+M0 is complete. Earlier incomplete/pending statements in cycle reports are historical. The human gate is resolved; the operator's explicit M1 hold remains.
+
+The recorded URL remains the original integration result, unchanged:
 
 ```json
 {"file_key":"RgmU4XGp5hEYxNTBlvXlOS","file_url":"https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS","message":"File \"Middlebury Campus RPG (unofficial)\" created successfully."}
 ```
 
-Flows page `2:4` contains desktop (1280×720) and phone starter letter/dialogue specimens in default, high contrast, larger UI, and colorblind modes. These use the same components. The larger phone letter is 390×1004 after repairing text reflow; it is a scrollable design specimen. Map specimen is 480×270 at integer coordinates. Handoff page `2:5` records content mappings and build differences.
+Cover has a supported cross-page internal node hyperlink, not a NAVIGATE action or a constructed URL. Exact readback:
 
-Typography is Atkinson Hyperlegible Mono Regular, verified in the rendered text. Larger UI scales shared instances 1.25×. Original palette variables bind fills and text. The generic colorblind mode replaces pine with blue; individual palettes and wheelchair animation remain later milestone work. No playable D1 demo or train prototype is claimed by M0.
+```json
+{"coverLink":{"type":"NODE","value":"3:86"}}
+```
 
-Exact IDs and tool evidence: [M0-state.json](figma/M0-state.json). The PR keeps M0 doing until merge under LOOP's assigned-branch rule.
+Follow the Cover link to Letter, then use Present / Flow 1. The existing five-edge chain was preserved and read back:
 
-## Cycle 0004 reconciliation — incomplete
+| Source frame | Control | Destination frame |
+| --- | --- | --- |
+| Letter `3:86` | `I3:87;3:57` | Origin `11:1029` |
+| Origin `11:1029` | `I11:1030;3:57` | Train `8:614` |
+| Train `8:614` | `8:628` | Platform `8:630` |
+| Platform `8:630` | `8:674` | Character `8:368` |
+| Character `8:368` | `I8:369;6:184` | Letter `3:86` |
 
-Observed: remote main contained PR #1 at 0521bba; unavailable commit 563faa5 was not fabricated. Reconstructed human gate was pushed as 9bdd474 before retrying.
+All 43 Flows frames were rendered and visually reviewed. Final tool readback reports `frameBoundsIssues: []`, `autoLayoutOverlapIssues: []`, and `imageFilledNodes: 0`. The source audit reports seven 480×270 maps, `pixelIssues: []`, and sixteen 32×32 standing/wheelchair facing/motion variants.
 
-Connected open result: `{"surface":"thread"}`. It returned no fresh URL. The real URL above remains exactly the original creation tool's `file_url`, quoted in the M0 integration evidence. No new file or URL was invented.
+| GOAL requirement | Accepted design evidence |
+| --- | --- |
+| Original palette, type, contrast, grid | Foundations board `3:517`; 17 color variables with recorded mode hex values. Ink/paper minimum 11.60:1; paper/pine minimum 6.43:1. |
+| Named components and states | Button and text-field four-state sets; Letter, Dialogue, Notice, Map HUD, Notebook, Lesson panel, Character preview; review board `23:231`. |
+| Standing and wheelchair | 16 sprite variants, source 32×32, review `23:270`; preview variants `6:142` and `17:182` with reciprocal CHANGE_TO links. |
+| Desktop and phone UI | Shared letter, creator, dialogue, notebook and lesson components; desktop 1280×720, phone 390 px with full-height scrollable specimens where needed. |
+| Accessibility and seasons | Same letter/dialogue/map components in default, high contrast, larger UI and colorblind modes. Four seasons use the same map/ground variable. |
+| Real layouts | Letter/origin, train/platform, creator, escort and dialogue-open state, dorm/doodad slots/notice, campus/dining/library, class with teacher portrait/lesson/notes/ask fields, sample town, Snow Bowl and optional minigame. |
+| Nonblocking outcomes | Skipped, finished and missed minigame states each navigate back to Snow Bowl `8:878`. |
+| Handoff | Board `3:528` names content IDs and differences from the build for every scene. |
 
-Added component families: Notice, Map HUD, Notebook, Lesson panel, Character preview, Character creator; 16 walking/wheelchair idle/step and four-direction sprite variants; four seasonal modes on the shared map; and additional starter scenes including train and platform. The class panel uses sample-seminar-questions verbatim excerpts. These new layouts have not passed full visual acceptance.
+The exact receipts, IDs, palette values, contrast calculations, and per-render review manifest are [M0-acceptance.json](figma/M0-acceptance.json). Earlier evidence files remain an audit trail; the acceptance file supersedes their outdated dimensions and pending state. The preview sizing delta in the acceptance file supersedes the earlier source-audit height for the two preview variants.
 
-Prototype wiring then failed: `TypeError: cannot read property 'setReactionsAsync' of undefined` (debug UUID 63e0cb11-1a6a-4ba5-af3c-1df40d637300). The earlier claim that M0 setup was complete is superseded: opening prototype and remaining design acceptance are incomplete. Keep M0 doing and stop: human-gate. No M1 work.
+All art consists of original editable Figma nodes, with no photographs or college marks. Maps are sample layouts/game framing. Class teacher text and the shown response are verbatim from `sample-seminar-questions`; campus dialogue uses the sample `orientation-leader / welcome` line. Escort dialogue is explicitly sample design copy.
 
-Tool results: [M0-reconciliation-evidence.json](figma/M0-reconciliation-evidence.json). Partial origin clone may exist and needs inspection at the next authorized retry. The historical audit's root name was `Document`; this was not treated as a new file title or a newly returned URL.
-
-## Cycle 0005 — internal wiring repaired, gate remains
-
-Inspection returned `origins: []`; actual control instances are named `Button`. Origin frame `11:1029` was created, and tool readback verified ON_CLICK/NAVIGATE edges for letter → origin → train → platform → character → letter. Cover navigation then failed because NAVIGATE destinations must be on the same page. Debug UUID: c52327d6-fe5b-41b4-9904-a8666706dba3. Full visual acceptance was not completed after this failure. No new URL was constructed.
-
-Exact results: [M0-wiring-retry-evidence.json](figma/M0-wiring-retry-evidence.json). Keep M0 doing and stop: human-gate; inspect partial Cover state and use a supported cross-page link at the next authorized retry.
+This is design acceptance, not a shipped game or live input/save test. The origin input is a filled prototype state. Native text entry, persistence, and the playable D1 build remain M1 work. Navigation was checked through exact reaction/hyperlink readback; no browser click-through or public URL is claimed. M1 was not started.

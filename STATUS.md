@@ -1,43 +1,31 @@
 # Status
 
-Keep this file under 120 lines. Cycle narrative goes in `cycles/`.
-
 ```yaml
-cycle: 5
+cycle: 6
 lastMetaCycle: 0
-productCyclesSinceMeta: 0
-lock: "codex-root"
-stop: human-gate
-current: M0-figma-file
-next: M0-figma-file
-lastGate: "npm run validate passed: 12 tests, tsc clean. Figma internal chain readback passed; Cover cross-page NAVIGATE failed (INVALID_ARGUMENT). human-gate."
+productCyclesSinceMeta: 1
+lock: ""
+stop: operator-hold
+current: none
+next: M1-letter-train
+lastGate: "M0 Figma acceptance passed: Cover NODE link, preserved five-edge chain, 43 rendered frames, no bounds/overlap issues. npm run validate: 12 tests passed, TypeScript clean."
 ```
 
 ## Index
 
 | Cycle | Item | Result |
 | --- | --- | --- |
-| 0000 | bootstrap | Environment landed. No player-facing game yet. |
-| — | operator style brief | D009–D016. That brief named M1-letter-train. D018 superseded the next item: it is M0-figma-file. |
-| — | playtest goal | D017. Feedback form is in feedback/. Demos D1–D8. Class must match the virtual lesson. |
-| — | Figma first | D018. Next item is M0-figma-file. Do not invent a Figma URL. |
-| — | one goal | D020. GOAL.md is the only goal. The named paste files are pointers. Figma remains primary. |
+| 0000 | bootstrap | Content/environment foundation. |
+| 0001–0002 | operator notes | Historical alignment notes; not product cycles. |
+| 0003 | M0-figma-file | Initial file setup, merged in PR #1; incomplete acceptance. |
+| 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
+| 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
+| 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
 
-## Notes
-
-- Integrator: first agent to start a session sets `lock` to its name.
-- Do not list future ideas here. File them only through the loop's rules.
-- Newest cycle note is `cycles/0002-one-goal.md`. Older notes that name `M1-shell` or `M1-letter-train` as next are historical.
-
-## M0 review
+## Current handoff
 
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
-- Branch: cycle/0003-figma-file. Assigned host branch requires PR; M0 stays doing until merge. M1 has not started.
-
-## Gate reconciliation
-
-Operator requested reconstruction of unavailable commit 563faa5. See gates/PENDING-figma.md and cycles/0004-figma-reconciliation.md. M0 remains doing; M1 has not started.
-
-- Cycle 0004: authentication/open succeeded; prototype wiring failed. Pending gate remains. Design acceptance incomplete.
-
-- Cycle 0005: internal chain repaired; Cover cross-page NAVIGATE rejected. Full visual acceptance incomplete. stop remains human-gate. See cycles/0005-figma-wiring-retry.md.
+- Cover text `3:515` links internally to Letter `3:86`; then use Present / Flow 1.
+- Evidence: docs/figma/M0-acceptance.json; newest cycle: cycles/0006-figma-acceptance.md.
+- Resolved gate: gates/resolved/figma-cycle-0006.md. No pending Figma gate or approval file was created.
+- Stop is operator-hold because the operator explicitly instructed not to start M1. M1 has not started. No playable D1 or public build is claimed.

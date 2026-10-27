@@ -11,11 +11,13 @@ When an item below is marked done, also publish its demo in the same cycle (LOOP
 ## M0-figma-file
 
 ```yaml
-status: doing
+status: done
 blockedBy: []
 humanGate: no
 owner: "codex-root"
 ```
+
+Completed 2026-10-27 — `cycle 0006: M0-figma-file acceptance`. Design acceptance and validation passed; no playable M1 demo is claimed.
 
 Create the Figma file with the connected integration. Do this before any game screen.
 
