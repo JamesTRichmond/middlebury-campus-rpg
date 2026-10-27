@@ -11,10 +11,10 @@ When an item below is marked done, also publish its demo in the same cycle (LOOP
 ## M0-figma-file
 
 ```yaml
-status: ready
+status: doing
 blockedBy: []
 humanGate: no
-owner: ""
+owner: "codex-root"
 ```
 
 Create the Figma file with the connected integration. Do this before any game screen.

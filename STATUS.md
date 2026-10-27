@@ -6,11 +6,11 @@ Keep this file under 120 lines. Cycle narrative goes in `cycles/`.
 cycle: 0
 lastMetaCycle: 0
 productCyclesSinceMeta: 0
-lock: ""
+lock: "codex-root"
 stop: none
-current: none
+current: M0-figma-file
 next: M0-figma-file
-lastGate: "npm run validate — vitest 6 passed, tsc clean, on the bootstrap tree before the seed commit (2026-10-27). Re-run at session start."
+lastGate: "NOT RUN: npm run validate; execution workspace is still pending. M0 cannot be marked done."
 ```
 
 ## Index
