@@ -3,11 +3,11 @@
 Keep this file under 120 lines. Cycle narrative goes in `cycles/`.
 
 ```yaml
-cycle: 3
+cycle: 4
 lastMetaCycle: 0
 productCyclesSinceMeta: 0
 lock: "codex-root"
-stop: none
+stop: human-gate
 current: M0-figma-file
 next: M0-figma-file
 lastGate: "npm run validate passed: 12 tests and tsc clean. Figma file access and starter composition checked. M0 remains doing pending PR merge."
@@ -33,3 +33,7 @@ lastGate: "npm run validate passed: 12 tests and tsc clean. Figma file access an
 
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
 - Branch: cycle/0003-figma-file. Assigned host branch requires PR; M0 stays doing until merge. M1 has not started.
+
+## Gate reconciliation
+
+Operator requested reconstruction of unavailable commit 563faa5. See gates/PENDING-figma.md and cycles/0004-figma-reconciliation.md. M0 remains doing; M1 has not started.
