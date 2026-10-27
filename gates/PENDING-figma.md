@@ -22,3 +22,13 @@ at <anonymous> (PLUGIN_3_SOURCE:10:11)
 Figma Debug UUID: `63e0cb11-1a6a-4ba5-af3c-1df40d637300`. Tool classification: INVALID_ARGUMENT; safeToRetryWithoutCanvasRead: true. This is a script node-lookup failure, not an authentication failure. The operator's stop-on-Figma-failure instruction prevents retry this turn. No approval file was created.
 
 The script cloned an origin frame before failing; that partial change was not inspected after the failure. Opening prototype, Cover link, full visual audit, and final GOAL acceptance remain incomplete. M0 is doing; M1 has not started. Next authorized retry should inspect actual instance names, repair wiring, and validate every required layout before clearing this gate.
+
+## Latest authorized repair attempt
+
+Observed inspection returned `origins: []`. No partial origin clone survived the prior failed call. Actual control instances are named `Button`, not `State=default`. Using those names repaired the internal five-edge opening chain and created origin frame `11:1029`.
+
+Tool readback returned letter button `I3:87;3:57` → `11:1029`, origin button `I11:1030;3:57` → `8:614`, train `8:628` → `8:630`, platform `8:674` → `8:368`, and character `I8:369;6:184` → `3:86`, all with ON_CLICK/NAVIGATE reactions.
+
+Cover wiring failed with INVALID_ARGUMENT: `for NAVIGATE actions, destinations must be a different top-level frame on the same page`. Debug UUID: `c52327d6-fe5b-41b4-9904-a8666706dba3`. No further Figma calls followed. Cover link and full visual acceptance remain incomplete. The operator's requested phrase “gate cleared” was not treated as evidence that the subsequent checks passed.
+
+Next authorized repair must use a supported cross-page link on Cover, rather than a NAVIGATE reaction to a different page. Inspect for any partial Cover button before editing. The internal chain should be preserved and read back. Then finish the full visual audit before clearing stop. No M1 work.

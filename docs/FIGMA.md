@@ -61,3 +61,9 @@ Added component families: Notice, Map HUD, Notebook, Lesson panel, Character pre
 Prototype wiring then failed: `TypeError: cannot read property 'setReactionsAsync' of undefined` (debug UUID 63e0cb11-1a6a-4ba5-af3c-1df40d637300). The earlier claim that M0 setup was complete is superseded: opening prototype and remaining design acceptance are incomplete. Keep M0 doing and stop: human-gate. No M1 work.
 
 Tool results: [M0-reconciliation-evidence.json](figma/M0-reconciliation-evidence.json). Partial origin clone may exist and needs inspection at the next authorized retry. The historical audit's root name was `Document`; this was not treated as a new file title or a newly returned URL.
+
+## Cycle 0005 — internal wiring repaired, gate remains
+
+Inspection returned `origins: []`; actual control instances are named `Button`. Origin frame `11:1029` was created, and tool readback verified ON_CLICK/NAVIGATE edges for letter → origin → train → platform → character → letter. Cover navigation then failed because NAVIGATE destinations must be on the same page. Debug UUID: c52327d6-fe5b-41b4-9904-a8666706dba3. Full visual acceptance was not completed after this failure. No new URL was constructed.
+
+Exact results: [M0-wiring-retry-evidence.json](figma/M0-wiring-retry-evidence.json). Keep M0 doing and stop: human-gate; inspect partial Cover state and use a supported cross-page link at the next authorized retry.

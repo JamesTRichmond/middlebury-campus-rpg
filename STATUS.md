@@ -3,14 +3,14 @@
 Keep this file under 120 lines. Cycle narrative goes in `cycles/`.
 
 ```yaml
-cycle: 4
+cycle: 5
 lastMetaCycle: 0
 productCyclesSinceMeta: 0
 lock: "codex-root"
 stop: human-gate
 current: M0-figma-file
 next: M0-figma-file
-lastGate: "Figma prototype wiring failed: undefined button node (INVALID_ARGUMENT); human-gate. npm run validate result recorded in cycle 0004."
+lastGate: "npm run validate passed: 12 tests, tsc clean. Figma internal chain readback passed; Cover cross-page NAVIGATE failed (INVALID_ARGUMENT). human-gate."
 ```
 
 ## Index
@@ -39,3 +39,5 @@ lastGate: "Figma prototype wiring failed: undefined button node (INVALID_ARGUMEN
 Operator requested reconstruction of unavailable commit 563faa5. See gates/PENDING-figma.md and cycles/0004-figma-reconciliation.md. M0 remains doing; M1 has not started.
 
 - Cycle 0004: authentication/open succeeded; prototype wiring failed. Pending gate remains. Design acceptance incomplete.
+
+- Cycle 0005: internal chain repaired; Cover cross-page NAVIGATE rejected. Full visual acceptance incomplete. stop remains human-gate. See cycles/0005-figma-wiring-retry.md.

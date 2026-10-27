@@ -15,3 +15,7 @@ Prototype wiring then failed with `TypeError: cannot read property 'setReactions
 ## Gate
 
 `npm run validate` passed before the gate reconstruction was pushed: 12 tests, TypeScript clean. Final handoff validation also exited 0: 12 tests passed, TypeScript clean. git diff --check passed. Stop reason: human-gate.
+
+## Subsequent repair
+
+See cycles/0005-figma-wiring-retry.md: internal button lookup and chain were repaired, but Cover cross-page navigation failed. Human gate remains pending.
