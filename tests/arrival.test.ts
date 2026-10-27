@@ -25,6 +25,7 @@ describe("D1 arrival", () => {
     expect({ ...a, origin: "" }).toEqual({ ...b, origin: "" });
     expect(rideCaption(a, content)).toContain("Home A");
     expect(rideCaption(b, content)).toContain("Home B");
+    expect(rideCaption(startArrival("$& Home", content), content)).toContain("$& Home");
     expect(originSchema.safeParse("   ").success).toBe(false);
     expect(originSchema.safeParse("x".repeat(81)).success).toBe(false);
   });

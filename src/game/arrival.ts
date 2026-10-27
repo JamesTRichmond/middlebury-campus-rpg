@@ -46,7 +46,7 @@ export function arrive(save: Save, content: GameContent): Save {
 }
 
 export function rideCaption(save: Save, content: GameContent): string {
-  return content.arrival.trainCaption.replace("{origin}", save.origin);
+  return content.arrival.trainCaption.replace("{origin}", () => save.origin);
 }
 
 export function readJourney(storage: StorageLike | null, content: GameContent): { save: Save | null; readOnly: boolean; warning?: string } {
