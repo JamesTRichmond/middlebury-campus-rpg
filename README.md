@@ -2,21 +2,7 @@
 
 Unofficial orientation RPG for new students at Middlebury College. This repository is the working environment for a coding agent. It is **not** affiliated with, endorsed by, or speaking for Middlebury College. Do not use college logos or depict real people.
 
-The playable game is not built yet. Cycle 0 is the goal, the continuous loop, and content gates. The next agent starts at backlog item `M1-shell`.
-
-## Paste this as the agent goal
-
-```text
-Build the unofficial Middlebury College orientation RPG described in GOAL.md of JamesTRichmond/middlebury-campus-rpg.
-
-Every session, read AGENTS.md, GOAL.md, LOOP.md, STATUS.md, BACKLOG.md, DECISIONS.md, docs/EXPERIENCE.md, and the newest file in cycles/. Then execute LOOP.md until a stop condition. Do not ask whether to continue between cycles. One backlog item per cycle. Fail closed: gates must actually pass, campus facts you state as true need a source, and you may not invent real faculty, staff, or students or use their photos.
-
-The feel is a cozy pixel-art life game. The player opens an acceptance letter, sets where they are traveling from, rides a train to Middlebury station, creates an inclusive character with accessibility options including a wheelchair, walks with a greeter through Triangle Park to a dorm, unpacks, then does campus orientation. Town and the Snow Bowl unlock later. Seasons are a map toggle. Dialogue uses a portrait. Do not copy Stardew Valley's assets or systems.
-
-Start by running npm run validate and recording the real result. If it passes, begin M1-letter-train.
-```
-
-If that prompt and `GOAL.md` ever disagree, `GOAL.md` wins until the operator edits it.
+The playable game is not built yet. The next agent starts at backlog item `M1-letter-train`. The goal to paste is [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md). If that prompt and `GOAL.md` disagree, `GOAL.md` wins until the operator edits it.
 
 ## Loop, short version
 
@@ -24,10 +10,20 @@ If that prompt and `GOAL.md` ever disagree, `GOAL.md` wins until the operator ed
 2. Implement only that.
 3. Run its gate, including `npm run validate`.
 4. Write `cycles/NNNN-*.md`, update `STATUS.md`, commit.
-5. Every fifth product cycle, run a meta cycle that tightens tests and fixes repeated failures without adding scope.
-6. Start the next cycle. Stop only for a human gate, three gate failures, an operator hold, or an empty backlog.
+5. Every fifth product cycle, run a meta cycle that tightens tests and fixes repeated failures without adding scope. Pasted playtest feedback jumps ahead of new features.
+6. After each of M1–M8, ship a playable demo linked to the feedback form, then start the next cycle. Stop only for a human gate, three gate failures, an operator hold, or an empty backlog.
 
-Human gates (do not create these yourself): `gates/real-people.approved`, `gates/live-lms.approved`.
+Human gates (do not create these yourself): `gates/real-people.approved`, `gates/likeness.approved`, `gates/live-lms.approved`.
+
+## Playtest form
+
+The feedback deck is already built. From the repo:
+
+```sh
+npm run feedback
+```
+
+Then open the local page it prints. A demo should link it with `?demo=D6-class&version=<git-sha>` so the report names the build. Submitting copies Markdown you can paste back to the agent. The same browser keeps earlier answers and the report shows what changed.
 
 ## Commands
 

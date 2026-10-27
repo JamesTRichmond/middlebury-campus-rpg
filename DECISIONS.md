@@ -43,6 +43,10 @@ Middlebury Snow Bowl unlocks after town, as a peripheral trip, not a tile next t
 After the escort, the player unpacks a few brought items and places doodads. Then a notice sends them downstairs to start the campus objectives. Cosmetics save with the character.
 
 
+## D017 — Demos and the skillgame feedback form
+
+Accepted 2026-10-27. Each phase from letter through Snow Bowl ships a playable demo and links [feedback/index.html](feedback/index.html) with `demo` and `version`. The form is the playtest instrument: one question per card, localStorage, clipboard Markdown, and earlier submissions from that browser included so drift is visible. Agents keep building after a demo. Pasted feedback outranks new features. Do not swap in another survey. Changes to the form follow [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md).
+
 ## D003 — Content is the source of truth
 
 Places, NPCs, quests, abilities, and lessons are JSON validated by Zod in `src/content/`. The UI reads the loader. A fact or exit that exists only in a component is a bug.

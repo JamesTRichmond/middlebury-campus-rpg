@@ -19,6 +19,7 @@ lastGate: "npm run validate — vitest 6 passed, tsc clean, on the bootstrap tre
 | --- | --- | --- |
 | 0000 | bootstrap | Environment landed. No player-facing game yet. |
 | — | operator style brief | D009–D016. Next item is M1-letter-train, not an exit-button shell. |
+| — | playtest goal | D017. Feedback form is in feedback/. Demos D1–D8. Class must match the virtual lesson. |
 
 ## Notes
 

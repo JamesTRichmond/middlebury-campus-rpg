@@ -41,6 +41,8 @@ A host goal that says "build the RPG" means "run the loop." It does not mean "im
 | [content/](content/) | Game data |
 | [src/content/](src/content/) | Schema, loader, graph checks |
 | [docs/EXPERIENCE.md](docs/EXPERIENCE.md) | First session: letter, train, greeter, dorm, town, Snow Bowl |
+| [feedback/](feedback/) | Playtest question cards. Do not replace with another survey |
+| [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md) | Rules for those cards, including the pre-flight for a new deck |
 | [cycles/](cycles/) | One report per cycle. The audit trail |
 | [gates/](gates/) | Human approvals. Absence means not approved |
 

@@ -1,10 +1,12 @@
 # Backlog
 
-Order is priority. The first `ready` item whose blockers are `done` is the only legal task. Put player-facing bugs above the current feature when you discover them. Do not mass-file GitHub issues from this list; this file is the queue.
+Order is priority. The first `ready` item whose blockers are `done` is the only legal task. Put player-facing bugs and playtest regressions above the current feature. Do not mass-file GitHub issues from this list; this file is the queue.
 
-The old "exit buttons as the game" plan is withdrawn. D009 replaces it. Scene order: [docs/EXPERIENCE.md](docs/EXPERIENCE.md).
+The old "exit buttons as the game" plan is withdrawn. D009 replaces it. Scene order: [docs/EXPERIENCE.md](docs/EXPERIENCE.md). Demo ids: [docs/DEMOS.md](docs/DEMOS.md).
 
 Status values: `ready`, `doing`, `done`, `blocked`.
+
+When an item below is marked done, also publish its demo in the same cycle (LOOP.md). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
 
 ## M1-letter-train
 
@@ -97,7 +99,7 @@ owner: ""
 
 - Grant `notebook`, `meal-plan`, and `ask-a-question` from the orientation rewards already in the quest JSON.
 - Notes survive reload, including from a save that had none.
-- Sample seminar via `LessonSource`. No network. Responses only from the lesson. Chrome says sample.
+- Sample seminar via `LessonSource`. No network. The teacher delivers that lesson and no other speech. Responses only from the lesson. Chrome says sample, and that this is the virtual lesson for the class. Demo id `D6-class`.
 - Gate: `npm run validate` plus tests for note migration and for a response that is not on the lesson.
 
 ## M7-town

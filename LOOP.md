@@ -25,6 +25,29 @@ Run this until a stop condition. One cycle is one backlog item, one gate, one cy
 8. If this success makes five product cycles since the last meta cycle, the next cycle is a meta cycle (below), not the next feature.
 9. Otherwise begin the next cycle now. Do not ask "should I continue?"
 
+## Demos
+
+Phases 1 through 8 are demo gates. When you mark one of those backlog items done, that same cycle must also:
+
+1. Leave a build a person can play. Prefer a static build or a URL the host already allows you to publish. Record the real open path or URL in [docs/DEMOS.md](docs/DEMOS.md) and in STATUS. If you cannot publish, say `local` and the command to open it. Never invent a public URL.
+2. Point that build at the feedback form with the demo id and version filled in: `feedback/index.html?demo=<id>&version=<sha>`.
+3. Play the new path once yourself and write what you actually did in the cycle report. A build you did not open is not a demo.
+
+Then continue to the next backlog item. Do not stop the loop to wait for players.
+
+## Feedback
+
+The form is [feedback/index.html](feedback/index.html). The rules for changing it are [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md). Do not replace it with a different survey.
+
+When the operator pastes a feedback report, or a file appears in `feedback/inbox/`:
+
+1. That report is the next cycle, ahead of new features.
+2. Save the paste as `feedback/inbox/YYYY-MM-DD-<demo>-<version>.md` if it is not already a file.
+3. Read the "previous submission" and "what changed" sections. File regressions and anything marked worse at the head of the backlog. Do not re-ask questions the player already answered.
+4. Then resume the loop.
+
+A demo is not accepted as progress if the newest report for that demo says the promised scene is missing or the class does not match the virtual lesson. Fix that before adding scope.
+
 ## Meta cycle
 
 1. Read the last five `cycles/*.md` reports, excluding older meta reports.

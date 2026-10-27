@@ -1,6 +1,8 @@
 # Lesson bridge
 
-The classroom and the "virtual lesson" are the same data, read through one interface.
+The classroom and the virtual lesson are the same data. The teacher in the game does not improvise a parallel lecture. If the player is in a class, every line the teacher speaks, and every answer to a question, comes from the lesson object `LessonSource` returned for that class.
+
+Bundled lessons are the first virtual lessons. A later live adapter, only after `gates/live-lms.approved`, must map into this same shape. It still may not invent instructor speech. Notes and questions store the lesson id so a new version of the lesson can be compared with what the player already wrote.
 
 ```ts
 type LessonBlock = { id: string; kind: "explain" | "prompt"; text: string };

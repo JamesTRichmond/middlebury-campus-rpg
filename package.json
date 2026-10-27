@@ -9,7 +9,8 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "validate": "vitest run && tsc --noEmit"
+    "validate": "vitest run && tsc --noEmit",
+    "feedback": "node scripts/serve-feedback.mjs"
   },
   "dependencies": {
     "zod": "^3.24.2"
