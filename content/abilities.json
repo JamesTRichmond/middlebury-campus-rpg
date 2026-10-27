@@ -1,0 +1,38 @@
+[
+  {
+    "id": "campus-sense",
+    "name": "Campus sense",
+    "description": "See the exits from the place you are in.",
+    "startsUnlocked": true
+  },
+  {
+    "id": "notebook",
+    "name": "Notebook",
+    "description": "Write notes tied to a place or a lesson and read them later.",
+    "startsUnlocked": false
+  },
+  {
+    "id": "meal-plan",
+    "name": "Meal plan",
+    "description": "Remember that unlimited meals are the dining halls, and retail spots are separate.",
+    "startsUnlocked": false
+  },
+  {
+    "id": "ask-a-question",
+    "name": "Ask a question",
+    "description": "Choose a question prompt during a lesson and hear the response stored on that lesson.",
+    "startsUnlocked": false
+  },
+  {
+    "id": "town-key",
+    "name": "Town key",
+    "description": "Unlock the downtown stand-in.",
+    "startsUnlocked": false
+  },
+  {
+    "id": "trail-legs",
+    "name": "Trail legs",
+    "description": "Unlock the outdoors stand-in.",
+    "startsUnlocked": false
+  }
+]

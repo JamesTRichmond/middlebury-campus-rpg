@@ -1,0 +1,23 @@
+[
+  {
+    "id": "orientation-span",
+    "text": "The orientation FAQ fetched 2026-10-27 said Fall Orientation and Feb Orientation run from Wednesday through Sunday.",
+    "status": "verified",
+    "sourceUrl": "https://www.middlebury.edu/college/orientation/faq",
+    "asOf": "2026-10-27"
+  },
+  {
+    "id": "fall-move-in-2026",
+    "text": "The orientation FAQ fetched 2026-10-27 listed fall move-in as Wednesday, September 9, 2026. Re-verify before showing this as current.",
+    "status": "verified",
+    "sourceUrl": "https://www.middlebury.edu/college/orientation/faq",
+    "asOf": "2026-10-27"
+  },
+  {
+    "id": "spring-move-in-2027",
+    "text": "The orientation FAQ fetched 2026-10-27 listed spring move-in as Wednesday, February 3, 2027. Re-verify before showing this as current.",
+    "status": "verified",
+    "sourceUrl": "https://www.middlebury.edu/college/orientation/faq",
+    "asOf": "2026-10-27"
+  }
+]

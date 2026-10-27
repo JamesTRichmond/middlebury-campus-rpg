@@ -1,0 +1,39 @@
+[
+  {
+    "id": "sample-seminar-questions",
+    "title": "How to ask a question in seminar",
+    "courseLabel": "Sample first-year seminar (not an official course)",
+    "status": "placeholder",
+    "instructorNpcId": "fys-instructor",
+    "placeId": "seminar-room",
+    "blocks": [
+      {
+        "id": "why",
+        "kind": "explain",
+        "text": "A useful seminar question points at a specific spot in the text or the lecture, then says what you don't yet understand."
+      },
+      {
+        "id": "shape",
+        "kind": "explain",
+        "text": "Try: location, confusion, stake. Where in the idea, what is unclear, and why the answer would change your reading."
+      },
+      {
+        "id": "try",
+        "kind": "prompt",
+        "text": "When you have the Ask a question ability, pick a prompt. The reply is written on this lesson. It is not a live professor."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "too-broad",
+        "question": "Is this reading important?",
+        "instructorResponse": "That is too broad to answer well. Name the paragraph that bothered you and what you expected it to say."
+      },
+      {
+        "id": "located",
+        "question": "In the second claim, is the example doing the work of the definition, or just illustrating it?",
+        "instructorResponse": "That is a seminar question. You located a claim and asked what job the example has. Write it in your notebook before you forget the wording."
+      }
+    ]
+  }
+]

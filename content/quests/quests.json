@@ -1,0 +1,80 @@
+[
+  {
+    "id": "orientation",
+    "title": "Find your footing",
+    "kind": "main",
+    "summary": "Meet an orientation leader, see your hall, eat, visit the library, and sit down in the sample seminar.",
+    "steps": [
+      {
+        "id": "meet-leader",
+        "text": "Talk to the orientation leader on Arrival Green.",
+        "on": { "type": "talk-npc", "npcId": "orientation-leader", "lineId": "welcome" }
+      },
+      {
+        "id": "see-hall",
+        "text": "Go inside your hall.",
+        "on": { "type": "enter-place", "placeId": "your-hall" }
+      },
+      {
+        "id": "eat",
+        "text": "Eat at Proctor.",
+        "on": { "type": "enter-place", "placeId": "proctor" }
+      },
+      {
+        "id": "library",
+        "text": "Visit Davis Family Library.",
+        "on": { "type": "enter-place", "placeId": "davis-library" }
+      },
+      {
+        "id": "seminar",
+        "text": "Enter the sample seminar room.",
+        "on": { "type": "enter-place", "placeId": "seminar-room" }
+      },
+      {
+        "id": "meet-instructor",
+        "text": "Talk to the seminar instructor.",
+        "on": { "type": "talk-npc", "npcId": "fys-instructor", "lineId": "open-class" }
+      }
+    ],
+    "rewards": {
+      "abilities": ["notebook", "meal-plan", "ask-a-question"],
+      "places": []
+    }
+  },
+  {
+    "id": "trail-afternoon",
+    "title": "A sample afternoon outside",
+    "kind": "side",
+    "summary": "Offered only if you picked outdoors. Unlocks the unnamed outdoors node.",
+    "requiresInterest": "outdoors",
+    "steps": [
+      {
+        "id": "take-trail",
+        "text": "Ask the Compass Mentor about the outdoors.",
+        "on": { "type": "talk-npc", "npcId": "compass-mentor", "lineId": "trail-offer" }
+      }
+    ],
+    "rewards": {
+      "abilities": ["trail-legs"],
+      "places": ["outdoors"]
+    }
+  },
+  {
+    "id": "town-errand",
+    "title": "Toward town",
+    "kind": "side",
+    "summary": "Offered only if you picked languages. Unlocks the unnamed downtown node.",
+    "requiresInterest": "languages",
+    "steps": [
+      {
+        "id": "take-town",
+        "text": "Ask the Compass Mentor about town.",
+        "on": { "type": "talk-npc", "npcId": "compass-mentor", "lineId": "town-offer" }
+      }
+    ],
+    "rewards": {
+      "abilities": ["town-key"],
+      "places": ["downtown"]
+    }
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "id": "orientation-leader",
+    "displayName": "Orientation Leader",
+    "role": "Student orientation leader",
+    "kind": "archetype",
+    "placeId": "arrival-green",
+    "knowsAbout": ["orientation", "first-year-halls", "dining"],
+    "lines": [
+      {
+        "id": "welcome",
+        "topic": "welcome",
+        "text": "I'm a student orientation leader, not a specific person. Start with your hall, then eat, then the library. Your seminar room is past Bicentennial."
+      },
+      {
+        "id": "feb-note",
+        "topic": "feb",
+        "text": "Feb start uses Feb Orientation. The Wednesday-through-Sunday span was on the orientation FAQ when this line was written, and the game will not pretend the dates never change.",
+        "requiresStartTerm": "feb"
+      },
+      {
+        "id": "first-gen",
+        "topic": "first-gen",
+        "text": "The college's orientation page says first-generation students get focused programming. Ask for that track. I won't invent the schedule.",
+        "requiresFlag": "firstGen"
+      },
+      {
+        "id": "international",
+        "topic": "international",
+        "text": "The college's orientation page says international students get focused programming. Ask for that track. I won't invent the schedule.",
+        "requiresFlag": "international"
+      }
+    ]
+  },
+  {
+    "id": "resident-assistant",
+    "displayName": "Resident Assistant",
+    "role": "Residence life student staff",
+    "kind": "archetype",
+    "placeId": "your-hall",
+    "knowsAbout": ["housing"],
+    "lines": [
+      {
+        "id": "halls",
+        "topic": "halls",
+        "text": "Most first-years, as of the admitted-student page fetched 2026-10-27, live in Stewart, Hepburn, Allen, Coffrin, or New Battell. Your real assignment comes from Residential Life, not from this game."
+      }
+    ]
+  },
+  {
+    "id": "dining-host",
+    "displayName": "Dining Host",
+    "role": "Dining hall staff",
+    "kind": "archetype",
+    "placeId": "proctor",
+    "knowsAbout": ["dining"],
+    "lines": [
+      {
+        "id": "meal-plan",
+        "topic": "meals",
+        "text": "Unlimited meals means Proctor, Atwater, and Ross. The Grille, Crossroads, So-full Sips, the S.E.A. Dinette, and Midd Express were the retail names on the admitted-student page."
+      }
+    ]
+  },
+  {
+    "id": "librarian",
+    "displayName": "Librarian",
+    "role": "Library staff",
+    "kind": "archetype",
+    "placeId": "davis-library",
+    "knowsAbout": ["library"],
+    "lines": [
+      {
+        "id": "crossroads",
+        "topic": "crossroads",
+        "text": "Crossroads is the student-run café in this library, per the admitted-student page fetched 2026-10-27. I can point you at Bicentennial when you are ready for a sample seminar. I am not a real librarian's portrait."
+      }
+    ]
+  },
+  {
+    "id": "fys-instructor",
+    "displayName": "Seminar Instructor",
+    "role": "First-year seminar instructor archetype",
+    "kind": "archetype",
+    "placeId": "seminar-room",
+    "knowsAbout": ["seminar", "questions"],
+    "lines": [
+      {
+        "id": "open-class",
+        "topic": "class",
+        "text": "This is a sample seminar, not an official Middlebury section and not a real professor. Sit down and the lesson panel will teach one skill: how to ask a question."
+      }
+    ]
+  },
+  {
+    "id": "compass-mentor",
+    "displayName": "Compass Mentor",
+    "role": "Compass Mentor archetype",
+    "kind": "archetype",
+    "placeId": "activities-fair",
+    "knowsAbout": ["support", "activities"],
+    "lines": [
+      {
+        "id": "support-team",
+        "topic": "support",
+        "text": "Your support team, as the admitted-student page described it, includes your first-year seminar professor and pre-major advisor, a Compass Mentor, an orientation leader, and a residence director or assistant."
+      },
+      {
+        "id": "trail-offer",
+        "topic": "outdoors",
+        "text": "If the outdoors are your interest, I can clear you toward the trail stand-in. It is not a named mountain yet."
+      },
+      {
+        "id": "town-offer",
+        "topic": "town",
+        "text": "If languages are your interest, I can clear you toward the downtown stand-in. No shops are named until we have a source."
+      }
+    ]
+  },
+  {
+    "id": "town-guide",
+    "displayName": "Town Guide",
+    "role": "Town orientation archetype",
+    "kind": "archetype",
+    "placeId": "downtown",
+    "knowsAbout": ["town"],
+    "lines": [
+      {
+        "id": "unverified",
+        "topic": "town",
+        "text": "Downtown is still a placeholder. I will not invent businesses, hours, or which street to trust."
+      }
+    ]
+  }
+]

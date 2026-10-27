@@ -1,0 +1,222 @@
+[
+  {
+    "id": "arrival-green",
+    "name": "Arrival Green",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "A gameplay stand-in for the moment you arrive. It is not a claim that this lawn has that official name.",
+    "summaryStatus": "placeholder",
+    "facts": [
+      {
+        "text": "As of the college orientation pages fetched 2026-10-27, in-person orientation is Fall Orientation or Feb Orientation, where new students meet classmates and orientation leaders.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/orientation",
+        "asOf": "2026-10-27"
+      },
+      {
+        "text": "The orientation FAQ fetched 2026-10-27 said Fall Orientation and Feb Orientation run from Wednesday through Sunday.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/orientation/faq",
+        "asOf": "2026-10-27"
+      },
+      {
+        "text": "The college orientation page says new students may square dance and calls that a Middlebury tradition.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/orientation",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["residence-quad", "proctor", "davis-library", "activities-fair", "downtown", "outdoors"],
+    "npcIds": ["orientation-leader"]
+  },
+  {
+    "id": "residence-quad",
+    "name": "First-year halls",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "The cluster of halls where most first-year students live. Your assigned building is the next door in.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "The admitted-student page fetched 2026-10-27 said first-year students will most likely live in Stewart, Hepburn, Allen, Coffrin, or New Battell.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["arrival-green", "your-hall"],
+    "npcIds": []
+  },
+  {
+    "id": "your-hall",
+    "name": "Your hall",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "A generic interior for whichever first-year hall you were assigned. The game does not know your real room.",
+    "summaryStatus": "placeholder",
+    "facts": [
+      {
+        "text": "The admitted-student page lists a residence director or assistant among the people who support first-years.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["residence-quad"],
+    "npcIds": ["resident-assistant"]
+  },
+  {
+    "id": "proctor",
+    "name": "Proctor Dining Hall",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "One of the campus dining halls.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "The admitted-student page fetched 2026-10-27 said the dining plan allows unlimited meals at Proctor, Atwater, and Ross.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      },
+      {
+        "text": "That same page named retail spots: the Grille, Crossroads in the Davis Library, So-full Sips in Bicentennial Hall, the S.E.A. Dinette, and Midd Express.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["arrival-green", "atwater", "ross"],
+    "npcIds": ["dining-host"]
+  },
+  {
+    "id": "atwater",
+    "name": "Atwater Dining Hall",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "One of the three dining halls named for unlimited meals.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "The admitted-student page fetched 2026-10-27 said unlimited meals include Atwater, along with Proctor and Ross.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["proctor"],
+    "npcIds": []
+  },
+  {
+    "id": "ross",
+    "name": "Ross Dining Hall",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "One of the three dining halls named for unlimited meals.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "The admitted-student page fetched 2026-10-27 said unlimited meals include Ross, along with Proctor and Atwater.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["proctor"],
+    "npcIds": []
+  },
+  {
+    "id": "davis-library",
+    "name": "Davis Family Library",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "The library node. Crossroads Café is the sourced detail here; the rest of the building tour is still a sample.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "The admitted-student page fetched 2026-10-27 described Crossroads as the student-run café in the Davis Library.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["arrival-green", "bicentennial"],
+    "npcIds": ["librarian"]
+  },
+  {
+    "id": "bicentennial",
+    "name": "McCardell Bicentennial Hall",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "Academic building node. Only the café line is verified; classrooms inside are reached through the seminar room.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "The admitted-student page fetched 2026-10-27 described So-full Sips as the café in Bicentennial Hall.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["davis-library", "seminar-room"],
+    "npcIds": []
+  },
+  {
+    "id": "seminar-room",
+    "name": "Sample seminar room",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "A sample classroom for the lesson bridge. It is not a numbered Middlebury classroom and not an official section.",
+    "summaryStatus": "placeholder",
+    "facts": [
+      {
+        "text": "The admitted-student page says first-years are supported by their first-year seminar professor, who is also the pre-major advisor.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["bicentennial"],
+    "npcIds": ["fys-instructor"]
+  },
+  {
+    "id": "activities-fair",
+    "name": "Activities fair",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "A sample fair where interest quests are offered. It does not list a live schedule of student organizations.",
+    "summaryStatus": "placeholder",
+    "facts": [
+      {
+        "text": "The admitted-student page fetched 2026-10-27 named a support team that includes the first-year seminar professor and pre-major advisor, a Compass Mentor, a student orientation leader, and a residence director or assistant.",
+        "status": "verified",
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["arrival-green"],
+    "npcIds": ["compass-mentor"]
+  },
+  {
+    "id": "downtown",
+    "name": "Downtown",
+    "region": "town",
+    "unlockedByDefault": false,
+    "summary": "A locked stand-in for the town of Middlebury. No shops are named until a sourced content pass.",
+    "summaryStatus": "placeholder",
+    "facts": [],
+    "exits": ["arrival-green"],
+    "npcIds": ["town-guide"]
+  },
+  {
+    "id": "outdoors",
+    "name": "Outdoors",
+    "region": "outdoors",
+    "unlockedByDefault": false,
+    "summary": "A locked stand-in for trails and the country around campus. No trail is named yet.",
+    "summaryStatus": "placeholder",
+    "facts": [],
+    "exits": ["arrival-green"],
+    "npcIds": []
+  }
+]
