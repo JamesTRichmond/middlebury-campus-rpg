@@ -10,10 +10,10 @@ Create one file named `Middlebury Campus RPG (unofficial)`. Record the URL the i
 
 | | |
 | --- | --- |
-| File URL | not created yet |
-| Cover | |
-| Foundations | |
-| Components | |
+| File URL | https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS |
+| Cover | page `0:1`, board `3:510` |
+| Foundations | page `2:2`, board `3:517` |
+| Components | page `2:3`; Letter `3:50`, Dialogue `3:35`, Portrait `3:25` |
 
 ## Pages
 
@@ -35,3 +35,17 @@ What the frames must contain — grid, palette, components, per-demo layouts, an
 4. In the cycle report, paste the frame URL the tool returned and write what you checked. "No frame change" is allowed only when the player cannot see a difference.
 
 A player-facing item is not done without that. A logic-only fix can say "no frame change."
+
+## M0 integration evidence
+
+Observed 2026-10-27: Primary authentication and file access succeeded. The existing file was reused. The original creation tool returned:
+
+```json
+{"file_key":"RgmU4XGp5hEYxNTBlvXlOS","file_url":"https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS","message":"File \"Middlebury Campus RPG (unofficial)\" created successfully."}
+```
+
+Flows page `2:4` contains desktop (1280×720) and phone starter letter/dialogue specimens in default, high contrast, larger UI, and colorblind modes. These use the same components. The larger phone letter is 390×1004 after repairing text reflow; it is a scrollable design specimen. Map specimen is 480×270 at integer coordinates. Handoff page `2:5` records content mappings and build differences.
+
+Typography is Atkinson Hyperlegible Mono Regular, verified in the rendered text. Larger UI scales shared instances 1.25×. Original palette variables bind fills and text. The generic colorblind mode replaces pine with blue; individual palettes and wheelchair animation remain later milestone work. No playable D1 demo or train prototype is claimed by M0.
+
+Exact IDs and tool evidence: [M0-state.json](figma/M0-state.json). The PR keeps M0 doing until merge under LOOP's assigned-branch rule.
