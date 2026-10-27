@@ -2,6 +2,8 @@
 
 You are the continuous builder of an unofficial Middlebury College life RPG in `JamesTRichmond/middlebury-campus-rpg`. The player's character is themselves. College life is the game: arrive, live there, learn the campus and the town, and go to class as that character.
 
+This is a portfolio piece for a full-stack developer interview at Middlebury College. Figma is a major tool on that developer team, and it is already connected. Figma is the primary tool. Design frames, components, prototypes, and accessibility modes there. Then implement them. The interview artifact is the Figma file plus a build that matches it. The game is not a college product.
+
 This file is the goal to give the agent. In the repo, `GOAL.md` is the copy the agent re-reads. If this file and `GOAL.md` disagree, `GOAL.md` wins until the operator edits it.
 
 ## Every session
@@ -14,14 +16,31 @@ Read, in order:
 4. `STATUS.md`
 5. `BACKLOG.md`
 6. `DECISIONS.md`
-7. `docs/EXPERIENCE.md`
-8. `docs/DEMOS.md`
-9. `docs/LESSON_BRIDGE.md`
-10. `skills/skillgame-feedback/SKILL.md`
-11. The newest file in `cycles/`
-12. Anything in `feedback/inbox/`
+7. `docs/FIGMA.md`
+8. `docs/EXPERIENCE.md`
+9. `docs/DEMOS.md`
+10. `docs/LESSON_BRIDGE.md`
+11. `skills/skillgame-feedback/SKILL.md`
+12. The newest file in `cycles/`
+13. Anything in `feedback/inbox/`
 
 Then execute `LOOP.md` until a stop condition. Do not ask whether to continue between cycles. One backlog item per cycle. If the operator pastes a playtest report, that report is the next cycle: file regressions before new features, then resume.
+
+## Figma
+
+Use the connected Figma integration. Do not ask first. Do not invent a file URL. Do not buy a plan or switch accounts.
+
+- One file: `Middlebury Campus RPG (unofficial)`.
+- Pages: Cover, Foundations, Components, Flows, Handoff. Details are in `docs/FIGMA.md`.
+- Foundations: integer pixel grid, type, color, and modes for default, high contrast, larger UI, and colorblind palettes. Wheelchair is a sprite and a path.
+- A control used twice becomes a component.
+- Flows: one prototype per demo, `D1-letter-train` through `D8-snow`.
+- Keep the cozy 16-bit to 64-bit look. Figma is not permission to restyle this as a generic web app.
+- No college logos, crests, athletic marks, or real people's photos in the file.
+
+If the player can see a change, update the frame before the item is done, record the URL the tool returned, and make the build match. If the integration fails, write `gates/PENDING-figma.md`, set `stop: human-gate`, and stop. Do not design the screen only in code.
+
+The first backlog item is `M0-figma-file`. Do not start the letter until that file exists.
 
 ## Feel
 
@@ -47,17 +66,21 @@ Do not add:
 9. After campus objectives, Triangle Park opens the town: movie theater and restaurants as sample places until sourced. Do not invent business names.
 10. Later, a season toggle and a trip to the Middlebury Snow Bowl (east on Route 125, not next to the dorm) with one optional minigame. Failure does not block the story.
 
+Each of those screens is a Figma frame before it is code.
+
 ## Facts and people
 
-Facts you state as true need status `verified`, a source URL, and an `asOf` date. Seed and placeholder copy must look unconfirmed. NPCs are archetypes until a likeness or people gate names them.
+Facts you state as true need status `verified`, a source URL, and an `asOf` date. Seed and placeholder copy must look unconfirmed. NPCs are archetypes until a likeness or people gate names them. Do not treat "the college uses Figma" as a fact inside the game.
 
 ## Work continuously
 
-After each of phases 1–8 (backlog M1 through M8), the same cycle must leave a build a person can play and point it at:
+After each of phases 1–8 (backlog M1 through M8), the same cycle must leave:
 
-`feedback/index.html?demo=<demo id>&version=<git sha>`
+- A Figma prototype whose URL came from the integration
+- A build a person can play
+- A link to `feedback/index.html?demo=<demo id>&version=<git sha>`
 
-Demo ids are in `docs/DEMOS.md`, `D1-letter-train` through `D8-snow`. Record the real open path. Never invent a public URL. Play the new path once and write what you did. Then start the next cycle. Do not wait idle for players.
+Demo ids are in `docs/DEMOS.md`, `D1-letter-train` through `D8-snow`. Record the real open path. Never invent a public URL. Play the new path once, compare it to the frame, and write what you did. Then start the next cycle. Do not wait idle for players.
 
 ## Playtest form
 
@@ -81,4 +104,4 @@ Every fifth product cycle is a meta cycle: tighten tests and fix repeated failur
 
 ## Start
 
-Run `npm run validate`. If it passes, begin `M1-letter-train` and its demo `D1-letter-train`.
+Run `npm run validate`. If it passes, begin `M0-figma-file`. Then `M1-letter-train` and its demo `D1-letter-train`.

@@ -47,6 +47,10 @@ After the escort, the player unpacks a few brought items and places doodads. The
 
 Accepted 2026-10-27. Each phase from letter through Snow Bowl ships a playable demo and links [feedback/index.html](feedback/index.html) with `demo` and `version`. The form is the playtest instrument: one question per card, localStorage, clipboard Markdown, and earlier submissions from that browser included so drift is visible. Agents keep building after a demo. Pasted feedback outranks new features. Do not swap in another survey. Changes to the form follow [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md).
 
+## D018 — Figma is the primary tool
+
+Accepted 2026-10-27. This repo is an unofficial portfolio piece for a full-stack interview at Middlebury College, where Figma is a major tool on the developer team. The connected Figma integration is the design source. Player-visible work is framed there before it is called done. Code implements the frames. Pixel art stays pixel art. The file URL must come from the integration. Setup is [docs/FIGMA.md](docs/FIGMA.md). This does not make the game a college product.
+
 ## D003 — Content is the source of truth
 
 Places, NPCs, quests, abilities, and lessons are JSON validated by Zod in `src/content/`. The UI reads the loader. A fact or exit that exists only in a component is a bug.

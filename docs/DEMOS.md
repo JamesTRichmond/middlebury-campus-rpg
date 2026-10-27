@@ -1,6 +1,6 @@
 # Demos
 
-A demo is a build someone can play, plus the feedback form bound to that build. Shipping the demo does not pause the loop. Pasted feedback jumps the queue. See LOOP.md.
+A demo is a Figma prototype, a build someone can play, and the feedback form bound to that build. The prototype comes first. Shipping the demo does not pause the loop. Pasted feedback jumps the queue. See LOOP.md and [FIGMA.md](FIGMA.md).
 
 Open the form from a demo like this:
 
@@ -27,8 +27,8 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 
 ## Recorded builds
 
-None yet. The first agent to finish M1 writes the open path here. Do not invent one.
+None yet. The first agent to finish M1 writes the open path and the Figma frame URL here. Do not invent either.
 
-| Demo | Version | How to play | Date |
-| --- | --- | --- | --- |
-| — | — | — | — |
+| Demo | Version | Figma | How to play | Date |
+| --- | --- | --- | --- | --- |
+| — | — | — | — | — |

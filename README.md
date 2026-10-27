@@ -2,7 +2,7 @@
 
 Unofficial orientation RPG for new students at Middlebury College. This repository is the working environment for a coding agent. It is **not** affiliated with, endorsed by, or speaking for Middlebury College. Do not use college logos or depict real people.
 
-The playable game is not built yet. The next agent starts at backlog item `M1-letter-train`. The goal to paste is [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md). If that prompt and `GOAL.md` disagree, `GOAL.md` wins until the operator edits it.
+The playable game is not built yet. The next agent starts at backlog item `M0-figma-file`, then `M1-letter-train`. Figma is the primary design tool. The goal to paste is [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md). If that prompt and `GOAL.md` disagree, `GOAL.md` wins until the operator edits it.
 
 ## Loop, short version
 
@@ -11,7 +11,7 @@ The playable game is not built yet. The next agent starts at backlog item `M1-le
 3. Run its gate, including `npm run validate`.
 4. Write `cycles/NNNN-*.md`, update `STATUS.md`, commit.
 5. Every fifth product cycle, run a meta cycle that tightens tests and fixes repeated failures without adding scope. Pasted playtest feedback jumps ahead of new features.
-6. After each of M1–M8, ship a playable demo linked to the feedback form, then start the next cycle. Stop only for a human gate, three gate failures, an operator hold, or an empty backlog.
+6. After each of M1–M8, the Figma prototype and a playable demo already match, the demo links the feedback form, and then the next cycle starts. Stop only for a human gate, three gate failures, an operator hold, or an empty backlog.
 
 Human gates (do not create these yourself): `gates/real-people.approved`, `gates/likeness.approved`, `gates/live-lms.approved`.
 

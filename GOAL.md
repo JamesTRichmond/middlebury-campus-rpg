@@ -1,6 +1,10 @@
 # Goal
 
-Build an unofficial, playable RPG that orients a new student to Middlebury College. The player's character is themselves. The feel is a cozy life game: a train into town, a pixel-art map, portraits when people talk, and a dorm you can fuss over.
+Build an unofficial, playable RPG that orients a new student to Middlebury College, and design it in Figma first. The player's character is themselves. The feel is a cozy life game: a train into town, a pixel-art map, portraits when people talk, and a dorm you can fuss over.
+
+This project is a portfolio piece for a full-stack developer interview at Middlebury College. Figma is a major tool on that developer team, and it is already connected. Figma is the primary tool. Frames, components, prototypes, and accessibility modes live there. The code implements those frames. Using that connected integration is authorized. Do not invent a file URL, do not buy a plan, and do not design a screen only in code.
+
+The game is not a college product. Do not imply endorsement. [docs/FIGMA.md](docs/FIGMA.md) is the file setup.
 
 This file is the goal. [LOOP.md](LOOP.md) is how you pursue it without stopping between cycles. [AGENTS.md](AGENTS.md) is the boundary. If a chat instruction and this file disagree, this file wins until the operator edits it.
 
@@ -42,7 +46,7 @@ Tone: welcoming, specific, and unhurried. Not a parody and not a combat game. Mi
 - Removing a shipped feature fails a test.
 - Facts stated as true are `verified`, with a source URL and `asOf`. The Triangle Park "campus boundary" line is labeled as the game's framing.
 - The in-game class and the virtual lesson are the same content. A question cannot be answered with text that is not on that lesson.
-- Each demo gate in [docs/DEMOS.md](docs/DEMOS.md) has a build a person can play, and that build opens [feedback/index.html](feedback/index.html) with its demo id and version.
+- Each demo gate in [docs/DEMOS.md](docs/DEMOS.md) has a Figma prototype and a build a person can play. The build opens [feedback/index.html](feedback/index.html) with its demo id and version. A player-visible change with no frame is not done.
 - Phone and laptop both work once UI exists.
 - Meta cycles make the next cycles faster and stricter. They do not add attractions.
 
@@ -55,7 +59,7 @@ Tone: welcoming, specific, and unhurried. Not a parody and not a combat game. Mi
 5. [BACKLOG.md](BACKLOG.md)
 6. [DECISIONS.md](DECISIONS.md)
 7. The newest file in [cycles/](cycles/)
-8. The doc linked by the backlog item you are about to touch. For the opening, [docs/EXPERIENCE.md](docs/EXPERIENCE.md). For a demo or playtest, [docs/DEMOS.md](docs/DEMOS.md) and [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md).
+8. The doc linked by the backlog item you are about to touch. For the opening, [docs/EXPERIENCE.md](docs/EXPERIENCE.md). For a demo or playtest, [docs/DEMOS.md](docs/DEMOS.md) and [skills/skillgame-feedback/SKILL.md](skills/skillgame-feedback/SKILL.md). For anything the player sees, [docs/FIGMA.md](docs/FIGMA.md).
 9. Unprocessed files in [feedback/inbox/](feedback/inbox/), if any.
 
 Then execute [LOOP.md](LOOP.md). Do not ask whether to continue. A pasted playtest report becomes the next cycle: file regressions first, then resume the backlog. Do not sit idle waiting for players. Do not skip shipping the demo.
@@ -66,8 +70,8 @@ Work in this order. Details and gates live in [BACKLOG.md](BACKLOG.md). Do not r
 
 | Phase | Outcome |
 | --- | --- |
-| 0 | Environment, schemas, seed content. Landed. Style brief landed as D009–D016. |
-| 1 | Acceptance letter, home place, train ride into the station. |
+| 0 | Environment, schemas, seed content. Landed. Next is the Figma file, then the letter. |
+| 1 | Acceptance letter, home place, train ride into the station. Frames first. |
 | 2 | Character creator on the platform: name, pronouns, inclusive appearance, accessibility. |
 | 3 | Pixel-map escort: station, Triangle Park, campus, dorm. |
 | 4 | Unpack and dorm doodads, then the orientation notice. |
@@ -76,7 +80,7 @@ Work in this order. Details and gates live in [BACKLOG.md](BACKLOG.md). Do not r
 | 7 | Town opens at Triangle Park. Theater and restaurants as sample or sourced places. |
 | 8 | Season toggle, Snow Bowl trip, one optional minigame. |
 | 9 | Verified-fact pass. Human gate for real likenesses and a live LMS. |
-| Demo | After phases 1–8, a playable demo and the feedback form bound to that version. See DEMOS.md. |
+| Demo | After phases 1–8, a Figma prototype, a playable build, and the feedback form bound to that version. See DEMOS.md. |
 | Meta | Every fifth done product cycle, and whenever playtest feedback shows drift. See LOOP.md. |
 
 Phase 9 never ends the loop by itself. After it, file the next concrete improvement from play, or stop on `backlog-empty`.
@@ -89,7 +93,7 @@ Every meta cycle, and every cycle that ingests playtest feedback, fix the proces
 
 - Read the pasted feedback and any earlier submission included in it. File regressions and "got worse" items at the head of the backlog. File "got better" only as a one-line note in the cycle report.
 - A bug class that appeared twice gets a regression test.
-- A demo that drifted from EXPERIENCE.md or from the lesson (the teacher said something the virtual lesson does not say) is repaired before any new place is added.
+- A demo that drifted from its Figma frame, from EXPERIENCE.md, or from the lesson (the teacher said something the virtual lesson does not say) is repaired before any new place is added.
 - If a cycle was too big to review, split the next items until each is one behavior.
 - Do not rebuild the feedback form from scratch. Extend it under the skill rules.
 
@@ -97,4 +101,4 @@ Do not expand into a new campus, a second school, multiplayer, or combat during 
 
 ## What you are improving toward
 
-College life at Middlebury, as an RPG: arrive, live in the dorm, learn the campus and the town, and go to class as yourself. The class is not a cutscene that approximates school. It is the virtual lesson, delivered by the teacher, with notes and questions. Demos are how players check that this stayed true from one version to the next.
+College life at Middlebury, as an RPG: arrive, live in the dorm, learn the campus and the town, and go to class as yourself. The class is not a cutscene that approximates school. It is the virtual lesson, delivered by the teacher, with notes and questions. The interview artifact is the Figma file plus a build that matches it. Demos are how players check that this stayed true from one version to the next.

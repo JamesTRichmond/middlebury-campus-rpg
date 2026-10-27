@@ -6,13 +6,33 @@ The old "exit buttons as the game" plan is withdrawn. D009 replaces it. Scene or
 
 Status values: `ready`, `doing`, `done`, `blocked`.
 
-When an item below is marked done, also publish its demo in the same cycle (LOOP.md). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
+When an item below is marked done, also publish its demo in the same cycle (LOOP.md). Design the screen in Figma first ([docs/FIGMA.md](docs/FIGMA.md)). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
+
+## M0-figma-file
+
+```yaml
+status: ready
+blockedBy: []
+humanGate: no
+owner: ""
+```
+
+Create the Figma file with the connected integration. Do this before any game screen.
+
+- File name: `Middlebury Campus RPG (unofficial)`.
+- Pages from [docs/FIGMA.md](docs/FIGMA.md): Cover, Foundations, Components, Flows, Handoff.
+- Foundations include the pixel grid, type, color, and accessibility modes (default, high contrast, larger UI, colorblind palettes).
+- Starter components: letter, dialogue box, portrait frame, button.
+- Cover states that the prototype is unofficial and not a college product.
+- Write the file URL the integration returns into `docs/FIGMA.md` and STATUS. The cycle report quotes the tool result. No invented URL.
+- If the integration fails, `gates/PENDING-figma.md` and `stop: human-gate`. Do not start M1 instead.
+- Gate: `npm run validate`, plus the URL present in `docs/FIGMA.md`.
 
 ## M1-letter-train
 
 ```yaml
 status: ready
-blockedBy: []
+blockedBy: [M0-figma-file]
 humanGate: no
 owner: ""
 ```
@@ -23,7 +43,7 @@ The opening, before free walk.
 - Player sets a home place. Store it on the save. It only affects ride captions.
 - A short train sequence ends at `middlebury-station`.
 - No campus exit menu. New game does not drop the player on Arrival Green.
-- Gate: `npm run validate` plus a test that a new save's place is `middlebury-station` and `origin` is the string they set. Browser check of letter then train if a browser exists.
+- Gate: `npm run validate` plus a test that a new save's place is `middlebury-station` and `origin` is the string they set. The letter and train frames exist in Figma and the build matches them. Browser check of letter then train if a browser exists.
 
 ## M2-character
 

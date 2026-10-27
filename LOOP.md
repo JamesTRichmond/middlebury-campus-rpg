@@ -25,13 +25,20 @@ Run this until a stop condition. One cycle is one backlog item, one gate, one cy
 8. If this success makes five product cycles since the last meta cycle, the next cycle is a meta cycle (below), not the next feature.
 9. Otherwise begin the next cycle now. Do not ask "should I continue?"
 
+## Design
+
+Figma is the primary tool. [docs/FIGMA.md](docs/FIGMA.md) is the setup. The connected integration is already authorized.
+
+If the item changes what the player sees, update the Figma frame before you call the item done. Record the URL the tool returned. If Figma is not signed in or the call fails, open `gates/PENDING-figma.md`, set `stop: human-gate`, and stop. Do not invent a URL and do not skip the file.
+
 ## Demos
 
 Phases 1 through 8 are demo gates. When you mark one of those backlog items done, that same cycle must also:
 
-1. Leave a build a person can play. Prefer a static build or a URL the host already allows you to publish. Record the real open path or URL in [docs/DEMOS.md](docs/DEMOS.md) and in STATUS. If you cannot publish, say `local` and the command to open it. Never invent a public URL.
-2. Point that build at the feedback form with the demo id and version filled in: `feedback/index.html?demo=<id>&version=<sha>`.
-3. Play the new path once yourself and write what you actually did in the cycle report. A build you did not open is not a demo.
+1. Leave a Figma prototype for that demo and record its real URL in [docs/DEMOS.md](docs/DEMOS.md).
+2. Leave a build a person can play. Prefer a static build or a URL the host already allows you to publish. Record the real open path or URL in DEMOS.md and in STATUS. If you cannot publish, say `local` and the command to open it. Never invent a public URL.
+3. Point that build at the feedback form with the demo id and version filled in: `feedback/index.html?demo=<id>&version=<sha>`.
+4. Play the new path once yourself and write what you actually did in the cycle report, including whether it matches the frame. A build you did not open is not a demo.
 
 Then continue to the next backlog item. Do not stop the loop to wait for players.
 
