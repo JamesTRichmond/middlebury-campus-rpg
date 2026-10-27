@@ -6,3 +6,19 @@
 - Recreated at the operator's explicit request to persist the stop state before retry.
 - PR #1 is merged on remote main at 0521bba. Its existing file URL is historical integration evidence, not a newly invented URL.
 - Resume only after connected Figma authentication and file verification succeed. Do not start M1 while this gate remains pending.
+
+## Observed retry result
+
+Authentication and opening the existing file succeeded. The open call returned `{"surface":"thread"}` and no URL; the original creation response supplies the recorded URL. File inspection returned populated pages and original component IDs. More components, mobility states, seasonal modes and starter layouts were added.
+
+The subsequent prototype-wiring call failed with:
+
+```text
+TypeError: cannot read property 'setReactionsAsync' of undefined
+at link (PLUGIN_3_SOURCE:8:42)
+at <anonymous> (PLUGIN_3_SOURCE:10:11)
+```
+
+Figma Debug UUID: `63e0cb11-1a6a-4ba5-af3c-1df40d637300`. Tool classification: INVALID_ARGUMENT; safeToRetryWithoutCanvasRead: true. This is a script node-lookup failure, not an authentication failure. The operator's stop-on-Figma-failure instruction prevents retry this turn. No approval file was created.
+
+The script cloned an origin frame before failing; that partial change was not inspected after the failure. Opening prototype, Cover link, full visual audit, and final GOAL acceptance remain incomplete. M0 is doing; M1 has not started. Next authorized retry should inspect actual instance names, repair wiring, and validate every required layout before clearing this gate.

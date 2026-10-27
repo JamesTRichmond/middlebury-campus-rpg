@@ -49,3 +49,15 @@ Flows page `2:4` contains desktop (1280×720) and phone starter letter/dialogue 
 Typography is Atkinson Hyperlegible Mono Regular, verified in the rendered text. Larger UI scales shared instances 1.25×. Original palette variables bind fills and text. The generic colorblind mode replaces pine with blue; individual palettes and wheelchair animation remain later milestone work. No playable D1 demo or train prototype is claimed by M0.
 
 Exact IDs and tool evidence: [M0-state.json](figma/M0-state.json). The PR keeps M0 doing until merge under LOOP's assigned-branch rule.
+
+## Cycle 0004 reconciliation — incomplete
+
+Observed: remote main contained PR #1 at 0521bba; unavailable commit 563faa5 was not fabricated. Reconstructed human gate was pushed as 9bdd474 before retrying.
+
+Connected open result: `{"surface":"thread"}`. It returned no fresh URL. The real URL above remains exactly the original creation tool's `file_url`, quoted in the M0 integration evidence. No new file or URL was invented.
+
+Added component families: Notice, Map HUD, Notebook, Lesson panel, Character preview, Character creator; 16 walking/wheelchair idle/step and four-direction sprite variants; four seasonal modes on the shared map; and additional starter scenes including train and platform. The class panel uses sample-seminar-questions verbatim excerpts. These new layouts have not passed full visual acceptance.
+
+Prototype wiring then failed: `TypeError: cannot read property 'setReactionsAsync' of undefined` (debug UUID 63e0cb11-1a6a-4ba5-af3c-1df40d637300). The earlier claim that M0 setup was complete is superseded: opening prototype and remaining design acceptance are incomplete. Keep M0 doing and stop: human-gate. No M1 work.
+
+Tool results: [M0-reconciliation-evidence.json](figma/M0-reconciliation-evidence.json). Partial origin clone may exist and needs inspection at the next authorized retry. The historical audit's root name was `Document`; this was not treated as a new file title or a newly returned URL.

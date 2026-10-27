@@ -10,7 +10,7 @@ lock: "codex-root"
 stop: human-gate
 current: M0-figma-file
 next: M0-figma-file
-lastGate: "npm run validate passed: 12 tests and tsc clean. Figma file access and starter composition checked. M0 remains doing pending PR merge."
+lastGate: "Figma prototype wiring failed: undefined button node (INVALID_ARGUMENT); human-gate. npm run validate result recorded in cycle 0004."
 ```
 
 ## Index
@@ -37,3 +37,5 @@ lastGate: "npm run validate passed: 12 tests and tsc clean. Figma file access an
 ## Gate reconciliation
 
 Operator requested reconstruction of unavailable commit 563faa5. See gates/PENDING-figma.md and cycles/0004-figma-reconciliation.md. M0 remains doing; M1 has not started.
+
+- Cycle 0004: authentication/open succeeded; prototype wiring failed. Pending gate remains. Design acceptance incomplete.
