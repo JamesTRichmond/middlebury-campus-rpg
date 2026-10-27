@@ -12,12 +12,15 @@ Middlebury College is a real place. People who work there are real. The game may
 
 A `verified` fact without `sourceUrl` and `asOf` fails `npm test`.
 
-## People
+## People and likenesses
 
-- Default NPC `kind` is `archetype`.
-- `sourced-person` fails validation unless `gates/real-people.approved` exists and contains a line `approved-by:`.
-- Do not attach a real name, office gossip, appearance, or quotation to an archetype.
+- Default NPC `kind` is `archetype`, drawn as an original character.
+- Dialogue portraits are more detailed than map sprites. They are still original art.
+- A real headshot, or an illustration meant to be a specific living person, needs `gates/likeness.approved` with `approved-by:` and that person's name in the file. Do not scrape a directory photo and do not trace one.
+- `sourced-person` still needs `gates/real-people.approved`.
+- The station greeter is the slot for a future recognizable college figure. Do not write them as the sitting president, and do not put Ian Baucom's name in content, until that gate exists.
 - Player-chosen flags (`firstGen`, `international`, `feb`) select lines written for those paths. They are not detected.
+- Accessibility options are settings, not facts about a disability and not content you invent a diagnosis for.
 
 ## Lessons
 

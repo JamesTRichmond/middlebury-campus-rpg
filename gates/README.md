@@ -5,6 +5,7 @@ An approval is a small text file in this directory. Until the file exists, the r
 | File | Allows |
 | --- | --- |
 | `real-people.approved` | NPCs with `kind: "sourced-person"` |
+| `likeness.approved` | A real headshot, or a portrait meant to be a specific living person. Name each person in the file. |
 | `live-lms.approved` | Lessons with `status: "official"` and any network lesson adapter |
 
 Each approval file must contain a line `approved-by:` naming the operator, plus one sentence of scope. Do not create these files yourself. Opening `PENDING-<backlog-id>.md` and setting `stop: human-gate` is how you ask.

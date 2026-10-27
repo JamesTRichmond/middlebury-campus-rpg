@@ -1,5 +1,59 @@
 [
   {
+    "id": "middlebury-station",
+    "name": "Middlebury station",
+    "region": "town",
+    "unlockedByDefault": true,
+    "summary": "The Amtrak platform where the train ride ends and the greeter is waiting. Third-person play starts here.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "Middlebury station (Amtrak MBY) is at 30 Middle Seymour Street. It is a platform stop on the Ethan Allen Express and has been open since July 29, 2022.",
+        "status": "verified",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Middlebury_station",
+        "asOf": "2026-10-27"
+      },
+      {
+        "text": "Amtrak lists the Middlebury, Vermont stop as accessible.",
+        "status": "verified",
+        "sourceUrl": "https://www.amtrak.com/stations/mby",
+        "asOf": "2026-10-27"
+      },
+      {
+        "text": "The Middlebury Campus reported in 2023 that the station is about a mile, roughly a twenty-minute walk, from campus.",
+        "status": "verified",
+        "sourceUrl": "https://www.middleburycampus.com/article/2023/03/middlebury-students-reflect-on-new-amtrak-stop-in-town",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["triangle-park"],
+    "npcIds": ["station-greeter"]
+  },
+  {
+    "id": "triangle-park",
+    "name": "Triangle Park",
+    "region": "town",
+    "unlockedByDefault": true,
+    "summary": "You pass through here on the way from the station to campus. Later it is the door back into town. Calling it the official campus boundary is the game's framing, not a sourced claim.",
+    "summaryStatus": "placeholder",
+    "facts": [
+      {
+        "text": "Great American Stations describes Triangle Park as the corner once cut off by the railroad: a plaza with a fountain and a grassy area edged by stone blocks used as seating, near the north end of town.",
+        "status": "verified",
+        "sourceUrl": "https://www.greatamericanstations.com/stations/middlebury-vt-mby/",
+        "asOf": "2026-10-27"
+      },
+      {
+        "text": "The station's history notes that the 2020 rail tunnel created Triangle Park next to St. Stephen's Episcopal Church.",
+        "status": "verified",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Middlebury_station",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["middlebury-station", "arrival-green", "downtown"],
+    "npcIds": []
+  },
+  {
     "id": "arrival-green",
     "name": "Arrival Green",
     "region": "campus",
@@ -26,7 +80,7 @@
         "asOf": "2026-10-27"
       }
     ],
-    "exits": ["residence-quad", "proctor", "davis-library", "activities-fair", "downtown", "outdoors"],
+    "exits": ["residence-quad", "proctor", "davis-library", "activities-fair", "downtown", "outdoors", "triangle-park"],
     "npcIds": ["orientation-leader"]
   },
   {
@@ -62,7 +116,7 @@
         "asOf": "2026-10-27"
       }
     ],
-    "exits": ["residence-quad"],
+    "exits": ["residence-quad", "dorm-room"],
     "npcIds": ["resident-assistant"]
   },
   {
@@ -205,7 +259,7 @@
     "summary": "A locked stand-in for the town of Middlebury. No shops are named until a sourced content pass.",
     "summaryStatus": "placeholder",
     "facts": [],
-    "exits": ["arrival-green"],
+    "exits": ["arrival-green", "triangle-park", "movie-theater", "snow-bowl"],
     "npcIds": ["town-guide"]
   },
   {
@@ -217,6 +271,46 @@
     "summaryStatus": "placeholder",
     "facts": [],
     "exits": ["arrival-green"],
+    "npcIds": []
+  },
+  {
+    "id": "dorm-room",
+    "name": "Your room",
+    "region": "campus",
+    "unlockedByDefault": true,
+    "summary": "A generic first-year room. Unpack here and place a few doodads. Not a real student's room.",
+    "summaryStatus": "placeholder",
+    "facts": [],
+    "exits": ["your-hall"],
+    "npcIds": []
+  },
+  {
+    "id": "movie-theater",
+    "name": "Movie theater",
+    "region": "town",
+    "unlockedByDefault": false,
+    "summary": "A locked stand-in for the downtown movie theater. No business name until a sourced pass.",
+    "summaryStatus": "placeholder",
+    "facts": [],
+    "exits": ["downtown"],
+    "npcIds": []
+  },
+  {
+    "id": "snow-bowl",
+    "name": "Middlebury Snow Bowl",
+    "region": "outdoors",
+    "unlockedByDefault": false,
+    "summary": "A later trip, not a walk from the dorm. Optional minigame once it is open.",
+    "summaryStatus": "seed",
+    "facts": [
+      {
+        "text": "A Middlebury walking-history page describes the Snow Bowl as farther east on Route 125, past the Bread Loaf campus in Ripton, and open in the skiing season. Do not treat that page's lift or trail counts as current.",
+        "status": "verified",
+        "sourceUrl": "https://sites.middlebury.edu/walkingmiddlebury/mountain-campus/",
+        "asOf": "2026-10-27"
+      }
+    ],
+    "exits": ["downtown"],
     "npcIds": []
   }
 ]

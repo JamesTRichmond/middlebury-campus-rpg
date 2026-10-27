@@ -2,9 +2,11 @@
 
 Order is priority. The first `ready` item whose blockers are `done` is the only legal task. Put player-facing bugs above the current feature when you discover them. Do not mass-file GitHub issues from this list; this file is the queue.
 
+The old "exit buttons as the game" plan is withdrawn. D009 replaces it. Scene order: [docs/EXPERIENCE.md](docs/EXPERIENCE.md).
+
 Status values: `ready`, `doing`, `done`, `blocked`.
 
-## M1-shell
+## M1-letter-train
 
 ```yaml
 status: ready
@@ -13,34 +15,33 @@ humanGate: no
 owner: ""
 ```
 
-Playable shell with no new content.
+The opening, before free walk.
 
-- Vite + React app.
-- Title screen: New game, Continue (disabled when no save).
-- New game writes save v1 with `placeId: arrival-green` and empty notes, quests, abilities.
-- Location screen shows the current place name, summary, fact statuses, NPCs present, and exit buttons.
-- Choosing an exit moves if that place is unlocked. Locked exits are visible and explain why in one sentence.
-- Reload restores the place.
-- Headless test: start, move along an unlocked exit, reload equivalent (load/save functions), still there.
-- Gate: `npm run validate` plus the new test file. If a browser is available, open the title and move once.
+- Title is the acceptance letter. It says the game is unofficial.
+- Player sets a home place. Store it on the save. It only affects ride captions.
+- A short train sequence ends at `middlebury-station`.
+- No campus exit menu. New game does not drop the player on Arrival Green.
+- Gate: `npm run validate` plus a test that a new save's place is `middlebury-station` and `origin` is the string they set. Browser check of letter then train if a browser exists.
 
 ## M2-character
 
 ```yaml
 status: ready
-blockedBy: [M1-shell]
+blockedBy: [M1-letter-train]
 humanGate: no
 owner: ""
 ```
 
-Character creator before the first location.
+On the platform, the greeter asks what to call you. That opens the builder.
 
-- Fields: name, pronouns (free text with suggestions), start term `fall` or `feb`, interests (subset of the ids in content), optional flags `firstGen` and `international` defaulting off. The player opts in. Never infer them.
-- Flags only select which archetype lines and quests are eligible. They do not change facts.
-- Save stores the character. Continue skips the creator.
-- Gate: `npm run validate` plus a test that a created character round-trips through the save.
+- Name, pronouns (free text plus suggestions).
+- Appearance: skin tones across the range, hair including textured and protective styles, facial hair, cultural or religious head coverings, body variety.
+- Mobility: foot, wheelchair, or another aid. Wheelchair is stored and will change the sprite in M3.
+- Accessibility, applied immediately and editable later: captions (default on), visual sound cues, colorblind palettes, high contrast, UI scale, control names a screen reader can use.
+- Fall or Feb, interests, and optional first-gen or international flags stay available. Flags are opt-in. Never infer them.
+- Gate: `npm run validate` plus a round-trip test of the character, including mobility and a colorblind mode.
 
-## M3-orientation-arc
+## M3-escort
 
 ```yaml
 status: ready
@@ -49,112 +50,100 @@ humanGate: no
 owner: ""
 ```
 
-Dialogue and the main quest.
+First pixel-art walk. Top-down, 16-bit to 64-bit cozy sprites. Not a menu of buttons.
 
-- Talk to NPCs at the current place. Lines come from `content/npcs.json` only.
-- Quest log for `content/quests/quests.json`.
-- The orientation quest already rewards `notebook`, `meal-plan`, and `ask-a-question` in data. Grant those when the arc completes. Do not invent extra rewards.
-- Steps complete from real actions (enter place, talk to npc), not from a debug button.
-- Headless simulation can finish the orientation arc.
-- Gate: `npm run validate` plus that simulation test.
+- Render the place graph as a walkable map for the escort: `middlebury-station` → `triangle-park` → campus → `dorm-room`.
+- Greeter escorts. Wheelchair completes the same path. No stair-only exit off the platform.
+- Collision and a facing sprite. Camera follows.
+- Gate: `npm run validate` plus a headless test that the escort quest `welcome` can complete, and a note in the cycle report of how the wheelchair was checked.
 
-## M4-notebook
+## M4-dorm
 
 ```yaml
 status: ready
-blockedBy: [M3-orientation-arc]
+blockedBy: [M3-escort]
 humanGate: no
 owner: ""
 ```
 
-Notebook tool.
+- Unpack a few items tied to `origin`.
+- Place a small set of doodads in `dorm-room`. Positions save.
+- When they finish, show the orientation notice pointing downstairs. Do not start the campus tour automatically.
+- Gate: `npm run validate` plus a save test that doodads survive reload.
 
-- Unlock ability `notebook` when the orientation quest completes (the reward is already in the quest JSON). It is not free at start.
-- Player can add a note tied to the current place or lesson.
-- Notes survive reload and show in a notebook screen.
-- Gate: `npm run validate` plus a save test that notes survive migration from a note-less v1 save.
-
-## M5-abilities
+## M5-campus-walk
 
 ```yaml
 status: ready
-blockedBy: [M4-notebook]
+blockedBy: [M4-dorm]
 humanGate: no
 owner: ""
 ```
 
-Abilities and tools gate actions.
+- Orientation arc in `content/quests/quests.json`, started by the player after the notice.
+- Talk uses a dialogue box and a portrait more detailed than the map sprite. Portraits are original art. No real headshots.
+- Steps complete from enter-place and talk-npc, including dining and the library.
+- Town stays locked.
+- Gate: `npm run validate` plus a simulation that finishes `orientation` without entering `downtown`.
 
-- Define the action each ability unlocks in code, data-driven from `content/abilities.json`.
-- Without the ability, the action is visible and locked.
-- `ask-a-question` does nothing useful until M6, but the lock state exists.
-- Gate: `npm run validate` plus a test that a locked action stays locked.
-
-## M6-classroom
+## M6-notebook-class
 
 ```yaml
 status: ready
-blockedBy: [M5-abilities]
+blockedBy: [M5-campus-walk]
 humanGate: no
 owner: ""
 ```
 
-Sample seminar.
+- Grant `notebook`, `meal-plan`, and `ask-a-question` from the orientation rewards already in the quest JSON.
+- Notes survive reload, including from a save that had none.
+- Sample seminar via `LessonSource`. No network. Responses only from the lesson. Chrome says sample.
+- Gate: `npm run validate` plus tests for note migration and for a response that is not on the lesson.
 
-- `LessonSource` bundle reader. No network.
-- At `seminar-room`, start the sample lesson. Show blocks in order.
-- Notes from the lesson go to the notebook.
-- With `ask-a-question`, the player picks a prompt and sees the instructor response stored on that lesson. No free-form model call.
-- Lesson chrome says sample, not an official Middlebury course.
-- Gate: `npm run validate` plus a test that a response cannot appear unless it is on the lesson. Do not add an LLM.
-
-## M7-sidequests
+## M7-town
 
 ```yaml
 status: ready
-blockedBy: [M6-classroom]
+blockedBy: [M6-notebook-class]
 humanGate: no
 owner: ""
 ```
 
-Sidequests and the activities fair.
+- Completing campus objectives unlocks `downtown` and `movie-theater`.
+- Triangle Park is the door you use. If you call it the campus boundary, label that as the game's framing.
+- Restaurants stay a sample place until sourced. Do not invent names.
+- Interest sidequests already in content still work and stay hidden when the interest was not picked.
+- Gate: `npm run validate` plus a test that those places are locked on a fresh save and open after orientation, and that an unselected interest offers no quest.
 
-- Interest flags from the character offer at most the sidequests already in content.
-- Completing one unlocks its reward ability or place.
-- An activities-fair beat lists activities without claiming a live schedule.
-- Gate: `npm run validate` plus a test that an interest the player did not pick does not offer its quest.
-
-## M8-town-outdoors
+## M8-seasons-snowbowl
 
 ```yaml
 status: ready
-blockedBy: [M7-sidequests]
+blockedBy: [M7-town]
 humanGate: no
 owner: ""
 ```
 
-Unlock downtown and outdoors nodes that already exist in content.
-
-- They stay `placeholder` or `seed` in the UI.
-- Do not add new real businesses or trail names unless you also add a verified fact. Prefer the existing placeholder nodes.
-- Gate: `npm run validate` plus a test that those places are locked on a fresh save and open after the unlocking quest.
+- Season toggle: spring, summer, fall, winter. Changes presentation only.
+- `snow-bowl` unlocks as a trip after town, not as a tile beside the dorm.
+- One optional minigame there. Failure does not block quests.
+- Gate: `npm run validate` plus a test that the toggle does not mutate quest state, and that the bowl is locked before town is open.
 
 ## M9-verify-facts
 
 ```yaml
 status: ready
-blockedBy: [M8-town-outdoors]
+blockedBy: [M8-seasons-snowbowl]
 humanGate: yes
 owner: ""
 ```
 
 Replace seed copy with verified facts, or delete claims you cannot source.
 
-- Every sentence the game states as true is `verified` with URL and `asOf`, or it is visibly a sample.
 - Re-fetch public pages. Do not copy from memory.
-- Stop when you want a named real person or a live LMS. That is the human gate.
-- Gate: `npm run validate`. The content test must still forbid `sourced-person` and `official` lessons while the approval files are absent.
+- Stop when you want a real person's likeness or a live LMS. That is the human gate.
+- Gate: `npm run validate`. Tests must still forbid `sourced-person`, official lessons, and unnamed likenesses while the approval files are absent.
 
 ## Meta template
 
-Copy this when a meta cycle needs an item. Id pattern `meta-NNNN-slug`. Tag `meta`. `blockedBy` empty. No player-facing scope.
+Copy when a meta cycle needs an item. Id pattern `meta-NNNN-slug`. Tag `meta`. No new player-facing scope.

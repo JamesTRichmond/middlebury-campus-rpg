@@ -9,7 +9,7 @@ productCyclesSinceMeta: 0
 lock: ""
 stop: none
 current: none
-next: M1-shell
+next: M1-letter-train
 lastGate: "npm run validate — vitest 6 passed, tsc clean, on the bootstrap tree before the seed commit (2026-10-27). Re-run at session start."
 ```
 
@@ -18,6 +18,7 @@ lastGate: "npm run validate — vitest 6 passed, tsc clean, on the bootstrap tre
 | Cycle | Item | Result |
 | --- | --- | --- |
 | 0000 | bootstrap | Environment landed. No player-facing game yet. |
+| — | operator style brief | D009–D016. Next item is M1-letter-train, not an exit-button shell. |
 
 ## Notes
 

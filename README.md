@@ -9,11 +9,11 @@ The playable game is not built yet. Cycle 0 is the goal, the continuous loop, an
 ```text
 Build the unofficial Middlebury College orientation RPG described in GOAL.md of JamesTRichmond/middlebury-campus-rpg.
 
-Every session, read AGENTS.md, GOAL.md, LOOP.md, STATUS.md, BACKLOG.md, DECISIONS.md, and the newest file in cycles/. Then execute LOOP.md until a stop condition. Do not ask whether to continue between cycles. One backlog item per cycle. Fail closed: gates must actually pass, campus facts you state as true need a source, and you may not invent real faculty, staff, or students.
+Every session, read AGENTS.md, GOAL.md, LOOP.md, STATUS.md, BACKLOG.md, DECISIONS.md, docs/EXPERIENCE.md, and the newest file in cycles/. Then execute LOOP.md until a stop condition. Do not ask whether to continue between cycles. One backlog item per cycle. Fail closed: gates must actually pass, campus facts you state as true need a source, and you may not invent real faculty, staff, or students or use their photos.
 
-The player creates a character of themselves, learns the campus by talking and traveling a place graph, finishes an orientation arc, unlocks abilities and tools, takes sidequests, opens the town and outdoors, and attends a sample class where they take notes and ask questions answered from that lesson.
+The feel is a cozy pixel-art life game. The player opens an acceptance letter, sets where they are traveling from, rides a train to Middlebury station, creates an inclusive character with accessibility options including a wheelchair, walks with a greeter through Triangle Park to a dorm, unpacks, then does campus orientation. Town and the Snow Bowl unlock later. Seasons are a map toggle. Dialogue uses a portrait. Do not copy Stardew Valley's assets or systems.
 
-Start by running npm run validate and recording the real result. If it passes, begin M1-shell.
+Start by running npm run validate and recording the real result. If it passes, begin M1-letter-train.
 ```
 
 If that prompt and `GOAL.md` ever disagree, `GOAL.md` wins until the operator edits it.

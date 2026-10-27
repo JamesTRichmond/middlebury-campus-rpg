@@ -6,9 +6,42 @@ Accepted at bootstrap by the operator request that created this repo (2026-10-27
 
 v1 is a Vite + React + TypeScript client. Persistence is versioned `localStorage`. No login, no database, no student-data server. Node `>=20`. Package manager is npm. Commit the lockfile when dependencies change.
 
-## D002 — Location graph before free-roam
+## D002 — Location data before a second hard-coded map
 
-The campus is places and exits in `content/places.json`, not a tile engine and not Phaser. A free-roam map is a later decision and only after the orientation arc is fun as a graph. This avoids an art bottleneck and keeps every location testable.
+Superseded in part by D009. The campus is still places and exits in `content/places.json`. Do not keep a second list of doors in the UI. The rejected part is the old plan to ship exit-buttons as the final way you travel. That is no longer the player-facing game.
+
+## D009 — Cozy pixel overworld
+
+Accepted 2026-10-27 from the operator's style brief. The player-facing world is a top-down pixel map in a 16-bit to 64-bit cozy range, in the spirit of Stardew Valley and Harvest Moon, not a clone of either. Map sprites stay small. Dialogue opens a portrait that is more detailed than the sprite. Seasons are a toggle on the same tiles. Scene order is [docs/EXPERIENCE.md](docs/EXPERIENCE.md).
+
+## D010 — Opening is the letter, the train, then third person
+
+First boot: acceptance letter (marked unofficial), the player sets where they are traveling from, a short first-person or window-view train ride into Vermont, arrival at Middlebury station, then third-person control. The greeter's "what should I call you?" opens character creation. Do not start the player on a menu of campus exits.
+
+## D011 — Accessibility is part of the character
+
+Chosen on the platform and applied immediately, and editable later: mobility including a wheelchair that changes sprite and pathing, captions for everyone, visual sound cues, colorblind palettes, high contrast, larger UI, and screen-reader names on controls. The escorted walk to the dorm is completable with the wheelchair option. These are player settings, not a diagnosis.
+
+## D012 — Inclusive character art
+
+The builder offers a wide range of skin tones, hair including textured and protective styles, facial hair, and cultural or religious head coverings. No default body is treated as neutral by omission.
+
+## D013 — Likeness gate
+
+Staff and students can eventually have either an approved real headshot or an original portrait drawn as that person. Until `gates/likeness.approved` names them, NPCs stay original archetypes. Do not depict President Ian Baucom, or any other real official, and do not scrape directory photos. The station greeter is the slot the operator may later point at a recognizable college figure.
+
+## D014 — Triangle Park is the town door in fiction
+
+After campus objectives, town places open from Triangle Park. Sourced geography: Triangle Park is the plaza by the downtown rail tunnel, and the station is about a mile from campus. The "campus boundary" reading is the game's framing, not a verified official line. Say so in the UI if you mention it.
+
+## D015 — Snow Bowl is a trip and a minigame
+
+Middlebury Snow Bowl unlocks after town, as a peripheral trip, not a tile next to the dorm. The visit can contain one optional cozy minigame. Failing it does not close the story. Confirm current trail counts before stating them; the walking-history page is not a live conditions report.
+
+## D016 — Dorm is yours before orientation starts
+
+After the escort, the player unpacks a few brought items and places doodads. Then a notice sends them downstairs to start the campus objectives. Cosmetics save with the character.
+
 
 ## D003 — Content is the source of truth
 
@@ -24,7 +57,7 @@ Classroom UI depends on a `LessonSource` that returns a lesson by id. v1 impleme
 
 ## D006 — Original art, no college marks
 
-CSS and SVG you draw. No official logos, no downloaded crest, no photo cutouts of campus people.
+No official logos, no downloaded crest, no photo cutouts of campus people. Map sprites and portraits follow D009. CSS and SVG remain fine for UI chrome.
 
 ## D007 — Fail-closed loop
 

@@ -8,6 +8,7 @@ export function checkContent(content: GameContent, root: string): string[] {
   const abilityIds = new Set(content.abilities.map((ability) => ability.id));
   const lessonIds = new Set(content.lessons.map((lesson) => lesson.id));
   const peopleAllowed = gateAllows(root, "real-people.approved");
+  const likenessAllowed = peopleAllowed || gateAllows(root, "likeness.approved");
   const officialLessonsAllowed = gateAllows(root, "live-lms.approved");
 
   if (new Set(placeIds).size !== content.places.length) {
@@ -33,6 +34,12 @@ export function checkContent(content: GameContent, root: string): string[] {
     npcsByPlace.set(npc.placeId, list);
     if (npc.kind === "sourced-person" && !peopleAllowed) {
       errors.push(`npc ${npc.id} is a sourced person without gates/real-people.approved`);
+    }
+    if (!likenessAllowed) {
+      const blob = `${npc.displayName}\n${npc.lines.map((line) => line.text).join("\n")}`.toLowerCase();
+      if (blob.includes("baucom") || blob.includes("president of middlebury") || blob.includes("president of the college")) {
+        errors.push(`npc ${npc.id} names a real office-holder without gates/likeness.approved`);
+      }
     }
     const lineIds = npc.lines.map((line) => line.id);
     if (new Set(lineIds).size !== lineIds.length) {

@@ -1,5 +1,20 @@
 [
   {
+    "id": "station-greeter",
+    "displayName": "Station Greeter",
+    "role": "Welcome figure at the platform",
+    "kind": "archetype",
+    "placeId": "middlebury-station",
+    "knowsAbout": ["arrival", "station"],
+    "lines": [
+      {
+        "id": "what-should-i-call-you",
+        "topic": "name",
+        "text": "I'm here to meet new students at the platform. I'm not a specific college officer, and this is not an official welcome. What should I call you?"
+      }
+    ]
+  },
+  {
     "id": "orientation-leader",
     "displayName": "Orientation Leader",
     "role": "Student orientation leader",

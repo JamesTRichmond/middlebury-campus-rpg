@@ -16,9 +16,22 @@ describe("seed content", () => {
     expect(main?.rewards.abilities).toEqual(["notebook", "meal-plan", "ask-a-question"]);
   });
 
-  it("keeps downtown and outdoors locked", () => {
+  it("keeps town and the mountain locked until play opens them", () => {
     const locked = content.places.filter((place) => !place.unlockedByDefault).map((place) => place.id);
-    expect(locked.sort()).toEqual(["downtown", "outdoors"]);
+    expect(locked.sort()).toEqual(["downtown", "movie-theater", "outdoors", "snow-bowl"]);
+  });
+
+  it("starts the fiction at the station and can walk to the dorm", () => {
+    const ids = content.places.map((place) => place.id);
+    for (const id of ["middlebury-station", "triangle-park", "dorm-room", "snow-bowl"]) {
+      expect(ids).toContain(id);
+    }
+    const welcome = content.quests.find((quest) => quest.id === "welcome");
+    expect(welcome?.steps.map((step) => step.id)).toEqual([
+      "introduce",
+      "through-the-park",
+      "your-room",
+    ]);
   });
 
   it("has no sourced people and no official lessons while gates are absent", () => {

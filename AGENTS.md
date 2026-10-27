@@ -21,13 +21,13 @@ A host goal that says "build the RPG" means "run the loop." It does not mean "im
 
 ## Product invariants
 
-1. **Unofficial.** The game is not Middlebury College. Do not imply endorsement. Do not copy logos, crests, athletic marks, or photographs of people. Original geometric art only.
-2. **No invented people.** NPCs are archetypes (orientation leader, librarian, FYS instructor) until `gates/real-people.approved` exists. Archetypes do not get a real person's name, biography, or quotations.
-3. **Facts have a status.** UI that states a campus fact must show it as verified, seed, or sample. Only `verified` facts may be phrased as currently true, and they require `sourceUrl` and `asOf`. See [docs/CONTENT_POLICY.md](docs/CONTENT_POLICY.md).
+1. **Unofficial.** The game is not Middlebury College. Do not imply endorsement. Do not copy logos, crests, or athletic marks. Map sprites and portraits are original art. Cozy-game references are for feel only. Do not copy another game's characters, tiles, or UI.
+2. **No invented people.** NPCs are archetypes until a gate says otherwise. A real name, biography, quotation, headshot, or "this drawing is that person" needs `gates/likeness.approved` naming them. `gates/real-people.approved` is the older biography gate; either file must contain `approved-by:`. Absence means original art and a role title, not President Baucom and not a scraped staff photo.
+3. **Facts have a status.** UI that states a campus fact must show it as verified, seed, or sample. Only `verified` facts may be phrased as currently true, and they require `sourceUrl` and `asOf`. The Triangle Park campus-boundary reading is fiction; label it. See [docs/CONTENT_POLICY.md](docs/CONTENT_POLICY.md).
 4. **Lessons are data.** Classrooms call `LessonSource`. Bundled lessons are samples. A lesson must not name a real instructor or claim to be an official course section. Live LMS wiring waits on `gates/live-lms.approved`.
-5. **The save is the player's.** `localStorage` key prefix `midd-campus-rpg.save`. Version it. Do not drop notes, quests, or unlocks on load. No accounts and no server database in v1.
-6. **The graph is the map.** Places, exits, NPCs, quests, and abilities are JSON under `content/`, checked by `npm run validate`. Do not hard-code a second map in the UI.
-7. **Progression is literacy, not punishment.** Abilities unlock actions. Failed or skipped tasks stay available.
+5. **The save is the player's.** `localStorage` key prefix `midd-campus-rpg.save`. Version it. Do not drop notes, quests, room doodads, accessibility settings, or unlocks on load. No accounts and no server database in v1.
+6. **The graph is the logic, the pixel map is the view.** Places, exits, NPCs, quests, and abilities are JSON under `content/`, checked by `npm run validate`. The player walks a top-down pixel map of that graph (D009). Do not keep a second set of doors in the UI, and do not ship exit-buttons as the final travel UI.
+7. **Progression is arrival, not punishment.** Tasks stay open if skipped. The wheelchair route is part of correctness for the escort. Abilities unlock actions.
 
 ## Where things are
 
@@ -40,7 +40,7 @@ A host goal that says "build the RPG" means "run the loop." It does not mean "im
 | [DECISIONS.md](DECISIONS.md) | Accepted technical choices |
 | [content/](content/) | Game data |
 | [src/content/](src/content/) | Schema, loader, graph checks |
-| [docs/](docs/) | Systems, lesson bridge, content policy, acceptance |
+| [docs/EXPERIENCE.md](docs/EXPERIENCE.md) | First session: letter, train, greeter, dorm, town, Snow Bowl |
 | [cycles/](cycles/) | One report per cycle. The audit trail |
 | [gates/](gates/) | Human approvals. Absence means not approved |
 

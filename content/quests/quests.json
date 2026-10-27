@@ -1,5 +1,32 @@
 [
   {
+    "id": "welcome",
+    "title": "Off the train",
+    "kind": "main",
+    "summary": "Meet the greeter, walk through Triangle Park, and reach your room. Town stays locked.",
+    "steps": [
+      {
+        "id": "introduce",
+        "text": "Tell the station greeter what to call you.",
+        "on": { "type": "talk-npc", "npcId": "station-greeter", "lineId": "what-should-i-call-you" }
+      },
+      {
+        "id": "through-the-park",
+        "text": "Walk through Triangle Park toward campus.",
+        "on": { "type": "enter-place", "placeId": "triangle-park" }
+      },
+      {
+        "id": "your-room",
+        "text": "Get to your room.",
+        "on": { "type": "enter-place", "placeId": "dorm-room" }
+      }
+    ],
+    "rewards": {
+      "abilities": [],
+      "places": []
+    }
+  },
+  {
     "id": "orientation",
     "title": "Find your footing",
     "kind": "main",
