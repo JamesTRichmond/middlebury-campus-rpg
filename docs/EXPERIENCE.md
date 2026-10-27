@@ -1,6 +1,6 @@
 # Experience
 
-Operator brief, 2026-10-27. This is the intended first session. [DECISIONS.md](../DECISIONS.md) D009–D016 accept it. Do not clone Stardew Valley's farming, copyrighted characters, or UI. Take the feel: cozy pace, small stakes, seasons, a portrait when someone talks.
+Operator brief, 2026-10-27. This is the intended first session. Each screen below is a Figma frame before it is code. See the Figma design section of [GOAL.md](../GOAL.md). [DECISIONS.md](../DECISIONS.md) D009–D016 accept it. Do not clone Stardew Valley's farming, copyrighted characters, or UI. Take the feel: cozy pace, small stakes, seasons, a portrait when someone talks.
 
 ## What you see first
 

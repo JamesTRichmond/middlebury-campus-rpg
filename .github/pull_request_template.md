@@ -4,6 +4,8 @@ Backlog id:
 
 ## Player-visible change
 
+Figma frame URL, or `no frame change`:
+
 ## Gate
 
 - [ ] `npm run validate` passed on this branch

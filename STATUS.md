@@ -18,7 +18,7 @@ lastGate: "npm run validate — vitest 6 passed, tsc clean, on the bootstrap tre
 | Cycle | Item | Result |
 | --- | --- | --- |
 | 0000 | bootstrap | Environment landed. No player-facing game yet. |
-| — | operator style brief | D009–D016. Next item is M1-letter-train, not an exit-button shell. |
+| — | operator style brief | D009–D016. That brief named M1-letter-train. D018 superseded the next item: it is M0-figma-file. |
 | — | playtest goal | D017. Feedback form is in feedback/. Demos D1–D8. Class must match the virtual lesson. |
 | — | Figma first | D018. Next item is M0-figma-file. Do not invent a Figma URL. |
 | — | one goal | D020. GOAL.md is the only goal. The named paste files are pointers. Figma remains primary. |
@@ -27,3 +27,4 @@ lastGate: "npm run validate — vitest 6 passed, tsc clean, on the bootstrap tre
 
 - Integrator: first agent to start a session sets `lock` to its name.
 - Do not list future ideas here. File them only through the loop's rules.
+- Newest cycle note is `cycles/0002-one-goal.md`. Older notes that name `M1-shell` or `M1-letter-train` as next are historical.

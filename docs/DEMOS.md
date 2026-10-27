@@ -27,7 +27,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 
 ## Recorded builds
 
-None yet. The first agent to finish M1 writes the open path and the Figma frame URL here. Do not invent either.
+None yet. M0 records the file URL in [FIGMA.md](FIGMA.md), not here. The first agent to finish M1 writes the open path and the Figma frame URL in this table. Do not invent either.
 
 | Demo | Version | Figma | How to play | Date |
 | --- | --- | --- | --- | --- |

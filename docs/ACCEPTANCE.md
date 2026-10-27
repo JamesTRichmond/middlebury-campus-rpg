@@ -13,6 +13,7 @@ The project goal is met when all of these are true and `npm run validate` passes
 9. The notebook records a seminar note. A question reveals only a response stored on that lesson.
 10. No NPC uses a real person's likeness unless the likeness gate names them.
 11. The UI does not use Middlebury logos.
+12. The Figma file exists, its URL came from the integration, and each shipped demo's build matches its frame. A player-visible change with no frame is not done.
 
 Until then, the loop continues.
 

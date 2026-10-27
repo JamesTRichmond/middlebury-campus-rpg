@@ -2,7 +2,7 @@
 
 Unofficial orientation RPG for new students at Middlebury College. This repository is the working environment for a coding agent. It is **not** affiliated with, endorsed by, or speaking for Middlebury College. Do not use college logos or depict real people.
 
-The playable game is not built yet. The next agent starts at backlog item `M0-figma-file`, then `M1-letter-train`. Figma is the primary design tool. The goal file is [Middlebury-Campus-RPG-GOAL.md](Middlebury-Campus-RPG-GOAL.md). If that file and `GOAL.md` disagree, `GOAL.md` wins until the operator edits it.
+The playable game is not built yet. The next agent starts at backlog item `M0-figma-file`, then `M1-letter-train`. Figma is the primary design tool. The only goal is [GOAL.md](GOAL.md). [Middlebury-Campus-RPG-GOAL.md](Middlebury-Campus-RPG-GOAL.md) and [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md) are pointers, not a second goal.
 
 ## Loop, short version
 
@@ -49,7 +49,8 @@ There is no game server. Do not invent a public URL.
 
 | File | Why it exists |
 | --- | --- |
-| [GOAL.md](GOAL.md) | Product goal and phase plan |
+| [GOAL.md](GOAL.md) | The only goal. Product, Figma design, and phase plan |
+| [docs/FIGMA.md](docs/FIGMA.md) | Figma file setup. Design there before code |
 | [LOOP.md](LOOP.md) | Continuous work, meta improvement, stop rules |
 | [AGENTS.md](AGENTS.md) | Boundaries |
 | [BACKLOG.md](BACKLOG.md) | The queue. Order beats any issue list |
