@@ -4,13 +4,13 @@ Use the existing checkout at `/workspace/middlebury-campus-rpg`. This is an unof
 
 ## Ready check
 
-There is no game server yet. Do not start Vite, do not invent a public URL, and do not deploy.
+The arrival game is a static Vite browser build. Use local preview when testing; do not invent a public URL or deploy.
 
 1. `cd /workspace/middlebury-campus-rpg`
-2. Confirm Node is 20 or newer.
+2. Confirm Node is 20.19 or newer.
 3. If `node_modules` is missing, run `npm ci`.
 4. Run `npm run validate`. It must exit 0. Do not start the backlog if it fails.
-5. The playtest form is local only: `npm run feedback` prints `http://127.0.0.1:4173/`.
+5. After validation, `npm run preview` serves the local game and `/feedback/index.html` on port 4173. `npm run feedback` separately serves only the original form.
 
 ## Then begin
 
@@ -18,4 +18,4 @@ Read, in order: `AGENTS.md`, `GOAL.md`, `LOOP.md`, `STATUS.md`, `BACKLOG.md`, `D
 
 Then execute `LOOP.md` until a stop condition. One backlog item per cycle. Do not ask whether to continue.
 
-The next item is `M0-figma-file`. Create the Figma file with the connected integration and record the real URL. If Figma is not available, write `gates/PENDING-figma.md`, set `stop: human-gate`, and stop. Do not invent a Figma URL and do not start `M1-letter-train` instead.
+Read STATUS.md for the next item. M0 has created and accepted the Figma file; reuse its recorded URL. If Figma is not available, write `gates/PENDING-figma.md`, set `stop: human-gate`, and stop. Do not invent a Figma URL and do not start `M1-letter-train` instead.

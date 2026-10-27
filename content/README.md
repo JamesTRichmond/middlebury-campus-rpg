@@ -4,6 +4,7 @@ JSON the game will read. Do not add a second copy of these facts in React compon
 
 | File | Contents |
 | --- | --- |
+| `arrival.json` | Unofficial letter, origin field, sample ride captions, save notices and arrival references |
 | `places.json` | Station, Triangle Park, campus, dorm, locked town and Snow Bowl |
 | `npcs.json` | Archetypes only, until the people gate |
 | `quests/quests.json` | Main orientation arc and two interest sidequests |

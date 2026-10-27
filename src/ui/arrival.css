@@ -1,0 +1,74 @@
+:root {
+  --color-paper: #f6ebd6;
+  --color-ink: #302d28;
+  --color-pine: #305c4d;
+  --color-gold: #d6a45c;
+  --color-grass: #879a6d;
+  --color-stone: #a69d90;
+  --color-snow: #e8f0ec;
+  --color-skin: #b57755;
+  --map-ground: #879a6d;
+  font-family: "Atkinson Hyperlegible Mono", monospace;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+p, h1 { margin: 0; font-weight: 400; }
+button, input, a { font: inherit; }
+.arrival { max-width: 1280px; min-height: 720px; margin: 0 auto; }
+.letter-stage { padding: 24px; }
+.letter { width: 600px; max-width: 100%; margin: 0 auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; overflow-wrap: anywhere; }
+.unofficial { font-size: 18px; line-height: 23px; }
+.letter-title { white-space: pre-line; font-size: 36px; }
+.letter-body { font-size: 22px; }
+.text-field { border: 2px solid var(--color-ink); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.text-field label { font-size: 18px; line-height: 23px; }
+.text-field input { width: 100%; min-width: 0; color: inherit; background: transparent; padding: 0; border: 0; outline: none; font-size: 20px; }
+.text-field input::placeholder { color: var(--color-ink); opacity: 1; }
+.text-field:focus-within { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+.field-error, .legal, .letter-warning, .scene-warning, .platform-warning { font-size: 16px; }
+.letter-warning { margin-top: 16px; }
+.button { display: block; padding: 16px; border: 0; border-radius: 0; min-height: 55px; color: var(--color-paper); background: var(--color-pine); font-size: 18px; line-height: 23px; text-align: left; text-decoration: none; cursor: pointer; overflow-wrap: anywhere; }
+.button:hover { background: var(--color-ink); }
+.button:focus-visible { outline: 4px solid var(--color-ink); outline-offset: 3px; }
+h1:focus { outline: none; }
+.scene-stage { position: relative; padding: 24px 32px; }
+.scene-title { font-size: 32px; line-height: 1.4; }
+.train-window { position: relative; width: 760px; height: 400px; max-width: 100%; margin-top: 27.2px; background: var(--color-ink); overflow: hidden; }
+.train-scenery { position: absolute; inset: 16px; overflow: hidden; background: var(--color-snow); }
+.train-land { position: absolute; left: 0; top: 238px; width: 100%; height: 130px; background: var(--color-grass); }
+.pixel, .person { display: block; position: absolute; }
+.person { width: 32px; height: 32px; }
+.train-tree { position: absolute; left: calc(16px + var(--tree-index) * 88px); top: calc(120px + var(--tree-phase) * 16px); width: 56px; height: 128px; }
+.ride-caption { max-width: 1050px; margin-top: 24px; font-size: 22px; overflow-wrap: anywhere; }
+.scene-continue { width: 240px; margin-top: 24px; }
+.platform-viewport { position: relative; width: 480px; height: 270px; overflow: hidden; margin-top: 27.2px; }
+.platform-map { position: relative; width: 480px; height: 270px; background: var(--map-ground); transform-origin: top left; }
+.station-sign { position: absolute; top: 152px; left: 28px; width: 140px; font-size: 12px; line-height: 16px; }
+.platform-sign-caption { position: absolute; top: 244px; left: 16px; width: 450px; font-size: 11px; line-height: 14px; }
+.mobile-platform-caption { display: none; }
+.feedback-hint { font-size: 14px; margin-top: 24px; }
+.scene-warning, .platform-warning { margin-top: 16px; max-width: 1050px; }
+@media (min-width: 1200px) {
+  .train-continue { position: absolute; left: 920px; top: 580px; margin: 0; }
+  .platform-viewport { width: 960px; height: 540px; }
+  .platform-map { transform: scale(2); }
+  .platform-continue { position: absolute; left: 1000px; top: 600px; margin: 0; }
+  .feedback-hint { position: absolute; left: 32px; top: 680px; margin: 0; }
+  .scene-warning { position: absolute; left: 32px; top: 640px; margin: 0; }
+  .platform-warning { position: relative; margin-top: 80px; }
+}
+@media (max-width: 767px) {
+  .scene-stage { padding: 24px; }
+  .train-window { width: 100%; height: 300px; }
+  .train-land { top: 174px; height: 94px; }
+  .train-tree { left: calc(8px + var(--tree-index) * 88px); top: calc(64px + var(--tree-phase) * 16px); }
+  .scene-continue { width: 100%; }
+  .platform-viewport { width: 100%; max-width: 480px; height: 228px; }
+  .mobile-platform-caption { display: block; margin-top: 24px; font-size: 18px; line-height: 23px; }
+}
+@media (prefers-contrast: more) {
+  :root { --color-paper: #ffffff; --color-ink: #101010; --color-pine: #123326; --color-gold: #e6b000; --color-grass: #76885b; --color-snow: #ffffff; }
+}

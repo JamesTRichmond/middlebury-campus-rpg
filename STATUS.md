@@ -4,9 +4,9 @@
 cycle: 6
 lastMetaCycle: 0
 productCyclesSinceMeta: 1
-lock: ""
-stop: operator-hold
-current: none
+lock: "codex-root"
+stop: none
+current: M1-letter-train
 next: M1-letter-train
 lastGate: "M0 Figma acceptance passed: Cover NODE link, preserved five-edge chain, 43 rendered frames, no bounds/overlap issues. npm run validate: 12 tests passed, TypeScript clean."
 ```
@@ -28,4 +28,4 @@ lastGate: "M0 Figma acceptance passed: Cover NODE link, preserved five-edge chai
 - Cover text `3:515` links internally to Letter `3:86`; then use Present / Flow 1.
 - Evidence: docs/figma/M0-acceptance.json; newest cycle: cycles/0006-figma-acceptance.md.
 - Resolved gate: gates/resolved/figma-cycle-0006.md. No pending Figma gate or approval file was created.
-- Stop is operator-hold because the operator explicitly instructed not to start M1. M1 has not started. No playable D1 or public build is claimed.
+- Operator cleared the hold and authorized M1. M1 is doing; no public deployment is authorized.

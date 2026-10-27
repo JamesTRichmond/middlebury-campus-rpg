@@ -4,20 +4,31 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=20.19.0"
   },
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "validate": "vitest run && tsc --noEmit",
-    "feedback": "node scripts/serve-feedback.mjs"
+    "validate": "vitest run && tsc --noEmit && vite build",
+    "feedback": "node scripts/serve-feedback.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:browser": "playwright test"
   },
   "dependencies": {
+    "@fontsource/atkinson-hyperlegible-mono": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.15.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "typescript": "^5.8.3",
-    "vitest": "^3.1.1",
-    "@types/node": "^22.15.3"
+    "vite": "^7.3.7",
+    "vitest": "^3.1.1"
   }
 }

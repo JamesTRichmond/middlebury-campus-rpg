@@ -14,6 +14,7 @@ function readJson(root: string, path: string): unknown {
 
 export function loadContent(root = repoRoot()): GameContent {
   const parsed = contentSchema.parse({
+    arrival: readJson(root, "content/arrival.json"),
     places: readJson(root, "content/places.json"),
     npcs: readJson(root, "content/npcs.json"),
     quests: readJson(root, "content/quests/quests.json"),

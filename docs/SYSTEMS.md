@@ -57,6 +57,8 @@ At a place, the player talks to NPCs whose `placeId` matches. A line may require
 ```ts
 type SaveV1 = {
   version: 1;
+  origin: string;
+  arrival: { stage: "train" | "platform" };
   character: Character | null;
   placeId: string;
   notes: { id: string; placeId?: string; lessonId?: string; text: string }[];
@@ -74,3 +76,9 @@ Migrations must keep notes, quests, doodads, and accessibility settings.
 
 Mobile and desktop. Captions on. Dialogue, map, notebook, quest log, lesson panel. No combat HUD. No official branding. Wheelchair sprite when that mobility is set.
 
+
+## Arrival persistence
+
+M1 reads `content/arrival.json` and the existing place/greeter IDs through the shared schema. `src/game/arrival.ts` owns the version-1 arrival transition. Origin changes the caption only. The new save starts at `middlebury-station`, with the view staged as train until Continue reaches the platform.
+
+Key: `midd-campus-rpg.save.v1`; the previous valid record is retained at `.previous`. Unknown/future/corrupt records are not applied or overwritten. A blocked or full storage backend leaves the prior record intact and the current trip playable in memory, with a visible notice. Schema validation and transitions preserve character, notes, quests, abilities, unlocked places, doodads, season and additional fields. Later migrations must maintain that contract.

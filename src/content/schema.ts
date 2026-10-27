@@ -146,7 +146,30 @@ export const calendarNoteSchema = factSchema.and(
   z.object({ id: z.string().regex(/^[a-z0-9-]+$/) }),
 );
 
+export const arrivalSchema = z.object({
+  id: z.literal("arrival-letter"),
+  status: z.literal("placeholder"),
+  placeId: z.string().min(1),
+  greeterNpcId: z.string().min(1),
+  unofficialLabel: z.string().min(1),
+  title: z.string().min(1),
+  body: z.string().min(1),
+  originLabel: z.string().min(1),
+  originPlaceholder: z.string().min(1),
+  originError: z.string().min(1),
+  continueLabel: z.string().min(1),
+  disclaimer: z.string().min(1),
+  trainTitle: z.string().min(1),
+  trainCaption: z.string().includes("{origin}"),
+  platformTitle: z.string().min(1),
+  platformCaption: z.string().min(1),
+  feedbackHint: z.string().min(1),
+  saveWarning: z.string().min(1),
+  loadWarning: z.string().min(1),
+});
+
 export const contentSchema = z.object({
+  arrival: arrivalSchema,
   places: z.array(placeSchema).min(1),
   npcs: z.array(npcSchema).min(1),
   quests: z.array(questSchema).min(1),

@@ -1,0 +1,21 @@
+{
+  "id": "arrival-letter",
+  "status": "placeholder",
+  "placeId": "middlebury-station",
+  "greeterNpcId": "station-greeter",
+  "unofficialLabel": "UNOFFICIAL · STORY PROP",
+  "title": "Your next chapter\nbegins here.",
+  "body": "In this imagined story, you have been accepted to Middlebury. Choose where your journey begins. This unofficial letter is not a real admissions decision.",
+  "originLabel": "Traveling from",
+  "originPlaceholder": "City or region",
+  "originError": "Enter a city or region to continue.",
+  "continueLabel": "Continue",
+  "disclaimer": "Not affiliated with, endorsed by, or speaking for Middlebury College.",
+  "trainTitle": "Train",
+  "trainCaption": "From {origin} · Sample journey · the ride ends at Middlebury station.",
+  "platformTitle": "Platform",
+  "platformCaption": "Arrived · step-free route to the greeter",
+  "feedbackHint": "Continue opens the arrival feedback form.",
+  "saveWarning": "This browser couldn’t save your journey. You can keep playing, but this trip may not be here when you return.",
+  "loadWarning": "Your saved journey couldn’t be loaded. It has been kept unchanged; this trip won’t overwrite it."
+}

@@ -32,10 +32,10 @@ Create the Figma file with the connected integration. Do this before any game sc
 ## M1-letter-train
 
 ```yaml
-status: ready
+status: doing
 blockedBy: [M0-figma-file]
 humanGate: no
-owner: ""
+owner: "codex-root"
 ```
 
 The opening, before free walk.

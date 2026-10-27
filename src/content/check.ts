@@ -11,6 +11,12 @@ export function checkContent(content: GameContent, root: string): string[] {
   const likenessAllowed = peopleAllowed || gateAllows(root, "likeness.approved");
   const officialLessonsAllowed = gateAllows(root, "live-lms.approved");
 
+  if (!placeIds.has(content.arrival.placeId)) errors.push("arrival destination is missing");
+  const greeter = content.npcs.find((npc) => npc.id === content.arrival.greeterNpcId);
+  if (!greeter || greeter.placeId !== content.arrival.placeId) {
+    errors.push("arrival greeter is missing or stationed elsewhere");
+  }
+
   if (new Set(placeIds).size !== content.places.length) {
     errors.push("duplicate place id");
   }

@@ -19,14 +19,17 @@ const flat = flatten(sections);
 const root = document.querySelector("#app");
 const live = document.querySelector("#live");
 const params = new URLSearchParams(location.search);
-const store = loadStore(localStorage);
+// Accessing the browser property can itself throw before loadStore's try/catch.
+let storage = null;
+try { storage = window.localStorage; } catch { /* The existing unsaved-state banner handles this. */ }
+const store = loadStore(storage);
 let draft = applyQuery(seedDraft(store, params.get("version") ?? ""), params, flat);
 let view = "card";
 let storedOk = true;
 
 function persist() {
   store.draft = draft;
-  storedOk = saveStore(localStorage, store);
+  storedOk = saveStore(storage, store);
 }
 
 function say(message) {
@@ -490,7 +493,7 @@ async function submitReport() {
   };
   store.submissions.push(submission);
   store.draft = draft;
-  storedOk = saveStore(localStorage, store);
+  storedOk = saveStore(storage, store);
   draft.copyOk = await writeClipboard(draft.report);
   view = "submitted";
   render();

@@ -2,7 +2,7 @@
 
 Unofficial orientation RPG for new students at Middlebury College. This repository is the working environment for a coding agent. It is **not** affiliated with, endorsed by, or speaking for Middlebury College. Do not use college logos or depict real people.
 
-The playable game is not built yet. The next agent starts at backlog item `M0-figma-file`, then `M1-letter-train`. Figma is the primary design tool. The only goal is [GOAL.md](GOAL.md). [Middlebury-Campus-RPG-GOAL.md](Middlebury-Campus-RPG-GOAL.md) and [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md) are pointers, not a second goal.
+D1 is a local playable arrival: unofficial letter, home place, train window, and Middlebury platform. M0 is complete; the active cycle and next item are in STATUS.md. Figma is the primary design tool. The only goal is [GOAL.md](GOAL.md). [Middlebury-Campus-RPG-GOAL.md](Middlebury-Campus-RPG-GOAL.md) and [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md) are pointers, not a second goal.
 
 ## Loop, short version
 
@@ -27,14 +27,26 @@ Then open the local page it prints. A demo should link it with `?demo=D6-class&v
 
 ## Commands
 
-Node `>=20`.
+Node `>=20.19` (or a current LTS release).
 
 ```sh
 npm ci
 npm run validate
 ```
 
-`npm run validate` is `vitest` plus `tsc`. There is no client yet; the green suite means the seed content is internally consistent.
+`npm run validate` runs content/arrival tests, TypeScript checks, and the production build. To play that build:
+
+```sh
+npm run preview
+```
+
+Open the local URL printed by Vite (port 4173). A new browser opens the letter; a returning browser resumes its saved train/platform. Platform Continue opens the existing feedback form with `demo=D1-letter-train` and the exact Git SHA compiled into that build. No account or remote service is used. The font and original Figma geometry are bundled locally.
+
+```sh
+npm run test:browser
+```
+
+This checks the production build on desktop and phone using Playwright. It uses `/usr/bin/chromium` when present; otherwise install Playwright Chromium with `npx playwright install chromium`. The separate `npm run feedback` command still serves the original form alone; run it separately from the game preview because both use port 4173.
 
 ## Codex Cloud
 
@@ -43,7 +55,7 @@ Paste these into the environment's setup fields before publishing:
 - Install script: [scripts/codex-install.sh](scripts/codex-install.sh)
 - Start skill: [.codex/start-skill.md](.codex/start-skill.md)
 
-There is no game server. Do not invent a public URL.
+The game is a static browser build, with local Vite preview for testing. There is no backend or published public URL.
 
 ## Map
 
