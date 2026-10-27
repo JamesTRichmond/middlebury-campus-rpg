@@ -1,0 +1,409 @@
+{
+  "fileUrl": "https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS",
+  "fileKey": "RgmU4XGp5hEYxNTBlvXlOS",
+  "sessionId": "885d5c54-ec49-45aa-ba02-a3a04005b8ad",
+  "scope": "M0 foundations and starter components",
+  "createdNodeIds": [
+    "0:1",
+    "2:2",
+    "2:3",
+    "2:4",
+    "2:5"
+  ],
+  "pages": {
+    "Cover": "0:1",
+    "Foundations": "2:2",
+    "Components": "2:3",
+    "Flows": "2:4",
+    "Handoff": "2:5"
+  },
+  "collectionId": "VariableCollectionId:2:6",
+  "modes": {
+    "default": "2:0",
+    "high contrast": "2:1",
+    "larger UI": "2:2",
+    "colorblind": "2:3"
+  },
+  "vars": {
+    "paper": "VariableID:2:7",
+    "ink": "VariableID:2:8",
+    "pine": "VariableID:2:9",
+    "gold": "VariableID:2:10",
+    "grass": "VariableID:2:11",
+    "stone": "VariableID:2:12",
+    "snow": "VariableID:2:13",
+    "skin": "VariableID:2:14"
+  },
+  "palette": {
+    "paper": [
+      "F6EBD6",
+      "FFFFFF",
+      "F6EBD6",
+      "F6EBD6"
+    ],
+    "ink": [
+      "302D28",
+      "101010",
+      "302D28",
+      "302D28"
+    ],
+    "pine": [
+      "305C4D",
+      "123326",
+      "305C4D",
+      "294D70"
+    ],
+    "gold": [
+      "D6A45C",
+      "E6B000",
+      "D6A45C",
+      "D6A45C"
+    ],
+    "grass": [
+      "879A6D",
+      "76885B",
+      "879A6D",
+      "8E976D"
+    ],
+    "stone": [
+      "A69D90",
+      "A69D90",
+      "A69D90",
+      "A69D90"
+    ],
+    "snow": [
+      "E8F0EC",
+      "FFFFFF",
+      "E8F0EC",
+      "E8F0EC"
+    ],
+    "skin": [
+      "B57755",
+      "B57755",
+      "B57755",
+      "B57755"
+    ]
+  },
+  "fonts": [
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Bold"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Bold Italic"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "ExtraBold"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "ExtraBold Italic"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "ExtraLight"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "ExtraLight Italic"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Italic"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Light"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Light Italic"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Medium"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Medium Italic"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Regular"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "SemiBold"
+    },
+    {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "SemiBold Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Black"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Black Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Bold"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Bold Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "ExtraBold"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "ExtraBold Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "ExtraLight"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "ExtraLight Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Light"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Light Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Medium"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Medium Italic"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "Regular"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "SemiBold"
+    },
+    {
+      "family": "Azeret Mono",
+      "style": "SemiBold Italic"
+    }
+  ],
+  "components": {
+    "createdNodeIds": [
+      "3:2",
+      "3:3",
+      "3:4",
+      "3:5",
+      "3:6",
+      "3:7",
+      "3:8",
+      "3:9",
+      "3:10",
+      "3:11",
+      "3:12",
+      "3:13",
+      "3:14",
+      "3:15",
+      "3:16",
+      "3:17",
+      "3:18",
+      "3:19",
+      "3:20",
+      "3:21",
+      "3:22",
+      "3:23",
+      "3:24",
+      "3:25",
+      "3:26",
+      "3:27",
+      "3:28",
+      "3:29",
+      "3:30",
+      "3:31",
+      "3:32",
+      "3:33",
+      "3:34",
+      "3:35",
+      "3:36",
+      "3:37",
+      "3:45",
+      "3:46",
+      "3:48",
+      "3:50",
+      "3:51",
+      "3:52",
+      "3:53",
+      "3:54",
+      "3:57",
+      "3:59"
+    ],
+    "components": {
+      "State=default": "3:2",
+      "State=hover": "3:4",
+      "State=focus": "3:17",
+      "State=disabled": "3:8",
+      "Button": "3:10",
+      "State=empty": "3:11",
+      "State=filled": "3:14",
+      "State=error": "3:20",
+      "Field": "3:24",
+      "Portrait / original station greeter": "3:25",
+      "Captions / on by default": "3:33",
+      "Dialogue": "3:35",
+      "Letter": "3:50"
+    },
+    "buttonIds": [
+      "3:2",
+      "3:4",
+      "3:6",
+      "3:8"
+    ],
+    "fieldIds": [
+      "3:11",
+      "3:14",
+      "3:17",
+      "3:20"
+    ],
+    "letterId": "3:50",
+    "dialogueId": "3:35",
+    "portraitId": "3:25",
+    "font": {
+      "family": "Atkinson Hyperlegible Mono",
+      "style": "Regular"
+    }
+  },
+  "flows": [
+    {
+      "id": "3:86",
+      "name": "M0 / Letter / default / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 422.79998779296875
+    },
+    {
+      "id": "3:97",
+      "name": "M0 / Dialogue / default / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 441.6000061035156
+    },
+    {
+      "id": "3:139",
+      "name": "M0 / Letter / default / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 469.79998779296875
+    },
+    {
+      "id": "3:150",
+      "name": "M0 / Dialogue / default / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 441.6000061035156
+    },
+    {
+      "id": "3:192",
+      "name": "M0 / Letter / high contrast / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 422.79998779296875
+    },
+    {
+      "id": "3:203",
+      "name": "M0 / Dialogue / high contrast / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 441.6000061035156
+    },
+    {
+      "id": "3:245",
+      "name": "M0 / Letter / high contrast / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 469.79998779296875
+    },
+    {
+      "id": "3:256",
+      "name": "M0 / Dialogue / high contrast / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 441.6000061035156
+    },
+    {
+      "id": "3:298",
+      "name": "M0 / Letter / larger UI / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 529
+    },
+    {
+      "id": "3:309",
+      "name": "M0 / Dialogue / larger UI / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 552
+    },
+    {
+      "id": "3:351",
+      "name": "M0 / Letter / larger UI / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 647
+    },
+    {
+      "id": "3:362",
+      "name": "M0 / Dialogue / larger UI / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 552
+    },
+    {
+      "id": "3:404",
+      "name": "M0 / Letter / colorblind / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 422.79998779296875
+    },
+    {
+      "id": "3:415",
+      "name": "M0 / Dialogue / colorblind / desktop",
+      "width": 1280,
+      "height": 720,
+      "contentHeight": 441.6000061035156
+    },
+    {
+      "id": "3:457",
+      "name": "M0 / Letter / colorblind / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 469.79998779296875
+    },
+    {
+      "id": "3:468",
+      "name": "M0 / Dialogue / colorblind / phone",
+      "width": 390,
+      "height": 720,
+      "contentHeight": 441.6000061035156
+    }
+  ],
+  "phoneLargerUIHeight": 1004,
+  "visualReview": "Desktop dialogue and larger UI phone letter reviewed; repaired reflow and frame bounds. Font asserted; zero image-filled nodes in Flows."
+}

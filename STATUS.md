@@ -3,14 +3,14 @@
 Keep this file under 120 lines. Cycle narrative goes in `cycles/`.
 
 ```yaml
-cycle: 0
+cycle: 3
 lastMetaCycle: 0
 productCyclesSinceMeta: 0
 lock: "codex-root"
 stop: none
 current: M0-figma-file
 next: M0-figma-file
-lastGate: "NOT RUN: npm run validate; execution workspace is still pending. M0 cannot be marked done."
+lastGate: "npm run validate passed: 12 tests and tsc clean. Figma file access and starter composition checked. M0 remains doing pending PR merge."
 ```
 
 ## Index
@@ -28,3 +28,8 @@ lastGate: "NOT RUN: npm run validate; execution workspace is still pending. M0 c
 - Integrator: first agent to start a session sets `lock` to its name.
 - Do not list future ideas here. File them only through the loop's rules.
 - Newest cycle note is `cycles/0002-one-goal.md`. Older notes that name `M1-shell` or `M1-letter-train` as next are historical.
+
+## M0 review
+
+- Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
+- Branch: cycle/0003-figma-file. Assigned host branch requires PR; M0 stays doing until merge. M1 has not started.
