@@ -13,12 +13,33 @@
 .creator[data-palette=Deuteranopia] { --color-pine:#354e68; --color-gold:#d6b65c; }
 .creator[data-palette=Tritanopia] { --color-pine:#51425c; --color-gold:#d6a08a; }
 .creator.contrast { --color-paper:#fff; --color-ink:#101010; --color-pine:#123326; }
-.character-preview { min-height:128px; padding:24px; }.preview-sprite { display:block;position:relative;width:32px;height:32px;transform:scale(3);transform-origin:top left; }.preview-sprite i { position:absolute;display:block; }
-.sprite-head { background:var(--skin);width:10px;height:10px;left:11px;top:2px; }.sprite-hair { background:var(--color-ink);width:12px;height:4px;left:10px;top:0; }.hair-Shaved { height:1px; }.hair-Braids,.hair-Locs { height:16px;width:3px; }.hair-Coils,.hair-Curls { height:7px;width:16px;left:8px; }
-.sprite-body { width:var(--body-width);height:12px;top:12px;left:8px;background:var(--color-pine); }.sprite-legs { width:16px;height:8px;border-left:5px solid var(--color-ink);border-right:5px solid var(--color-ink);top:24px;left:8px; }.sprite-wheel {width:14px;height:14px;border:3px solid var(--color-ink);top:18px;left:3px;}.sprite-covering {background:var(--color-gold);width:16px;height:8px;left:8px;top:0;}.sprite-beard {width:8px;height:4px;left:12px;top:9px;background:var(--color-ink);}.sprite-aid {width:3px;height:20px;background:var(--color-stone);left:26px;top:12px;}
 @media(max-width:600px){.creator{padding:24px;}}
 :root[data-palette=Protanopia] { --color-pine:#304d70; --color-gold:#d6b65c; }
 :root[data-palette=Deuteranopia] { --color-pine:#354e68; --color-gold:#d6b65c; }
 :root[data-palette=Tritanopia] { --color-pine:#51425c; --color-gold:#d6a08a; }
 :root[data-contrast=high] { --color-paper:#fff; --color-ink:#101010; --color-pine:#123326; }
 :root[data-ui-scale=Larger] .arrival { font-size:24px; }:root[data-ui-scale=Larger] .arrival .button { font-size:24px; }
+
+/* Preview-first D2 wardrobe: whole-number figure scale and a persistent view. */
+.creator { display:grid; grid-template-columns:360px minmax(0,1fr); gap:24px; padding:24px; align-items:start; }
+.creator h1 { grid-column:1/-1; font-size:28px; line-height:1.4; margin:0; }
+.creator form,.character-complete { display:flex;flex-direction:column;gap:12px;min-width:0; }
+.live-preview { position:sticky;top:12px;display:flex;flex-direction:column;align-items:center;gap:12px;padding:12px 0;background:var(--color-paper);z-index:2;text-align:center;min-width:0; }
+.creator .preview-sprite { display:block;position:static;width:192px;height:240px;transform:none;flex-shrink:0; }
+.preview-help {font-size:14px;line-height:20px;}
+.creator .skin-choices {border:0;padding:0;margin:0;min-width:0;}
+.skin-swatches {display:grid;grid-template-columns:repeat(4,44px);gap:8px;margin-top:12px;}
+.creator .skin-swatch {width:44px;height:44px;border:2px solid var(--color-ink);padding:4px;font:inherit;cursor:pointer;}
+.skin-swatch span {display:block;color:#fff;text-shadow:1px 1px #101010,-1px -1px #101010;}
+.skin-swatch[aria-pressed=true] {outline:3px solid var(--color-ink);outline-offset:2px;}
+.swatch-name {font-size:14px;margin-top:8px;}
+.creator input,.creator select {min-height:44px;}
+.creator input,.creator select,.creator button {scroll-margin-top:24px;}
+@media(max-width:900px){
+ .creator {grid-template-columns:minmax(0,1fr);}
+ .live-preview {top:0;box-shadow:0 2px 0 var(--color-ink);gap:6px;padding:8px 0;}
+ .creator .preview-sprite {width:128px;height:160px;}
+ .creator input,.creator select,.creator button {scroll-margin-top:260px;}
+}
+.creator h1 {line-height:39px;}
+.live-preview > p:first-child {line-height:25px;}

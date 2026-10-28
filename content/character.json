@@ -3,7 +3,7 @@
   "greeterNpcId": "station-greeter",
   "greeting": "Welcome! What should I call you?",
   "open": "Create your character",
-  "title": "What should I call you?",
+  "title": "Make this character yours",
   "save": "Save character",
   "end": "Your character is ready. D2 ends here; the escorted walk comes next.",
   "fields": {
@@ -29,12 +29,16 @@
       "Coils",
       "Braids",
       "Locs",
-      "Shaved"
+      "Shaved",
+      "Afro",
+      "Bun",
+      "Ponytail"
     ],
     "facialHair": [
       "None",
       "Beard",
-      "Moustache"
+      "Moustache",
+      "Goatee"
     ],
     "covering": [
       "None",
@@ -62,6 +66,41 @@
       "Choose later",
       "Fall",
       "Feb"
+    ],
+    "hairColor": [
+      "Ink",
+      "Brown",
+      "Blond",
+      "Silver",
+      "Auburn"
+    ],
+    "clothes": [
+      "Sweater",
+      "Jacket",
+      "T-shirt"
+    ],
+    "clothesColor": [
+      "Pine",
+      "Gold",
+      "Stone",
+      "Ink"
+    ],
+    "bottom": [
+      "Trousers",
+      "Skirt"
+    ],
+    "eyewear": [
+      "None",
+      "Square glasses",
+      "Round glasses"
+    ],
+    "scarf": [
+      "None",
+      "Scarf"
+    ],
+    "bag": [
+      "None",
+      "Shoulder bag"
     ]
   },
   "interests": [
@@ -70,5 +109,47 @@
     "Languages",
     "Athletics",
     "Science"
+  ],
+  "skinTones": [
+    {
+      "id": "1",
+      "name": "Light warm",
+      "hex": "#f4d9c0"
+    },
+    {
+      "id": "2",
+      "name": "Light peach",
+      "hex": "#e5b894"
+    },
+    {
+      "id": "3",
+      "name": "Medium warm",
+      "hex": "#d39a72"
+    },
+    {
+      "id": "4",
+      "name": "Medium copper",
+      "hex": "#b57755"
+    },
+    {
+      "id": "5",
+      "name": "Deep warm",
+      "hex": "#965b3e"
+    },
+    {
+      "id": "6",
+      "name": "Deep brown",
+      "hex": "#75432f"
+    },
+    {
+      "id": "7",
+      "name": "Deep umber",
+      "hex": "#52301f"
+    },
+    {
+      "id": "8",
+      "name": "Rich deep",
+      "hex": "#332018"
+    }
   ]
 }
