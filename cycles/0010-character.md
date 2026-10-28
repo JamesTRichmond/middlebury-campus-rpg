@@ -1,0 +1,11 @@
+# Cycle 0010 — M2-character
+
+Date: 2026-10-28. Operator played D1, cleared the hold and authorized M2 only. Stop after this cycle: operator-hold, M3 explicitly forbidden.
+
+Implemented platform greeter question and builder: name, free-text pronouns and suggestions, eight skin tones, body/hair/facial hair/head coverings, foot/wheelchair/another aid, captions (default on), visual sound cues, three colorblind palettes, high contrast, larger UI and named controls. Term, interests and identity flags remain optional and unselected. Save validates character and preserves notes/progress; completed character can be edited after reload. Accessibility applies immediately to the builder and remains active after saving.
+
+Figma before code: read creator 8:368 / 8:466 and expanded shared 6:158 with explicit controls. Original file remains https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Tool returned platform control 51:3340; completion receipt: {"endFrames":["53:3263","53:3271"]}. Save routes to completion, Edit returns. Reused eight-tone foundation and original pixel preview style. Later reconciliation removed obsolete summaries and added explicit skin control. Native controls and document scrolling replace compact field specimens. Browser chrome differs; these differences are recorded on Handoff. No public URL invented.
+
+Observed npm run validate passed: 23 tests, TypeScript clean, production build. Character round-trip test includes wheelchair and Deuteranopia, pronouns, optional choices and retained notes. Browser suite passed 10 desktop/phone checks: arrival → greeting → creator → edit name/pronouns/mobility/hair/covering/palette/scale/contrast → save → reload → persisted character → D2 feedback. First browser run caught ambiguous select names; explicit names fixed it without weakening assertions. Phone screenshot inspected: controls readable and no horizontal overflow. Existing D1 checks remain passing.
+
+Source version: 2b2ce0a4b3f61626a94eee39c94ae411760d5ca9. Local: npm ci && npm run validate && npm run preview from repo. Feedback uses D2-character with built SHA. Content IDs: character-creator, station-greeter, middlebury-station. No M3 walk implementation. Product cycle count is four since meta.

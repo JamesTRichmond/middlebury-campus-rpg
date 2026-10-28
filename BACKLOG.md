@@ -66,7 +66,7 @@ The opening, before free walk.
 ## M2-character
 
 ```yaml
-status: ready
+status: done
 blockedBy: [M1-letter-train]
 humanGate: no
 owner: ""

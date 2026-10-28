@@ -17,7 +17,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 | Demo | After | Player should be able to |
 | --- | --- | --- |
 | [D1-letter-train](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M1 | Read the unofficial letter, set a home place, ride the train into the station |
-| `D2-character` | M2 | Name themselves, set pronouns and appearance, turn on wheelchair and other access options |
+| [D2-character](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M2 | Name themselves, set pronouns and appearance, turn on wheelchair and other access options |
 | `D3-escort` | M3 | Walk from the station through Triangle Park to the dorm, including with a wheelchair |
 | `D4-dorm` | M4 | Unpack and place doodads, then see the orientation notice |
 | `D5-campus` | M5 | Visit dining and the library with portrait dialogue |
@@ -46,3 +46,7 @@ Desktop 1280×720 and phone 390×844 were played through in Chromium and compare
 Version: `aa56940b0a0bfb9b046c76dd024ea664a46b2780`. Local: from the repository folder run `npm ci && npm run validate && npm run preview`, then open the printed URL. Existing platform saves expose Replay the arrival. Feedback is `feedback/index.html?demo=D1-letter-train&version=aa56940b0a0bfb9b046c76dd024ea664a46b2780`. Fresh builds embed their checked-out SHA.
 
 [Repaired prototype](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS): Cover → repaired Letter 38:2698 → Present. Three ride stages lead to an explicit D1 ending with replay. The earlier one-caption implementation above is historical. M2 remains on hold.
+
+## D2-character — cycle 0010
+
+Source `2b2ce0a4b3f61626a94eee39c94ae411760d5ca9`. Prototype: recorded Figma file → platform Create your character (51:3340) → 8:368, phone 8:466; save ends at 53:3263 / 53:3271 and Edit returns. Local: from repo run `npm ci && npm run validate && npm run preview`. Play arrival, open builder, save character, Give feedback opens D2 with built SHA. Native controls replace field specimens; preview and access changes apply immediately. M3 remains held.

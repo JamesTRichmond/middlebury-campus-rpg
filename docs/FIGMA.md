@@ -104,3 +104,7 @@ The playtest on a68e28f blocks new features. Ten repair frames were created in t
 Authentication recovered; all ten existing repair frames were retained and inspected. Fixed text reflow, reviewed desktop/phone layouts, and implemented their original rectangle scenery and shared palette. Cover now targets repaired Letter 38:2698. Exact readback: `{"mutatedNodeIds":["3:515"],"coverLink":{"type":"NODE","value":"38:2698"}}`. Handoff returned `{"createdNodeIds":["47:2"],"contentId":"arrival-letter","publicUrl":null}`.
 
 Train departure, Vermont and approach scenes move in integer steps in the build; pause and reduced motion stop movement. The prototype uses still scenes. The native input is single-line; the prototype-only feedback note is omitted from the actual ending. All copy comes from arrival-letter; station and greeter IDs remain existing content references. No new file or public URL. The prior pending section is historical; gate archived under gates/resolved/figma-cycle-0009.md.
+
+## M2-character — cycle 0010
+
+Existing creator 6:158 expanded before implementing the native form; desktop 8:368 and phone 8:466. Platform open control returned 51:3340; completion frames returned 53:3263 and 53:3271. Content ID character-creator in content/character.json, existing station-greeter and middlebury-station. Local D2 build and feedback path are in DEMOS.md. Native selects/checkboxes differ from the compact Figma field specimens; document-flow scrolling and browser focus chrome are intentional. M3 is held.
