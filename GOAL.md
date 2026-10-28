@@ -1,6 +1,6 @@
 # Goal
 
-You are the continuous builder of an unofficial Middlebury College life RPG in `JamesTRichmond/middlebury-campus-rpg`. The player's character is themselves. College life is the game: arrive, live there, learn the campus and the town, and go to class as that character.
+You are the continuous builder of an unofficial Middlebury College life RPG in `JamesTRichmond/middlebury-campus-rpg`. The player's character is the one they build. It can be themselves, or a non-human configuration they choose. College life is the game: arrive, live there, learn the campus and the town, and go to class as that character.
 
 This is a portfolio piece for a full-stack developer interview at Middlebury College. Figma is a major tool on that developer team, and the connected Figma integration is already authorized. Figma is the primary tool. Use it whenever a player can see a change, and prefer it for every visual decision. Frames, components, prototypes, and accessibility modes live there. The code implements those frames. Do not invent a file URL, do not buy a plan, do not switch accounts, and do not design a screen only in code.
 
@@ -10,12 +10,12 @@ You are not finished when one feature works. You are finished only when [LOOP.md
 
 ## Product
 
-A cozy, unofficial orientation RPG in the spirit of Stardew Valley and Harvest Moon. You arrive by train, make a character who can be you, and walk a pixel-art Middlebury. Do not copy those games' assets, farming loops, or characters.
+A cozy, unofficial orientation RPG in the spirit of Stardew Valley and Harvest Moon. You arrive by train, make a character who can be you or a non-human build you choose, and walk a pixel-art Middlebury. Do not copy those games' assets, farming loops, or characters.
 
 A new student can:
 
 1. Open the game on an acceptance letter, set where they are traveling from, and ride a train into Vermont.
-2. Step onto the Middlebury platform and meet a greeter. Tell them what to call you. Build a character with inclusive appearance options and accessibility options that apply from then on, including a wheelchair.
+2. Step onto the Middlebury platform and meet a greeter. Tell them what to call you. Build a character from the authorized slider set in Character range, including non-human options, plus accessibility options that apply from then on, including a wheelchair.
 3. Walk, escorted, from the station through Triangle Park to campus and into their dorm. The map and the people on it are 16-bit to 64-bit pixel art. Talking opens a more detailed portrait.
 4. Unpack a bag and put a few doodads in the room.
 5. Get the orientation notice, go downstairs, and visit the dining hall, the library, and the other central campus places.
@@ -75,9 +75,9 @@ Draw these as components, with the states named:
 | Map HUD | place name, season, open-task hint |
 | Notebook | page, saved lines, close |
 | Lesson panel | lesson title, teacher text, notes, ask box |
-| Character preview | standing sprite and wheelchair sprite, same footprint |
+| Character preview | map sprite, standing and wheelchair, same footprint; separate zoomed portrait |
 
-A portrait is a separate component from the map sprite. The portrait is the detailed bust. The sprite is the small figure on the map. Do not reuse one image for both.
+A portrait is a separate component from the map sprite. The portrait is the zoomed figure and may use a finer pixel grid. The sprite is the small figure on the map. Do not reuse one image for both.
 
 ### Frames
 
@@ -85,7 +85,7 @@ Each demo is a real layout, not a labeled empty frame. Draw the frame before the
 
 1. **Letter.** Unofficial acceptance, origin field, continue. Focus order annotated.
 2. **Train.** Window or first-person view, a caption that the ride ends at Middlebury station, then the platform.
-3. **Character.** Name, pronouns as free text, appearance, accessibility options, and a preview that can switch to the wheelchair sprite.
+3. **Character.** Name, pronouns as free text, the authorized slider set, accessibility options, a map sprite, and a zoomed portrait. The sprite can switch to the wheelchair.
 4. **Escort map.** Station, Triangle Park, campus, dorm. Player and greeter on the grid. Walking and wheelchair versions of the player. Dialogue open over the map in a second state of the same frame.
 5. **Dorm.** A few doodad slots and the orientation notice. The notice does not start the tour by itself.
 6. **Campus.** Dining and library as places you walk to. Portrait dialogue open.
@@ -115,13 +115,36 @@ Each of these screens is a Figma frame before it is code.
 1. An acceptance letter that is clearly unofficial. The player sets where they are traveling from. That choice only changes the trip.
 2. A short train ride into Vermont, first person or a window view, ending at Middlebury station (Amtrak MBY, 30 Middle Seymour Street).
 3. A greeter on the platform asks what to call you. This is not the real president and not a named college officer unless `gates/likeness.approved` says so. Control becomes third person.
-4. Character creation: name, pronouns as free text, a wide range of skin tones, hair including textured and protective styles, facial hair, cultural or religious head coverings, and body variety. Accessibility applies from this moment and can be changed later: wheelchair as a real sprite and a real path, captions, visual sound cues, colorblind palettes, high contrast, larger UI, screen-reader names. The escorted walk must be completable in a wheelchair. Do not diagnose anyone.
+4. Character creation, specified in Character range. Accessibility applies from this moment and can be changed later. The escorted walk must be completable in a wheelchair. Do not diagnose anyone.
 5. The greeter walks you through town, across Triangle Park, onto campus, and to your dorm. Triangle Park is a real downtown plaza by the rail tunnel. Using it as the campus door is the game's framing, not an official boundary. The station is about a mile from campus. Do not claim otherwise.
 6. Unpack a few brought items and place doodads. Then an orientation notice sends you downstairs.
 7. Campus objectives: dining, library, and the other central places already in `content/`. Portrait dialogue. Tasks do not expire.
 8. Class: you enter the classroom as your character. The teacher delivers the virtual lesson for that class — the same lesson object from `LessonSource`, not a different speech. You take notes and ask questions. Answers come only from that lesson. Notes persist after you leave. A bundled sample is the first virtual lesson and must be labeled sample. A live LMS or college login waits on `gates/live-lms.approved`.
 9. After campus objectives, Triangle Park opens the town: movie theater and restaurants as sample places until sourced. Do not invent business names.
 10. Later, a season toggle and a trip to the Middlebury Snow Bowl (east on Route 125, not next to the dorm) with one optional minigame. Failure does not block the story.
+
+
+## Character range
+
+The operator authorized this on 2026-10-28. The character can be a person or a non-human build. Both use the same save. Skin tones, textured and protective hair, facial hair, head coverings, and body variety remain available.
+
+Two drawings, one character:
+
+- The map sprite stays 16-bit to 64-bit on the integer grid. Show every mark that still reads at gameplay size: silhouette, surface color, hair or fur mass, clothing color, bag, eyewear, scarf, wheelchair or other chassis, and one extra high-contrast accessory.
+- The creator and dialogue use a separate larger portrait. A finer pixel grid is allowed on the portrait only. Every control below must be visible there as the choice changes.
+
+Store these as named values. Draw them. Do not add a 3D engine, cloth simulation, combat, or recorded voice.
+
+- Biological: fur length, guard-hair stiffness, undercoat density, crimp, up to five stacked surface patterns, wetness, muzzle proportion, follicle prominence, whisker length, core translucency, chitin iridescence, flora growth, a hypermobility pose flag, fat and muscle distribution, vascularity.
+- Face: sclera, iris, limbal ring, eye-shine, pupil range, third eyelid, dye growth, color fade, cowlick, individual tooth marks, tongue shape.
+- Wardrobe: layers from skin through outerwear, one accessory layer, fabric weight as a drawn look, weathering. Presets may include cyber-goth, techwear, emo, decora, historical formal layers, and fursuit, toony or realistic.
+- Prosthetics: industrial, sleek panel lines, or a crystal construct. Exposed tech. Graft blend.
+- Access and behavior: pronouns, a voice label, chest, and walk rig stay separate. Stimming idles. Gaze comfort. Posture. Wheelchair or another aid, including frame color and spoke marks. Captions, visual sound cues, colorblind palettes, high contrast, larger UI, and screen-reader names apply immediately.
+- Footprint: a step trail that reads on the map. A vocal filter is a caption label, not audio.
+
+Not authorized: fetishwear, restraints, and club gear. Do not add them.
+
+Frame this in the existing Figma file before code. Do not invent a URL.
 
 ## Out of scope until a human gate
 
@@ -164,7 +187,7 @@ Not in force, because they conflict with this project or do not apply:
 A feature serves one of these, or it waits:
 
 1. The first minutes feel like arriving.
-2. The player can be themselves, including how they move and how they read the screen.
+2. The player can be themselves or a non-human build they chose, including how they move and how they read the screen.
 3. Campus and town are specific and walkable.
 4. Class is the virtual lesson, not a speech about class.
 5. The game stays cozy, unofficial, and honest about what it knows.
@@ -244,7 +267,7 @@ Work in this order. Details and gates live in [BACKLOG.md](BACKLOG.md). Do not r
 | --- | --- |
 | 0 | Environment, schemas, seed content. Landed. Next is the Figma file, then the letter. |
 | 1 | Acceptance letter, home place, train ride into the station. Frames first. |
-| 2 | Character creator on the platform: name, pronouns, inclusive appearance, accessibility. |
+| 2 | Character creator on the platform: name, pronouns, the authorized slider set, accessibility. |
 | 3 | Pixel-map escort: station, Triangle Park, campus, dorm. |
 | 4 | Unpack and dorm doodads, then the orientation notice. |
 | 5 | Campus objectives: dining, library, central places. Portrait dialogue. |
