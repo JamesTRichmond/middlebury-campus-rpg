@@ -116,3 +116,7 @@ Player feedback rejected the tiny lower-page figure and numeric skin list. The r
 Prototype readback returned `{"mutatedNodeIds":["51:3340","53:3267","53:3275"],"desktop":"57:3098","phone":"57:3213","saveDestinations":["53:3263","53:3271"],"contentId":"character-creator"}`. Handoff returned `{"createdNodeIds":["61:2"],"contentId":"character-creator","frames":["57:3098","57:3213"],"publicUrl":null}`. Original URL remains https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Evidence and full creation receipts: figma/D2-preview-repair.json.
 
 Native inputs/selects and document-flow optional controls differ from compact Figma specimens. The prototype sample is Coils / medium copper; the build shows the selected saved state. The live preview sticks to the left on desktop and above the form on phone, including on completion. Every named visual option changes rendered figure pixels in browser checks. M3 remains held.
+
+## Character range checkpoint — cycle 0012 (incomplete)
+
+GOAL a2855d5 is synced. Connected reads of the existing file and D2 desktop 57:3098 succeeded in session `3eb7748b-2965-4160-b30d-99bbb92753cc`. The operator requested a safe stop before any range frames were created. Unaccepted original portrait/sprite/control drafts are preserved in `docs/figma/drafts/0012/`; see its README and `cycles/0012-character-range-checkpoint.md` to resume. These drafts do not constitute Figma acceptance or shipped code. Existing cycle 0011 frames remain unchanged. M3 is held.

@@ -8,6 +8,19 @@ Status values: `ready`, `doing`, `done`, `blocked`.
 
 When an item below is marked done, also publish its demo in the same cycle (LOOP.md). Design the screen in Figma first ([docs/FIGMA.md](docs/FIGMA.md)). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
 
+## R3-D2-character-range
+
+```yaml
+status: doing
+blockedBy: []
+humanGate: no
+owner: "codex-root"
+```
+
+Paused at operator request in cycle 0012. Drafts are preserved under docs/figma/drafts/0012; no product implementation yet.
+
+Operator authorized 2026-10-28 against GOAL edit a2855d5. Separate detailed creator/dialogue portrait and gameplay-size sprite; every Character range control has a named saved value and a visible portrait effect. Preserve prior choices, access and opt-ins. No M3. Frame first in the existing file. Gate: `npm run validate`, desktop/phone visual coverage, save migration and round-trip checks.
+
 ## R2-D2-preview
 
 ```yaml

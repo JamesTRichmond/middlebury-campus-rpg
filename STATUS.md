@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 11
+cycle: 12
 lastMetaCycle: 11
 productCyclesSinceMeta: 0
 lock: ""
 stop: operator-hold
-current: none
-next: operator review of repaired D2; M3 held
-lastGate: "D2 repair: 24 tests, TypeScript, production build and 12 desktop/phone browser checks passed; every named appearance option changes rendered pixels."
+current: R3-D2-character-range
+next: resume R3 design drafts in Figma, then implement; M3 held
+lastGate: "Cycle 0012 checkpoint: baseline npm run validate passed (24 tests, TypeScript, production build). No Character range implementation or visual acceptance claimed."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "D2 repair: 24 tests, TypeScript, production build and 12 desktop/phon
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0012 | R3-D2-character-range | Paused at operator request. Design drafts preserved; Figma inspected, no new range frames or product code. |
 | 0011 | R2-D2-preview | Repaired: persistent large figure, skin swatches and visible wardrobe; M3 held. Meta review recorded. |
 | 0010 | M2-character | Implemented; saved mobility and colorblind round trip; M3 held. |
 | 0009 | R1-D1-arrival | Done. Three-stage ride, explicit ending and replay; M2 held. |
@@ -28,6 +29,9 @@ lastGate: "D2 repair: 24 tests, TypeScript, production build and 12 desktop/phon
 | 0007 | M1-letter-train | Done. Local D1 arrival + version-bound feedback; tested build fd13bcf. |
 
 ## Current handoff
+
+- Cycle 0012 is incomplete and does not increment product-cycle count. Current item R3 remains doing but paused. Resume from cycles/0012-character-range-checkpoint.md and docs/figma/drafts/0012/README.md.
+- GOAL a2855d5 is synced. Connected Figma reads succeeded; only local design drafts exist for Character range. Frame before code remains outstanding.
 
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
 - Cover text `3:515` links internally to repaired Letter `38:2698`; then use Present / Flow 1.
