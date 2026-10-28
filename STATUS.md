@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 12
+cycle: 13
 lastMetaCycle: 11
 productCyclesSinceMeta: 0
 lock: ""
-stop: operator-hold
+stop: human-gate
 current: R3-D2-character-range
-next: resume R3 design drafts in Figma, then implement; M3 held
-lastGate: "Cycle 0012 checkpoint: baseline npm run validate passed (24 tests, TypeScript, production build). No Character range implementation or visual acceptance claimed."
+next: reauthenticate Figma, then resume R3 checkpoint drafts; M3 held
+lastGate: "Cycle 0013: Figma inspection failed UNAUTHORIZED (reauthentication required). Existing build validate passed: 24 tests, TypeScript, production build; no range frames or application edits."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0012 checkpoint: baseline npm run validate passed (24 tests, Ty
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0013 | R3-D2-character-range | Resume blocked: Figma UNAUTHORIZED; drafts intact, no product edits. |
 | 0012 | R3-D2-character-range | Paused at operator request. Design drafts preserved; Figma inspected, no new range frames or product code. |
 | 0011 | R2-D2-preview | Repaired: persistent large figure, skin swatches and visible wardrobe; M3 held. Meta review recorded. |
 | 0010 | M2-character | Implemented; saved mobility and colorblind round trip; M3 held. |
@@ -30,8 +31,8 @@ lastGate: "Cycle 0012 checkpoint: baseline npm run validate passed (24 tests, Ty
 
 ## Current handoff
 
-- Cycle 0012 is incomplete and does not increment product-cycle count. Current item R3 remains doing but paused. Resume from cycles/0012-character-range-checkpoint.md and docs/figma/drafts/0012/README.md.
-- GOAL a2855d5 is synced. Connected Figma reads succeeded; only local design drafts exist for Character range. Frame before code remains outstanding.
+- Cycles 0012–0013 are incomplete and do not increment product-cycle count. R3 is blocked on gates/PENDING-figma.md. Resume the existing drafts after reauthentication; see cycles/0013-character-range-auth.md.
+- GOAL a2855d5 is synced. Latest Figma inspection failed UNAUTHORIZED. Only local design drafts exist for Character range; frame before code remains outstanding.
 
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
 - Cover text `3:515` links internally to repaired Letter `38:2698`; then use Present / Flow 1.

@@ -120,3 +120,7 @@ Native inputs/selects and document-flow optional controls differ from compact Fi
 ## Character range checkpoint — cycle 0012 (incomplete)
 
 GOAL a2855d5 is synced. Connected reads of the existing file and D2 desktop 57:3098 succeeded in session `3eb7748b-2965-4160-b30d-99bbb92753cc`. The operator requested a safe stop before any range frames were created. Unaccepted original portrait/sprite/control drafts are preserved in `docs/figma/drafts/0012/`; see its README and `cycles/0012-character-range-checkpoint.md` to resume. These drafts do not constitute Figma acceptance or shipped code. Existing cycle 0011 frames remain unchanged. M3 is held.
+
+## Character range retry — cycle 0013 (blocked)
+
+The operator resumed the checkpoint. The first connected inspection returned `UNAUTHORIZED`: "This app connection requires reauthentication before other actions on this app can succeed." No Figma mutations or product edits occurred. See gates/PENDING-figma.md and cycles/0013-character-range-auth.md. Preserve the cycle 0012 drafts and original file; reauthenticate before resuming.
