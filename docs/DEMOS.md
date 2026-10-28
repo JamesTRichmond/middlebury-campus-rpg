@@ -40,3 +40,9 @@ Feedback path for the inspected build:
 `feedback/index.html?demo=D1-letter-train&version=fd13bcf3bd32b0af91f33d8492dfa89f441c1e9a`
 
 Desktop 1280×720 and phone 390×844 were played through in Chromium and compared with the Figma screenshots. The native origin input replaces the prototype’s filled sample state. D1 ends at feedback; the M0 prototype still shows the later character design after the platform. See the D1 board on Figma Handoff and [cycle 0007](../cycles/0007-letter-train.md).
+
+## D1 repaired — cycle 0009
+
+Version: `aa56940b0a0bfb9b046c76dd024ea664a46b2780`. Local: from the repository folder run `npm ci && npm run validate && npm run preview`, then open the printed URL. Existing platform saves expose Replay the arrival. Feedback is `feedback/index.html?demo=D1-letter-train&version=aa56940b0a0bfb9b046c76dd024ea664a46b2780`. Fresh builds embed their checked-out SHA.
+
+[Repaired prototype](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS): Cover → repaired Letter 38:2698 → Present. Three ride stages lead to an explicit D1 ending with replay. The earlier one-caption implementation above is historical. M2 remains on hold.

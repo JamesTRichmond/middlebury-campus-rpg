@@ -98,3 +98,9 @@ The earlier M0-only statement that no game screens exist is historical. D1 is no
 ## D1 repair pending — cycle 0008
 
 The playtest on a68e28f blocks new features. Ten repair frames were created in this same file before the interruption, including three ride stages and an explicit demo ending. Their IDs and creation evidence are in [D1-repair-pending.json](figma/D1-repair-pending.json). They must be inspected and visually accepted before implementation. The resumed inspection returned UNAUTHORIZED / reauthentication required. See gates/PENDING-figma.md. Do not duplicate the file or frames. M2 remains on hold.
+
+## D1 repair accepted — cycle 0009
+
+Authentication recovered; all ten existing repair frames were retained and inspected. Fixed text reflow, reviewed desktop/phone layouts, and implemented their original rectangle scenery and shared palette. Cover now targets repaired Letter 38:2698. Exact readback: `{"mutatedNodeIds":["3:515"],"coverLink":{"type":"NODE","value":"38:2698"}}`. Handoff returned `{"createdNodeIds":["47:2"],"contentId":"arrival-letter","publicUrl":null}`.
+
+Train departure, Vermont and approach scenes move in integer steps in the build; pause and reduced motion stop movement. The prototype uses still scenes. The native input is single-line; the prototype-only feedback note is omitted from the actual ending. All copy comes from arrival-letter; station and greeter IDs remain existing content references. No new file or public URL. The prior pending section is historical; gate archived under gates/resolved/figma-cycle-0009.md.

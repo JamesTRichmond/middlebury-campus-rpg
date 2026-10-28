@@ -1,3 +1,9 @@
+# Resolved in cycle 0009
+
+Operator requested retry. Connected inspection succeeded for all ten retained frames. Text reflow fixed and frames visually reviewed before implementation. No approval file created.
+
+Historical gate:
+
 # Pending Figma authentication — D1 repair
 
 Item: R1-D1-arrival. M2 must not start.
