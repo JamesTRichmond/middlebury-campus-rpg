@@ -124,3 +124,7 @@ GOAL a2855d5 is synced. Connected reads of the existing file and D2 desktop 57:3
 ## Character range retry — cycle 0013 (blocked)
 
 The operator resumed the checkpoint. The first connected inspection returned `UNAUTHORIZED`: "This app connection requires reauthentication before other actions on this app can succeed." No Figma mutations or product edits occurred. See gates/PENDING-figma.md and cycles/0013-character-range-auth.md. Preserve the cycle 0012 drafts and original file; reauthenticate before resuming.
+
+## Character range retry — cycle 0014 (blocked)
+
+Authentication is restored; the connected inspection succeeded with `rangeNodes: []`. The first write was rejected before execution because its `code` string exceeded 50000 characters (`INVALID_ARGUMENT`). No frames or product code were added. This was an assistant request-sizing error. See cycle 0014 and gates/PENDING-figma.md; resume with compact or bounded requests after the gate is cleared.

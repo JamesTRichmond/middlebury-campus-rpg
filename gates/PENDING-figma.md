@@ -1,15 +1,19 @@
-# Figma authentication required
+# Figma request-size failure
 
 - Date: 2026-10-28
 - Item: R3-D2-character-range
-- Cycle: 0013
+- Cycle: 0014
 - Stop: human-gate
 - Existing file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
 
-The first connected `use_figma` inspection on resume failed before any mutation. Exact response:
+Authentication is restored: a read-only Components inspection succeeded and returned `"rangeNodes":[]`. The first write was rejected by connector schema validation before execution:
 
-```json
-{"error":"This app connection requires reauthentication before other actions on this app can succeed.","error_code":"UNAUTHORIZED","error_data":{"detail":"Reauthentication required","action":"TRIGGER_REAUTHENTICATION","reason":"www_authenticate_reauth"}}
+```text
+Parameters failed connector schema validation: code [maxLength]: String longer than maxLength 50000
+error_code: INVALID_ARGUMENT
+reason: INVALID_PARAMETERS
 ```
 
-Reauthenticate the existing Figma connection, then resume R3 from docs/figma/drafts/0012/README.md. Preserve the original file and existing work. No new range frames or application code were created in this retry. Do not start M3. Do not mark visual acceptance complete or create approval files automatically.
+Cause: the assistant submitted the generated script with every expanded portrait study embedded, exceeding the request limit. This is an assistant request-sizing error, not an authentication or file-access problem. No new nodes were created.
+
+The project requires stopping on any failed Figma call. On operator resume, preserve the existing file and drafts. Generate compact scripts or split independent groups into bounded requests, assert each code string is under 50000 characters before calling, and save every returned node ID. Inspect for partial/later work before creating anything. Review frames before application code. Do not start M3.
