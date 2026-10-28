@@ -97,4 +97,4 @@ The earlier M0-only statement that no game screens exist is historical. D1 is no
 
 ## D1 repair pending — cycle 0008
 
-The playtest on a68e28f blocks new features. Ten repair frames were created in this same file before the interruption, including three ride stages and an explicit demo ending. Their IDs and original receipts are in [D1-repair-pending.json](figma/D1-repair-pending.json). They must be inspected and visually accepted before implementation. The resumed inspection returned UNAUTHORIZED / reauthentication required. See gates/PENDING-figma.md. Do not duplicate the file or frames. M2 remains on hold.
+The playtest on a68e28f blocks new features. Ten repair frames were created in this same file before the interruption, including three ride stages and an explicit demo ending. Their IDs and creation evidence are in [D1-repair-pending.json](figma/D1-repair-pending.json). They must be inspected and visually accepted before implementation. The resumed inspection returned UNAUTHORIZED / reauthentication required. See gates/PENDING-figma.md. Do not duplicate the file or frames. M2 remains on hold.

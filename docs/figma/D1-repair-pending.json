@@ -1,5 +1,24 @@
 {
   "fileUrl": "https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS",
   "sessionId": "2596676d-6f3c-4994-91c6-c61aee824bb2",
-  "acceptance": "pending; resume inspection failed with UNAUTHORIZED"
+  "acceptance": "pending; resume inspection failed with UNAUTHORIZED",
+  "reportedCreatedFrames": [
+    "38:2698",
+    "38:2713",
+    "38:2744",
+    "38:2797",
+    "38:2846",
+    "38:2933",
+    "38:2945",
+    "38:2976",
+    "38:3029",
+    "38:3078"
+  ],
+  "reportedCreatedComponents": [
+    "37:509",
+    "37:418",
+    "37:435",
+    "37:474"
+  ],
+  "evidence": "IDs transcribed from successful creation results earlier in this conversation. Full raw receipts were not retained across interruption. Current readback failed authentication."
 }

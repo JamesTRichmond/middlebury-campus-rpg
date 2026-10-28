@@ -6,7 +6,7 @@
 
 The operator reported that D1 on a68e28f ended at the station in under 30 seconds, the train did not read as a ride into Vermont, and origin was confusing. Saved the report in feedback/inbox/2026-10-27-D1-letter-train-a68e28f.md and put the repair ahead of M2. M2 remains unstarted.
 
-Before interruption, the connected integration created a repaired letter component and departure, Vermont countryside and station-approach scenery. It returned ten desktop/phone frame IDs: 38:2698, 38:2713, 38:2744, 38:2797, 38:2846, 38:2933, 38:2945, 38:2976, 38:3029, 38:3078. The new chain includes an explicit demo ending and replay. Creation receipts and planned copy are preserved in docs/figma/D1-repair-pending.json. Visual acceptance, responsive review and implementation remain unfinished.
+Before interruption, the connected integration created a repaired letter component and departure, Vermont countryside and station-approach scenery. It returned ten desktop/phone frame IDs: 38:2698, 38:2713, 38:2744, 38:2797, 38:2846, 38:2933, 38:2945, 38:2976, 38:3029, 38:3078. The new chain includes an explicit demo ending and replay. Creation IDs are preserved in docs/figma/D1-repair-pending.json. Visual acceptance, responsive review and implementation remain unfinished.
 
 On resumption the first Figma inspection failed. Exact tool text:
 
