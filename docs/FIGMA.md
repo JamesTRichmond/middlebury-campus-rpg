@@ -94,3 +94,7 @@ Handoff board `32:2` records the shipped scope and differences. Tested source bu
 The prototype is linked from the D1 row in [DEMOS.md](DEMOS.md) using the original recorded file URL, with Cover → arrival link → Present / Flow 1 instructions. No prototype/public URL was constructed. Exact frame/readback evidence is [D1-handoff.json](figma/D1-handoff.json).
 
 The earlier M0-only statement that no game screens exist is historical. D1 is now a playable local build. Later gameplay phases remain pending.
+
+## D1 repair pending — cycle 0008
+
+The playtest on a68e28f blocks new features. Ten repair frames were created in this same file before the interruption, including three ride stages and an explicit demo ending. Their IDs and original receipts are in [D1-repair-pending.json](figma/D1-repair-pending.json). They must be inspected and visually accepted before implementation. The resumed inspection returned UNAUTHORIZED / reauthentication required. See gates/PENDING-figma.md. Do not duplicate the file or frames. M2 remains on hold.

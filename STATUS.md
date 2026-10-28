@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 7
+cycle: 8
 lastMetaCycle: 0
 productCyclesSinceMeta: 2
 lock: ""
-stop: none
-current: none
-next: M2-character
-lastGate: "M1: 21 tests passed, TypeScript clean, production build passed; 6 desktop/phone Chromium checks passed. D1 screenshots compared with Figma."
+stop: human-gate
+current: R1-D1-arrival
+next: R1-D1-arrival after Figma reauthentication
+lastGate: "Figma inspection failed: UNAUTHORIZED / reauthentication required. D1 repair blocked; 21 tests, TypeScript and production build passed; repair browser acceptance remains pending."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "M1: 21 tests passed, TypeScript clean, production build passed; 6 des
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0008 | R1-D1-arrival | Blocked on Figma authentication. Repair frames created previously; no repair code shipped. |
 | 0007 | M1-letter-train | Done. Local D1 arrival + version-bound feedback; tested build fd13bcf. |
 
 ## Current handoff
@@ -28,8 +29,8 @@ lastGate: "M1: 21 tests passed, TypeScript clean, production build passed; 6 des
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
 - Cover text `3:515` links internally to Letter `3:86`; then use Present / Flow 1.
 - M0 evidence: docs/figma/M0-acceptance.json. D1 evidence: docs/figma/D1-handoff.json.
-- Resolved gate: gates/resolved/figma-cycle-0006.md. No pending Figma gate or approval file was created.
-- Operator cleared the hold. M1 is done; next is M2-character. No public deployment is authorized.
+- Resolved gate: gates/resolved/figma-cycle-0006.md. Current pending gate: gates/PENDING-figma.md.
+- D1 playtest blocks new features. R1-D1-arrival must finish before any M2 work; operator explicitly forbids starting M2.
 
 ## D1 build
 
@@ -38,4 +39,4 @@ lastGate: "M1: 21 tests passed, TypeScript clean, production build passed; 6 des
 - Built files: `dist/index.html` and `dist/feedback/index.html`.
 - Feedback: `feedback/index.html?demo=D1-letter-train&version=fd13bcf3bd32b0af91f33d8492dfa89f441c1e9a` (Platform Continue fills this automatically).
 - Prototype: recorded Figma file → Cover arrival link → Present / Flow 1. D1 handoff board `32:2`.
-- Newest cycle: `cycles/0007-letter-train.md`. No M2 implementation is included in this cycle.
+- Newest cycle: `cycles/0008-D1-repair-blocked.md`. No M2 implementation is included in this cycle.

@@ -8,6 +8,19 @@ Status values: `ready`, `doing`, `done`, `blocked`.
 
 When an item below is marked done, also publish its demo in the same cycle (LOOP.md). Design the screen in Figma first ([docs/FIGMA.md](docs/FIGMA.md)). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
 
+## R1-D1-arrival
+
+```yaml
+status: blocked
+blockedBy: []
+humanGate: no
+owner: "codex-root"
+```
+
+D1 playtest on a68e28f reports an unclear letter/origin, a weak train ride, and a dead end at the station. Repair D1 before any new features. Frame before code. Make the unofficial acceptance and character-origin choice explicit, add a staged ride into Vermont, and mark the platform as the demo ending with the greeter next. Allow replay without deleting saved state. No character builder or M2.
+
+Gate: `npm run validate`, desktop/phone browser checks of journey progression, save compatibility, replay, and the explicit ending. Feedback source: feedback/inbox/2026-10-27-D1-letter-train-a68e28f.md.
+
 ## M0-figma-file
 
 ```yaml
