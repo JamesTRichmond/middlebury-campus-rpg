@@ -3,19 +3,47 @@
   "status": "placeholder",
   "placeId": "middlebury-station",
   "greeterNpcId": "station-greeter",
-  "unofficialLabel": "UNOFFICIAL · STORY PROP",
-  "title": "Your next chapter\nbegins here.",
-  "body": "In this imagined story, you have been accepted to Middlebury. Choose where your journey begins. This unofficial letter is not a real admissions decision.",
-  "originLabel": "Traveling from",
-  "originPlaceholder": "City or region",
-  "originError": "Enter a city or region to continue.",
-  "continueLabel": "Continue",
+  "unofficialLabel": "UNOFFICIAL ACCEPTANCE LETTER",
+  "title": "You’re accepted.",
+  "body": "Dear future student,\n\nIn this imagined story, you’ve been accepted to Middlebury College. A new chapter is waiting. Pack your bag; we’ll meet you in Vermont.",
+  "originLabel": "Your character is traveling from",
+  "originPlaceholder": "Choose a city or region",
+  "originError": "Choose a city or region for your character.",
+  "continueLabel": "Board the train",
   "disclaimer": "Not affiliated with, endorsed by, or speaking for Middlebury College.",
-  "trainTitle": "Train",
-  "trainCaption": "From {origin} · Sample journey · the ride ends at Middlebury station.",
-  "platformTitle": "Platform",
-  "platformCaption": "Arrived · step-free route to the greeter",
-  "feedbackHint": "Continue opens the arrival feedback form.",
+  "trainTitle": "On the way to Vermont",
+  "trainCaption": "Your character’s journey begins in {origin}.",
+  "platformTitle": "Welcome to Middlebury",
+  "platformCaption": "Arrived · a greeter is waiting",
+  "feedbackHint": "Replay keeps your saved character, notes and progress.",
   "saveWarning": "This browser couldn’t save your journey. You can keep playing, but this trip may not be here when you return.",
-  "loadWarning": "Your saved journey couldn’t be loaded. It has been kept unchanged; this trip won’t overwrite it."
+  "loadWarning": "Your saved journey couldn’t be loaded. It has been kept unchanged; this trip won’t overwrite it.",
+  "originHelp": "Real or imagined — you choose. This only changes the ride’s caption; we don’t infer your location.",
+  "journeyLabel": "Fictional journey · take your time",
+  "pauseLabel": "Pause scenery",
+  "resumeLabel": "Move scenery",
+  "endTitle": "You’ve reached the end of D1.",
+  "endBody": "A greeter is waiting on the platform. Meeting them and creating your character come next, in a later demo.",
+  "feedbackLabel": "Give feedback",
+  "replayLabel": "Replay the arrival",
+  "rideSteps": [
+    {
+      "id": "departure",
+      "title": "1 of 3 · Leaving home",
+      "caption": "Your bag is by your feet. Beyond the window, the departure platform slips away. The wheels settle into a steady rhythm.",
+      "action": "Watch the countryside"
+    },
+    {
+      "id": "vermont",
+      "title": "2 of 3 · Into Vermont",
+      "caption": "The view opens to green hills and autumn trees. You’re riding into Vermont now. There’s time to watch the fields go by.",
+      "action": "Approach Middlebury"
+    },
+    {
+      "id": "approach",
+      "title": "3 of 3 · Almost there",
+      "caption": "Roofs replace the open fields. The train slows; a platform comes into view. Gather your bag — Middlebury station is next.",
+      "action": "Step onto the platform"
+    }
+  ]
 }

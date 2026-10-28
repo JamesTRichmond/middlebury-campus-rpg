@@ -10,7 +10,7 @@ export const saveSchema = z.object({
   version: z.literal(1),
   origin: originSchema,
   placeId: z.string().min(1),
-  arrival: z.object({ stage: z.enum(["train", "platform"]) }).passthrough(),
+  arrival: z.object({ stage: z.enum(["train", "platform"]), beat: z.number().int().min(0).max(2).default(0) }).passthrough(),
   character: z.object({}).passthrough().nullable(),
   notes: z.array(z.object({ id: z.string(), text: z.string(), placeId: z.string().optional(), lessonId: z.string().optional() }).passthrough()),
   quests: z.record(z.object({ stepIndex: z.number().int().nonnegative(), done: z.boolean() }).passthrough()),
@@ -76,4 +76,12 @@ export function writeJourney(storage: StorageLike | null, save: Save, content: G
 
 export function feedbackPath(version: string): string {
   return `feedback/index.html?${new URLSearchParams({ demo: DEMO_ID, version })}`;
+}
+
+export function advanceRide(save: Save, content: GameContent): Save {
+  if (save.arrival.stage !== "train") return save;
+  return save.arrival.beat === 2 ? arrive(save, content) : parseSave({ ...save, arrival: { ...save.arrival, beat: save.arrival.beat + 1 } }, content);
+}
+export function replayArrival(save: Save, origin: string, content: GameContent): Save {
+  return parseSave({ ...save, origin: originSchema.parse(origin), arrival: { ...save.arrival, stage: "train", beat: 0 } }, content);
 }

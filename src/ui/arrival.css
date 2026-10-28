@@ -72,3 +72,25 @@ h1:focus { outline: none; }
 @media (prefers-contrast: more) {
   :root { --color-paper: #ffffff; --color-ink: #101010; --color-pine: #123326; --color-gold: #e6b000; --color-grass: #76885b; --color-snow: #ffffff; }
 }
+/* D1 repair: Figma 38:2698–38:3078. Normal flow keeps captions readable. */
+.letter-body { white-space: pre-line; }
+.origin-help { font-size:16px; line-height:22px; }
+.scene-title { font-size:28px; line-height:39px; }
+.ride-body { display:flex; flex-direction:column; gap:12px; max-width:1000px; margin-top:12px; }
+.ride-progress,.ride-origin { font-size:16px; line-height:22px; overflow-wrap:anywhere; }
+.ride-story { font-size:18px; line-height:25px; }
+.train-window { width:760px; height:268px; margin:0; flex-shrink:0; }
+.train-scenery { inset:16px; }
+.moving-scenery { position:absolute; width:1456px; height:268px; animation: passing 24s steps(364,end) infinite; }
+.ride-strip { position:absolute; width:728px; height:268px; overflow:hidden; background:var(--color-snow); }
+@keyframes passing { to { transform:translateX(-728px); } }
+.ride-actions { display:grid; grid-template-columns:480px 268px; gap:12px; max-width:760px; }
+.journey-label { font-size:14px; line-height:20px; }
+.ending-layout { display:flex; gap:32px; margin-top:24px; align-items:flex-start; }
+.ending-layout .platform-viewport { width:480px; height:270px; margin:0; flex-shrink:0; }
+.ending-layout .platform-map { transform:none; }
+.ending-copy { width:600px; max-width:100%; display:flex; flex-direction:column; gap:12px; font-size:18px; line-height:25px; }
+.ending-copy h2 { margin:0; font-size:24px; line-height:34px; font-weight:400; }
+@media(max-width:900px) { .ride-actions { grid-template-columns:1fr; width:100%; } .ending-layout { flex-direction:column; } .ending-layout .platform-viewport { max-width:100%; } }
+@media(max-width:767px) { .ending-layout .platform-viewport { height:228px; } }
+@media(prefers-reduced-motion:reduce) { .moving-scenery { animation:none; } }

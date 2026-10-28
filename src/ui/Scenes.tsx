@@ -6,18 +6,15 @@ function Pixel({ x, y, w, h, color }: { x: number; y: number; w: number; h: numb
   return <span className="pixel" style={{ left: x, top: y, width: w, height: h, background: `var(--color-${color})` }} />;
 }
 
-// Original native rectangle geometry from Figma, not a flattened screenshot asset.
-export function TrainWindow() {
-  return <div className="train-window" role="img" aria-label="A quiet window view of pixel trees and green countryside">
-    <div className="train-scenery" aria-hidden="true">
-      <div className="train-land" />
-      {Array.from({ length: 8 }, (_, i) => <div key={i} className="train-tree" style={{ "--tree-index": i, "--tree-phase": i % 3 } as CSSProperties}>
-        <Pixel x={20} y={72} w={12} h={56} color="stone" />
-        <Pixel x={0} y={32} w={56} h={48} color="pine" />
-        <Pixel x={8} y={8} w={40} h={32} color="pine" />
-        <Pixel x={16} y={0} w={24} h={16} color="pine" />
+import rideScenes from "./ride-scenes.json";
+
+export function TrainWindow({ scene, paused }: { scene: keyof typeof rideScenes; paused: boolean }) {
+  return <div className="train-window" role="img" aria-label={`Train window: ${scene}`} data-scene={scene}>
+    <div className="train-scenery" aria-hidden="true"><div className="moving-scenery" style={{ animationPlayState: paused ? "paused" : "running" }}>
+      {[0, 1].map((repeat) => <div className="ride-strip" key={repeat} style={{ left: repeat * 728 }}>
+        {rideScenes[scene].map((r, i) => <Pixel key={i} {...r} color={r.color as Color} />)}
       </div>)}
-    </div>
+    </div></div>
   </div>;
 }
 
