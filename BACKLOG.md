@@ -8,6 +8,19 @@ Status values: `ready`, `doing`, `done`, `blocked`.
 
 When an item below is marked done, also publish its demo in the same cycle (LOOP.md). Design the screen in Figma first ([docs/FIGMA.md](docs/FIGMA.md)). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
 
+## R2-D2-preview
+
+```yaml
+status: done
+blockedBy: []
+humanGate: no
+owner: "codex-root"
+```
+
+Completed 2026-10-28 — `cycle 0011: repair D2 live character preview and wardrobe`.
+
+D2 playtest blocker: prominent live preview, skin swatches, distinct appearance and mobility on the same figure, visible clothes/accessories. Frame first. No M3. Gate: validate, desktop/phone visual-change and save-compatibility browser checks. Feedback: feedback/inbox/2026-10-28-D2-character-9264cd7.md.
+
 ## R1-D1-arrival
 
 ```yaml

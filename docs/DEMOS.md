@@ -50,3 +50,9 @@ Version: `aa56940b0a0bfb9b046c76dd024ea664a46b2780`. Local: from the repository 
 ## D2-character — cycle 0010
 
 Source `2b2ce0a4b3f61626a94eee39c94ae411760d5ca9`. Prototype: recorded Figma file → platform Create your character (51:3340) → 8:368, phone 8:466; save ends at 53:3263 / 53:3271 and Edit returns. Local: from repo run `npm ci && npm run validate && npm run preview`. Play arrival, open builder, save character, Give feedback opens D2 with built SHA. Native controls replace field specimens; preview and access changes apply immediately. M3 remains held.
+
+## D2 live preview repair — cycle 0011
+
+This supersedes the original form-only D2 acceptance above. Tested source `28aa39ff5fe2a8a0abccd03d0ff6219dfb1e9f06`. [Prototype](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS): platform Create your character → desktop 57:3098; phone 57:3213. Save reaches the existing D2 ending; Edit returns to the repaired builder.
+
+Local, from the repository folder: `npm ci && npm run validate && npm run preview`. Existing platform saves can open the builder directly. The large live figure remains visible while controls scroll. Skin choices are named swatches; hair, coverings, body, wheelchair, clothes and accessories change the same figure. Save/reload retains the image and choices. Feedback: `feedback/index.html?demo=D2-character&version=28aa39ff5fe2a8a0abccd03d0ff6219dfb1e9f06`; fresh builds use their actual SHA. No public deployment is claimed.

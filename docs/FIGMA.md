@@ -108,3 +108,11 @@ Train departure, Vermont and approach scenes move in integer steps in the build;
 ## M2-character — cycle 0010
 
 Existing creator 6:158 expanded before implementing the native form; desktop 8:368 and phone 8:466. Platform open control returned 51:3340; completion frames returned 53:3263 and 53:3271. Content ID character-creator in content/character.json, existing station-greeter and middlebury-station. Local D2 build and feedback path are in DEMOS.md. Native selects/checkboxes differ from the compact Figma field specimens; document-flow scrolling and browser focus chrome are intentional. M3 is held.
+
+## D2 preview repair — cycle 0011
+
+Player feedback rejected the tiny lower-page figure and numeric skin list. The repaired frames are desktop 57:3098 and phone 57:3213, built before application code. Review 56:429 shows four large standing/wheelchair figures. Components also contains 46 named appearance specimens, all original editable rectangles on a 64×80 grid. The same geometry renders dynamically in the build at 3× desktop and 2× phone. Eight original skin variables remain the source of the named swatches. No new file, external art, photographs, college marks or static screenshot assets were used.
+
+Prototype readback returned `{"mutatedNodeIds":["51:3340","53:3267","53:3275"],"desktop":"57:3098","phone":"57:3213","saveDestinations":["53:3263","53:3271"],"contentId":"character-creator"}`. Handoff returned `{"createdNodeIds":["61:2"],"contentId":"character-creator","frames":["57:3098","57:3213"],"publicUrl":null}`. Original URL remains https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Evidence and full creation receipts: figma/D2-preview-repair.json.
+
+Native inputs/selects and document-flow optional controls differ from compact Figma specimens. The prototype sample is Coils / medium copper; the build shows the selected saved state. The live preview sticks to the left on desktop and above the form on phone, including on completion. Every named visual option changes rendered figure pixels in browser checks. M3 remains held.
