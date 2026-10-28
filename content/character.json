@@ -1,0 +1,74 @@
+{
+  "id": "character-creator",
+  "greeterNpcId": "station-greeter",
+  "greeting": "Welcome! What should I call you?",
+  "open": "Create your character",
+  "title": "What should I call you?",
+  "save": "Save character",
+  "end": "Your character is ready. D2 ends here; the escorted walk comes next.",
+  "fields": {
+    "body": [
+      "Compact",
+      "Tall",
+      "Broad"
+    ],
+    "skin": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "hair": [
+      "Straight",
+      "Wavy",
+      "Curls",
+      "Coils",
+      "Braids",
+      "Locs",
+      "Shaved"
+    ],
+    "facialHair": [
+      "None",
+      "Beard",
+      "Moustache"
+    ],
+    "covering": [
+      "None",
+      "Headwrap",
+      "Hijab",
+      "Turban",
+      "Kippah"
+    ],
+    "mobility": [
+      "Foot",
+      "Wheelchair",
+      "Another aid"
+    ],
+    "palette": [
+      "Default",
+      "Protanopia",
+      "Deuteranopia",
+      "Tritanopia"
+    ],
+    "uiScale": [
+      "Default",
+      "Larger"
+    ],
+    "term": [
+      "Choose later",
+      "Fall",
+      "Feb"
+    ]
+  },
+  "interests": [
+    "Outdoors",
+    "Arts",
+    "Languages",
+    "Athletics",
+    "Science"
+  ]
+}

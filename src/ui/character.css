@@ -1,0 +1,24 @@
+.creator { max-width:1280px; margin:auto; padding:32px 40px; min-height:720px; color:var(--color-ink); background:var(--color-paper); font-size:18px; }
+.creator form,.creator { display:flex; flex-direction:column; gap:12px; }
+.creator label { display:flex; flex-direction:column; gap:8px; border:2px solid var(--color-ink); padding:16px; }
+.creator input,.creator select { font:inherit; color:inherit; background:var(--color-paper); width:100%; padding:8px; border:1px solid var(--color-ink); }
+.creator input[type=checkbox] { width:24px; height:24px; }
+.creator fieldset label { flex-direction:row; align-items:center; border:0; }
+.creator fieldset { border:2px solid var(--color-ink); }
+.creator :focus-visible { outline:3px solid var(--color-ink); outline-offset:3px; }
+.creator .pronoun-suggestions { display:flex; flex-wrap:wrap; gap:12px; }
+.pronoun-suggestions button { font:inherit; padding:12px; background:var(--color-paper); color:inherit; border:2px solid var(--color-ink); }
+.creator.larger { font-size:24px; }.creator.larger .button { font-size:24px; }
+.creator[data-palette=Protanopia] { --color-pine:#304d70; --color-gold:#d6b65c; }
+.creator[data-palette=Deuteranopia] { --color-pine:#354e68; --color-gold:#d6b65c; }
+.creator[data-palette=Tritanopia] { --color-pine:#51425c; --color-gold:#d6a08a; }
+.creator.contrast { --color-paper:#fff; --color-ink:#101010; --color-pine:#123326; }
+.character-preview { min-height:128px; padding:24px; }.preview-sprite { display:block;position:relative;width:32px;height:32px;transform:scale(3);transform-origin:top left; }.preview-sprite i { position:absolute;display:block; }
+.sprite-head { background:var(--skin);width:10px;height:10px;left:11px;top:2px; }.sprite-hair { background:var(--color-ink);width:12px;height:4px;left:10px;top:0; }.hair-Shaved { height:1px; }.hair-Braids,.hair-Locs { height:16px;width:3px; }.hair-Coils,.hair-Curls { height:7px;width:16px;left:8px; }
+.sprite-body { width:var(--body-width);height:12px;top:12px;left:8px;background:var(--color-pine); }.sprite-legs { width:16px;height:8px;border-left:5px solid var(--color-ink);border-right:5px solid var(--color-ink);top:24px;left:8px; }.sprite-wheel {width:14px;height:14px;border:3px solid var(--color-ink);top:18px;left:3px;}.sprite-covering {background:var(--color-gold);width:16px;height:8px;left:8px;top:0;}.sprite-beard {width:8px;height:4px;left:12px;top:9px;background:var(--color-ink);}.sprite-aid {width:3px;height:20px;background:var(--color-stone);left:26px;top:12px;}
+@media(max-width:600px){.creator{padding:24px;}}
+:root[data-palette=Protanopia] { --color-pine:#304d70; --color-gold:#d6b65c; }
+:root[data-palette=Deuteranopia] { --color-pine:#354e68; --color-gold:#d6b65c; }
+:root[data-palette=Tritanopia] { --color-pine:#51425c; --color-gold:#d6a08a; }
+:root[data-contrast=high] { --color-paper:#fff; --color-ink:#101010; --color-pine:#123326; }
+:root[data-ui-scale=Larger] .arrival { font-size:24px; }:root[data-ui-scale=Larger] .arrival .button { font-size:24px; }

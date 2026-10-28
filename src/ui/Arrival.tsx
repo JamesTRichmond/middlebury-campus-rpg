@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { CharacterBuilder } from "./CharacterBuilder";
+import { creator, characterSchema } from "../game/character";
 import { content } from "../content/bundle";
 import { advanceRide, replayArrival, feedbackPath, originSchema, readJourney, rideCaption, startArrival, writeJourney, type Save } from "../game/arrival";
 import { PlatformScene, TrainWindow } from "./Scenes";
@@ -18,6 +20,7 @@ export function Arrival() {
   const [warning, setWarning] = useState(boot.warning);
   const heading = useRef<HTMLHeadingElement>(null);
   const input = useRef<HTMLInputElement>(null);
+  const [building, setBuilding] = useState(false);
   const [replaying, setReplaying] = useState(false);
   const [paused, setPaused] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const stage = replaying ? "letter" : save?.arrival.stage ?? "letter";
@@ -31,6 +34,16 @@ export function Arrival() {
       previousStage.current = focusKey;
     }
   }, [focusKey]);
+
+  useEffect(() => {
+    const c = characterSchema.safeParse(save?.character);
+    const root = document.documentElement;
+    root.dataset.palette = c.success ? c.data.palette : 'Default';
+    root.dataset.contrast = c.success && c.data.highContrast ? 'high' : 'default';
+    root.dataset.uiScale = c.success ? c.data.uiScale : 'Default';
+    root.dataset.captions = String(c.success ? c.data.captions : true);
+    root.dataset.visualCues = String(c.success ? c.data.visualSoundCues : true);
+  }, [save]);
 
   function persist(next: Save) {
     if (!boot.readOnly && !writeJourney(browserStorage(), next, content)) setWarning(copy.saveWarning);
@@ -65,6 +78,8 @@ export function Arrival() {
     </form>
   </main>;
 
+  if (building && save) return <CharacterBuilder save={save} onSave={persist} onClose={() => setBuilding(false)} version={__BUILD_VERSION__} warning={warning} />;
+
   const station = content.places.find((place) => place.id === copy.placeId);
   if (!station) return <main><p role="alert">Missing arrival place: {copy.placeId}</p></main>;
 
@@ -84,6 +99,7 @@ export function Arrival() {
     </div> : <div className="ending-layout">
       <PlatformScene name={station.name} caption={copy.platformCaption} />
       <section className="ending-copy" aria-labelledby="end-title">
+        <p>{creator.greeting}</p><button className="button" onClick={() => setBuilding(true)}>{creator.open}</button>
         <h2 id="end-title">{copy.endTitle}</h2><p>{copy.endBody}</p>
         <a className="button" href={feedbackPath(__BUILD_VERSION__)}>{copy.feedbackLabel}</a>
         <button className="button" onClick={() => setReplaying(true)}>{copy.replayLabel}</button>
