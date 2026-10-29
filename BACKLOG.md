@@ -17,7 +17,7 @@ humanGate: no
 owner: "codex-root"
 ```
 
-Cycle 0015 passed the input limit with a 41431-character script, but its 53420-byte return exceeded 48000 bytes; Figma reported edits were not committed. Blocked on gates/PENDING-figma.md. Split component creation into smaller batches and retain every ID in bounded receipts. Drafts remain under docs/figma/drafts/0012; no product implementation yet.
+Cycle 0016 reconciled the existing sprite board and saved receipts for portraits, all 52 control studies, desktop/phone creator frames, accessibility modes, and prototype wiring. The Figma return-size gate is resolved. Implementation is incomplete: stopped after three failed verification attempts under LOOP.md. Last validate: 27 unit tests passed, TypeScript failed on widened test-context literals in tests/character-range.test.ts:20; build and browser gate not reached. Resume this checkpoint after the blocked stop is cleared; do not recreate Figma nodes or start M3. See cycles/0016-character-range-checkpoint.md.
 
 Operator authorized 2026-10-28 against GOAL edit a2855d5. Separate detailed creator/dialogue portrait and gameplay-size sprite; every Character range control has a named saved value and a visible portrait effect. Preserve prior choices, access and opt-ins. No M3. Frame first in the existing file. Gate: `npm run validate`, desktop/phone visual coverage, save migration and round-trip checks.
 

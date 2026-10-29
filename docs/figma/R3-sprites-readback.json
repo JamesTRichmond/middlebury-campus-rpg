@@ -1,0 +1,27 @@
+{
+  "board": {
+    "id": "71:2017",
+    "name": "R3 / sprites",
+    "type": "FRAME"
+  },
+  "components": [
+    {
+      "id": "71:2020",
+      "name": "D2 map sprite / Person",
+      "width": 64,
+      "height": 80
+    },
+    {
+      "id": "71:2056",
+      "name": "D2 map sprite / Creature",
+      "width": 64,
+      "height": 80
+    },
+    {
+      "id": "71:2124",
+      "name": "D2 map sprite / Construct",
+      "width": 64,
+      "height": 80
+    }
+  ]
+}

@@ -132,3 +132,13 @@ Authentication is restored; the connected inspection succeeded with `rangeNodes:
 ## Character range retry — cycle 0015 (blocked)
 
 Connected inspection succeeded. A compact 41431-character write passed the input limit but returned 53420 bytes, exceeding the 48000-byte result limit. Tool result: "Canvas edits from this run were not committed." No new accepted frames or product code. Resume with smaller component batches; exact evidence is in cycles/0015-character-range-return-limit.md.
+
+## Character range — cycle 0016 checkpoint (implementation incomplete)
+
+Existing file remains https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Connected readback retained board `71:2017`: Person `71:2020`, Creature `71:2056`, Construct `71:2124`, all 64×80. No sprite recreation. Exact original receipt and readback are committed as `figma/R3-sprites.json` and `figma/R3-sprites-readback.json`.
+
+Separate 160×180 portraits: Person `74:2020`, Creature `74:2102`, Construct `74:2272`. All 52 named control studies were added in nine batches (six each, final four); exact receipts `figma/R3-controls-*.json`. Creator desktop `74:9838`, phone `74:9987`. Shared-variable modes: high contrast `78:3672`, colorblind `78:3842`, larger UI `78:4012`. Retained existing appearance/access fields, optional identity flags, and six range groups. Native selects/checkboxes implement the compact Figma field studies; samples show Coils/medium copper while the build uses saved choices. Portrait, map sprite and optional aid-detail inset are separate visual elements. Voice/filter are caption labels, with no audio. Original art, existing palette variables, no imported third-party art.
+
+Prototype readback: platform `51:3340` → desktop `74:9838`; save `74:9985` → completion `53:3263`; phone save `74:10134` → `53:3271`; edit `53:3267` → desktop; edit `53:3275` → phone. Completion frames now contain separate portrait instances. Full receipt `figma/R3-dialogue-wiring.json`. A relaxed-coat regression specimen `79:2020` keeps its hem inside the portrait; receipt `figma/R3-relaxed-coat.json`.
+
+Desktop/phone creator and phone completion screenshots were inspected in Figma. No full interactive browser acceptance is claimed. Runtime wiring is started, but `npm run validate` fails TypeScript in the new test; see cycle 0016. The Figma Handoff page still needs the final build comparison before R3 is marked done. Older checkpoint/gate sections above are historical.

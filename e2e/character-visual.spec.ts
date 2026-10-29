@@ -4,7 +4,7 @@ import copy from '../content/character.json' with { type: 'json' };
 test('preview is visible, every named visual choice changes pixels, and wardrobe survives reload',async({page},info)=>{
  test.setTimeout(90000);
  await page.goto('/');await page.getByLabel('Your character is traveling from').fill('Home');await page.getByRole('button',{name:'Board the train',exact:true}).click();for(const name of ['Watch the countryside','Approach Middlebury','Step onto the platform'])await page.getByRole('button',{name,exact:true}).click();await page.getByRole('button',{name:'Create your character'}).click();
- const figure=page.locator('svg.preview-sprite');await expect(figure).toBeVisible();let bounds=await figure.boundingBox();expect(bounds!.y).toBeGreaterThanOrEqual(0);expect(bounds!.y+bounds!.height).toBeLessThanOrEqual(page.viewportSize()!.height);expect(bounds!.width).toBe(info.project.name==='phone'?128:192);
+ const figure=page.locator('svg.preview-sprite');await expect(figure).toBeVisible();let bounds=await figure.boundingBox();expect(bounds!.y).toBeGreaterThanOrEqual(0);expect(bounds!.y+bounds!.height).toBeLessThanOrEqual(page.viewportSize()!.height);expect(bounds!.width).toBe(64);
  await expect(page.getByRole('combobox',{name:'Skin tone',exact:true})).toHaveCount(0);
  let prior=await figure.screenshot();
  for(const tone of copy.skinTones){await page.getByRole('button',{name:tone.name,exact:true}).click();await expect(page.getByRole('button',{name:tone.name,exact:true})).toHaveAttribute('aria-pressed','true');const next=await figure.screenshot();if(tone.id!=='1')expect(next.equals(prior)).toBe(false);prior=next;}

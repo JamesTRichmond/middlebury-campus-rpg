@@ -1,0 +1,639 @@
+{
+  "id": "character-range",
+  "controls": [
+    {
+      "key": "buildKind",
+      "label": "Build kind",
+      "group": "Biological",
+      "options": [
+        "Person",
+        "Creature",
+        "Construct"
+      ],
+      "default": "Person",
+      "description": "Person keeps the existing silhouette; Creature adds pointed ears and a fur-edged cheek; Construct adds a segmented temple and neck. This choice never changes pronouns, chest, mobility or optional flags."
+    },
+    {
+      "key": "surfaceColor",
+      "label": "Surface color",
+      "group": "Biological",
+      "options": [
+        "Natural",
+        "Pine",
+        "Gold",
+        "Stone"
+      ],
+      "default": "Natural",
+      "description": "Natural uses the selected skin swatch; other named colors tint the visible face, ears and arms using the existing palette. Preserve the skin selection underneath."
+    },
+    {
+      "key": "furLength",
+      "label": "Fur length",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Short",
+        "Long"
+      ],
+      "default": "None",
+      "description": "Draw no fur, a short sawtooth cheek and shoulder edge, or a longer layered fur silhouette. The map keeps only the readable mass."
+    },
+    {
+      "key": "guardHairStiffness",
+      "label": "Guard-hair stiffness",
+      "group": "Biological",
+      "options": [
+        "Soft",
+        "Upright",
+        "Bristled"
+      ],
+      "default": "Soft",
+      "description": "Soft lies along the cheek edge; Upright adds several tall guard hairs; Bristled draws short rigid guard spikes. The selected guard treatment remains visible even with minimal base fur."
+    },
+    {
+      "key": "undercoatDensity",
+      "label": "Undercoat density",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Light",
+        "Dense"
+      ],
+      "default": "None",
+      "description": "Add a sparse or dense contrasting undercoat patch along the neck and outer cheek. Keep this layer visible beneath guard hairs."
+    },
+    {
+      "key": "crimp",
+      "label": "Crimp",
+      "group": "Biological",
+      "options": [
+        "Straight",
+        "Wavy",
+        "Tight"
+      ],
+      "default": "Straight",
+      "description": "Draw straight, stepped-wave or tight zigzag texture in a visible temple or cheek lock without replacing the chosen hairstyle."
+    },
+    {
+      "key": "pattern1",
+      "label": "Surface pattern 1",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Spots",
+        "Stripes",
+        "Speckles"
+      ],
+      "default": "None",
+      "description": "First ordered surface-pattern layer: forehead region. Pattern marks stay individually readable when all five slots are populated."
+    },
+    {
+      "key": "pattern2",
+      "label": "Surface pattern 2",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Spots",
+        "Stripes",
+        "Speckles"
+      ],
+      "default": "None",
+      "description": "Second ordered surface-pattern layer: left cheek region, with marks distinct from slot 1."
+    },
+    {
+      "key": "pattern3",
+      "label": "Surface pattern 3",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Spots",
+        "Stripes",
+        "Speckles"
+      ],
+      "default": "None",
+      "description": "Third ordered surface-pattern layer: right cheek region, with marks distinct from slots 1 and 2."
+    },
+    {
+      "key": "pattern4",
+      "label": "Surface pattern 4",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Spots",
+        "Stripes",
+        "Speckles"
+      ],
+      "default": "None",
+      "description": "Fourth ordered surface-pattern layer: neck region. Retain visible marks above clothing."
+    },
+    {
+      "key": "pattern5",
+      "label": "Surface pattern 5",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Spots",
+        "Stripes",
+        "Speckles"
+      ],
+      "default": "None",
+      "description": "Fifth ordered surface-pattern layer: outer temple and ear region. It is the final overlay, not a replacement for earlier slots."
+    },
+    {
+      "key": "wetness",
+      "label": "Wetness",
+      "group": "Biological",
+      "options": [
+        "Dry",
+        "Dewy",
+        "Wet"
+      ],
+      "default": "Dry",
+      "description": "Dry has no added shine; Dewy has small highlight beads; Wet has longer highlight streaks and grouped fur tips."
+    },
+    {
+      "key": "muzzleProportion",
+      "label": "Muzzle proportion",
+      "group": "Biological",
+      "options": [
+        "Flat",
+        "Short",
+        "Long"
+      ],
+      "default": "Flat",
+      "description": "Change the actual nose-and-mouth silhouette from the human face to short and elongated muzzle blocks, retaining a visible mouth."
+    },
+    {
+      "key": "follicleProminence",
+      "label": "Follicle prominence",
+      "group": "Biological",
+      "options": [
+        "Smooth",
+        "Dotted",
+        "Raised"
+      ],
+      "default": "Smooth",
+      "description": "Add small follicle dots or outlined raised follicles around the muzzle and lower cheek; these are distinct from the five surface-pattern layers."
+    },
+    {
+      "key": "whiskerLength",
+      "label": "Whisker length",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Short",
+        "Long"
+      ],
+      "default": "None",
+      "description": "Draw symmetric short or long whisker strokes extending from the cheek; preserve them in front of fur layers."
+    },
+    {
+      "key": "coreTranslucency",
+      "label": "Core translucency",
+      "group": "Biological",
+      "options": [
+        "Opaque",
+        "Clouded",
+        "Clear"
+      ],
+      "default": "Opaque",
+      "description": "Opaque keeps the existing surface; Clouded and Clear expose a drawn inner crystal core at the temple or neck with progressively lighter surface panels. Use static layered art, not a material simulation."
+    },
+    {
+      "key": "chitinIridescence",
+      "label": "Chitin iridescence",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Gold sheen",
+        "Pine sheen"
+      ],
+      "default": "None",
+      "description": "Add segmented chitin accents with alternating palette bands and a named gold or pine sheen at the temple. Both remain distinct on any surface color."
+    },
+    {
+      "key": "floraGrowth",
+      "label": "Flora growth",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Leaves",
+        "Blossoms"
+      ],
+      "default": "None",
+      "description": "Draw a small branching temple sprout with either paired leaves or gold blossoms. Leave the selected hairstyle visible."
+    },
+    {
+      "key": "hypermobilityPose",
+      "label": "Hypermobility pose",
+      "group": "Biological",
+      "options": [
+        "Neutral",
+        "Flexible pose"
+      ],
+      "default": "Neutral",
+      "description": "The optional pose changes a drawn wrist and elbow angle without a diagnosis or mobility inference. It is independent of the walk rig and mobility aid."
+    },
+    {
+      "key": "fatDistribution",
+      "label": "Fat distribution",
+      "group": "Biological",
+      "options": [
+        "Even",
+        "Cheeks",
+        "Upper arms"
+      ],
+      "default": "Even",
+      "description": "Redistribute the portrait silhouette toward fuller cheeks or fuller upper arms; keep the existing body selector independent."
+    },
+    {
+      "key": "muscleDistribution",
+      "label": "Muscle distribution",
+      "group": "Biological",
+      "options": [
+        "Even",
+        "Shoulders",
+        "Arms"
+      ],
+      "default": "Even",
+      "description": "Change shoulder contour or upper-arm contour and shading; no stat or ability change accompanies the look."
+    },
+    {
+      "key": "vascularity",
+      "label": "Vascularity",
+      "group": "Biological",
+      "options": [
+        "None",
+        "Soft",
+        "Defined"
+      ],
+      "default": "None",
+      "description": "Draw one faint or several contrasting branching lines on an exposed hand or temple so the selection is visible with outerwear."
+    },
+    {
+      "key": "sclera",
+      "label": "Sclera",
+      "group": "Face",
+      "options": [
+        "Snow",
+        "Gold",
+        "Pine"
+      ],
+      "default": "Snow",
+      "description": "Change the eye whites using named existing palette colors, retaining clear pupil contrast."
+    },
+    {
+      "key": "iris",
+      "label": "Iris",
+      "group": "Face",
+      "options": [
+        "Ink",
+        "Pine",
+        "Gold"
+      ],
+      "default": "Ink",
+      "description": "Change the iris fill independently from sclera, limbal ring, pupil and shine."
+    },
+    {
+      "key": "limbalRing",
+      "label": "Limbal ring",
+      "group": "Face",
+      "options": [
+        "None",
+        "Thin",
+        "Bold"
+      ],
+      "default": "None",
+      "description": "Draw a separate thin or thick dark rim around each iris."
+    },
+    {
+      "key": "eyeShine",
+      "label": "Eye-shine",
+      "group": "Face",
+      "options": [
+        "None",
+        "Dot",
+        "Star"
+      ],
+      "default": "None",
+      "description": "Add a light dot or stepped star within each eye without changing iris color."
+    },
+    {
+      "key": "pupilRange",
+      "label": "Pupil range",
+      "group": "Face",
+      "options": [
+        "Round",
+        "Slit",
+        "Wide"
+      ],
+      "default": "Round",
+      "description": "Draw a round, vertical slit or broad horizontal pupil as distinct geometry."
+    },
+    {
+      "key": "thirdEyelid",
+      "label": "Third eyelid",
+      "group": "Face",
+      "options": [
+        "Absent",
+        "Partial",
+        "Closed"
+      ],
+      "default": "Absent",
+      "description": "Add a diagonal membrane across part or most of one eye. The other eye remains visible for independent eye controls."
+    },
+    {
+      "key": "dyeGrowth",
+      "label": "Dye growth",
+      "group": "Face",
+      "options": [
+        "None",
+        "Roots",
+        "Tips"
+      ],
+      "default": "None",
+      "description": "Add a clearly contrasting dye band at hair roots or ends while retaining the chosen hair color and style."
+    },
+    {
+      "key": "colorFade",
+      "label": "Color fade",
+      "group": "Face",
+      "options": [
+        "None",
+        "Ends",
+        "Streaks"
+      ],
+      "default": "None",
+      "description": "Draw a lighter band at hair ends or alternating lighter streaks. Keep the fade region distinct from the dye-growth band."
+    },
+    {
+      "key": "cowlick",
+      "label": "Cowlick",
+      "group": "Face",
+      "options": [
+        "None",
+        "Left",
+        "Right"
+      ],
+      "default": "None",
+      "description": "Add a short curved or stepped hair tuft leaning left or right. Head coverings may occlude the natural hair; use the same selected underlying hair in the portrait detail view."
+    },
+    {
+      "key": "toothMarks",
+      "label": "Individual tooth marks",
+      "group": "Face",
+      "options": [
+        "Even",
+        "Gap",
+        "Fang"
+      ],
+      "default": "Even",
+      "description": "Draw individually separated teeth in a small open mouth; show a missing central tooth or one elongated side tooth for the alternate selections."
+    },
+    {
+      "key": "tongueShape",
+      "label": "Tongue shape",
+      "group": "Face",
+      "options": [
+        "Round",
+        "Pointed",
+        "Forked"
+      ],
+      "default": "Round",
+      "description": "Draw a round, pointed or forked tongue visibly inside the portrait mouth, independently from the tooth marks."
+    },
+    {
+      "key": "wardrobePreset",
+      "label": "Wardrobe preset",
+      "group": "Wardrobe",
+      "options": [
+        "Everyday",
+        "Techwear",
+        "Emo",
+        "Decora",
+        "Historical formal",
+        "Toony fursuit",
+        "Realistic fursuit"
+      ],
+      "default": "Everyday",
+      "description": "Everyday preserves existing clothes. Other presets draw modest layered styling: utility seams, dark cardigan accents, colorful pins, a high-collar formal jacket, rounded plush suit details, or textured suit details. No fetishwear, restraints or club gear. Do not change identity, body, pronouns, accessibility or opt-in flags."
+    },
+    {
+      "key": "baseLayer",
+      "label": "Base layer",
+      "group": "Wardrobe",
+      "options": [
+        "Plain",
+        "Striped",
+        "High collar"
+      ],
+      "default": "Plain",
+      "description": "Draw a plain underlayer, striped neckline insert or raised collar beneath existing clothes and outerwear. Do not expose or sexualize skin."
+    },
+    {
+      "key": "outerwear",
+      "label": "Outerwear",
+      "group": "Wardrobe",
+      "options": [
+        "None",
+        "Coat",
+        "Capelet"
+      ],
+      "default": "None",
+      "description": "Draw no additional layer, an open coat with visible base and clothes, or a short shoulder capelet. Preserve visible neckline details."
+    },
+    {
+      "key": "accessory",
+      "label": "Accessory layer",
+      "group": "Wardrobe",
+      "options": [
+        "None",
+        "Star pin",
+        "Leaf pin"
+      ],
+      "default": "None",
+      "description": "One extra high-contrast lapel pin, with star or leaf geometry. Carry the readable mark onto the map sprite."
+    },
+    {
+      "key": "fabricWeight",
+      "label": "Fabric weight",
+      "group": "Wardrobe",
+      "options": [
+        "Medium",
+        "Light",
+        "Heavy"
+      ],
+      "default": "Medium",
+      "description": "Medium retains current fabric. Light uses narrow fold lines; Heavy uses broad hems and deep stepped folds. This is a drawn look, never cloth simulation."
+    },
+    {
+      "key": "weathering",
+      "label": "Weathering",
+      "group": "Wardrobe",
+      "options": [
+        "Clean",
+        "Faded",
+        "Patched"
+      ],
+      "default": "Clean",
+      "description": "Add faded fabric blocks or small stitched repair patches to the outer visible clothing layer."
+    },
+    {
+      "key": "prostheticStyle",
+      "label": "Prosthetic style",
+      "group": "Prosthetics",
+      "options": [
+        "None",
+        "Industrial",
+        "Sleek panels",
+        "Crystal construct"
+      ],
+      "default": "None",
+      "description": "Style one visible forearm and hand as segmented industrial hardware, smooth panel lines or faceted crystal. Preserve mobility and pronouns independently."
+    },
+    {
+      "key": "exposedTech",
+      "label": "Exposed tech",
+      "group": "Prosthetics",
+      "options": [
+        "None",
+        "Circuit",
+        "Mechanism"
+      ],
+      "default": "None",
+      "description": "Add a small visible circuit path or gear-like mechanism on the forearm; this optional detail can appear independently of prosthetic style."
+    },
+    {
+      "key": "graftBlend",
+      "label": "Graft blend",
+      "group": "Prosthetics",
+      "options": [
+        "Seamless",
+        "Seamed",
+        "Mottled"
+      ],
+      "default": "Seamless",
+      "description": "Render a clean transition, outlined joining seam or mottled blend between surface and a hand/forearm panel. If no prosthetic is selected, the same optional treatment appears as a visible surface patch."
+    },
+    {
+      "key": "voiceLabel",
+      "label": "Voice label",
+      "group": "Access and behavior",
+      "options": [
+        "Unspecified",
+        "Soft",
+        "Bright"
+      ],
+      "default": "Unspecified",
+      "description": "Display the chosen voice label beside the portrait and dialogue caption. This creates no audio and never infers gender, pronouns, chest or rig."
+    },
+    {
+      "key": "chest",
+      "label": "Chest",
+      "group": "Access and behavior",
+      "options": [
+        "Straight",
+        "Soft",
+        "Fuller"
+      ],
+      "default": "Straight",
+      "description": "Adjust only the fully clothed chest contour and garment shading. Keep it independent of pronouns, voice label, body and walk rig."
+    },
+    {
+      "key": "walkRig",
+      "label": "Walk rig",
+      "group": "Access and behavior",
+      "options": [
+        "Easy",
+        "Measured",
+        "Springy"
+      ],
+      "default": "Easy",
+      "description": "Change the static demonstration step pose and optional preview idle, with distinct shoulder/arm/leg positions. This does not unlock M3 or change mobility selection."
+    },
+    {
+      "key": "stimmingIdle",
+      "label": "Stimming idle",
+      "group": "Access and behavior",
+      "options": [
+        "Still",
+        "Finger tap",
+        "Hand flutter"
+      ],
+      "default": "Still",
+      "description": "Draw a neutral hand, finger-tap hand pose or flutter pose with a few motion marks; any optional animation respects reduced motion. Never diagnose the player."
+    },
+    {
+      "key": "gazeComfort",
+      "label": "Gaze comfort",
+      "group": "Access and behavior",
+      "options": [
+        "Forward",
+        "Sideways",
+        "Lowered"
+      ],
+      "default": "Forward",
+      "description": "Shift the eyes and pupil placement toward forward, side or lower gaze while retaining independent eye anatomy selections."
+    },
+    {
+      "key": "posture",
+      "label": "Posture",
+      "group": "Access and behavior",
+      "options": [
+        "Upright",
+        "Relaxed",
+        "Leaning"
+      ],
+      "default": "Upright",
+      "description": "Change shoulder height and head/torso alignment. Keep the mobility device visible and unchanged."
+    },
+    {
+      "key": "frameColor",
+      "label": "Aid frame color",
+      "group": "Access and behavior",
+      "options": [
+        "Ink",
+        "Pine",
+        "Gold"
+      ],
+      "default": "Ink",
+      "description": "Color the selected wheelchair or other aid frame. For a character on foot, show the selected aid finish in the portrait's mobility-detail sample without silently adding an aid."
+    },
+    {
+      "key": "spokeMarks",
+      "label": "Spoke marks",
+      "group": "Access and behavior",
+      "options": [
+        "Plain",
+        "Cross",
+        "Stars"
+      ],
+      "default": "Plain",
+      "description": "Draw plain wheel hubs, crossed spokes or distinct star spoke markers. When a chair is not selected, the portrait's mobility-detail sample still shows the chosen wheel treatment."
+    },
+    {
+      "key": "stepTrail",
+      "label": "Step trail",
+      "group": "Footprint",
+      "options": [
+        "None",
+        "Dots",
+        "Leaves"
+      ],
+      "default": "None",
+      "description": "Draw a short sequence of high-contrast dots or leaf-shaped footsteps behind the integer-grid sprite, and a matching small trail sample below the portrait. Preview only: do not implement M3 travel."
+    },
+    {
+      "key": "vocalFilter",
+      "label": "Vocal filter",
+      "group": "Footprint",
+      "options": [
+        "None",
+        "Soft echo",
+        "Synthetic"
+      ],
+      "default": "None",
+      "description": "Display the selected filter as a portrait/dialogue caption label only. Do not synthesize, play or record voice."
+    }
+  ]
+}

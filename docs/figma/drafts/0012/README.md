@@ -43,3 +43,7 @@ node work/figma-range-components.mjs
 ## Cycle 0015 retry evidence
 
 `compact-figma.mjs` replaces expanded geometry with drawing functions and produces a 41431-character request. This fixes the input limit, but **do not submit it as one call**: its 53420-byte ID return exceeded Figma's 48000-byte return limit and the tool reported no canvas commit. Split main specimens and small control-study groups into separate calls, preserving all IDs per bounded receipt. See cycles/0015-character-range-return-limit.md.
+
+## Cycle 0016 continuation
+
+The sprite board was retained and the portrait/control/creator batches now exist in Figma; use `../../R3-*.json` receipts before any further writes. The portrait geometry here includes the visibility corrections and bounded relaxed-coat hem. Application ports are in `src/game/character-portrait.ts` and `character-sprite.ts`. `batch-design.mjs` records the bounded generation approach (six controls per call); its work-directory paths describe the execution workspace. Do not rerun creation batches already receipted. See cycles/0016-character-range-checkpoint.md for the blocked implementation state.

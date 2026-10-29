@@ -27,7 +27,10 @@ export type StorageLike = Pick<Storage, "getItem" | "setItem">;
 function parseSave(value: unknown, content: GameContent): Save {
   const save = saveSchema.parse(value);
   if (!content.places.some((place) => place.id === save.placeId)) throw new Error("Saved place is missing.");
-  if (save.character?.creatorVersion === 1) characterSchema.parse(save.character);
+  if (save.character?.creatorVersion === 1) {
+    // Materialize additive defaults on load without discarding unrelated saved fields.
+    save.character = { ...save.character, ...characterSchema.parse(save.character) };
+  }
   return save;
 }
 
