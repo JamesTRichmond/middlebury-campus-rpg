@@ -110,7 +110,7 @@ On the platform, the greeter asks what to call you. That opens the builder.
 ## M3-escort
 
 ```yaml
-status: blocked
+status: done
 blockedBy: [M2-character]
 humanGate: no
 owner: "codex-root"
@@ -124,6 +124,8 @@ First pixel-art walk. Top-down, 16-bit to 64-bit cozy sprites. Not a menu of but
 - Gate: `npm run validate` plus a headless test that the escort quest `welcome` can complete, and a note in the cycle report of how the wheelchair was checked.
 
 Cycle 0017: design checkpoint blocked by a Figma node-reference failure during facing/accessibility work. Successful frames and receipts retained; no M3 runtime implementation. Inspect partial failed-batch state after clearance of gates/PENDING-figma.md. See cycles/0017-escort-figma-gate.md. M4 not started.
+
+Completed 2026-10-29 — cycle 0018: M3 escort. Walking and wheelchair complete welcome; collision, camera, portrait dialogue, save/reload and D3 feedback. 29 unit tests and 18 browser checks passed. Cycle 0017 gate entry above is historical; gate resolved. M4 held.
 
 ## M4-dorm
 

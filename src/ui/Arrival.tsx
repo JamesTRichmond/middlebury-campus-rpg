@@ -1,3 +1,5 @@
+import { Escort } from './Escort';
+import { beginEscort } from '../game/escort';
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { CharacterBuilder } from "./CharacterBuilder";
 import { creator, characterSchema } from "../game/character";
@@ -20,6 +22,7 @@ export function Arrival() {
   const [warning, setWarning] = useState(boot.warning);
   const heading = useRef<HTMLHeadingElement>(null);
   const input = useRef<HTMLInputElement>(null);
+  const [escorting,setEscorting]=useState(Boolean(boot.save?.escort));
   const [building, setBuilding] = useState(false);
   const [replaying, setReplaying] = useState(false);
   const [paused, setPaused] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
@@ -78,7 +81,9 @@ export function Arrival() {
     </form>
   </main>;
 
-  if (building && save) return <CharacterBuilder save={save} onSave={persist} onClose={() => setBuilding(false)} version={__BUILD_VERSION__} warning={warning} />;
+  if (building && save) return <CharacterBuilder save={save} onSave={persist} onClose={() => setBuilding(false)} version={__BUILD_VERSION__} warning={warning} onEscort={()=>{persist(beginEscort(save,content));setBuilding(false);setEscorting(true);}} />;
+
+  if(escorting && stage==="platform" && save.escort) return <Escort save={save} onSave={persist} onSettings={()=>setBuilding(true)} onClose={()=>setEscorting(false)} version={__BUILD_VERSION__} warning={warning}/>;
 
   const station = content.places.find((place) => place.id === copy.placeId);
   if (!station) return <main><p role="alert">Missing arrival place: {copy.placeId}</p></main>;
@@ -100,7 +105,7 @@ export function Arrival() {
       <PlatformScene name={station.name} caption={copy.platformCaption} />
       <section className="ending-copy" aria-labelledby="end-title">
         <p>{creator.greeting}</p><button className="button" onClick={() => setBuilding(true)}>{creator.open}</button>
-        <h2 id="end-title">{copy.endTitle}</h2><p>{copy.endBody}</p>
+        {characterSchema.safeParse(save.character).success&&<button className="button" onClick={()=>{persist(beginEscort(save,content));setEscorting(true);}}>Walk with the greeter</button>}<h2 id="end-title">{copy.endTitle}</h2><p>{copy.endBody}</p>
         <a className="button" href={feedbackPath(__BUILD_VERSION__)}>{copy.feedbackLabel}</a>
         <button className="button" onClick={() => setReplaying(true)}>{copy.replayLabel}</button>
         <p className="journey-label">{copy.feedbackHint}</p>

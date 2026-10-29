@@ -16,3 +16,5 @@ Error: in get_name: The node with id "90:5044" does not exist
 ```
 
 This was an execution/node-reference failure, not a reported authentication failure. Partial changes from that failed call are unknown; no success receipt was returned. The batch attempted three accessibility clones followed by eight cardinal facing specimens. Do not retry or recreate blindly. After operator clearance, inspect the file and any partial nodes before resuming. Exact failure: docs/figma/M3-facing-mode-failure.json. No M3 application code was written. Preserve existing character art and all successful frames. Do not start M4.
+
+Resolved 2026-10-29: inspection retained all eight saved frames and accessibility frames 92:4723 / 92:4824 / 92:4925. Facing study 93:4921 completed with eight actual cardinal component references; receipts M3-facing.json, M3-high-contrast.json and M3-colorblind.json are in the repo. Larger UI readback is included in M3-facing.json.

@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 17
+cycle: 18
 lastMetaCycle: 11
-productCyclesSinceMeta: 1
+productCyclesSinceMeta: 2
 lock: ""
-stop: human-gate
-current: M3-escort
-next: inspect partial M3 facing/accessibility batch after Figma gate clearance; M4 held
-lastGate: "Cycle 0017: Figma failed with missing node 90:5044. Existing runtime: validate passed (27 tests, TypeScript, production build); all 14 browser tests passed. M3 runtime/quest gate not implemented."
+stop: operator-hold
+current: none
+next: M4-dorm held by explicit operator instruction
+lastGate: "Cycle 0018: M3 implemented; validate passed 29 tests, TypeScript and production build; 18 desktop/phone browser checks passed."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0017: Figma failed with missing node 90:5044. Existing runtime:
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0018 | M3-escort | Done: saved frames retained, accessible escort and dialogue implemented; all gates passed. M4 held. |
 | 0017 | M3-escort | Design receipts saved; facing/accessibility call failed. Human gate, no runtime implementation. |
 | 0016 | R3-D2-character-range | Done: visual comparison, targeted frame reconciliation, Handoff and all validation passed. M3 held. |
 | 0015 | R3-D2-character-range | Compact request passed input limit; oversized return prevented commit. Human gate. |
@@ -35,13 +36,11 @@ lastGate: "Cycle 0017: Figma failed with missing node 90:5044. Existing runtime:
 
 ## Current handoff
 
-- M3 started after operator clearance. Existing escort starter inspected; walking, wheelchair, dialogue, full-route and endpoint frames created before any code. Original character sprite reused. Successful receipts: docs/figma/M3-*.json.
-- Figma failed in the facing/accessibility batch: `Error: in get_name: The node with id "90:5044" does not exist`. Partial canvas state is unknown. Stop on gates/PENDING-figma.md. After clearance inspect before retrying; do not recreate successful frames. Session: 1fe85448-172e-4c6e-a39d-5caced638a1f.
-- No M3 runtime or content changes. Existing build passed 27 unit tests, TypeScript, production build and 14 desktop/phone browser tests. Escort welcome-completion and wheelchair-travel gates remain unimplemented; no D3 acceptance claimed.
-- Cycle: cycles/0017-escort-figma-gate.md. Design drafts: docs/figma/drafts/0017/. M4 not started. This incomplete attempt does not increment product count.
+- M3 complete: existing Figma frames retained; mode receipts reconciled, missing facing study completed. Gate archived at gates/resolved/figma-cycle-0018.md. Handoff 94:2 records match and differences.
+- Character builder → Save → Walk with the greeter. Arrow keys/WASD or direction buttons follow station, Triangle Park, campus, halls and room. Level route shared by walking/wheelchair; stone collision; camera follows; greeter follows history; portrait dialogue overlays map. Progress saves; town stays locked.
+- Local: from repository run `npm ci && npm run validate && npm run preview`. Give D3 feedback binds `demo=D3-escort` and built Git SHA. No public deployment. Existing prototype linked in DEMOS.md.
+- Gates: 29 unit tests, TypeScript, production build; 18 browser checks including foot/wheelchair desktop/phone completion and reload. Cycle: cycles/0018-escort.md. M4 not started.
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
-- Walking: 87:4031 / 87:4130; wheelchair: 87:4229 / 87:4335; dialogue: 87:4441 / 87:4624; route: 88:4585; endpoint: 89:4655.
-- R3 remains complete; Handoff 84:3 records its visual comparison. Its runtime remains unchanged by this design-only attempt.
 
 ## D1 build
 

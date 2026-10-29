@@ -1,3 +1,4 @@
+import { escortStateSchema } from './escort';
 import { characterSchema } from "./character";
 import { z } from "zod";
 import type { GameContent } from "../content/schema";
@@ -8,6 +9,7 @@ export const DEMO_ID = "D1-letter-train";
 export const originSchema = z.string().trim().min(1).max(80);
 
 export const saveSchema = z.object({
+  escort: escortStateSchema.optional(),
   version: z.literal(1),
   origin: originSchema,
   placeId: z.string().min(1),

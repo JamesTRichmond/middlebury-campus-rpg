@@ -1,0 +1,7 @@
+import {it,expect} from 'vitest';
+import {beginEscort,moveEscort} from '../src/game/escort';
+import {startArrival,writeJourney,readJourney} from '../src/game/arrival';
+import {defaultCharacter} from '../src/game/character';
+import {loadContent} from '../src/content/load';
+it('walking and wheelchair complete welcome along graph edges, preserve progress and round trip',()=>{const c=loadContent();for(const mobility of ['Foot','Wheelchair'] as const){let s=beginEscort({...startArrival('Home',c),character:{...defaultCharacter,name:'Ari',mobility},notes:[{id:'keep',text:'Keep'}]},c);const seen=new Set([s.placeId]);for(let i=0;i<19;i++)s=moveEscort(s,'south',c);for(let i=0;i<200;i++){s=moveEscort(s,'east',c);seen.add(s.placeId);}expect(s.quests.welcome.done).toBe(true);expect([...seen]).toEqual(['middlebury-station','triangle-park','arrival-green','residence-quad','your-hall','dorm-room']);expect(s.notes).toEqual([{id:'keep',text:'Keep'}]);expect(s.unlockedPlaces).not.toContain('downtown');const data=new Map<string,string>();const storage={getItem:(k:string)=>data.get(k)??null,setItem:(k:string,v:string)=>{data.set(k,v);}};expect(writeJourney(storage,s,c)).toBe(true);expect(readJourney(storage,c).save).toEqual(s);}});
+it('stone and path edges block movement',()=>{const c=loadContent();let s=beginEscort({...startArrival('Home',c),character:{...defaultCharacter,name:'Ari'}},c);for(let i=0;i<80;i++)s=moveEscort(s,'east',c);expect(s.escort!.x).toBe(584);for(let i=0;i<20;i++)s=moveEscort(s,'north',c);expect(s.escort!.y).toBe(192);});

@@ -18,7 +18,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 | --- | --- | --- |
 | [D1-letter-train](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M1 | Read the unofficial letter, set a home place, ride the train into the station |
 | [D2-character](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M2 | Name themselves, set pronouns and appearance, turn on wheelchair and other access options |
-| `D3-escort` | M3 | Walk from the station through Triangle Park to the dorm, including with a wheelchair |
+| [D3-escort](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M3 | Walk from the station through Triangle Park to the dorm, including with a wheelchair |
 | `D4-dorm` | M4 | Unpack and place doodads, then see the orientation notice |
 | `D5-campus` | M5 | Visit dining and the library with portrait dialogue |
 | `D6-class` | M6 | Attend class as their character; the teacher delivers the virtual lesson; take notes; ask a question answered only from that lesson |
@@ -66,3 +66,9 @@ The D2 row links the existing file. Its platform prototype now opens range creat
 The earlier incomplete checkpoint entry is historical. Validated build source `f86981922dc279501d3a06f67c26eabd007ed791`: run `npm ci && npm run validate && npm run preview` from the repository and open the printed local URL. Platform → Create your character → Save → Edit / Give feedback / Back to platform. Feedback opens `feedback/index.html?demo=D2-character&version=f86981922dc279501d3a06f67c26eabd007ed791`; fresh builds bind their own checked-out SHA.
 
 D2 prototype uses the original file linked in the demo row: platform → 74:9838 (phone 74:9987) → completion → edit or return. Handoff 84:3 records comparison and intentional native-control differences. 27 tests, TypeScript, production build and 14 browser checks passed. No public deployment. M3 remains held.
+
+## D3 escort — cycle 0018
+
+Local: `npm ci && npm run validate && npm run preview` from the repository. Complete arrival/character, Save, then Walk with the greeter. Use arrow keys/WASD or direction controls; go around the stone. Talk opens portrait dialogue. Dorm arrival ends D3; Give D3 feedback opens `feedback/index.html?demo=D3-escort&version=<built SHA>` automatically. Saves resume the same walk. No public deployment.
+
+Prototype in the recorded file: D2 completion entry 89:4649 / 89:4652 → escort 87:4031 / 87:4130; dialogue previews 87:4441 / 87:4624; endpoint 89:4655. Prototype uses preview jumps; actual build requires walking. Handoff 94:2 records differences. M4 held.

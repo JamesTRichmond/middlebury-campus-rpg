@@ -4,7 +4,7 @@ import type { Save } from '../game/arrival';
 import './character.css';
 import { rangeControls } from '../game/character-range';
 import { CharacterPreview } from './CharacterPreview';
-export function CharacterBuilder({save,onSave,onClose,version,warning}:{save:Save;onSave:(s:Save)=>void;onClose:()=>void;version:string;warning?:string}) {
+export function CharacterBuilder({save,onSave,onClose,version,warning,onEscort}:{save:Save;onSave:(s:Save)=>void;onClose:()=>void;version:string;warning?:string;onEscort?:()=>void}) {
   const parsed=characterSchema.safeParse(save.character);
   const [value,setValue]=useState<Character>(parsed.success?parsed.data:defaultCharacter);
   const [done,setDone]=useState(false);const heading=useRef<HTMLHeadingElement>(null);
@@ -14,7 +14,7 @@ export function CharacterBuilder({save,onSave,onClose,version,warning}:{save:Sav
   return <main className={`creator ${value.highContrast?'contrast':''} ${value.uiScale==='Larger'?'larger':''}`} data-palette={value.palette} data-captions={value.captions} data-visual-cues={value.visualSoundCues}>
     <h1 tabIndex={-1} ref={heading}>{done?'Your character is ready':creator.title}</h1>
     <CharacterPreview value={value} dialogue={done} />
-    {done?<section className="character-complete"><p>{creator.end}</p><button className="button" onClick={()=>setDone(false)}>Edit character</button><a className="button" href={`feedback/index.html?demo=D2-character&version=${version}`}>Give feedback</a><button className="button" onClick={onClose}>Back to platform</button>{warning&&<p role="alert">{warning}</p>}</section>:<form onSubmit={e=>{e.preventDefault();onSave({...save,character:characterSchema.parse(value)});setDone(true);}}>
+    {done?<section className="character-complete"><p>{creator.end}</p>{onEscort&&<button className="button" onClick={onEscort}>Walk with the greeter</button>}<button className="button" onClick={()=>setDone(false)}>Edit character</button><a className="button" href={`feedback/index.html?demo=D2-character&version=${version}`}>Give feedback</a><button className="button" onClick={onClose}>Back to platform</button>{warning&&<p role="alert">{warning}</p>}</section>:<form onSubmit={e=>{e.preventDefault();onSave({...save,character:characterSchema.parse(value)});setDone(true);}}>
       <fieldset className="skin-choices"><legend>Skin tone</legend><div className="skin-swatches">
         {creator.skinTones.map(t=><button key={t.id} className="skin-swatch" type="button" aria-label={t.name} aria-pressed={value.skin===t.id} onClick={()=>update('skin',t.id as Character['skin'])} style={{background:t.hex}}><span aria-hidden="true">{value.skin===t.id?'✓':''}</span></button>)}
       </div><p className="swatch-name">{creator.skinTones.find(t=>t.id===value.skin)?.name}</p></fieldset>
