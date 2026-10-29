@@ -170,3 +170,9 @@ Handoff 97:2 records native selects, item initials and scrolling differences; M4
 ## M4 comparison complete — cycle 0019 resume
 
 Read-only comparison of saved desktop/phone notice frames 95:5009 / 95:5026 against production browser screenshots. Room geometry, palette and slot positions match. Native selects remain visible after finishing; notice is farther down the scrolling document. Item initials, substituted origin and native heading/button typography differ from compact specimens. No frames changed. Screenshots: figma/M4-comparison/. Runner JSON-import fix passed 30 tests, TypeScript, production build and 20 browser checks. M4 complete; prior blocked checkpoint is historical. M5 held.
+
+## M5 campus — cycle 0020
+
+Inspected existing starter campus 8:773, then framed walking desktop/phone 99:4982 / 99:5099 and portrait dialogue 99:5216 / 99:5417 before implementation. Exact IDs: M5-frames.json. Explicit start controls connect finished dorm notice to orientation; conversation previews return to map (M5-prototype.json). Added full readable Nearby destination hint before implementing it, since map crop can clip long portal names (M5-nearby-hint.json).
+
+Handoff 101:5532 (M5-handoff.json) records existing content IDs, graph portals, nonexpiring saved tasks and native-control differences. Runtime repeats sample building geometry for each campus place; exits and NPC names/text come from content. Saved character replaces specimen; phone uses 320×270 crop, desktop 480×270 at 2×. NPC portrait is separate from small sprite. Longer bundled dialogue wraps beyond the short sample specimen; browser controls and task list use document flow. Final screenshots in M5-comparison/. No copied assets or invented URL. All 31 tests, TypeScript, production build and 22 browser checks passed. M6 held.

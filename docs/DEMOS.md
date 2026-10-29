@@ -20,7 +20,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 | [D2-character](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M2 | Name themselves, set pronouns and appearance, turn on wheelchair and other access options |
 | [D3-escort](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M3 | Walk from the station through Triangle Park to the dorm, including with a wheelchair |
 | [D4-dorm](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M4 | Unpack and place doodads, then see the orientation notice |
-| `D5-campus` | M5 | Visit dining and the library with portrait dialogue |
+| [D5-campus](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M5 | Visit dining and the library with portrait dialogue |
 | `D6-class` | M6 | Attend class as their character; the teacher delivers the virtual lesson; take notes; ask a question answered only from that lesson |
 | `D7-town` | M7 | Cross Triangle Park into town after campus objectives |
 | `D8-snow` | M8 | Toggle seasons and take the optional Snow Bowl trip |
@@ -78,3 +78,9 @@ Prototype in the recorded file: D2 completion entry 89:4649 / 89:4652 → escort
 From repository: `npm ci && npm run validate && npm run preview`. Reach dorm via escort → Unpack in your room → Unpack your bag → place Book, Mug, Keepsake → Finish settling in. Notice points downstairs; campus tour does not start. All placements and notice persist on reload. Give D4 feedback opens `feedback/index.html?demo=D4-dorm&version=<built SHA>` automatically. Fresh builds bind their checked-out SHA; no public deployment.
 
 Existing Figma prototype entry 96:4981 → phone unpack 95:4995 → finished notice 95:5026; desktop 95:4981 / 95:5009. The prototype uses a state jump; actual build requires placement. Handoff 97:2 records native-control differences. Room comparison evidence: figma/M4-comparison/. 30 unit tests, TypeScript, production build and 20 browser checks passed. M5 held.
+
+## D5 campus — cycle 0020
+
+Local: `npm ci && npm run validate && npm run preview` from repository. After finishing dorm, choose Go downstairs for orientation. Arrow keys/WASD or direction buttons walk to map portals. Interact nearby enters a portal or talks to a nearby NPC. Full nearby names appear outside the phone map crop. Meet orientation leader, visit hall, Proctor, library, and sample seminar for the introductory line; tasks persist and town stays locked. No lesson panel yet.
+
+Prototype in recorded file: dorm notice start → campus 99:4982 / 99:5099, dialogue previews 99:5216 / 99:5417. Handoff 101:5532. Prototype jumps preview states; build requires walking and interacting. Give D5 feedback opens `feedback/index.html?demo=D5-campus&version=<built SHA>` automatically. No public deployment. 31 unit tests and 22 browser checks pass; M6 held.

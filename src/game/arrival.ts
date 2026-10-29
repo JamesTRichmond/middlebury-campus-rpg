@@ -1,3 +1,4 @@
+import {campusStateSchema} from './campus';
 import { dormStateSchema } from './dorm';
 import { escortStateSchema } from './escort';
 import { characterSchema } from "./character";
@@ -10,6 +11,7 @@ export const DEMO_ID = "D1-letter-train";
 export const originSchema = z.string().trim().min(1).max(80);
 
 export const saveSchema = z.object({
+  campus: campusStateSchema.optional(),
   dorm: dormStateSchema.optional(),
   escort: escortStateSchema.optional(),
   version: z.literal(1),

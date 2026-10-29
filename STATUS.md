@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 19
+cycle: 20
 lastMetaCycle: 11
-productCyclesSinceMeta: 3
+productCyclesSinceMeta: 4
 lock: ""
 stop: operator-hold
 current: none
-next: M5-campus-walk held by operator
-lastGate: "Cycle 0019 complete: runner fixed; 30 tests, TypeScript, production build and all 20 desktop/phone browser checks passed. Room compared with saved Figma frames; frames unchanged."
+next: M6-notebook-class held by explicit operator instruction
+lastGate: "Cycle 0020: 31 tests, TypeScript, production build and all 22 desktop/phone browser checks passed; orientation completes without downtown."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0019 complete: runner fixed; 30 tests, TypeScript, production b
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0020 | M5-campus-walk | Done: graph walking, portrait dialogue, persistent orientation; all gates passed. M6 held. |
 | 0019 | M4-dorm | Done: browser runner fixed, room compared, all 20 browser checks and validation passed; M5 held. |
 | 0018 | M3-escort | Done: saved frames retained, accessible escort and dialogue implemented; all gates passed. M4 held. |
 | 0017 | M3-escort | Design receipts saved; facing/accessibility call failed. Human gate, no runtime implementation. |
@@ -37,11 +38,11 @@ lastGate: "Cycle 0019 complete: runner fixed; 30 tests, TypeScript, production b
 
 ## Current handoff
 
-- M4 complete. JSON imports fixed for Node browser-test loading; no gameplay/UI or Figma frame changes in this resume. All 30 unit tests, TypeScript, production build and 20 browser checks pass.
-- Compared room to saved desktop/phone frames 95:5009 / 95:5026. Geometry/palette/slots match. Native placement controls remain after finishing, moving the notice down the document; item initials, origin substitution and heading/button typography differ from compact specimens. Evidence: docs/figma/M4-comparison/. Cycle 0019 final section records comparison.
-- Origin-labeled belongings unpack, occupy three unique slots and persist through reload. Finish reveals the downstairs notice without starting orientation or changing location. M5 not started; operator-hold.
-- Local: `npm ci && npm run validate && npm run preview` from repository. Reach dorm via escort → Unpack in your room. Give D4 feedback binds D4-dorm and built SHA. No public deployment.
-- Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Handoff 97:2; existing prototype and frames retained.
+- M5 complete: explicit start from finished dorm notice, campus graph portals reached by walking, nearby destination names, portrait conversations and saved nonexpiring task progress. Dining, library, halls, activities and academic buildings use existing content. Seminar introduction only; no lesson panel. Town remains locked.
+- Figma walk 99:4982 / 99:5099, dialogue 99:5216 / 99:5417. Prototype connected from dorm notice; Handoff 101:5532 records content and differences. File: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS.
+- Gates: 31 tests, TypeScript, production build and 22 browser checks passed. New simulation finishes orientation without downtown; desktop/phone browser journeys verify portrait dialogue, completion and reload. Cycle: cycles/0020-campus-walk.md.
+- Local: from repository run `npm ci && npm run validate && npm run preview`. Finish dorm → Go downstairs for orientation. Arrow keys/WASD or direction buttons, then Interact nearby. Give D5 feedback binds D5-campus and built SHA. No public deployment.
+- M6 not started; operator hold. Four product cycles since last meta cycle.
 
 ## D1 build
 

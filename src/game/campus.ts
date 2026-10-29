@@ -1,0 +1,10 @@
+import {z} from 'zod';
+import type {Save} from './arrival';
+import type {GameContent} from '../content/schema';
+export const campusStateSchema=z.object({x:z.number().int().min(32).max(448),y:z.number().int().min(160).max(248),visited:z.array(z.string()),talked:z.array(z.string())});
+export function campusExits(s:Save,c:GameContent){return c.places.find(p=>p.id===s.placeId)!.exits.map(id=>c.places.find(p=>p.id===id)!).filter(p=>p.region==='campus');}
+export function campusProgress(s:Save,c:GameContent):Save{const q=c.quests.find(q=>q.id==='orientation')!;const state=s.campus!;let n=0;for(const step of q.steps){const on=step.on;const met=on.type==='enter-place'?state.visited.includes(on.placeId):on.type==='talk-npc'?state.talked.includes(on.npcId+':'+on.lineId):false;if(!met)break;n++;}const done=n===q.steps.length;return {...s,quests:{...s.quests,orientation:{stepIndex:n,done}},abilities:done?[...new Set([...s.abilities,...q.rewards.abilities])]:s.abilities};}
+export function startCampus(s:Save,c:GameContent):Save{if(!s.dorm?.finished)throw Error('Finish settling in first');if(s.campus)return s;return campusProgress({...s,placeId:'your-hall',campus:{x:240,y:192,visited:['your-hall'],talked:[]}},c);}
+export function moveCampus(s:Save,d:string):Save{const state=campusStateSchema.parse(s.campus);const delta:Record<string,[number,number]>={north:[0,-8],south:[0,8],east:[8,0],west:[-8,0]};const [dx,dy]=delta[d]??[0,0];return {...s,campus:{...state,x:Math.max(32,Math.min(448,state.x+dx)),y:Math.max(160,Math.min(248,state.y+dy))}};}
+export function enterCampus(s:Save,id:string,c:GameContent):Save{if(!campusExits(s,c).some(p=>p.id===id))throw Error('Campus exit unavailable');return campusProgress({...s,placeId:id,campus:{...s.campus!,x:240,y:192,visited:[...new Set([...s.campus!.visited,id])]}},c);}
+export function talkCampus(s:Save,npcId:string,c:GameContent):Save{const npc=c.npcs.find(n=>n.id===npcId&&n.placeId===s.placeId);if(!npc)throw Error('NPC not here');return campusProgress({...s,campus:{...s.campus!,talked:[...new Set([...s.campus!.talked,npc.id+':'+npc.lines[0].id])]}},c);}

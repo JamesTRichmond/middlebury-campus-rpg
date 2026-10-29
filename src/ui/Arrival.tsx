@@ -1,3 +1,5 @@
+import {Campus} from './Campus';
+import {startCampus} from '../game/campus';
 import { Dorm } from './Dorm';
 import { openDorm } from '../game/dorm';
 import { Escort } from './Escort';
@@ -86,7 +88,8 @@ export function Arrival() {
 
   if (building && save) return <CharacterBuilder save={save} onSave={persist} onClose={() => setBuilding(false)} version={__BUILD_VERSION__} warning={warning} onEscort={()=>{persist(beginEscort(save,content));setBuilding(false);setEscorting(true);}} />;
 
-  if(inDorm && stage==="platform" && save.dorm) return <Dorm save={save} onSave={persist} onClose={()=>setInDorm(false)} version={__BUILD_VERSION__} warning={warning}/>;
+  if(stage==="platform" && save.campus) return <Campus save={save} onSave={persist} onSettings={()=>setBuilding(true)} version={__BUILD_VERSION__} warning={warning}/>;
+  if(inDorm && stage==="platform" && save.dorm) return <Dorm onOrientation={()=>persist(startCampus(save,content))} save={save} onSave={persist} onClose={()=>setInDorm(false)} version={__BUILD_VERSION__} warning={warning}/>;
   if(escorting && stage==="platform" && save.escort) return <Escort save={save} onSave={persist} onDorm={()=>{persist(openDorm(save));setInDorm(true);}} onSettings={()=>setBuilding(true)} onClose={()=>setEscorting(false)} version={__BUILD_VERSION__} warning={warning}/>;
 
   const station = content.places.find((place) => place.id === copy.placeId);

@@ -148,7 +148,7 @@ Completed 2026-10-29 — cycle 0019: browser runner fix. All 30 tests, TypeScrip
 ## M5-campus-walk
 
 ```yaml
-status: ready
+status: done
 blockedBy: [M4-dorm]
 humanGate: no
 owner: ""
@@ -159,6 +159,8 @@ owner: ""
 - Steps complete from enter-place and talk-npc, including dining and the library.
 - Town stays locked.
 - Gate: `npm run validate` plus a simulation that finishes `orientation` without entering `downtown`.
+
+Completed 2026-10-29 — cycle 0020: M5 campus walk. Orientation simulation and desktop/phone browser paths pass; 31 unit tests and 22 browser checks. Town remains locked; M6 held.
 
 ## M6-notebook-class
 
