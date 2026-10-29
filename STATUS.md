@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 14
+cycle: 15
 lastMetaCycle: 11
 productCyclesSinceMeta: 0
 lock: ""
 stop: human-gate
 current: R3-D2-character-range
-next: resume R3 with Figma requests under 50000 characters after gate clearance; M3 held
-lastGate: "Cycle 0014: authentication restored; Figma write rejected INVALID_ARGUMENT, code exceeds 50000 characters. No mutations or product edits. Existing build validate passed: 24 tests, TypeScript, production build."
+next: resume R3 with smaller component batches and bounded ID receipts; M3 held
+lastGate: "Cycle 0015: input size fixed; Figma return exceeded 48000 bytes, edits not committed. Existing build: npm run validate passed (24 tests, TypeScript, production build)."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0014: authentication restored; Figma write rejected INVALID_ARG
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0015 | R3-D2-character-range | Compact request passed input limit; oversized return prevented commit. Human gate. |
 | 0014 | R3-D2-character-range | Authentication restored; oversized write rejected before execution. Human gate retained. |
 | 0013 | R3-D2-character-range | Resume blocked: Figma UNAUTHORIZED; drafts intact, no product edits. |
 | 0012 | R3-D2-character-range | Paused at operator request. Design drafts preserved; Figma inspected, no new range frames or product code. |
@@ -32,8 +33,8 @@ lastGate: "Cycle 0014: authentication restored; Figma write rejected INVALID_ARG
 
 ## Current handoff
 
-- Cycles 0012–0014 are incomplete and do not increment product-cycle count. R3 is blocked on gates/PENDING-figma.md. Resume existing drafts using bounded requests after gate clearance; see cycles/0014-character-range-request-limit.md.
-- GOAL a2855d5 is synced. Latest Figma inspection succeeded; the subsequent write exceeded the connector request limit. Only local design drafts exist for Character range; frame before code remains outstanding.
+- Cycles 0012–0015 are incomplete and do not increment product-cycle count. R3 is blocked on gates/PENDING-figma.md. Resume existing drafts using bounded requests after gate clearance; see cycles/0015-character-range-return-limit.md.
+- GOAL a2855d5 is synced. Latest Figma inspection succeeded; the compact write returned too many node IDs; Figma reported edits were not committed. Only local design drafts exist for Character range; frame before code remains outstanding.
 
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
 - Cover text `3:515` links internally to repaired Letter `38:2698`; then use Present / Flow 1.

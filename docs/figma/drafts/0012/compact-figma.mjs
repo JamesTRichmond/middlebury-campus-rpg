@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+let s=fs.readFileSync('work/figma-range-components.js','utf8');
+let data=JSON.parse(fs.readFileSync('work/range-design-data.json'));
+const funcs=fs.readFileSync('work/range-portrait-design.js','utf8').replaceAll('export function','function')+'\n'+fs.readFileSync('work/range-sprite-design.js','utf8').replaceAll('export function','function');
+const controls=data.controls.map(({key,label,group,options,default:def})=>({key,label,group,options,default:def,description:''}));
+const init=funcs+'\nconst base='+JSON.stringify(data.base)+';\nconst controls='+JSON.stringify(controls)+';\nconst samples='+JSON.stringify(data.samples.map(s=>s.value))+';\nconst data={samples:samples.map(value=>({value,portrait:portraitShapes(value),sprite:rangeSpriteShapes(value)})),studies:controls.map(c=>{const value={...base,[c.key]:c.options.at(-1)};if(["frameColor","spokeMarks"].includes(c.key))value.mobility="Wheelchair";return {...c,value,portrait:portraitShapes(value)};})};\n';
+s=s.replace(/const data=\{[\s\S]*?\};\nconst right=/,init+'\nconst right=');
+s=s.replace('control.resize(300,72)','control.resize(300,84)');
+if(s.length>=50000)throw Error('Too big '+s.length);
+fs.writeFileSync('work/figma-compact.js',s);console.log({characters:s.length});

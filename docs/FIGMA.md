@@ -128,3 +128,7 @@ The operator resumed the checkpoint. The first connected inspection returned `UN
 ## Character range retry — cycle 0014 (blocked)
 
 Authentication is restored; the connected inspection succeeded with `rangeNodes: []`. The first write was rejected before execution because its `code` string exceeded 50000 characters (`INVALID_ARGUMENT`). No frames or product code were added. This was an assistant request-sizing error. See cycle 0014 and gates/PENDING-figma.md; resume with compact or bounded requests after the gate is cleared.
+
+## Character range retry — cycle 0015 (blocked)
+
+Connected inspection succeeded. A compact 41431-character write passed the input limit but returned 53420 bytes, exceeding the 48000-byte result limit. Tool result: "Canvas edits from this run were not committed." No new accepted frames or product code. Resume with smaller component batches; exact evidence is in cycles/0015-character-range-return-limit.md.

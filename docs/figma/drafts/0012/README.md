@@ -39,3 +39,7 @@ node work/figma-range-components.mjs
 - Voice, vocal-filter and pronouns are independent visible text labels, never recorded audio or inferred identity.
 - Presets are everyday stylizations only; no fetishwear, restraints or club gear.
 - `parseSave` currently validates character defaults but returns the raw character. The builder materializes defaults; test legacy load and resave explicitly.
+
+## Cycle 0015 retry evidence
+
+`compact-figma.mjs` replaces expanded geometry with drawing functions and produces a 41431-character request. This fixes the input limit, but **do not submit it as one call**: its 53420-byte ID return exceeded Figma's 48000-byte return limit and the tool reported no canvas commit. Split main specimens and small control-study groups into separate calls, preserving all IDs per bounded receipt. See cycles/0015-character-range-return-limit.md.

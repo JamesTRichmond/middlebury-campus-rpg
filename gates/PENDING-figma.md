@@ -1,19 +1,15 @@
-# Figma request-size failure
+# Figma return-size failure
 
 - Date: 2026-10-28
 - Item: R3-D2-character-range
-- Cycle: 0014
+- Cycle: 0015
 - Stop: human-gate
 - Existing file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
 
-Authentication is restored: a read-only Components inspection succeeded and returned `"rangeNodes":[]`. The first write was rejected by connector schema validation before execution:
+Authentication works. Read-only inspection returned `rangeNodes: []`. A compact 41431-character request passed the 50000-character input limit, but its result failed:
 
 ```text
-Parameters failed connector schema validation: code [maxLength]: String longer than maxLength 50000
-error_code: INVALID_ARGUMENT
-reason: INVALID_PARAMETERS
+Return value exceeds the 48000-byte limit (53420 bytes). Canvas edits from this run were not committed.
 ```
 
-Cause: the assistant submitted the generated script with every expanded portrait study embedded, exceeding the request limit. This is an assistant request-sizing error, not an authentication or file-access problem. No new nodes were created.
-
-The project requires stopping on any failed Figma call. On operator resume, preserve the existing file and drafts. Generate compact scripts or split independent groups into bounded requests, assert each code string is under 50000 characters before calling, and save every returned node ID. Inspect for partial/later work before creating anything. Review frames before application code. Do not start M3.
+The assistant still grouped too many components and returned too many node IDs. No new committed frames or application changes. On operator resume, inspect the existing file and split the same preserved design into smaller independent batches (for example three main portrait/sprite components first, then 6–8 control studies per call). Keep both code and returned receipts bounded. Return every created ID; do not silently truncate the receipt. Save each successful receipt before the next call. No M3.
