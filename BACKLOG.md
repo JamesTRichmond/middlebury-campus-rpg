@@ -130,7 +130,7 @@ Completed 2026-10-29 — cycle 0018: M3 escort. Walking and wheelchair complete 
 ## M4-dorm
 
 ```yaml
-status: ready
+status: blocked
 blockedBy: [M3-escort]
 humanGate: no
 owner: ""
@@ -140,6 +140,8 @@ owner: ""
 - Place a small set of doodads in `dorm-room`. Positions save.
 - When they finish, show the orientation notice pointing downstairs. Do not start the campus tour automatically.
 - Gate: `npm run validate` plus a save test that doodads survive reload.
+
+Cycle 0019 checkpoint: Figma frames and runtime started; 30 tests, TypeScript and production build pass. Browser runner fails loading content/escort.json without import attribute. Three-failure stop; see cycles/0019-dorm-checkpoint.md. Do not mark done or start M5.
 
 ## M5-campus-walk
 

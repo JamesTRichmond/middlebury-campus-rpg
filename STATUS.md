@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 18
+cycle: 19
 lastMetaCycle: 11
 productCyclesSinceMeta: 2
 lock: ""
-stop: operator-hold
-current: none
-next: M4-dorm held by explicit operator instruction
-lastGate: "Cycle 0018: M3 implemented; validate passed 29 tests, TypeScript and production build; 18 desktop/phone browser checks passed."
+stop: blocked
+current: M4-dorm
+next: resume M4 browser-runner import issue after blocked stop clearance; M5 held
+lastGate: "Cycle 0019: 30 tests, TypeScript and production build passed. Browser runner cannot load content/escort.json without JSON import attribute; three failed verification attempts. M4 incomplete."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0018: M3 implemented; validate passed 29 tests, TypeScript and 
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0019 | M4-dorm | Figma and implementation checkpoint; tests/build pass, browser runner blocked. |
 | 0018 | M3-escort | Done: saved frames retained, accessible escort and dialogue implemented; all gates passed. M4 held. |
 | 0017 | M3-escort | Design receipts saved; facing/accessibility call failed. Human gate, no runtime implementation. |
 | 0016 | R3-D2-character-range | Done: visual comparison, targeted frame reconciliation, Handoff and all validation passed. M3 held. |
@@ -36,11 +37,10 @@ lastGate: "Cycle 0018: M3 implemented; validate passed 29 tests, TypeScript and 
 
 ## Current handoff
 
-- M3 complete: existing Figma frames retained; mode receipts reconciled, missing facing study completed. Gate archived at gates/resolved/figma-cycle-0018.md. Handoff 94:2 records match and differences.
-- Character builder → Save → Walk with the greeter. Arrow keys/WASD or direction buttons follow station, Triangle Park, campus, halls and room. Level route shared by walking/wheelchair; stone collision; camera follows; greeter follows history; portrait dialogue overlays map. Progress saves; town stays locked.
-- Local: from repository run `npm ci && npm run validate && npm run preview`. Give D3 feedback binds `demo=D3-escort` and built Git SHA. No public deployment. Existing prototype linked in DEMOS.md.
-- Gates: 29 unit tests, TypeScript, production build; 18 browser checks including foot/wheelchair desktop/phone completion and reload. Cycle: cycles/0018-escort.md. M4 not started.
-- Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
+- M4 checkpoint, incomplete. Figma unpack frames 95:4981 / 95:4995; notice 95:5009 / 95:5026; prototype entry 96:4981; Handoff 97:2. Existing file retained: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS.
+- Added origin-labeled bag, three room doodads with saved slots, explicit Finish settling in and orientation notice. No campus transition. Implementation is not browser accepted.
+- Last validate passed 30 unit tests, TypeScript and production build. Browser suite never ran: Node requires a JSON import attribute on content/escort.json when loading the new test's imports. Initial test typing failure and two browser-runner import failures reached LOOP.md's three-failure limit. Stop blocked.
+- Resume cycles/0019-dorm-checkpoint.md after clearance. Keep frames; fix module loading, run browser checks, compare room screenshots, then update acceptance. M5 not started. Product count unchanged.
 
 ## D1 build
 

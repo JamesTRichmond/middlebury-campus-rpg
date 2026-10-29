@@ -1,0 +1,5 @@
+import {it,expect} from 'vitest';
+import {startArrival,writeJourney,readJourney,type Save} from '../src/game/arrival';
+import {unpack,placeDoodad,finishDorm} from '../src/game/dorm';
+import {loadContent} from '../src/content/load';
+it('unpacks, places and reloads doodads without starting orientation or dropping other saves',()=>{const c=loadContent();let s:Save={...startArrival('Oslo',c),placeId:'dorm-room',quests:{welcome:{stepIndex:3,done:true}},notes:[{id:'note',text:'Keep'}],doodads:[{id:'legacy',slot:'old'}]};expect(()=>finishDorm(s)).toThrow();s=unpack(s);for(const [id,slot]of [['dorm-book','left'],['dorm-mug','center'],['dorm-keepsake','right']])s=placeDoodad(s,id,slot);s=finishDorm(s);const map=new Map<string,string>(),storage={getItem:(k:string)=>map.get(k)??null,setItem:(k:string,v:string)=>{map.set(k,v);}};expect(writeJourney(storage,s,c)).toBe(true);expect(readJourney(storage,c).save).toEqual(s);expect(s.quests).not.toHaveProperty('orientation');expect(s.doodads).toContainEqual({id:'legacy',slot:'old'});expect(()=>placeDoodad(s,'dorm-book','center')).toThrow();});

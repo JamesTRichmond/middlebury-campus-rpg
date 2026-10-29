@@ -160,3 +160,9 @@ The next facing/accessibility batch failed: `Error: in get_name: The node with i
 ## M3 implemented — cycle 0018
 
 Retained all saved frames. Recovered high contrast 92:4723, colorblind 92:4824 and larger UI 92:4925; exact original receipts/readback saved. Added missing cardinal facing study 93:4921; eight resolved existing directional components. Original failed node ignored. Gate resolved only after receipts were saved. Handoff 94:2 (receipt M3-handoff.json) records dynamic camera, saved character, native controls and simplified decorative scenery differences. Character range sprite remains the runtime art; facing mirrors west and hides facial features north, with a direction cue. 29 tests, TypeScript, production build and 18 browser checks passed. D3 local instructions in DEMOS.md. No new file or invented URL; M4 held.
+
+## M4 dorm — cycle 0019 checkpoint (incomplete)
+
+Session 7127f940-07d6-45e1-b049-875c7eefcc69 inspected starter dorm 8:721 before changes. New unpack desktop/phone 95:4981 / 95:4995 and finished-notice 95:5009 / 95:5026 precede code; exact IDs M4-frames.json. Room uses original 320×180 geometry, 2× desktop and 1× phone, with bed, desk and three slots. Generic book/mug/keepsake are belongings brought from selected origin, with no inferred geography/culture. Prototype entry 96:4981 links D3 endpoint to phone unpack; unpack state links to notice specimen. Actual build requires all three placements before finishing. M4-prototype.json records wiring.
+
+Handoff 97:2 records native selects, item initials and scrolling differences; M4-handoff.json. Figma notice screenshot reviewed. Application tests/build pass; browser suite is blocked before execution by a Node JSON import-attribute issue. No final visual comparison or D4 acceptance claimed. Preserve frames on resume; M5 held.
