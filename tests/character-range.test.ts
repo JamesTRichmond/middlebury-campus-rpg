@@ -15,7 +15,7 @@ function pixels(shapes:PixelShape[],width:number,height:number){
  return raster.join('');
 }
 it('every named drawing option changes the rendered portrait; labels remain independent',()=>{
- for(const context of [{},{thirdEyelid:'Closed'},{clothesColor:'Ink'},{surfaceColor:'Pine'},{hairColor:'Blond'},{outerwear:'Coat'}]){
+ for(const context of [{},{thirdEyelid:'Closed'},{clothesColor:'Ink'},{surfaceColor:'Pine'},{hairColor:'Blond'},{outerwear:'Coat'}] as const){
   for(const c of rangeControls.filter(c=>!['voiceLabel','vocalFilter'].includes(c.key))){
    const images=c.options.map(option=>pixels(portraitShapes({...defaultCharacter,...defaultRange,...context,[c.key]:option}),160,180));
    expect(new Set(images).size,`${c.key} ${JSON.stringify(context)}`).toBe(c.options.length);

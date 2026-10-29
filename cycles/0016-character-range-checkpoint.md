@@ -3,7 +3,7 @@
 - Date: 2026-10-29
 - Agent: codex-root
 - Item: R3-D2-character-range — blocked, incomplete
-- Stop: blocked (LOOP.md three-failure rule); M3 remains held
+- Original stop: blocked (LOOP.md three-failure rule), cleared by operator on 2026-10-29. Current stop: operator-hold after the scoped typing fix and verification; M3 remains held
 
 ## Figma evidence
 
@@ -37,3 +37,17 @@ Stopped under LOOP.md, “After three failed attempts on the same item ... stop.
 ## Resume without restarting
 
 After operator clearance, fix the test-context literal typing, run the full validation gate, then desktop/phone browser suite. Inspect actual browser screenshots against the recorded frames; fix discrepancies in Figma first. Verify all retained appearance options on both portrait and sprite, combined choices, keyboard access and sticky previews. Reconcile completion layout details and add final Figma Handoff content IDs (`character-creator`, `character-range`) and differences. Complete D2 version/feedback metadata only after acceptance. Keep all receipt IDs and original file. No M3.
+
+## Operator-authorized typing fix and verification — 2026-10-29
+
+Resumed from `1e67b2d` after the operator cleared the three-failure stop. Scope was explicitly limited to the TypeScript failure at tests/character-range.test.ts:20, validation, documentation and push. Added `as const` to the context array so its named choices retain literal types. No assertions, runtime code, Figma frames, receipts or URLs changed. No frame change.
+
+Observed on the final code tree:
+
+- `npm run validate`: exit 0; 27 unit tests passed, TypeScript passed, Vite production build passed (66 modules). Both game and feedback artifacts were produced.
+- `npm run test:browser`: exit 0; all 14 tests passed in 26.1 seconds across desktop and phone against the production preview. This includes all range portrait choices and labels, existing sprite/wardrobe choices, mobility and colorblind persistence, high contrast/larger UI, save/reload, uninferred optional flags, and D1 arrival/storage/feedback regressions.
+- `git diff --check`: passed.
+
+The test-only fix does not change the production behavior from checkpoint `1e67b2d`; the built feedback version uses that checked-out source SHA. Local play remains `npm run preview` from the repository after validation.
+
+The previous failing verification record above is historical. The TypeScript and browser blockers are now cleared. R3 remains open for the final visual comparison and Figma Handoff work recorded above; those were outside this explicitly limited request. No new design acceptance is claimed. Stop: operator-hold at the end of the requested scope. Do not start M3.

@@ -11,13 +11,13 @@ When an item below is marked done, also publish its demo in the same cycle (LOOP
 ## R3-D2-character-range
 
 ```yaml
-status: blocked
+status: doing
 blockedBy: []
 humanGate: no
 owner: "codex-root"
 ```
 
-Cycle 0016 reconciled the existing sprite board and saved receipts for portraits, all 52 control studies, desktop/phone creator frames, accessibility modes, and prototype wiring. The Figma return-size gate is resolved. Implementation is incomplete: stopped after three failed verification attempts under LOOP.md. Last validate: 27 unit tests passed, TypeScript failed on widened test-context literals in tests/character-range.test.ts:20; build and browser gate not reached. Resume this checkpoint after the blocked stop is cleared; do not recreate Figma nodes or start M3. See cycles/0016-character-range-checkpoint.md.
+Cycle 0016 reconciled the existing sprite board and saved all Figma receipts. On 2026-10-29 the operator cleared the three-failure stop and limited the resume to the TypeScript test fix and verification. The literal-typing fix passed `npm run validate` (27 tests, TypeScript, production build) and all 14 desktop/phone browser tests. R3 remains doing under operator-hold: final visual comparison and Figma Handoff work are outside that scoped request. Do not recreate Figma nodes or start M3. See the resume section in cycles/0016-character-range-checkpoint.md.
 
 Operator authorized 2026-10-28 against GOAL edit a2855d5. Separate detailed creator/dialogue portrait and gameplay-size sprite; every Character range control has a named saved value and a visible portrait effect. Preserve prior choices, access and opt-ins. No M3. Frame first in the existing file. Gate: `npm run validate`, desktop/phone visual coverage, save migration and round-trip checks.
 
