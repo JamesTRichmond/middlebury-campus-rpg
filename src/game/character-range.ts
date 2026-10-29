@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import raw from '../../content/character-range.json';
+import raw from '../../content/character-range.json' with {type:'json'};
 
 // These stable keys define the saved contract. Named choices/defaults live in content.
 const rangeKeys = ['buildKind','surfaceColor','furLength','guardHairStiffness','undercoatDensity','crimp','pattern1','pattern2','pattern3','pattern4','pattern5','wetness','muzzleProportion','follicleProminence','whiskerLength','coreTranslucency','chitinIridescence','floraGrowth','hypermobilityPose','fatDistribution','muscleDistribution','vascularity','sclera','iris','limbalRing','eyeShine','pupilRange','thirdEyelid','dyeGrowth','colorFade','cowlick','toothMarks','tongueShape','wardrobePreset','baseLayer','outerwear','accessory','fabricWeight','weathering','prostheticStyle','exposedTech','graftBlend','voiceLabel','chest','walkRig','stimmingIdle','gazeComfort','posture','frameColor','spokeMarks','stepTrail','vocalFilter'] as const;

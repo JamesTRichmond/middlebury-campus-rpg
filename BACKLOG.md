@@ -130,7 +130,7 @@ Completed 2026-10-29 — cycle 0018: M3 escort. Walking and wheelchair complete 
 ## M4-dorm
 
 ```yaml
-status: blocked
+status: done
 blockedBy: [M3-escort]
 humanGate: no
 owner: ""
@@ -142,6 +142,8 @@ owner: ""
 - Gate: `npm run validate` plus a save test that doodads survive reload.
 
 Cycle 0019 checkpoint: Figma frames and runtime started; 30 tests, TypeScript and production build pass. Browser runner fails loading content/escort.json without import attribute. Three-failure stop; see cycles/0019-dorm-checkpoint.md. Do not mark done or start M5.
+
+Completed 2026-10-29 — cycle 0019: browser runner fix. All 30 tests, TypeScript, production build and 20 desktop/phone browser checks pass. Room compared to saved frames; native-control differences recorded in cycle note. Prior blocker above is historical. M5 held.
 
 ## M5-campus-walk
 

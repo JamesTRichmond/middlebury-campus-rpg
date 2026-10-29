@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import raw from '../../content/escort.json';
+import raw from '../../content/escort.json' with {type:'json'};
 import type {Save} from './arrival';
 import type {GameContent} from '../content/schema';
 const rect=z.object({x:z.number().int(),y:z.number().int(),w:z.number().int().positive(),h:z.number().int().positive()});

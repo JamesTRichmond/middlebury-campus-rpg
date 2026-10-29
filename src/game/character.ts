@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import raw from '../../content/character.json';
+import raw from '../../content/character.json' with {type:'json'};
 import { characterRangeSchema, defaultRange } from './character-range';
 export { rangeControls, defaultRange, characterRangeSchema } from './character-range';
 export type { CharacterRange, RangeKey } from './character-range';
