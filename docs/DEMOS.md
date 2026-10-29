@@ -60,3 +60,9 @@ Local, from the repository folder: `npm ci && npm run validate && npm run previe
 ### R3 checkpoint, cycle 0016 — not a validated demo
 
 The D2 row links the existing file. Its platform prototype now opens range creator `74:9838`, with phone frame `74:9987` and save/edit return paths. See `figma/R3-dialogue-wiring.json`. Current source is an incomplete implementation checkpoint, not a replacement accepted D2 build: TypeScript and browser acceptance remain outstanding. Do not start M3.
+
+### R3 final comparison accepted — cycle 0016
+
+The earlier incomplete checkpoint entry is historical. Validated build source `f86981922dc279501d3a06f67c26eabd007ed791`: run `npm ci && npm run validate && npm run preview` from the repository and open the printed local URL. Platform → Create your character → Save → Edit / Give feedback / Back to platform. Feedback opens `feedback/index.html?demo=D2-character&version=f86981922dc279501d3a06f67c26eabd007ed791`; fresh builds bind their own checked-out SHA.
+
+D2 prototype uses the original file linked in the demo row: platform → 74:9838 (phone 74:9987) → completion → edit or return. Handoff 84:3 records comparison and intentional native-control differences. 27 tests, TypeScript, production build and 14 browser checks passed. No public deployment. M3 remains held.

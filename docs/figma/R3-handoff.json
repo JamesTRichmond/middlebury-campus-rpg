@@ -1,0 +1,16 @@
+{
+  "createdNodeIds": [
+    "84:2"
+  ],
+  "handoff": "84:2",
+  "contentIds": [
+    "character-creator",
+    "character-range",
+    "station-greeter",
+    "middlebury-station"
+  ],
+  "source": "f86981922dc279501d3a06f67c26eabd007ed791",
+  "text": "R3 / D2 Character range — visual comparison, 2026-10-29\nObserved build: f86981922dc279501d3a06f67c26eabd007ed791. Content: character-creator (content/character.json), character-range (content/character-range.json), station-greeter, middlebury-station.\nMATCHES: Separate original portrait (160×180 logical pixels) and map sprite (64×80), same palette and geometry as Components. Creator portrait is 320×360 desktop and 160×180 phone; map sprite stays 64×80. Completion uses 160×180 portrait. Eight named skin swatches; 52 named range controls; six groups; mobility, captions, visual cues, colorblind palettes, contrast and scale; independent optional identity choices. Voice/filter are visible labels only. Save/reload retains choices.\nFRAMES: Creator 74:9838 / 74:9987; completion 53:3263 / 53:3271; modes 78:3672 / 78:3842 / 78:4012. Existing portrait/sprite/control studies retained. Reconciled centered previews and separate 44px name/pronoun inputs. Completion now shows portrait AND map sprite, Edit character, Give feedback and Back to platform, with desktop columns and phone stack.\nDOCUMENTED DIFFERENCES: Native inputs/selects/checkboxes render taller than compact option-list studies, with browser focus/validation chrome. Build scrolls the document and keeps preview sticky; Figma uses scrollable fixed-height specimens. Build shows saved name/state; Figma samples Coils/medium copper and Rowan. Phone build checked at 390×844; frame is 390×720 and scrolls. Build has selected-swatch check/name and a thin phone preview divider. Browser font metrics, wrapping and vertical gaps differ slightly. Larger UI increases form controls to 24px while preview captions remain compact; Figma larger mode uses 24px specimen text. Three named colorblind palettes in build map to the shared colorblind design mode; exact palette values remain in D2/M2 Handoff.\nPROTOTYPE: Existing platform→creator→completion→edit chain read back unchanged. Back to platform now returns to 38:2846 desktop / 38:3078 phone. Give feedback is a visual specimen in Figma; the local build opens feedback/index.html?demo=D2-character&version=<built SHA>. No external feedback URL or public deployment invented.\nOBSERVED CHECKS: Compared desktop/phone creator and completion screenshots with the same Coils/medium copper character. No horizontal overflow. npm run validate passed: 27 tests, TypeScript, production build. npm run test:browser passed all 14 desktop/phone checks, including option pixels, access, persistence and D1 regressions. Native controls and scrolling differences above are intentional; no pixel-identical claim.\nLOCAL DEMO: From repository run npm ci && npm run validate && npm run preview, then open the printed local URL. Platform → Create your character → Save → feedback/edit/return. This is D2 only. M3 remains held. No 3D engine, audio recording or prohibited wardrobe added.",
+  "width": 1100,
+  "height": 910
+}

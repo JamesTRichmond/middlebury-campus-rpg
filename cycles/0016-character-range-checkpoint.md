@@ -2,8 +2,8 @@
 
 - Date: 2026-10-29
 - Agent: codex-root
-- Item: R3-D2-character-range — blocked, incomplete
-- Original stop: blocked (LOOP.md three-failure rule), cleared by operator on 2026-10-29. Current stop: operator-hold after the scoped typing fix and verification; M3 remains held
+- Item: R3-D2-character-range — completed on final comparison resume (earlier checkpoints below are historical)
+- Original stop: blocked (LOOP.md three-failure rule), cleared by operator on 2026-10-29. Current stop: operator-hold after R3 completion; M3 remains held
 
 ## Figma evidence
 
@@ -51,3 +51,26 @@ Observed on the final code tree:
 The test-only fix does not change the production behavior from checkpoint `1e67b2d`; the built feedback version uses that checked-out source SHA. Local play remains `npm run preview` from the repository after validation.
 
 The previous failing verification record above is historical. The TypeScript and browser blockers are now cleared. R3 remains open for the final visual comparison and Figma Handoff work recorded above; those were outside this explicitly limited request. No new design acceptance is claimed. Stop: operator-hold at the end of the requested scope. Do not start M3.
+
+## Final comparison and Handoff — 2026-10-29
+
+Operator cleared the hold and authorized comparison, targeted frame reconciliation, Handoff, verification and push from `f869819`. No runtime code or typing fix was changed. No design restart, new file or invented URL.
+
+Observed: opened the production build on desktop 1280×720 and phone 390×844; played letter → train stages → platform → builder, selected Rowan / Coils / medium copper, saved, and inspected completion and feedback links. Compared creator and completion screenshots with existing Figma frames. Evidence images and measured preview bounds are in docs/figma/R3-comparison/. The initial screenshots use the same runtime built at 1e67b2d; final validation rebuilt at f869819 (feedback version changes only).
+
+Matches: original portrait and sprite rectangle geometry, palette, logical 160×180 portrait and 64×80 sprite, desktop 2×/phone 1× portrait scaling, native-size sprite, swatches, names, range options, access, saved choices and explicit D2 ending. No horizontal overflow in either comparison viewport.
+
+Observed disagreements corrected in the existing frames only: centered live previews; separate 44px name/pronoun input specimens; completion portrait plus map sprite; desktop columns/phone stack; actual Edit, Give feedback and Back to platform controls. Retained all original component and frame IDs and mode bindings. Platform returns now target the existing desktop/phone platform frames. Exact readback preserved all five original platform/save/edit edges. Receipts: R3-comparison-creator.json, R3-comparison-completion.json, R3-comparison-wiring.json.
+
+Documented differences: native controls are taller than compact Figma option-list studies; browser focus/validation chrome, document scrolling/sticky preview, saved name/state, selected-swatch check/name, phone divider and small font/wrapping/gap differences. Phone build uses 844px viewport versus scrollable 720px frame. Build larger mode enlarges form controls but retains compact preview captions; Figma larger-mode specimens use 24px text. Build exposes three named colorblind palettes against the common design mode. Feedback is functional and version-bound in the local build; Figma shows its control without an invented external destination. This is not a pixel-identical screenshot claim.
+
+Handoff tool result (exact excerpt):
+```json
+{"createdNodeIds":["84:3"],"mutatedNodeIds":["84:2"],"handoff":"84:3","note":"84:2"}
+```
+
+Handoff board 84:3 / note 84:2 records the comparison, differences, content IDs character-creator / character-range / station-greeter / middlebury-station, local play instructions, prototype paths and verification. Exact text/receipt: docs/figma/R3-handoff.json and R3-handoff-board.json. Final Handoff screenshot checked for readability; completion/creator screenshots checked after reconciliation.
+
+Final observed gates: `npm run validate` exit 0 (27 tests, TypeScript, production build); `npm run test:browser` exit 0 (14 desktop/phone checks, 26.2 seconds). No failing Figma calls. R3 is complete with the documented native-control/prototype differences. Local build source: f86981922dc279501d3a06f67c26eabd007ed791. Feedback uses demo=D2-character and that built SHA. No public deployment.
+
+Stop: operator-hold — the operator explicitly prohibited starting M3.

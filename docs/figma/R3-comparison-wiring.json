@@ -1,0 +1,208 @@
+{
+  "mutatedNodeIds": [
+    "82:4085",
+    "82:4209"
+  ],
+  "edges": [
+    {
+      "id": "82:4085",
+      "destination": "38:2846",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "38:2846",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "38:2846",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "82:4209",
+      "destination": "38:3078",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "38:3078",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "38:3078",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    }
+  ],
+  "preserved": [
+    {
+      "id": "51:3340",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "74:9838",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "74:9838",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "74:9985",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "53:3263",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "53:3263",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "74:10134",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "53:3271",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "53:3271",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "53:3267",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "74:9838",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "74:9838",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "53:3275",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "74:9987",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false,
+            "resetScrollPosition": true
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "74:9987",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false,
+              "resetScrollPosition": true
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    }
+  ]
+}

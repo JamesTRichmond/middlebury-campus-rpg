@@ -142,3 +142,11 @@ Separate 160×180 portraits: Person `74:2020`, Creature `74:2102`, Construct `74
 Prototype readback: platform `51:3340` → desktop `74:9838`; save `74:9985` → completion `53:3263`; phone save `74:10134` → `53:3271`; edit `53:3267` → desktop; edit `53:3275` → phone. Completion frames now contain separate portrait instances. Full receipt `figma/R3-dialogue-wiring.json`. A relaxed-coat regression specimen `79:2020` keeps its hem inside the portrait; receipt `figma/R3-relaxed-coat.json`.
 
 Desktop/phone creator and phone completion screenshots were inspected in Figma. No full interactive browser acceptance is claimed. Runtime wiring is started, but `npm run validate` fails TypeScript in the new test; see cycle 0016. The Figma Handoff page still needs the final build comparison before R3 is marked done. Older checkpoint/gate sections above are historical.
+
+## R3 final comparison — cycle 0016 complete
+
+The prior checkpoint sections are historical. Resumed from f869819 without runtime changes. Compared desktop/phone creator and completion against existing frames; retained artwork and component IDs. Reconciled centered preview, separate text inputs, completion's two drawings and all exit controls only where the build disagreed. Five existing prototype edges remain intact; new Back to platform controls return to 38:2846 / 38:3078.
+
+Handoff board `84:3`, text `84:2`, records what matches and differs. Full returned text is [R3-handoff.json](figma/R3-handoff.json); board receipt [R3-handoff-board.json](figma/R3-handoff-board.json). Screenshot evidence: figma/R3-comparison/. Native field heights/focus chrome, sticky document scrolling, saved state, selected swatch cues, compact preview captions, mode specimens and local-only feedback behavior are explicitly documented differences, not a pixel-identical claim. No new URL.
+
+Final observed validation: 27 unit tests, TypeScript, production build and all 14 desktop/phone browser checks passed. D2 source f86981922dc279501d3a06f67c26eabd007ed791; local play and version-bound feedback in DEMOS.md. R3 complete; M3 held.

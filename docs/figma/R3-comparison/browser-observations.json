@@ -1,0 +1,45 @@
+{
+  "observations": [
+    {
+      "name": "desktop",
+      "portrait": {
+        "x": 34,
+        "y": 136,
+        "width": 320,
+        "height": 360
+      },
+      "sprite": {
+        "x": 366,
+        "y": 276,
+        "width": 64,
+        "height": 80
+      },
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "feedback": "feedback/index.html?demo=D2-character&version=1e67b2d49a7f75d95c28f6b2db9f12865064d3d7"
+    },
+    {
+      "name": "phone",
+      "portrait": {
+        "x": 77,
+        "y": 163,
+        "width": 160,
+        "height": 180
+      },
+      "sprite": {
+        "x": 249,
+        "y": 213,
+        "width": 64,
+        "height": 80
+      },
+      "overflow": false
+    },
+    {
+      "name": "phone",
+      "feedback": "feedback/index.html?demo=D2-character&version=1e67b2d49a7f75d95c28f6b2db9f12865064d3d7"
+    }
+  ],
+  "note": "Visual comparison captures use the unchanged runtime from 1e67b2d. Final production/browser validation rebuilt at f869819; the only difference is embedded feedback SHA."
+}
