@@ -110,10 +110,10 @@ On the platform, the greeter asks what to call you. That opens the builder.
 ## M3-escort
 
 ```yaml
-status: ready
+status: blocked
 blockedBy: [M2-character]
 humanGate: no
-owner: ""
+owner: "codex-root"
 ```
 
 First pixel-art walk. Top-down, 16-bit to 64-bit cozy sprites. Not a menu of buttons.
@@ -122,6 +122,8 @@ First pixel-art walk. Top-down, 16-bit to 64-bit cozy sprites. Not a menu of but
 - Greeter escorts. Wheelchair completes the same path. No stair-only exit off the platform.
 - Collision and a facing sprite. Camera follows.
 - Gate: `npm run validate` plus a headless test that the escort quest `welcome` can complete, and a note in the cycle report of how the wheelchair was checked.
+
+Cycle 0017: design checkpoint blocked by a Figma node-reference failure during facing/accessibility work. Successful frames and receipts retained; no M3 runtime implementation. Inspect partial failed-batch state after clearance of gates/PENDING-figma.md. See cycles/0017-escort-figma-gate.md. M4 not started.
 
 ## M4-dorm
 

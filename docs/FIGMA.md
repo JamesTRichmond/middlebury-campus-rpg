@@ -150,3 +150,9 @@ The prior checkpoint sections are historical. Resumed from f869819 without runti
 Handoff board `84:3`, text `84:2`, records what matches and differs. Full returned text is [R3-handoff.json](figma/R3-handoff.json); board receipt [R3-handoff-board.json](figma/R3-handoff-board.json). Screenshot evidence: figma/R3-comparison/. Native field heights/focus chrome, sticky document scrolling, saved state, selected swatch cues, compact preview captions, mode specimens and local-only feedback behavior are explicitly documented differences, not a pixel-identical claim. No new URL.
 
 Final observed validation: 27 unit tests, TypeScript, production build and all 14 desktop/phone browser checks passed. D2 source f86981922dc279501d3a06f67c26eabd007ed791; local play and version-bound feedback in DEMOS.md. R3 complete; M3 held.
+
+## M3 escort — cycle 0017 design checkpoint, incomplete
+
+New session `1fe85448-172e-4c6e-a39d-5caced638a1f` in the existing file. Read starter escort 8:676 and its dialogue state, then drew walking desktop/phone 87:4031 / 87:4130, wheelchair 87:4229 / 87:4335, and portrait dialogue 87:4441 / 87:4624. Reused existing character components. Native full-route overview 88:4585 follows existing content graph locations, with a level path, stone collision specimen and Triangle Park fountain. Endpoint specimen 89:4655 explicitly ends D3 before unpacking; D2 entry controls 89:4649 / 89:4652 point to escort frames. Full successful IDs: M3-walk.json, M3-chair.json, M3-dialogue.json, M3-route.json, M3-entry-end.json.
+
+The next facing/accessibility batch failed: `Error: in get_name: The node with id "90:5044" does not exist`. Its partial canvas state is unknown. No retry, runtime code, new file or invented URL. Read gates/PENDING-figma.md and cycle 0017 before resuming. These designs are not a shipped or accepted D3 demo. M4 remains untouched.

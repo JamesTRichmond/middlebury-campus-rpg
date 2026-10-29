@@ -1,0 +1,21 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Error: in get_name: The node with id \"90:5044\" does not exist\n    at get (<input>:55:11)\n    at <anonymous> (PLUGIN_1_SOURCE:1:1613)\n"
+    },
+    {
+      "type": "text",
+      "text": "Figma Debug UUID: c774a864-f230-4e5b-9d92-cd1a30cb5789"
+    }
+  ],
+  "structuredContent": {
+    "error": {
+      "message": "Error: in get_name: The node with id \"90:5044\" does not exist\n    at get (<input>:55:11)\n    at <anonymous> (PLUGIN_1_SOURCE:1:1613)\n",
+      "debugUuid": "c774a864-f230-4e5b-9d92-cd1a30cb5789"
+    },
+    "safeToRetryWithoutCanvasRead": true,
+    "error_code": "INVALID_ARGUMENT"
+  },
+  "isError": true
+}

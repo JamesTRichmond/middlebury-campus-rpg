@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 16
+cycle: 17
 lastMetaCycle: 11
 productCyclesSinceMeta: 1
 lock: ""
-stop: operator-hold
-current: none
-next: M3-escort remains held by operator
-lastGate: "Cycle 0016 complete: Figma comparison and Handoff 84:3 recorded; npm run validate passed (27 tests, TypeScript, production build); all 14 desktop/phone browser checks passed."
+stop: human-gate
+current: M3-escort
+next: inspect partial M3 facing/accessibility batch after Figma gate clearance; M4 held
+lastGate: "Cycle 0017: Figma failed with missing node 90:5044. Existing runtime: validate passed (27 tests, TypeScript, production build); all 14 browser tests passed. M3 runtime/quest gate not implemented."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0016 complete: Figma comparison and Handoff 84:3 recorded; npm 
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0017 | M3-escort | Design receipts saved; facing/accessibility call failed. Human gate, no runtime implementation. |
 | 0016 | R3-D2-character-range | Done: visual comparison, targeted frame reconciliation, Handoff and all validation passed. M3 held. |
 | 0015 | R3-D2-character-range | Compact request passed input limit; oversized return prevented commit. Human gate. |
 | 0014 | R3-D2-character-range | Authentication restored; oversized write rejected before execution. Human gate retained. |
@@ -34,12 +35,13 @@ lastGate: "Cycle 0016 complete: Figma comparison and Handoff 84:3 recorded; npm 
 
 ## Current handoff
 
-- R3 completed from f869819. No runtime code changes in final comparison. Existing artwork retained; creator/completion layout disagreements reconciled. Figma Handoff board 84:3 / note 84:2 records matches, intentional native-control/prototype differences, content IDs and local demo instructions.
-- Final gates passed: 27 unit tests, TypeScript, production build, 14 desktop/phone browser checks. Comparison screenshots and exact tool receipts: docs/figma/R3-comparison/ and docs/figma/R3-*.json.
-- Cycle record: cycles/0016-character-range-checkpoint.md, final comparison section. This completes one product cycle since the last meta cycle. M3 was not started and remains held by explicit operator instruction.
+- M3 started after operator clearance. Existing escort starter inspected; walking, wheelchair, dialogue, full-route and endpoint frames created before any code. Original character sprite reused. Successful receipts: docs/figma/M3-*.json.
+- Figma failed in the facing/accessibility batch: `Error: in get_name: The node with id "90:5044" does not exist`. Partial canvas state is unknown. Stop on gates/PENDING-figma.md. After clearance inspect before retrying; do not recreate successful frames. Session: 1fe85448-172e-4c6e-a39d-5caced638a1f.
+- No M3 runtime or content changes. Existing build passed 27 unit tests, TypeScript, production build and 14 desktop/phone browser tests. Escort welcome-completion and wheelchair-travel gates remain unimplemented; no D3 acceptance claimed.
+- Cycle: cycles/0017-escort-figma-gate.md. Design drafts: docs/figma/drafts/0017/. M4 not started. This incomplete attempt does not increment product count.
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
-- Prototype: Cover arrival link → platform → creator 74:9838; phone 74:9987. Save/edit links preserved; completion returns to desktop/phone platform. Feedback operates in the local build.
-- Figma gate remains resolved: gates/resolved/figma-cycle-0016.md. No new human gate.
+- Walking: 87:4031 / 87:4130; wheelchair: 87:4229 / 87:4335; dialogue: 87:4441 / 87:4624; route: 88:4585; endpoint: 89:4655.
+- R3 remains complete; Handoff 84:3 records its visual comparison. Its runtime remains unchanged by this design-only attempt.
 
 ## D1 build
 
