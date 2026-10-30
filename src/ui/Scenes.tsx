@@ -6,7 +6,7 @@ function Pixel({ x, y, w, h, color }: { x: number; y: number; w: number; h: numb
   return <span className="pixel" style={{ left: x, top: y, width: w, height: h, background: `var(--color-${color})` }} />;
 }
 
-import rideScenes from "./ride-scenes.json";
+import rideScenes from "./ride-scenes.json" with {type:'json'};
 
 export function TrainWindow({ scene, paused }: { scene: keyof typeof rideScenes; paused: boolean }) {
   return <div className="train-window" role="img" aria-label={`Train window: ${scene}`} data-scene={scene}>

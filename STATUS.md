@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 21
-lastMetaCycle: 11
-productCyclesSinceMeta: 5
+cycle: 22
+lastMetaCycle: 22
+productCyclesSinceMeta: 0
 lock: ""
 stop: operator-hold
 current: none
-next: meta cycle (due after five product cycles); M7 not authorized
-lastGate: "Cycle 0021: 33 tests, TypeScript, production build and all 24 desktop/phone browser checks passed; offline LessonSource and note migration verified."
+next: M7-town remains held pending operator instruction
+lastGate: "Meta 0022: 38 tests, TypeScript, production build and 24 browser checks passed. Repaired campus Figma access-control placement; JSON, palette, and save-integrity regressions added."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0021: 33 tests, TypeScript, production build and all 24 desktop
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| meta-0022 | META-0022 | Done: frame alignment and regression guards; all gates passed. Operator-hold. |
 | 0021 | M6-notebook-class | Done: offline virtual lesson, lesson-only answers, persistent notebook and migration; all gates passed. Meta next, operator-hold. |
 | 0020 | M5-campus-walk | Done: graph walking, portrait dialogue, persistent orientation; all gates passed. M6 held. |
 | 0019 | M4-dorm | Done: browser runner fixed, room compared, all 20 browser checks and validation passed; M5 held. |
@@ -39,13 +40,12 @@ lastGate: "Cycle 0021: 33 tests, TypeScript, production build and all 24 desktop
 
 ## Current handoff
 
-- M6 complete: offline BundleLessonSource delivers exact sample lesson blocks and answers from sample-seminar-questions. Labels say sample and virtual lesson for this class. Saved character appears in room; separate original teacher portrait. No LMS/network adapter added.
-- Notebook accessible from campus and class; notes retain lesson/place IDs after leaving/reloading. Missing notes migrate to empty list. Completed orientation grants notebook, meal-plan, ask-a-question from existing quest rewards, including old completed saves.
-- Lesson position/completion/asked prompt IDs persist. Unknown questions/other-lesson answers rejected. Missing blocks show error chrome outside teacher text.
-- Gates: 33 tests, TypeScript, production build and 24 browser checks pass, including offline class interaction and legacy-save reload. Cycle: cycles/0021-notebook-class.md. Figma class 103:5528 / 103:5655, notebook 103:5782 / 103:5787; Handoff 105:2. Exact receipts and screenshots under docs/figma/M6-*.
-- Local: `npm ci && npm run validate && npm run preview`; finish orientation → sample seminar → Attend sample virtual lesson. Give D6 feedback binds demo=D6-class and built SHA. No public deployment URL.
+- Meta cycle 0022 complete; lastMetaCycle 22, productCyclesSinceMeta 0. Report: cycles/meta-0022.md. Operator-hold; M7 not started.
+- Existing campus frames 99:4982 / 99:5099 now show M6 notebook/class controls above the map with direct notebook prototype links. No screen added. Exact repair and readback in docs/figma/meta-0022-*.json. Other reviewed differences remain documented in existing Handoffs.
+- Repeated JSON-import failures now have a source-wide regression guard; remaining source imports carry native JSON attributes. TypeScript runs first in validate, followed by every unit test and production build. Palette values are checked against the accepted Figma receipt. Malformed notes cannot silently reset or overwrite a good backup.
+- Final gates: 38 unit tests, TypeScript, production build and all 24 desktop/phone browser checks passed, including new control-order assertions. No gameplay behavior changes or new places, quests, abilities, screens, feedback-form rebuild or live LMS.
 - Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
-- Operator-hold. Five product cycles since last meta; the next cycle must be meta. No meta work or M7 started in this pass.
+- Existing playable demos: repository → `npm ci && npm run validate && npm run preview`; open printed local URL. Fresh builds bind feedback to checked-out SHA. No public deployment.
 
 ## D1 build
 

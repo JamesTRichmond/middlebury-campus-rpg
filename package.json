@@ -9,7 +9,7 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "validate": "vitest run && tsc --noEmit && vite build",
+    "validate": "tsc --noEmit && vitest run && vite build",
     "feedback": "node scripts/serve-feedback.mjs",
     "dev": "vite",
     "build": "vite build",

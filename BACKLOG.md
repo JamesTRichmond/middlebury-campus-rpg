@@ -8,6 +8,18 @@ Status values: `ready`, `doing`, `done`, `blocked`.
 
 When an item below is marked done, also publish its demo in the same cycle (LOOP.md). Design the screen in Figma first ([docs/FIGMA.md](docs/FIGMA.md)). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
 
+## META-0022 — validation and shipped-frame drift
+
+```yaml
+status: done
+tag: meta
+blockedBy: []
+humanGate: no
+owner: "codex-root"
+```
+
+Completed 2026-10-29 — cycle 0022: meta validation regressions and campus frame repair. Reviewed the five completed product cycles (0016, 0018–0021). Repaired existing campus Figma control placement/direct notebook links to match M6. Added browser ordering coverage, default palette comparison against Figma receipt, static JSON import-attribute coverage, and corrupt-note/backup regressions. Standardized remaining source JSON imports; validate typechecks first. 38 tests, production build and 24 browser checks pass. No new product scope; M7 held. See cycles/meta-0022.md.
+
 ## R3-D2-character-range
 
 ```yaml

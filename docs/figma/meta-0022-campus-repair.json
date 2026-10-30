@@ -1,0 +1,27 @@
+{
+  "createdNodeIds": [
+    "107:5756",
+    "I107:5756;3:3",
+    "107:5759",
+    "I107:5759;3:3"
+  ],
+  "mutatedNodeIds": [
+    "99:4982",
+    "104:5748",
+    "99:5099",
+    "104:5751"
+  ],
+  "edges": [
+    {
+      "source": "107:5756",
+      "notebook": "103:5782",
+      "attend": "104:5748"
+    },
+    {
+      "source": "107:5759",
+      "notebook": "103:5787",
+      "attend": "104:5751"
+    }
+  ],
+  "reason": "M6 access controls existed in build; repaired campus entry placement and direct notebook link without adding a screen."
+}
