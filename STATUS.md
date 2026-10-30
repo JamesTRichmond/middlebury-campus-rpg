@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 23
+cycle: 24
 lastMetaCycle: 22
-productCyclesSinceMeta: 1
+productCyclesSinceMeta: 2
 lock: ""
 stop: operator-hold
 current: none
-next: M8-seasons-snowbowl held by explicit operator instruction
-lastGate: "Cycle 0023: 40 tests, TypeScript, production build and 28 browser checks passed; town unlock, Triangle Park routing, interest filtering and reload verified."
+next: M9-verify-facts held by explicit operator instruction
+lastGate: "Cycle 0024: 43 tests, TypeScript, production build and all 30 desktop/phone browser checks passed; seasons preserve state and all optional game outcomes return safely."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0023: 40 tests, TypeScript, production build and 28 browser che
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0024 | M8-seasons-snowbowl | Done: presentation-only seasons, explicit trip and optional nonblocking game; all gates passed. M9 held. |
 | 0023 | M7-town | Done: town through Triangle Park, sample destinations and selected-interest quests; all gates passed. M8 held. |
 | meta-0022 | META-0022 | Done: frame alignment and regression guards; all gates passed. Operator-hold. |
 | 0021 | M6-notebook-class | Done: offline virtual lesson, lesson-only answers, persistent notebook and migration; all gates passed. Meta next, operator-hold. |
@@ -41,12 +42,12 @@ lastGate: "Cycle 0023: 40 tests, TypeScript, production build and 28 browser che
 
 ## Current handoff
 
-- M7 complete: orientation rewards unlock downtown, movie theater and sample restaurants, including completed legacy saves. Triangle Park is the only playable campus/town door; direct campus/downtown shortcut excluded both ways. Boundary wording explicitly says game framing.
-- Existing selected-interest sidequests work at Compass Mentor; unselected offers and offer dialogue stay hidden. Completion/rewards persist. No business names or real listings. No M8/Snow Bowl travel or season controls added.
-- Figma town 110:5758 / 110:5810, park 110:5862, interest-offer 110:5912. Handoff 112:5904; exact receipts and comparison screenshots in docs/figma/M7-*. Original file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS.
-- Gates: 40 unit tests, TypeScript, production build and 28 desktop/phone browser checks passed. Cycle: cycles/0023-town.md.
-- Local: `npm ci && npm run validate && npm run preview`; complete orientation, walk via Arrival Green → Triangle Park → Downtown → movie theater/sample restaurants. Compass Mentor at activities fair offers matching interests only. Give D7 feedback binds D7-town and built SHA. No public deployment.
-- Operator-hold; M8 not started. lastMetaCycle remains 22; one product cycle since meta.
+- M8 complete. Four-season selector changes only seasonView and map presentation, reusing original seasonal ground colors. Place, quests, notes, identity, lesson progress and unlocks remain unchanged.
+- Snow Bowl unlocks after completed orientation and visiting downtown. Explicit Take a trip action from downtown; no walkable Snow Bowl portal beside dorm. Arrival/cancel separate from town movement; return is always available. Optional Trail card match records success/missed/skipped only, with retry and no quest gating.
+- Figma trip 115:5896 / 115:5941; visit 115:5986 / 115:6031; outcomes 116:6052 / 116:6097 / 116:6142. Original four seasonal-map modes retained; shared selector 114:2017. Handoff 118:2; receipts under docs/figma/M8-*. Original file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS.
+- Gates: 43 unit tests, TypeScript, production build, 30 browser checks passed. Cycle: cycles/0024-seasons-snowbowl.md. No M9 fact-verification pass; existing Snow Bowl fact/source/asOf displayed unchanged.
+- Local: `npm ci && npm run validate && npm run preview`; visit town, Take a trip to the Snow Bowl, Arrive. Try/skip minigame or return. Give D8 feedback binds D8-snow and built SHA. No public deployment URL.
+- Operator-hold; M9 not started. lastMetaCycle remains 22; two product cycles since meta.
 
 ## D1 build
 

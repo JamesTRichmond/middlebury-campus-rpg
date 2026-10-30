@@ -46,6 +46,7 @@ export function Arrival() {
   useEffect(() => {
     const c = characterSchema.safeParse(save?.character);
     const root = document.documentElement;
+    root.dataset.season = save?.seasonView??'fall';
     root.dataset.palette = c.success ? c.data.palette : 'Default';
     root.dataset.contrast = c.success && c.data.highContrast ? 'high' : 'default';
     root.dataset.uiScale = c.success ? c.data.uiScale : 'Default';

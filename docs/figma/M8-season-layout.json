@@ -1,0 +1,21 @@
+{
+  "mutatedNodeIds": [
+    "8:927",
+    "20:2293",
+    "116:6044",
+    "8:926",
+    "8:970",
+    "20:2297",
+    "116:6046",
+    "8:969",
+    "8:1013",
+    "20:2301",
+    "116:6048",
+    "8:1012",
+    "8:1056",
+    "20:2305",
+    "116:6050",
+    "8:1055"
+  ],
+  "reason": "Retained mode previews use absolute positioning; selector moved into visible bounds, original scene shifted without changing geometry."
+}

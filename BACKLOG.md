@@ -210,7 +210,7 @@ Completed 2026-10-29 — cycle 0023: M7 town. Orientation unlocks town/theater/s
 ## M8-seasons-snowbowl
 
 ```yaml
-status: ready
+status: done
 blockedBy: [M7-town]
 humanGate: no
 owner: ""
@@ -220,6 +220,8 @@ owner: ""
 - `snow-bowl` unlocks as a trip after town, not as a tile beside the dorm.
 - One optional minigame there. Failure does not block quests.
 - Gate: `npm run validate` plus a test that the toggle does not mutate quest state, and that the bowl is locked before town is open.
+
+Completed 2026-10-29 — cycle 0024: M8 seasons/Snow Bowl. 43 tests, TypeScript, production build and 30 browser checks pass. Season changes preserve the save; trip unlocks after town; every optional minigame outcome returns without quest gating. M9 held.
 
 ## M9-verify-facts
 

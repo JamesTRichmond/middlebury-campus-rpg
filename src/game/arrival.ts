@@ -1,3 +1,4 @@
+import {snowStateSchema,unlockSnow} from './seasons-snow';
 import {lessonProgressSchema} from './lessons';
 import {campusStateSchema} from './campus';
 import { dormStateSchema } from './dorm';
@@ -12,6 +13,7 @@ export const DEMO_ID = "D1-letter-train";
 export const originSchema = z.string().trim().min(1).max(80);
 
 export const saveSchema = z.object({
+  snowBowl: snowStateSchema.optional(),
   lessonProgress: lessonProgressSchema.optional(),
   campus: campusStateSchema.optional(),
   dorm: dormStateSchema.optional(),
@@ -40,7 +42,7 @@ function parseSave(value: unknown, content: GameContent): Save {
     save.character = { ...save.character, ...characterSchema.parse(save.character) };
   }
   if(save.quests.orientation?.done){const rewards=content.quests.find(q=>q.id==='orientation')?.rewards.abilities??[];save.abilities=[...new Set([...save.abilities,...rewards])];save.unlockedPlaces=[...new Set([...save.unlockedPlaces,...(content.quests.find(q=>q.id==='orientation')?.rewards.places??[])])];}
-  return save;
+  return unlockSnow(save);
 }
 
 export function startArrival(origin: string, content: GameContent): Save {

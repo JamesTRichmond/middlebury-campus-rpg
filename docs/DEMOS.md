@@ -23,7 +23,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 | [D5-campus](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M5 | Visit dining and the library with portrait dialogue |
 | [D6-class](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M6 | Attend class as their character; the teacher delivers the virtual lesson; take notes; ask a question answered only from that lesson |
 | [D7-town](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M7 | Cross Triangle Park into town after campus objectives |
-| `D8-snow` | M8 | Toggle seasons and take the optional Snow Bowl trip |
+| [D8-snow](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M8 | Toggle seasons and take the optional Snow Bowl trip |
 
 ## Recorded builds
 
@@ -96,3 +96,9 @@ Prototype in recorded file: campus → class 103:5528 / 103:5655 → notebook 10
 Local: `npm ci && npm run validate && npm run preview` from repository. Complete orientation, return through Arrival Green to Triangle Park, then enter Downtown. Walk to movie theater and Restaurants · sample portals. Triangle Park is the town door; the direct campus/downtown shortcut is unavailable. Generic sample places have no real businesses, hours or menus. Existing Compass Mentor sidequests appear only for selected interests; accept at activities fair and completion saves.
 
 Figma prototype: campus after-orientation preview → Triangle Park 110:5862 → town 110:5810 (desktop 110:5758); selected-interest offer 110:5912. Handoff 112:5904 records dynamic graph/native-control differences. Give D7 feedback opens `feedback/index.html?demo=D7-town&version=<built SHA>` automatically. No public deployment. 40 unit tests, TypeScript, production build and 28 browser checks pass. M8 remains held.
+
+## D8 snow — cycle 0024
+
+Local: `npm ci && npm run validate && npm run preview` from repository. Complete orientation and visit downtown. Take a trip to the Snow Bowl → Arrive. The optional Trail card match accepts star/circle/skip; retry or return is always available. The four-season selector changes scenery only, including while on the trip; saves retain place and progress.
+
+Prototype: town trip entry → 115:5896 / 115:5941 → visit 115:5986 / 115:6031 → success 116:6052, missed 116:6097 or skipped 116:6142 → return to town. Existing seasonal previews 8:926 / 8:969 / 8:1012 / 8:1055 retain the same map. Handoff 118:2 records native selector, scrolling and source metadata differences. Give D8 feedback opens `feedback/index.html?demo=D8-snow&version=<built SHA>` automatically. No public deployment. 43 tests and 30 browser checks pass; M9 held.
