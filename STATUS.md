@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 24
+cycle: 25
 lastMetaCycle: 22
-productCyclesSinceMeta: 2
+productCyclesSinceMeta: 3
 lock: ""
 stop: operator-hold
 current: none
-next: M9-verify-facts held by explicit operator instruction
-lastGate: "Cycle 0024: 43 tests, TypeScript, production build and all 30 desktop/phone browser checks passed; seasons preserve state and all optional game outcomes return safely."
+next: none; M9-only pass complete, await operator
+lastGate: "Cycle 0025: TypeScript, 45 tests, production build and all 32 desktop/phone browser checks passed; fresh facts and absent-approval guards verified."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0024: 43 tests, TypeScript, production build and all 30 desktop
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0025 | M9-verify-facts | Done: fresh public-source audit, unsupported claims deleted, displayed provenance and approval guards; all gates passed. Operator-hold. |
 | 0024 | M8-seasons-snowbowl | Done: presentation-only seasons, explicit trip and optional nonblocking game; all gates passed. M9 held. |
 | 0023 | M7-town | Done: town through Triangle Park, sample destinations and selected-interest quests; all gates passed. M8 held. |
 | meta-0022 | META-0022 | Done: frame alignment and regression guards; all gates passed. Operator-hold. |
@@ -42,12 +43,12 @@ lastGate: "Cycle 0024: 43 tests, TypeScript, production build and all 30 desktop
 
 ## Current handoff
 
-- M8 complete. Four-season selector changes only seasonView and map presentation, reusing original seasonal ground colors. Place, quests, notes, identity, lesson progress and unlocks remain unchanged.
-- Snow Bowl unlocks after completed orientation and visiting downtown. Explicit Take a trip action from downtown; no walkable Snow Bowl portal beside dorm. Arrival/cancel separate from town movement; return is always available. Optional Trail card match records success/missed/skipped only, with retry and no quest gating.
-- Figma trip 115:5896 / 115:5941; visit 115:5986 / 115:6031; outcomes 116:6052 / 116:6097 / 116:6142. Original four seasonal-map modes retained; shared selector 114:2017. Handoff 118:2; receipts under docs/figma/M8-*. Original file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS.
-- Gates: 43 unit tests, TypeScript, production build, 30 browser checks passed. Cycle: cycles/0024-seasons-snowbowl.md. No M9 fact-verification pass; existing Snow Bowl fact/source/asOf displayed unchanged.
-- Local: `npm ci && npm run validate && npm run preview`; visit town, Take a trip to the Snow Bowl, Arrive. Try/skip minigame or return. Give D8 feedback binds D8-snow and built SHA. No public deployment URL.
-- Operator-hold; M9 not started. lastMetaCycle remains 22; two product cycles since meta.
+- M9 complete. Four successful public-page fetches; four blocked requests recorded. Kept claims have verified/sourceUrl/asOf; unsupported station, Triangle Park and Snow Bowl route claims deleted. Map copy stays sample. See docs/CONTENT.md and docs/facts/0025-fetch-evidence.json.
+- Existing Figma file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Updated existing dialogue/trip copy and same-screen source rows. Handoff 125:2; docs/figma/M9-*.json receipts. Original art/layout retained; native control/wrapping differences documented.
+- Observed: npm run validate passed TypeScript, 45 tests and production build. npm run test:browser passed all 32 desktop/phone checks. Browser checks include source/date in factual dialogue and place facts; tests forbid sourced people, official lessons and unnamed/unapproved likeness metadata without approval.
+- No likeness or live LMS requested, conditional M9 human gate not invoked. No gates approval files created. Sample virtual lesson unchanged. No new feature.
+- Local: from repository run npm ci && npm run validate && npm run preview; open printed local URL. Continue existing play path; source links/date appear on escort/campus and Snow Bowl. Existing demo feedback binds checked-out SHA. No public deployment URL.
+- Cycle report: cycles/0025-verify-facts.md. Operator-hold at explicit M9-only scope; lastMetaCycle 22, three product cycles since meta.
 
 ## D1 build
 

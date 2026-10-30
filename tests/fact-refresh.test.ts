@@ -1,0 +1,9 @@
+import {it,expect} from 'vitest';
+import {loadContent} from '../src/content/load';
+import {checkContent} from '../src/content/check';
+import {contentSchema} from '../src/content/schema';
+import evidence from '../docs/facts/0025-fetch-evidence.json' with {type:'json'};
+import snow from '../content/snow-bowl.json' with {type:'json'};
+const content=loadContent();
+it('all retained factual records have a fresh successful fetch and source/date, with no seed summaries',()=>{const facts=[...content.places.flatMap(p=>p.facts),...content.npcs.flatMap(n=>n.lines.flatMap(l=>l.fact?[l.fact]:[])),...content.calendar];expect(facts.length).toBeGreaterThan(0);for(const f of facts){expect(f.status).toBe('verified');expect(f.asOf).toBe(evidence.asOf);const source=evidence.sources.find(s=>s.url===f.sourceUrl);expect(source?.status,f.text).toBe(200);expect(source?.evidenceExcerpts?.length,f.sourceUrl).toBeGreaterThan(0);}expect(content.places.some(p=>p.summaryStatus==='seed')).toBe(false);for(const n of content.npcs)for(const l of n.lines)if(l.fact)expect(l.text).toBe(l.fact.text);expect(snow.description).not.toMatch(/Route 125|Bread Loaf|mile/);});
+it('missing approvals forbid sourced people, official lessons and any likeness metadata',()=>{const root='/missing-approvals';const broken=structuredClone(content);broken.npcs[0].kind='sourced-person';broken.npcs[0].sourceUrl='https://example.invalid/person';broken.npcs[0].likeness={personName:'Unapproved example'};broken.lessons[0].status='official';const errors=checkContent(broken,root);expect(errors.some(e=>e.includes('real-people.approved'))).toBe(true);expect(errors.some(e=>e.includes('live-lms.approved'))).toBe(true);expect(errors.some(e=>e.includes('likeness.approved'))).toBe(true);broken.npcs[0].kind='archetype';broken.npcs[0].likeness={personName:''};expect(contentSchema.safeParse(broken).success).toBe(false);expect(checkContent(broken,root).some(e=>e.includes('likeness.approved'))).toBe(true);});

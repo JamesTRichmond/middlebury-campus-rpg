@@ -4,53 +4,36 @@
     "name": "Middlebury station",
     "region": "town",
     "unlockedByDefault": true,
-    "summary": "The Amtrak platform where the train ride ends and the greeter is waiting. Third-person play starts here.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "Middlebury station (Amtrak MBY) is at 30 Middle Seymour Street. It is a platform stop on the Ethan Allen Express and has been open since July 29, 2022.",
-        "status": "verified",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Middlebury_station",
-        "asOf": "2026-10-27"
-      },
-      {
-        "text": "Amtrak lists the Middlebury, Vermont stop as accessible.",
+        "text": "Amtrak lists Middlebury station at 30 Middle Seymour Street and describes it as a platform with shelter.",
         "status": "verified",
         "sourceUrl": "https://www.amtrak.com/stations/mby",
-        "asOf": "2026-10-27"
-      },
-      {
-        "text": "The Middlebury Campus reported in 2023 that the station is about a mile, roughly a twenty-minute walk, from campus.",
-        "status": "verified",
-        "sourceUrl": "https://www.middleburycampus.com/article/2023/03/middlebury-students-reflect-on-new-amtrak-stop-in-town",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["triangle-park"],
-    "npcIds": ["station-greeter"]
+    "exits": [
+      "triangle-park"
+    ],
+    "npcIds": [
+      "station-greeter"
+    ]
   },
   {
     "id": "triangle-park",
     "name": "Triangle Park",
     "region": "town",
     "unlockedByDefault": true,
-    "summary": "You pass through here on the way from the station to campus. Later it is the door back into town. Calling it the official campus boundary is the game's framing, not a sourced claim.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
-    "facts": [
-      {
-        "text": "Great American Stations describes Triangle Park as the corner once cut off by the railroad: a plaza with a fountain and a grassy area edged by stone blocks used as seating, near the north end of town.",
-        "status": "verified",
-        "sourceUrl": "https://www.greatamericanstations.com/stations/middlebury-vt-mby/",
-        "asOf": "2026-10-27"
-      },
-      {
-        "text": "The station's history notes that the 2020 rail tunnel created Triangle Park next to St. Stephen's Episcopal Church.",
-        "status": "verified",
-        "sourceUrl": "https://en.wikipedia.org/wiki/Middlebury_station",
-        "asOf": "2026-10-27"
-      }
+    "facts": [],
+    "exits": [
+      "middlebury-station",
+      "arrival-green",
+      "downtown"
     ],
-    "exits": ["middlebury-station", "arrival-green", "downtown"],
     "npcIds": []
   },
   {
@@ -58,47 +41,48 @@
     "name": "Arrival Green",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "A gameplay stand-in for the moment you arrive. It is not a claim that this lawn has that official name.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "As of the college orientation pages fetched 2026-10-27, in-person orientation is Fall Orientation or Feb Orientation, where new students meet classmates and orientation leaders.",
-        "status": "verified",
-        "sourceUrl": "https://www.middlebury.edu/college/orientation",
-        "asOf": "2026-10-27"
-      },
-      {
-        "text": "The orientation FAQ fetched 2026-10-27 said Fall Orientation and Feb Orientation run from Wednesday through Sunday.",
+        "text": "Fall Orientation and Feb Orientation run from Wednesday through Sunday.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/orientation/faq",
-        "asOf": "2026-10-27"
-      },
-      {
-        "text": "The college orientation page says new students may square dance and calls that a Middlebury tradition.",
-        "status": "verified",
-        "sourceUrl": "https://www.middlebury.edu/college/orientation",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["residence-quad", "proctor", "davis-library", "activities-fair", "downtown", "outdoors", "triangle-park"],
-    "npcIds": ["orientation-leader"]
+    "exits": [
+      "residence-quad",
+      "proctor",
+      "davis-library",
+      "activities-fair",
+      "downtown",
+      "outdoors",
+      "triangle-park"
+    ],
+    "npcIds": [
+      "orientation-leader"
+    ]
   },
   {
     "id": "residence-quad",
     "name": "First-year halls",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "The cluster of halls where most first-year students live. Your assigned building is the next door in.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page fetched 2026-10-27 said first-year students will most likely live in Stewart, Hepburn, Allen, Coffrin, or New Battell.",
+        "text": "The admitted-student page lists Stewart, Hepburn, Allen, Coffrin and New Battell as likely first-year residence halls.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["arrival-green", "your-hall"],
+    "exits": [
+      "arrival-green",
+      "your-hall"
+    ],
     "npcIds": []
   },
   {
@@ -106,59 +90,66 @@
     "name": "Your hall",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "A generic interior for whichever first-year hall you were assigned. The game does not know your real room.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page lists a residence director or assistant among the people who support first-years.",
+        "text": "The first-year support team includes a residence director or assistant.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["residence-quad", "dorm-room"],
-    "npcIds": ["resident-assistant"]
+    "exits": [
+      "residence-quad",
+      "dorm-room"
+    ],
+    "npcIds": [
+      "resident-assistant"
+    ]
   },
   {
     "id": "proctor",
     "name": "Proctor Dining Hall",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "One of the campus dining halls.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page fetched 2026-10-27 said the dining plan allows unlimited meals at Proctor, Atwater, and Ross.",
+        "text": "The dining plan allows unlimited meals at Proctor, Atwater, and Ross.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
-      },
-      {
-        "text": "That same page named retail spots: the Grille, Crossroads in the Davis Library, So-full Sips in Bicentennial Hall, the S.E.A. Dinette, and Midd Express.",
-        "status": "verified",
-        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["arrival-green", "atwater", "ross"],
-    "npcIds": ["dining-host"]
+    "exits": [
+      "arrival-green",
+      "atwater",
+      "ross"
+    ],
+    "npcIds": [
+      "dining-host"
+    ]
   },
   {
     "id": "atwater",
     "name": "Atwater Dining Hall",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "One of the three dining halls named for unlimited meals.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page fetched 2026-10-27 said unlimited meals include Atwater, along with Proctor and Ross.",
+        "text": "Atwater is one of the three campus dining halls named for unlimited meals.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["proctor"],
+    "exits": [
+      "proctor"
+    ],
     "npcIds": []
   },
   {
@@ -166,53 +157,63 @@
     "name": "Ross Dining Hall",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "One of the three dining halls named for unlimited meals.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page fetched 2026-10-27 said unlimited meals include Ross, along with Proctor and Atwater.",
+        "text": "Ross is one of the three campus dining halls named for unlimited meals.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["proctor"],
+    "exits": [
+      "proctor"
+    ],
     "npcIds": []
   },
   {
     "id": "davis-library",
-    "name": "Davis Family Library",
+    "name": "Davis Library",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "The library node. Crossroads Café is the sourced detail here; the rest of the building tour is still a sample.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page fetched 2026-10-27 described Crossroads as the student-run café in the Davis Library.",
+        "text": "Crossroads is the student-run café in the Davis Library.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["arrival-green", "bicentennial"],
-    "npcIds": ["librarian"]
+    "exits": [
+      "arrival-green",
+      "bicentennial"
+    ],
+    "npcIds": [
+      "librarian"
+    ]
   },
   {
     "id": "bicentennial",
-    "name": "McCardell Bicentennial Hall",
+    "name": "Bicentennial Hall",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "Academic building node. Only the café line is verified; classrooms inside are reached through the seminar room.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page fetched 2026-10-27 described So-full Sips as the café in Bicentennial Hall.",
+        "text": "So-full Sips is the café in Bicentennial Hall.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["davis-library", "seminar-room"],
+    "exits": [
+      "davis-library",
+      "seminar-room"
+    ],
     "npcIds": []
   },
   {
@@ -220,57 +221,75 @@
     "name": "Sample seminar room",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "A sample classroom for the lesson bridge. It is not a numbered Middlebury classroom and not an official section.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page says first-years are supported by their first-year seminar professor, who is also the pre-major advisor.",
+        "text": "The first-year seminar instructor is also the pre-major advisor.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["bicentennial"],
-    "npcIds": ["fys-instructor"]
+    "exits": [
+      "bicentennial"
+    ],
+    "npcIds": [
+      "fys-instructor"
+    ]
   },
   {
     "id": "activities-fair",
     "name": "Activities fair",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "A sample fair where interest quests are offered. It does not list a live schedule of student organizations.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "The admitted-student page fetched 2026-10-27 named a support team that includes the first-year seminar professor and pre-major advisor, a Compass Mentor, a student orientation leader, and a residence director or assistant.",
+        "text": "The first-year support team includes a seminar professor and pre-major advisor, Compass Mentor, student orientation leader, and residence director or assistant.",
         "status": "verified",
         "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
-        "asOf": "2026-10-27"
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["arrival-green"],
-    "npcIds": ["compass-mentor"]
+    "exits": [
+      "arrival-green"
+    ],
+    "npcIds": [
+      "compass-mentor"
+    ]
   },
   {
     "id": "downtown",
     "name": "Downtown",
     "region": "town",
     "unlockedByDefault": false,
-    "summary": "A locked stand-in for the town of Middlebury. No shops are named until a sourced content pass.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [],
-    "exits": ["arrival-green", "triangle-park", "movie-theater", "snow-bowl", "sample-restaurants"],
-    "npcIds": ["town-guide"]
+    "exits": [
+      "arrival-green",
+      "triangle-park",
+      "movie-theater",
+      "snow-bowl",
+      "sample-restaurants"
+    ],
+    "npcIds": [
+      "town-guide"
+    ]
   },
   {
     "id": "outdoors",
     "name": "Outdoors",
     "region": "outdoors",
     "unlockedByDefault": false,
-    "summary": "A locked stand-in for trails and the country around campus. No trail is named yet.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [],
-    "exits": ["arrival-green"],
+    "exits": [
+      "arrival-green"
+    ],
     "npcIds": []
   },
   {
@@ -278,10 +297,12 @@
     "name": "Your room",
     "region": "campus",
     "unlockedByDefault": true,
-    "summary": "A generic first-year room. Unpack here and place a few doodads. Not a real student's room.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [],
-    "exits": ["your-hall"],
+    "exits": [
+      "your-hall"
+    ],
     "npcIds": []
   },
   {
@@ -289,10 +310,12 @@
     "name": "Movie theater",
     "region": "town",
     "unlockedByDefault": false,
-    "summary": "A locked stand-in for the downtown movie theater. No business name until a sourced pass.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [],
-    "exits": ["downtown"],
+    "exits": [
+      "downtown"
+    ],
     "npcIds": []
   },
   {
@@ -300,25 +323,27 @@
     "name": "Middlebury Snow Bowl",
     "region": "outdoors",
     "unlockedByDefault": false,
-    "summary": "A later trip, not a walk from the dorm. Optional minigame once it is open.",
-    "summaryStatus": "seed",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
+    "summaryStatus": "placeholder",
     "facts": [
       {
-        "text": "A Middlebury walking-history page describes the Snow Bowl as farther east on Route 125, past the Bread Loaf campus in Ripton, and open in the skiing season. Do not treat that page's lift or trail counts as current.",
+        "text": "The admitted-student page lists public transportation to the Snowbowl.",
         "status": "verified",
-        "sourceUrl": "https://sites.middlebury.edu/walkingmiddlebury/mountain-campus/",
-        "asOf": "2026-10-27"
+        "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+        "asOf": "2026-10-29"
       }
     ],
-    "exits": ["downtown"],
+    "exits": [
+      "downtown"
+    ],
     "npcIds": []
   },
   {
     "id": "sample-restaurants",
-    "name": "Restaurants \u00b7 sample",
+    "name": "Restaurants · sample",
     "region": "town",
     "unlockedByDefault": false,
-    "summary": "A sample restaurant place. No real businesses, hours or menus are represented.",
+    "summary": "Sample map location for this game; the layout and route are fictional.",
     "summaryStatus": "placeholder",
     "facts": [],
     "exits": [

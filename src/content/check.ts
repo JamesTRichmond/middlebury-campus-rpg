@@ -1,5 +1,5 @@
 import type { GameContent } from "./schema";
-import { gateAllows } from "./gates";
+import { gateAllows, namedLikenessAllowed } from "./gates";
 
 export function checkContent(content: GameContent, root: string): string[] {
   const errors: string[] = [];
@@ -8,7 +8,7 @@ export function checkContent(content: GameContent, root: string): string[] {
   const abilityIds = new Set(content.abilities.map((ability) => ability.id));
   const lessonIds = new Set(content.lessons.map((lesson) => lesson.id));
   const peopleAllowed = gateAllows(root, "real-people.approved");
-  const likenessAllowed = peopleAllowed || gateAllows(root, "likeness.approved");
+  const likenessAllowed = gateAllows(root, "likeness.approved");
   const officialLessonsAllowed = gateAllows(root, "live-lms.approved");
 
   if (!placeIds.has(content.arrival.placeId)) errors.push("arrival destination is missing");
@@ -47,6 +47,8 @@ export function checkContent(content: GameContent, root: string): string[] {
         errors.push(`npc ${npc.id} names a real office-holder without gates/likeness.approved`);
       }
     }
+    if(npc.likeness&&!namedLikenessAllowed(root,npc.likeness.personName))errors.push(`npc ${npc.id} likeness requires named approval in gates/likeness.approved`);
+    for(const line of npc.lines)if(line.fact&&line.text!==line.fact.text)errors.push(`npc ${npc.id} fact speech differs from its sourced claim`);
     const lineIds = npc.lines.map((line) => line.id);
     if (new Set(lineIds).size !== lineIds.length) {
       errors.push(`npc ${npc.id} has duplicate line ids`);

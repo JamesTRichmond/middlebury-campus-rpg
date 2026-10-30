@@ -202,3 +202,12 @@ Inspected existing seasonal-map modes and Snow Bowl starter frames. Reused Map /
 Framed trip desktop/phone 115:5896 / 115:5941, visit 115:5986 / 115:6031 and all three optional outcomes before code: success 116:6052, missed 116:6097, skipped 116:6142. Native room artwork remains 320×180, 2× desktop / 1× phone, with saved character. Exact receipts M8-season-component.json, M8-trip-visit.json and M8-seasons-outcomes.json. Prototype and all return/retry/cancel paths: M8-prototype.json. Handoff 118:2: M8-handoff.json.
 
 Compared runtime desktop/phone trip captures with visit specimen. Original hill geometry and seasonal color match; native selector/buttons, saved wheelchair character, fact/source metadata and document scrolling differ. Optional game may be below the fold on phone. Previously recorded Snow Bowl fact/source/asOf is reused; no M9 verification performed. All 43 tests, TypeScript, production build and 30 browser checks passed. M9 held. No new file or invented URL.
+
+
+## M9 fact audit — cycle 0025
+
+Existing file retained: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Connected-tool result: `"handoffNodeId":"125:2","fileUrl":"https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS"`.
+
+Before runtime/content changes, existing campus dialogue 99:5216 / 99:5417 received freshly verified dining copy, source/date 122:6156 / 122:6157; trip copy 115:5939 / 115:5984 removed unsupported road/distance details. Active library hints now say Davis Library. Same-screen source rows 124:10–124:13 demonstrate verified station/dining facts with real source links; no new screen. Receipts: M9-copy-provenance.json, M9-library-labels.json, M9-source-rows.json, M9-handoff.json under docs/figma/.
+
+Compared the updated phone dialogue specimen with browser desktop/phone screenshots. Original portrait/map geometry retained; source/date wrap visibly in build. Existing Figma specimens scroll at fixed heights; build uses native links/buttons and document flow. Build source precedes Keep walking, whereas the compact specimen puts it after. Dynamic place facts and selected character replace static examples. These differences are recorded on Handoff 125:2. Earlier Handoff fact statements are historical; cycle 0025 source evidence supersedes them. See docs/CONTENT.md for kept/deleted claims.

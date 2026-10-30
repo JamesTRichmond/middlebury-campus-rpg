@@ -49,7 +49,7 @@
       },
       {
         "id": "library",
-        "text": "Visit Davis Family Library.",
+        "text": "Visit Davis Library.",
         "on": { "type": "enter-place", "placeId": "davis-library" }
       },
       {

@@ -1,1 +1,13 @@
-{"id":"snow-bowl-trip","departureId":"downtown","destinationId":"snow-bowl","title":"Trip to the Snow Bowl","tripLabel":"Sample trip · separate from the walk through town","description":"A compressed journey east on Route 125, beyond Bread Loaf. The Snow Bowl is not beside the dorm.","gameTitle":"Optional sample minigame · Trail card match","sign":"Match the sign: ★","success":"Success. No quest is blocked. Retry, skip or return whenever you like.","missed":"Missed match. No quest is blocked. Retry, skip or return whenever you like.","skipped":"Skipped. No quest is blocked. Retry, skip or return whenever you like."}
+{
+  "id": "snow-bowl-trip",
+  "departureId": "downtown",
+  "destinationId": "snow-bowl",
+  "title": "Trip to the Snow Bowl",
+  "tripLabel": "Sample trip · separate from the walk through town",
+  "description": "A compressed fictional trip from downtown. This sample scene does not model a real route or travel distance.",
+  "gameTitle": "Optional sample minigame · Trail card match",
+  "sign": "Match the sign: ★",
+  "success": "Success. No quest is blocked. Retry, skip or return whenever you like.",
+  "missed": "Missed match. No quest is blocked. Retry, skip or return whenever you like.",
+  "skipped": "Skipped. No quest is blocked. Retry, skip or return whenever you like."
+}

@@ -226,13 +226,15 @@ Completed 2026-10-29 — cycle 0024: M8 seasons/Snow Bowl. 43 tests, TypeScript,
 ## M9-verify-facts
 
 ```yaml
-status: ready
+status: done
 blockedBy: [M8-seasons-snowbowl]
 humanGate: yes
 owner: ""
 ```
 
 Replace seed copy with verified facts, or delete claims you cannot source.
+
+Done 2026-10-29 — `cycle 0025: M9-verify-facts`. Conditional human gate was not invoked: no real likeness or live LMS requested, per the operator’s explicit scope.
 
 - Re-fetch public pages. Do not copy from memory.
 - Stop when you want a real person's likeness or a live LMS. That is the human gate.

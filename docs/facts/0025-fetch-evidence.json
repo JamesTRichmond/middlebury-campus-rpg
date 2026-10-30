@@ -1,0 +1,81 @@
+{
+  "asOf": "2026-10-29",
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Middlebury_station",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "asOf": "2026-10-29"
+    },
+    {
+      "url": "https://sites.middlebury.edu/walkingmiddlebury/mountain-campus/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "asOf": "2026-10-29"
+    },
+    {
+      "url": "https://www.amtrak.com/stations/mby",
+      "status": 200,
+      "finalUrl": "https://www.amtrak.com/stations/mby",
+      "sha256": "89aa58180f62a0b4968016e256f6b17de514e7632d6db979f3707c846bde93f8",
+      "textLength": 7680,
+      "asOf": "2026-10-29",
+      "evidenceExcerpts": [
+        "Train Station - Platform with Shelter",
+        "30 Middle Seymour Street"
+      ]
+    },
+    {
+      "url": "https://www.greatamericanstations.com/stations/middlebury-vt-mby/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "asOf": "2026-10-29"
+    },
+    {
+      "url": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+      "status": 200,
+      "finalUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+      "sha256": "f0941e3b1e0bda62e5bf8d7407916c1d5f5f2a0e672b087ef8308024f7bf8ade",
+      "textLength": 10764,
+      "asOf": "2026-10-29",
+      "evidenceExcerpts": [
+        "Stewart, Hepburn, Allen, Coffrin, or New Battell",
+        "our three campus dining halls, Proctor, Atwater, and Ross",
+        "Crossroads, the student-run café in the Davis Library",
+        "So-full Sips, the café in Bicentennial Hall",
+        "Your FYS instructor is also your pre-major advisor.",
+        "This team includes your first-year seminar",
+        "there are pathways through orientation programming tailored to your needs.",
+        "Snowbowl",
+        "This team includes your first-year seminar (FYS) professor and pre-major advisor; your Compass Mentor; your student orientation leader, and your residence director or assistant",
+        "Our dining plan allows for unlimited meals at our three campus dining halls, Proctor, Atwater, and Ross",
+        "If you are a first-generation college student or an international student, there are pathways through orientation programming tailored to your needs.",
+        "There’s good public transportation in town, as well as to the Snowbowl"
+      ]
+    },
+    {
+      "url": "https://www.middlebury.edu/college/orientation",
+      "status": 200,
+      "finalUrl": "https://www.middlebury.edu/college/orientation",
+      "sha256": "3137bee111541ad95cd99da4432908067cd6bd7e8e69509558bddaf1d703b6ad",
+      "textLength": 6476,
+      "asOf": "2026-10-29",
+      "evidenceExcerpts": []
+    },
+    {
+      "url": "https://www.middlebury.edu/college/orientation/faq",
+      "status": 200,
+      "finalUrl": "https://www.middlebury.edu/college/orientation/faq",
+      "sha256": "4a592a674eaee1aeeb07f16d52c9fa9faa859995de0eae52b28f32cf20c274b6",
+      "textLength": 4751,
+      "asOf": "2026-10-29",
+      "evidenceExcerpts": [
+        "Fall Orientation and Feb Orientation run from Wednesday through Sunday.",
+        "Wednesday, September 9, 2026.",
+        "Wednesday, February 3, 2027."
+      ]
+    },
+    {
+      "url": "https://www.middleburycampus.com/article/2023/03/middlebury-students-reflect-on-new-amtrak-stop-in-town",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "asOf": "2026-10-29"
+    }
+  ]
+}

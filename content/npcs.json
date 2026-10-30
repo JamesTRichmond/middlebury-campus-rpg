@@ -5,7 +5,10 @@
     "role": "Welcome figure at the platform",
     "kind": "archetype",
     "placeId": "middlebury-station",
-    "knowsAbout": ["arrival", "station"],
+    "knowsAbout": [
+      "arrival",
+      "station"
+    ],
     "lines": [
       {
         "id": "what-should-i-call-you",
@@ -20,30 +23,52 @@
     "role": "Student orientation leader",
     "kind": "archetype",
     "placeId": "arrival-green",
-    "knowsAbout": ["orientation", "first-year-halls", "dining"],
+    "knowsAbout": [
+      "orientation",
+      "first-year-halls",
+      "dining"
+    ],
     "lines": [
       {
         "id": "welcome",
         "topic": "welcome",
-        "text": "I'm a student orientation leader, not a specific person. Start with your hall, then eat, then the library. Your seminar room is past Bicentennial."
+        "text": "In this sample route, visit your hall, Proctor and the library, then the sample seminar."
       },
       {
         "id": "feb-note",
         "topic": "feb",
-        "text": "Feb start uses Feb Orientation. The Wednesday-through-Sunday span was on the orientation FAQ when this line was written, and the game will not pretend the dates never change.",
-        "requiresStartTerm": "feb"
+        "text": "Fall Orientation and Feb Orientation run from Wednesday through Sunday.",
+        "requiresStartTerm": "feb",
+        "fact": {
+          "text": "Fall Orientation and Feb Orientation run from Wednesday through Sunday.",
+          "status": "verified",
+          "sourceUrl": "https://www.middlebury.edu/college/orientation/faq",
+          "asOf": "2026-10-29"
+        }
       },
       {
         "id": "first-gen",
         "topic": "first-gen",
-        "text": "The college's orientation page says first-generation students get focused programming. Ask for that track. I won't invent the schedule.",
-        "requiresFlag": "firstGen"
+        "text": "The admitted-student page describes orientation pathways tailored to first-generation and international students.",
+        "requiresFlag": "firstGen",
+        "fact": {
+          "text": "The admitted-student page describes orientation pathways tailored to first-generation and international students.",
+          "status": "verified",
+          "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+          "asOf": "2026-10-29"
+        }
       },
       {
         "id": "international",
         "topic": "international",
-        "text": "The college's orientation page says international students get focused programming. Ask for that track. I won't invent the schedule.",
-        "requiresFlag": "international"
+        "text": "The admitted-student page describes orientation pathways tailored to first-generation and international students.",
+        "requiresFlag": "international",
+        "fact": {
+          "text": "The admitted-student page describes orientation pathways tailored to first-generation and international students.",
+          "status": "verified",
+          "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+          "asOf": "2026-10-29"
+        }
       }
     ]
   },
@@ -53,12 +78,20 @@
     "role": "Residence life student staff",
     "kind": "archetype",
     "placeId": "your-hall",
-    "knowsAbout": ["housing"],
+    "knowsAbout": [
+      "housing"
+    ],
     "lines": [
       {
         "id": "halls",
         "topic": "halls",
-        "text": "Most first-years, as of the admitted-student page fetched 2026-10-27, live in Stewart, Hepburn, Allen, Coffrin, or New Battell. Your real assignment comes from Residential Life, not from this game."
+        "text": "The admitted-student page lists Stewart, Hepburn, Allen, Coffrin and New Battell as likely first-year residence halls.",
+        "fact": {
+          "text": "The admitted-student page lists Stewart, Hepburn, Allen, Coffrin and New Battell as likely first-year residence halls.",
+          "status": "verified",
+          "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+          "asOf": "2026-10-29"
+        }
       }
     ]
   },
@@ -68,12 +101,20 @@
     "role": "Dining hall staff",
     "kind": "archetype",
     "placeId": "proctor",
-    "knowsAbout": ["dining"],
+    "knowsAbout": [
+      "dining"
+    ],
     "lines": [
       {
         "id": "meal-plan",
         "topic": "meals",
-        "text": "Unlimited meals means Proctor, Atwater, and Ross. The Grille, Crossroads, So-full Sips, the S.E.A. Dinette, and Midd Express were the retail names on the admitted-student page."
+        "text": "The dining plan allows unlimited meals at Proctor, Atwater, and Ross.",
+        "fact": {
+          "text": "The dining plan allows unlimited meals at Proctor, Atwater, and Ross.",
+          "status": "verified",
+          "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+          "asOf": "2026-10-29"
+        }
       }
     ]
   },
@@ -83,12 +124,20 @@
     "role": "Library staff",
     "kind": "archetype",
     "placeId": "davis-library",
-    "knowsAbout": ["library"],
+    "knowsAbout": [
+      "library"
+    ],
     "lines": [
       {
         "id": "crossroads",
         "topic": "crossroads",
-        "text": "Crossroads is the student-run café in this library, per the admitted-student page fetched 2026-10-27. I can point you at Bicentennial when you are ready for a sample seminar. I am not a real librarian's portrait."
+        "text": "Crossroads is the student-run café in the Davis Library.",
+        "fact": {
+          "text": "Crossroads is the student-run café in the Davis Library.",
+          "status": "verified",
+          "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+          "asOf": "2026-10-29"
+        }
       }
     ]
   },
@@ -98,7 +147,10 @@
     "role": "First-year seminar instructor archetype",
     "kind": "archetype",
     "placeId": "seminar-room",
-    "knowsAbout": ["seminar", "questions"],
+    "knowsAbout": [
+      "seminar",
+      "questions"
+    ],
     "lines": [
       {
         "id": "open-class",
@@ -113,12 +165,21 @@
     "role": "Compass Mentor archetype",
     "kind": "archetype",
     "placeId": "activities-fair",
-    "knowsAbout": ["support", "activities"],
+    "knowsAbout": [
+      "support",
+      "activities"
+    ],
     "lines": [
       {
         "id": "support-team",
         "topic": "support",
-        "text": "Your support team, as the admitted-student page described it, includes your first-year seminar professor and pre-major advisor, a Compass Mentor, an orientation leader, and a residence director or assistant."
+        "text": "The first-year support team includes a seminar professor and pre-major advisor, Compass Mentor, student orientation leader, and residence director or assistant.",
+        "fact": {
+          "text": "The first-year support team includes a seminar professor and pre-major advisor, Compass Mentor, student orientation leader, and residence director or assistant.",
+          "status": "verified",
+          "sourceUrl": "https://www.middlebury.edu/college/admissions/admitted/first-year-life-middlebury",
+          "asOf": "2026-10-29"
+        }
       },
       {
         "id": "trail-offer",
@@ -138,7 +199,9 @@
     "role": "Town orientation archetype",
     "kind": "archetype",
     "placeId": "downtown",
-    "knowsAbout": ["town"],
+    "knowsAbout": [
+      "town"
+    ],
     "lines": [
       {
         "id": "unverified",
