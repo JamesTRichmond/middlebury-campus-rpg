@@ -259,7 +259,7 @@
     "summary": "A locked stand-in for the town of Middlebury. No shops are named until a sourced content pass.",
     "summaryStatus": "placeholder",
     "facts": [],
-    "exits": ["arrival-green", "triangle-park", "movie-theater", "snow-bowl"],
+    "exits": ["arrival-green", "triangle-park", "movie-theater", "snow-bowl", "sample-restaurants"],
     "npcIds": ["town-guide"]
   },
   {
@@ -311,6 +311,19 @@
       }
     ],
     "exits": ["downtown"],
+    "npcIds": []
+  },
+  {
+    "id": "sample-restaurants",
+    "name": "Restaurants \u00b7 sample",
+    "region": "town",
+    "unlockedByDefault": false,
+    "summary": "A sample restaurant place. No real businesses, hours or menus are represented.",
+    "summaryStatus": "placeholder",
+    "facts": [],
+    "exits": [
+      "downtown"
+    ],
     "npcIds": []
   }
 ]

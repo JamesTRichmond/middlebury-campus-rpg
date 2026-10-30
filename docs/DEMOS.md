@@ -22,7 +22,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 | [D4-dorm](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M4 | Unpack and place doodads, then see the orientation notice |
 | [D5-campus](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M5 | Visit dining and the library with portrait dialogue |
 | [D6-class](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M6 | Attend class as their character; the teacher delivers the virtual lesson; take notes; ask a question answered only from that lesson |
-| `D7-town` | M7 | Cross Triangle Park into town after campus objectives |
+| [D7-town](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M7 | Cross Triangle Park into town after campus objectives |
 | `D8-snow` | M8 | Toggle seasons and take the optional Snow Bowl trip |
 
 ## Recorded builds
@@ -90,3 +90,9 @@ Prototype in recorded file: dorm notice start → campus 99:4982 / 99:5099, dial
 Local: `npm ci && npm run validate && npm run preview` from repository. Finish orientation; in Sample seminar room choose Attend sample virtual lesson. Previous/Next/Finish follow the bundled virtual lesson. Choose a lesson prompt to ask; teacher responses are from that lesson only. Save a note, leave class, open notebook on campus, or reload and return. Legacy saves without notes and completed-orientation reward grants migrate automatically. Give D6 feedback opens `feedback/index.html?demo=D6-class&version=<built SHA>` automatically.
 
 Prototype in recorded file: campus → class 103:5528 / 103:5655 → notebook 103:5782 / 103:5787 with return links. Handoff 105:2. Native fields and scrolling differ from compact specimens; exact lesson blocks/prompts match. Sample, offline, no live LMS or public deployment. 33 tests, TypeScript, production build and 24 browser checks pass. Next cycle is meta; neither meta nor M7 ran in this pass.
+
+## D7 town — cycle 0023
+
+Local: `npm ci && npm run validate && npm run preview` from repository. Complete orientation, return through Arrival Green to Triangle Park, then enter Downtown. Walk to movie theater and Restaurants · sample portals. Triangle Park is the town door; the direct campus/downtown shortcut is unavailable. Generic sample places have no real businesses, hours or menus. Existing Compass Mentor sidequests appear only for selected interests; accept at activities fair and completion saves.
+
+Figma prototype: campus after-orientation preview → Triangle Park 110:5862 → town 110:5810 (desktop 110:5758); selected-interest offer 110:5912. Handoff 112:5904 records dynamic graph/native-control differences. Give D7 feedback opens `feedback/index.html?demo=D7-town&version=<built SHA>` automatically. No public deployment. 40 unit tests, TypeScript, production build and 28 browser checks pass. M8 remains held.

@@ -65,7 +65,7 @@
     ],
     "rewards": {
       "abilities": ["notebook", "meal-plan", "ask-a-question"],
-      "places": []
+      "places": ["downtown", "movie-theater", "sample-restaurants"]
     }
   },
   {

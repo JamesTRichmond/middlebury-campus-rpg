@@ -18,7 +18,7 @@ describe("seed content", () => {
 
   it("keeps town and the mountain locked until play opens them", () => {
     const locked = content.places.filter((place) => !place.unlockedByDefault).map((place) => place.id);
-    expect(locked.sort()).toEqual(["downtown", "movie-theater", "outdoors", "snow-bowl"]);
+    expect(locked.sort()).toEqual(["downtown", "movie-theater", "outdoors", "sample-restaurants", "snow-bowl"]);
   });
 
   it("starts the fiction at the station and can walk to the dorm", () => {

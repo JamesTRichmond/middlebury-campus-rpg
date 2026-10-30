@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 22
+cycle: 23
 lastMetaCycle: 22
-productCyclesSinceMeta: 0
+productCyclesSinceMeta: 1
 lock: ""
 stop: operator-hold
 current: none
-next: M7-town remains held pending operator instruction
-lastGate: "Meta 0022: 38 tests, TypeScript, production build and 24 browser checks passed. Repaired campus Figma access-control placement; JSON, palette, and save-integrity regressions added."
+next: M8-seasons-snowbowl held by explicit operator instruction
+lastGate: "Cycle 0023: 40 tests, TypeScript, production build and 28 browser checks passed; town unlock, Triangle Park routing, interest filtering and reload verified."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Meta 0022: 38 tests, TypeScript, production build and 24 browser chec
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0023 | M7-town | Done: town through Triangle Park, sample destinations and selected-interest quests; all gates passed. M8 held. |
 | meta-0022 | META-0022 | Done: frame alignment and regression guards; all gates passed. Operator-hold. |
 | 0021 | M6-notebook-class | Done: offline virtual lesson, lesson-only answers, persistent notebook and migration; all gates passed. Meta next, operator-hold. |
 | 0020 | M5-campus-walk | Done: graph walking, portrait dialogue, persistent orientation; all gates passed. M6 held. |
@@ -40,12 +41,12 @@ lastGate: "Meta 0022: 38 tests, TypeScript, production build and 24 browser chec
 
 ## Current handoff
 
-- Meta cycle 0022 complete; lastMetaCycle 22, productCyclesSinceMeta 0. Report: cycles/meta-0022.md. Operator-hold; M7 not started.
-- Existing campus frames 99:4982 / 99:5099 now show M6 notebook/class controls above the map with direct notebook prototype links. No screen added. Exact repair and readback in docs/figma/meta-0022-*.json. Other reviewed differences remain documented in existing Handoffs.
-- Repeated JSON-import failures now have a source-wide regression guard; remaining source imports carry native JSON attributes. TypeScript runs first in validate, followed by every unit test and production build. Palette values are checked against the accepted Figma receipt. Malformed notes cannot silently reset or overwrite a good backup.
-- Final gates: 38 unit tests, TypeScript, production build and all 24 desktop/phone browser checks passed, including new control-order assertions. No gameplay behavior changes or new places, quests, abilities, screens, feedback-form rebuild or live LMS.
-- Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
-- Existing playable demos: repository → `npm ci && npm run validate && npm run preview`; open printed local URL. Fresh builds bind feedback to checked-out SHA. No public deployment.
+- M7 complete: orientation rewards unlock downtown, movie theater and sample restaurants, including completed legacy saves. Triangle Park is the only playable campus/town door; direct campus/downtown shortcut excluded both ways. Boundary wording explicitly says game framing.
+- Existing selected-interest sidequests work at Compass Mentor; unselected offers and offer dialogue stay hidden. Completion/rewards persist. No business names or real listings. No M8/Snow Bowl travel or season controls added.
+- Figma town 110:5758 / 110:5810, park 110:5862, interest-offer 110:5912. Handoff 112:5904; exact receipts and comparison screenshots in docs/figma/M7-*. Original file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS.
+- Gates: 40 unit tests, TypeScript, production build and 28 desktop/phone browser checks passed. Cycle: cycles/0023-town.md.
+- Local: `npm ci && npm run validate && npm run preview`; complete orientation, walk via Arrival Green → Triangle Park → Downtown → movie theater/sample restaurants. Compass Mentor at activities fair offers matching interests only. Give D7 feedback binds D7-town and built SHA. No public deployment.
+- Operator-hold; M8 not started. lastMetaCycle remains 22; one product cycle since meta.
 
 ## D1 build
 

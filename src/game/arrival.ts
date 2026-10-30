@@ -39,7 +39,7 @@ function parseSave(value: unknown, content: GameContent): Save {
     // Materialize additive defaults on load without discarding unrelated saved fields.
     save.character = { ...save.character, ...characterSchema.parse(save.character) };
   }
-  if(save.quests.orientation?.done){const rewards=content.quests.find(q=>q.id==='orientation')?.rewards.abilities??[];save.abilities=[...new Set([...save.abilities,...rewards])];}
+  if(save.quests.orientation?.done){const rewards=content.quests.find(q=>q.id==='orientation')?.rewards.abilities??[];save.abilities=[...new Set([...save.abilities,...rewards])];save.unlockedPlaces=[...new Set([...save.unlockedPlaces,...(content.quests.find(q=>q.id==='orientation')?.rewards.places??[])])];}
   return save;
 }
 

@@ -193,7 +193,7 @@ Completed 2026-10-29 — cycle 0021: M6 notebook/class. 33 unit tests and 24 bro
 ## M7-town
 
 ```yaml
-status: ready
+status: done
 blockedBy: [M6-notebook-class]
 humanGate: no
 owner: ""
@@ -204,6 +204,8 @@ owner: ""
 - Restaurants stay a sample place until sourced. Do not invent names.
 - Interest sidequests already in content still work and stay hidden when the interest was not picked.
 - Gate: `npm run validate` plus a test that those places are locked on a fresh save and open after orientation, and that an unselected interest offers no quest.
+
+Completed 2026-10-29 — cycle 0023: M7 town. Orientation unlocks town/theater/sample restaurants through Triangle Park; legacy migration, selected-interest sidequests and reload verified. 40 tests and 28 browser checks pass. M8 held.
 
 ## M8-seasons-snowbowl
 
