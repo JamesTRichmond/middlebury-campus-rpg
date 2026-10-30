@@ -8,6 +8,17 @@ Status values: `ready`, `doing`, `done`, `blocked`.
 
 When an item below is marked done, also publish its demo in the same cycle (LOOP.md). Design the screen in Figma first ([docs/FIGMA.md](docs/FIGMA.md)). The class demo is `D6-class`: the teacher delivers the virtual lesson, and notes and questions stay on that lesson.
 
+## playtest
+
+```yaml
+status: doing
+blockedBy: [M9-verify-facts]
+humanGate: no
+owner: ""
+```
+
+Operator-named next item: prepare the current D1–D8 playtest guide, confirm `npm run validate`, then stop on operator-hold. No new feature. Guide preparation is cycle 0026; player feedback remains pending.
+
 ## META-0022 — validation and shipped-frame drift
 
 ```yaml

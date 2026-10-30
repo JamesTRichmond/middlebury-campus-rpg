@@ -1,5 +1,7 @@
 # Demos
 
+For the current combined build, use [the D1–D8 playtest note](PLAYTEST.md). The build records below are historical.
+
 A demo is a Figma prototype, a build someone can play, and the feedback form bound to that build. The prototype comes first. Shipping the demo does not pause the loop. Pasted feedback jumps the queue. See LOOP.md and [FIGMA.md](FIGMA.md).
 
 Open the form from a demo like this:

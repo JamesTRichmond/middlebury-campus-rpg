@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 25
+cycle: 26
 lastMetaCycle: 22
 productCyclesSinceMeta: 3
 lock: ""
 stop: operator-hold
-current: none
-next: none; M9-only pass complete, await operator
-lastGate: "Cycle 0025: TypeScript, 45 tests, production build and all 32 desktop/phone browser checks passed; fresh facts and absent-approval guards verified."
+current: playtest
+next: await playtest feedback; no feature authorized
+lastGate: "Cycle 0026: npm run validate passed TypeScript, 45 tests and production build; documentation-only playtest handoff. Browser checks last passed in cycle 0025."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0025: TypeScript, 45 tests, production build and all 32 desktop
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0026 | playtest | D1–D8 current-build guide ready; validate passed. Await player feedback on operator-hold. |
 | 0025 | M9-verify-facts | Done: fresh public-source audit, unsupported claims deleted, displayed provenance and approval guards; all gates passed. Operator-hold. |
 | 0024 | M8-seasons-snowbowl | Done: presentation-only seasons, explicit trip and optional nonblocking game; all gates passed. M9 held. |
 | 0023 | M7-town | Done: town through Triangle Park, sample destinations and selected-interest quests; all gates passed. M8 held. |
@@ -43,12 +44,12 @@ lastGate: "Cycle 0025: TypeScript, 45 tests, production build and all 32 desktop
 
 ## Current handoff
 
-- M9 complete. Four successful public-page fetches; four blocked requests recorded. Kept claims have verified/sourceUrl/asOf; unsupported station, Triangle Park and Snow Bowl route claims deleted. Map copy stays sample. See docs/CONTENT.md and docs/facts/0025-fetch-evidence.json.
-- Existing Figma file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Updated existing dialogue/trip copy and same-screen source rows. Handoff 125:2; docs/figma/M9-*.json receipts. Original art/layout retained; native control/wrapping differences documented.
-- Observed: npm run validate passed TypeScript, 45 tests and production build. npm run test:browser passed all 32 desktop/phone checks. Browser checks include source/date in factual dialogue and place facts; tests forbid sourced people, official lessons and unnamed/unapproved likeness metadata without approval.
-- No likeness or live LMS requested, conditional M9 human gate not invoked. No gates approval files created. Sample virtual lesson unchanged. No new feature.
-- Local: from repository run npm ci && npm run validate && npm run preview; open printed local URL. Continue existing play path; source links/date appear on escort/campus and Snow Bowl. Existing demo feedback binds checked-out SHA. No public deployment URL.
-- Cycle report: cycles/0025-verify-facts.md. Operator-hold at explicit M9-only scope; lastMetaCycle 22, three product cycles since meta.
+- Current: playtest. [D1–D8 guide](docs/PLAYTEST.md) lists the local command, navigation to each demo and its feedback form. docs/DEMOS.md links this current guide above historical build records.
+- Validated product source: 9d3bca9667443481715370ff0795f82b0fa4a66e. From the cloned repository containing package.json: `npm ci && npm run validate && npm run preview`; open the printed local URL. Fresh browser profile starts the letter; existing saves resume. Demos are stages of one game, not separate routes.
+- Each in-game feedback link supplies its D1–D8 demo id and built SHA. Confirm & Submit copies the Markdown report; paste it back. New builds bind the checked-out commit, including later documentation commits.
+- Observed this cycle: npm run validate exit 0, TypeScript, 45 tests, production build. No new browser playthrough or operator feedback claimed; cycle 0025's 32 desktop/phone checks remain the latest browser results.
+- Documentation only: no frame change, feature, content, place, quest, screen, feedback-form, likeness or LMS changes. Existing Figma file retained: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. No new URL or public deployment.
+- Cycle: cycles/0026-playtest.md. Operator-hold with current left at playtest as requested. lastMetaCycle remains 22 and productCyclesSinceMeta remains 3; this is not a product cycle.
 
 ## D1 build
 
