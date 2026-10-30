@@ -1,3 +1,4 @@
+import {lessonProgressSchema} from './lessons';
 import {campusStateSchema} from './campus';
 import { dormStateSchema } from './dorm';
 import { escortStateSchema } from './escort';
@@ -11,6 +12,7 @@ export const DEMO_ID = "D1-letter-train";
 export const originSchema = z.string().trim().min(1).max(80);
 
 export const saveSchema = z.object({
+  lessonProgress: lessonProgressSchema.optional(),
   campus: campusStateSchema.optional(),
   dorm: dormStateSchema.optional(),
   escort: escortStateSchema.optional(),
@@ -19,7 +21,7 @@ export const saveSchema = z.object({
   placeId: z.string().min(1),
   arrival: z.object({ stage: z.enum(["train", "platform"]), beat: z.number().int().min(0).max(2).default(0) }).passthrough(),
   character: z.object({}).passthrough().nullable(),
-  notes: z.array(z.object({ id: z.string(), text: z.string(), placeId: z.string().optional(), lessonId: z.string().optional() }).passthrough()),
+  notes: z.array(z.object({ id: z.string(), text: z.string(), placeId: z.string().optional(), lessonId: z.string().optional() }).passthrough()).default([]),
   quests: z.record(z.object({ stepIndex: z.number().int().nonnegative(), done: z.boolean() }).passthrough()),
   abilities: z.array(z.string()),
   unlockedPlaces: z.array(z.string()),
@@ -37,6 +39,7 @@ function parseSave(value: unknown, content: GameContent): Save {
     // Materialize additive defaults on load without discarding unrelated saved fields.
     save.character = { ...save.character, ...characterSchema.parse(save.character) };
   }
+  if(save.quests.orientation?.done){const rewards=content.quests.find(q=>q.id==='orientation')?.rewards.abilities??[];save.abilities=[...new Set([...save.abilities,...rewards])];}
   return save;
 }
 

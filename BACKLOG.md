@@ -165,7 +165,7 @@ Completed 2026-10-29 — cycle 0020: M5 campus walk. Orientation simulation and 
 ## M6-notebook-class
 
 ```yaml
-status: ready
+status: done
 blockedBy: [M5-campus-walk]
 humanGate: no
 owner: ""
@@ -175,6 +175,8 @@ owner: ""
 - Notes survive reload, including from a save that had none.
 - Sample seminar via `LessonSource`. No network. The teacher delivers that lesson and no other speech. Responses only from the lesson. Chrome says sample, and that this is the virtual lesson for the class. Demo id `D6-class`.
 - Gate: `npm run validate` plus tests for note migration and for a response that is not on the lesson.
+
+Completed 2026-10-29 — cycle 0021: M6 notebook/class. 33 unit tests and 24 browser checks pass; source-only teacher responses, offline sample class, reward and note migration verified. Meta cycle is next; M7 held.
 
 ## M7-town
 

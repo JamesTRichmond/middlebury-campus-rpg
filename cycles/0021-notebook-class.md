@@ -1,0 +1,18 @@
+# Cycle 0021 — M6-notebook-class
+
+- Date: 2026-10-29
+- Agent: codex-root
+- Item: M6-notebook-class, done
+- Stop: operator-hold; next cycle is meta. M7 unstarted.
+
+Read project instructions and lesson bridge. Connected session a2b01a56-7cac-4302-8ab0-16bbb28aa5e9 inspected existing class/notebook starters, then created class 103:5528 / 103:5655 and notebook 103:5782 / 103:5787 before code. Existing file: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS. Exact creation IDs in M6-frames.json. Prototype campus/class/notebook returns in M6-prototype.json. Inspected phone class frame. Handoff result {"createdNodeIds":["105:2","105:3"],"handoff":"105:2"}; M6-handoff.json records scope and differences. No failed Figma calls.
+
+Implemented LessonSource interface and BundleLessonSource over bundled lesson JSON only. Class gets its lesson by current place. Teacher text is a lesson block; answer lookup is confined to that lesson's prompt IDs. Unknown lesson/prompt IDs return no answer; unrelated response fails membership check. Missing block state shows application error chrome, not teacher speech. UI labels sample and virtual lesson for this class. Saved player sprite appears inside room, with separate finer-grid original teacher portrait. No network/LMS/login adapter was added; live LMS still waits on gates/live-lms.approved.
+
+Orientation rewards are granted from the existing quest reward list, also during load of completed legacy saves. No handwritten alternate reward list. Notebook saves notes with lesson/place IDs, available after leaving the class and reloading. Missing notes default to empty list; invalid existing note data still rejects save. Lesson block, completion and asked IDs persist. Chrome/status messages are separate from teacher paragraphs. The ask control offers only prompts on this lesson, with full selected question shown as wrapped text for phone readability.
+
+Verification: final npm run validate passed 33 tests, TypeScript and production build. Final npm run test:browser passed 24 desktop/phone checks. Unit checks migrate notes absent from a legacy save, grant all existing orientation rewards, round-trip lesson notes, reject unknown questions and a response absent from the lesson. Browser checks compare every block to content, disable network for lesson interaction, select a prompt and assert exact answer, save note, leave/open notebook, reload and verify note plus completion, player presence, sample label, D6/version feedback and no horizontal overflow. Existing D1–D5 regressions pass. One initial browser attempt failed because wrapped select lacked an explicit accessible name; added aria-label, kept assertions, and reran successfully. Aligned lesson JSON import attributes to remove bundler warning. git diff --check passed.
+
+Visual comparison: reviewed desktop/phone production question/notebook screenshots against class/notebook frames. Palette, room/player and separate portrait follow original rectangle design. Native controls, note metadata, dynamic selected state, font wrapping and document scrolling differ from static specimens; no pixel-identical claim. Full selected prompt wraps outside the native select to avoid phone clipping, as in the frame. Screenshots docs/figma/M6-comparison/. No screen designed only in code.
+
+Local demo: npm ci && npm run validate && npm run preview from repository; finish orientation, sample seminar, Attend sample virtual lesson. Give D6 feedback binds existing feedback form demo=D6-class and built SHA. Prototype linked from D6 row in DEMOS.md. No public URL/deployment. Five completed product cycles since last meta: meta must be the next cycle, explicitly not run in this pass. Stop: operator-hold.

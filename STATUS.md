@@ -1,14 +1,14 @@
 # Status
 
 ```yaml
-cycle: 20
+cycle: 21
 lastMetaCycle: 11
-productCyclesSinceMeta: 4
+productCyclesSinceMeta: 5
 lock: ""
 stop: operator-hold
 current: none
-next: M6-notebook-class held by explicit operator instruction
-lastGate: "Cycle 0020: 31 tests, TypeScript, production build and all 22 desktop/phone browser checks passed; orientation completes without downtown."
+next: meta cycle (due after five product cycles); M7 not authorized
+lastGate: "Cycle 0021: 33 tests, TypeScript, production build and all 24 desktop/phone browser checks passed; offline LessonSource and note migration verified."
 ```
 
 ## Index
@@ -21,6 +21,7 @@ lastGate: "Cycle 0020: 31 tests, TypeScript, production build and all 22 desktop
 | 0004 | M0 reconciliation | Gate persisted; internal button lookup failed. |
 | 0005 | M0 wiring retry | Internal chain repaired; Cover cross-page NAVIGATE failed. |
 | 0006 | M0-figma-file | Accepted. Supported Cover link, layouts and modes checked; human gate resolved. |
+| 0021 | M6-notebook-class | Done: offline virtual lesson, lesson-only answers, persistent notebook and migration; all gates passed. Meta next, operator-hold. |
 | 0020 | M5-campus-walk | Done: graph walking, portrait dialogue, persistent orientation; all gates passed. M6 held. |
 | 0019 | M4-dorm | Done: browser runner fixed, room compared, all 20 browser checks and validation passed; M5 held. |
 | 0018 | M3-escort | Done: saved frames retained, accessible escort and dialogue implemented; all gates passed. M4 held. |
@@ -38,11 +39,13 @@ lastGate: "Cycle 0020: 31 tests, TypeScript, production build and all 22 desktop
 
 ## Current handoff
 
-- M5 complete: explicit start from finished dorm notice, campus graph portals reached by walking, nearby destination names, portrait conversations and saved nonexpiring task progress. Dining, library, halls, activities and academic buildings use existing content. Seminar introduction only; no lesson panel. Town remains locked.
-- Figma walk 99:4982 / 99:5099, dialogue 99:5216 / 99:5417. Prototype connected from dorm notice; Handoff 101:5532 records content and differences. File: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS.
-- Gates: 31 tests, TypeScript, production build and 22 browser checks passed. New simulation finishes orientation without downtown; desktop/phone browser journeys verify portrait dialogue, completion and reload. Cycle: cycles/0020-campus-walk.md.
-- Local: from repository run `npm ci && npm run validate && npm run preview`. Finish dorm → Go downstairs for orientation. Arrow keys/WASD or direction buttons, then Interact nearby. Give D5 feedback binds D5-campus and built SHA. No public deployment.
-- M6 not started; operator hold. Four product cycles since last meta cycle.
+- M6 complete: offline BundleLessonSource delivers exact sample lesson blocks and answers from sample-seminar-questions. Labels say sample and virtual lesson for this class. Saved character appears in room; separate original teacher portrait. No LMS/network adapter added.
+- Notebook accessible from campus and class; notes retain lesson/place IDs after leaving/reloading. Missing notes migrate to empty list. Completed orientation grants notebook, meal-plan, ask-a-question from existing quest rewards, including old completed saves.
+- Lesson position/completion/asked prompt IDs persist. Unknown questions/other-lesson answers rejected. Missing blocks show error chrome outside teacher text.
+- Gates: 33 tests, TypeScript, production build and 24 browser checks pass, including offline class interaction and legacy-save reload. Cycle: cycles/0021-notebook-class.md. Figma class 103:5528 / 103:5655, notebook 103:5782 / 103:5787; Handoff 105:2. Exact receipts and screenshots under docs/figma/M6-*.
+- Local: `npm ci && npm run validate && npm run preview`; finish orientation → sample seminar → Attend sample virtual lesson. Give D6 feedback binds demo=D6-class and built SHA. No public deployment URL.
+- Figma: https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS
+- Operator-hold. Five product cycles since last meta; the next cycle must be meta. No meta work or M7 started in this pass.
 
 ## D1 build
 

@@ -21,7 +21,7 @@ That serves this folder. The page remembers this browser's earlier answers and, 
 | [D3-escort](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M3 | Walk from the station through Triangle Park to the dorm, including with a wheelchair |
 | [D4-dorm](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M4 | Unpack and place doodads, then see the orientation notice |
 | [D5-campus](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M5 | Visit dining and the library with portrait dialogue |
-| `D6-class` | M6 | Attend class as their character; the teacher delivers the virtual lesson; take notes; ask a question answered only from that lesson |
+| [D6-class](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS) | M6 | Attend class as their character; the teacher delivers the virtual lesson; take notes; ask a question answered only from that lesson |
 | `D7-town` | M7 | Cross Triangle Park into town after campus objectives |
 | `D8-snow` | M8 | Toggle seasons and take the optional Snow Bowl trip |
 
@@ -84,3 +84,9 @@ Existing Figma prototype entry 96:4981 → phone unpack 95:4995 → finished not
 Local: `npm ci && npm run validate && npm run preview` from repository. After finishing dorm, choose Go downstairs for orientation. Arrow keys/WASD or direction buttons walk to map portals. Interact nearby enters a portal or talks to a nearby NPC. Full nearby names appear outside the phone map crop. Meet orientation leader, visit hall, Proctor, library, and sample seminar for the introductory line; tasks persist and town stays locked. No lesson panel yet.
 
 Prototype in recorded file: dorm notice start → campus 99:4982 / 99:5099, dialogue previews 99:5216 / 99:5417. Handoff 101:5532. Prototype jumps preview states; build requires walking and interacting. Give D5 feedback opens `feedback/index.html?demo=D5-campus&version=<built SHA>` automatically. No public deployment. 31 unit tests and 22 browser checks pass; M6 held.
+
+## D6 class — cycle 0021
+
+Local: `npm ci && npm run validate && npm run preview` from repository. Finish orientation; in Sample seminar room choose Attend sample virtual lesson. Previous/Next/Finish follow the bundled virtual lesson. Choose a lesson prompt to ask; teacher responses are from that lesson only. Save a note, leave class, open notebook on campus, or reload and return. Legacy saves without notes and completed-orientation reward grants migrate automatically. Give D6 feedback opens `feedback/index.html?demo=D6-class&version=<built SHA>` automatically.
+
+Prototype in recorded file: campus → class 103:5528 / 103:5655 → notebook 103:5782 / 103:5787 with return links. Handoff 105:2. Native fields and scrolling differ from compact specimens; exact lesson blocks/prompts match. Sample, offline, no live LMS or public deployment. 33 tests, TypeScript, production build and 24 browser checks pass. Next cycle is meta; neither meta nor M7 ran in this pass.

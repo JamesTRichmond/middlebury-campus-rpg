@@ -3,7 +3,7 @@ import places from "../../content/places.json";
 import npcs from "../../content/npcs.json";
 import quests from "../../content/quests/quests.json";
 import abilities from "../../content/abilities.json";
-import lessons from "../../content/lessons.json";
+import lessons from "../../content/lessons.json" with {type:"json"};
 import calendar from "../../content/calendar.json";
 import { contentSchema } from "./schema";
 
