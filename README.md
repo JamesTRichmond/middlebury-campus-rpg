@@ -1,5 +1,14 @@
 # Middlebury Campus RPG
 
+<!-- portfolio summary -->
+> **Portfolio summary.** A cozy, unofficial orientation RPG: arrive by train, build a character (including a wheelchair route), walk a pixel-art campus, and attend a class whose teacher can only say what's in the lesson data. All eight demo stages (D1–D8) are playable locally.
+>
+> **Stack:** TypeScript · React 19 · Vite · Zod-validated content graph · Vitest · Playwright · Figma-first design (every player-visible screen is a Figma frame before it's code)
+>
+> **Notable engineering:** places, exits, NPCs and quests are JSON validated by schema and graph checks (`npm run validate`); a versioned `localStorage` save that never drops notes on load; every stated campus fact carries a status, a source URL and an as-of date; accessibility modes (high contrast, larger UI, colorblind palettes, captions) are part of the design system, not an afterthought; built by an agent loop with gated cycles, 26 gated cycles so far and a meta cycle every fifth.
+>
+> **Try it:** `npm ci && npm run validate && npm run preview`. Unofficial; not affiliated with Middlebury College.
+
 Unofficial orientation RPG for new students at Middlebury College. This repository is the working environment for a coding agent. It is **not** affiliated with, endorsed by, or speaking for Middlebury College. Do not use college logos or depict real people.
 
 D1 is a local playable arrival: unofficial letter, home place, train window, and Middlebury platform. M0 is complete; the active cycle and next item are in STATUS.md. Figma is the primary design tool. The only goal is [GOAL.md](GOAL.md). [Middlebury-Campus-RPG-GOAL.md](Middlebury-Campus-RPG-GOAL.md) and [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md) are pointers, not a second goal.
