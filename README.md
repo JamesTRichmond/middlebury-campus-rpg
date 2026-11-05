@@ -1,19 +1,49 @@
-# Middlebury Campus RPG
+# Middlebury Campus RPG (unofficial)
 
-Unofficial orientation RPG for new students at Middlebury College. This repository is the working environment for a coding agent. It is **not** affiliated with, endorsed by, or speaking for Middlebury College. Do not use college logos or depict real people.
+A cozy, browser-based orientation RPG. You arrive by train, build a character who can be you or a non-human build, and walk a pixel-art Middlebury: dorm, dining hall, library, class, town, and a Snow Bowl trip. Class is a real lesson object, not a cutscene, and the teacher can only answer from that lesson.
 
-D1 is a local playable arrival: unofficial letter, home place, train window, and Middlebury platform. M0 is complete; the active cycle and next item are in STATUS.md. Figma is the primary design tool. The only goal is [GOAL.md](GOAL.md). [Middlebury-Campus-RPG-GOAL.md](Middlebury-Campus-RPG-GOAL.md) and [prompts/PASTE-GOAL.md](prompts/PASTE-GOAL.md) are pointers, not a second goal.
+**Not affiliated with, endorsed by, or speaking for Middlebury College.** No college logos, no real people, original art only.
 
-## Loop, short version
+## What a player can do
 
-1. Take the first `ready` backlog item whose blockers are done.
-2. Implement only that.
-3. Run its gate, including `npm run validate`.
-4. Write `cycles/NNNN-*.md`, update `STATUS.md`, commit.
-5. Every fifth product cycle, run a meta cycle that tightens tests and fixes repeated failures without adding scope. Pasted playtest feedback jumps ahead of new features.
-6. After each of M1–M8, the Figma prototype and a playable demo already match, the demo links the feedback form, and then the next cycle starts. Stop only for a human gate, three gate failures, an operator hold, or an empty backlog.
+All eight demo scenes (D1–D8) are implemented and covered by tests:
 
-Human gates (do not create these yourself): `gates/real-people.approved`, `gates/likeness.approved`, `gates/live-lms.approved`.
+1. Open an unofficial acceptance letter, set a home town, ride the train into Middlebury station.
+2. Build a character: name, free-text pronouns, a wide slider set, and accessibility options (wheelchair, captions, high contrast, larger UI, colorblind palettes) that apply from then on.
+3. Walk an escorted route from the station through Triangle Park to the dorm, walking or in a wheelchair.
+4. Unpack and place doodads, then take the orientation notice downstairs.
+5. Visit dining and the library with portrait dialogue.
+6. Attend class. Notes persist, and questions are answered only from that lesson's content.
+7. Cross into town, where sample places are labeled as sample.
+8. Toggle seasons without touching quest state, and take an optional Snow Bowl minigame that never blocks the story.
+
+Leave and come back: character, room, notes, and unlocks live in a versioned `localStorage` save. A save that fails validation is refused instead of dropped.
+
+## Engineering
+
+| Area | Choice |
+| --- | --- |
+| App | React 19 + TypeScript, Vite 7, static build, no backend or accounts |
+| Data | Places, exits, NPCs, quests and lessons are JSON in `content/`, validated with Zod and graph checks |
+| Lessons | A `LessonSource` seam. Bundled lessons are labeled samples, and a live LMS adapter waits on a human gate |
+| Facts | Every campus fact shown in UI is tagged verified, seed or sample. Verified facts carry a source URL and date |
+| Design | Figma first: frames, components and accessibility modes are drawn before code ([design file](https://www.figma.com/design/RgmU4XGp5hEYxNTBlvXlOS)) |
+| Tests | Vitest unit and content tests, plus Playwright desktop and phone flows for every demo scene |
+
+The repo was built by an AI coding agent working a fail-closed loop: one backlog item per cycle, a required gate before it lands, a cycle report in `cycles/`, and human approval files in `gates/` for anything touching likeness, live systems or cost. The loop rules are in [GOAL.md](GOAL.md), [LOOP.md](LOOP.md) and [AGENTS.md](AGENTS.md). Accepted choices are in [DECISIONS.md](DECISIONS.md).
+
+## Run it
+
+Node `>=20.19`.
+
+```sh
+npm ci
+npm run validate   # typecheck, unit tests, production build
+npm run preview    # open the printed URL (port 4173)
+npm run test:browser  # Playwright, desktop and phone
+```
+
+`test:browser` uses `/usr/bin/chromium` when present; otherwise run `npx playwright install chromium` first. A playable walkthrough of all eight scenes is in [docs/PLAYTEST.md](docs/PLAYTEST.md).
 
 ## Playtest form
 
@@ -23,39 +53,15 @@ The feedback deck is already built. From the repo:
 npm run feedback
 ```
 
-Then open the local page it prints. A demo should link it with `?demo=D6-class&version=<git-sha>` so the report names the build. Submitting copies Markdown you can paste back to the agent. The same browser keeps earlier answers and the report shows what changed.
+Then open the local page it prints. It shares port 4173 with `npm run preview`, so run one at a time. A demo should link it with `?demo=D6-class&version=<git-sha>` so the report names the build. Submitting copies Markdown you can paste back to the agent. The same browser keeps earlier answers and the report shows what changed.
 
-## Commands
+## Agent setup
 
-Node `>=20.19` (or a current LTS release).
-
-```sh
-npm ci
-npm run validate
-```
-
-`npm run validate` runs content/arrival tests, TypeScript checks, and the production build. To play that build:
-
-```sh
-npm run preview
-```
-
-Open the local URL printed by Vite (port 4173). A new browser opens the letter; a returning browser resumes its saved train/platform. Platform Continue opens the existing feedback form with `demo=D1-letter-train` and the exact Git SHA compiled into that build. No account or remote service is used. The font and original Figma geometry are bundled locally.
-
-```sh
-npm run test:browser
-```
-
-This checks the production build on desktop and phone using Playwright. It uses `/usr/bin/chromium` when present; otherwise install Playwright Chromium with `npx playwright install chromium`. The separate `npm run feedback` command still serves the original form alone; run it separately from the game preview because both use port 4173.
-
-## Codex Cloud
-
-Paste these into the environment's setup fields before publishing:
-
-- Install script: [scripts/codex-install.sh](scripts/codex-install.sh)
+- Codex Cloud install script: [scripts/codex-install.sh](scripts/codex-install.sh)
 - Start skill: [.codex/start-skill.md](.codex/start-skill.md)
+- Human gates (never created by an agent): `gates/real-people.approved`, `gates/likeness.approved`, `gates/live-lms.approved`.
 
-The game is a static browser build, with local Vite preview for testing. There is no backend or published public URL.
+The game is a static browser build. No public URL is published yet.
 
 ## Map
 
