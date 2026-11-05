@@ -1,5 +1,7 @@
 # Middlebury Campus RPG (unofficial)
 
+[![CI](https://github.com/JamesTRichmond/middlebury-campus-rpg/actions/workflows/validate.yml/badge.svg)](https://github.com/JamesTRichmond/middlebury-campus-rpg/actions/workflows/validate.yml)
+
 A cozy, browser-based orientation RPG. You arrive by train, build a character who can be you or a non-human build, and walk a pixel-art Middlebury: dorm, dining hall, library, class, town, and a Snow Bowl trip. Class is a real lesson object, not a cutscene, and the teacher can only answer from that lesson.
 
 **Not affiliated with, endorsed by, or speaking for Middlebury College.** No college logos, no real people, original art only.
