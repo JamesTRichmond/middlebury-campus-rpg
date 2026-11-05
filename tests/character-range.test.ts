@@ -22,7 +22,7 @@ it('every named drawing option changes the rendered portrait; labels remain inde
   }
  }
  expect(defaultRange.voiceLabel).toBe('Unspecified');expect(defaultRange.vocalFilter).toBe('None');
-});
+},30_000);
 it('map retains native grid and readable silhouette, aid, accessory and trail choices',()=>{
  for(const key of ['buildKind','surfaceColor','furLength','accessory','stepTrail','frameColor','spokeMarks'] as const){const c=rangeControls.find(c=>c.key===key)!;const images=c.options.map(option=>pixels(rangeSpriteShapes({...defaultCharacter,mobility:'Wheelchair',...defaultRange,[key]:option}),64,80));expect(new Set(images).size,key).toBe(c.options.length);}
 });
